@@ -1,4 +1,4 @@
-# ClarksPNS# ClarksPNS
+# ClarksPNS
 
 Internal project repository for the ClarksPNS website.  
 This project uses **React**, **TypeScript**, and **TailwindCSS** for development.
