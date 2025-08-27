@@ -1,52 +1,49 @@
-// RewardsPromo.tsx
+import rewardsImg from "@/assets/clarksrewards.jpg";
+
 export default function RewardsPromo() {
-    return (
-        <section className="relative w-full bg-transparent">
-            {/* top + bottom blue bars */}
-            <div className="absolute inset-x-0 top-0 h-2 bg-[#263B95]" />
-            <div className="absolute inset-x-0 bottom-0 h-2 bg-[#263B95]" />
+  return (
+    <section className="relative w-full bg-transparent">
+      {/* top + bottom brand bars */}
+      <div className="absolute inset-x-0 top-0 h-2 bg-brand" />
+      <div className="absolute inset-x-0 bottom-0 h-2 bg-brand" />
 
-            {/* White background full width */}
-            <div className="relative z-[1] w-full h-64 bg-white overflow-hidden flex items-center justify-center px-6 md:px-10">
-                
+      {/* fixed-height white box */}
+      <div className="relative z-[1] w-full h-64 bg-surface overflow-hidden">
+        <div className="container max-w-screen-2xl h-full flex items-center justify-between px-6 md:px-10 gap-8">
+          {/* Phone image */}
+          <div className="relative h-full flex-shrink-0">
+            <img
+              src={rewardsImg}
+              alt="Clarks Rewards app preview"
+              className="h-[410px] w-auto relative bottom-[-40px]" // hangs below, cropped by h-64 box
+            />
+          </div>
 
-                {/* Text + button on right */}
-                <div className="relative z-[1] w-full h-64 bg-white overflow-hidden flex items-center px-6 md:px-10">
-                    {/* Phone */}
-                    <div className="relative h-full flex-shrink-0">
-                        <img
-                            src="/clarksrewards.jpg"
-                            alt="Clarks Rewards app preview"
-                            className="h-[410px] w-auto relative bottom-[-40px]"
-                        />
-                    </div>
+          {/* Center text */}
+          <div className="flex-1 flex flex-col justify-center items-center gap-1 mx-auto text-center md:text-left">
+            <p className="font-bold text-black text-2xl md:text-3xl">
+              Get 1,500 Points Free
+            </p>
+            <p className="text-black text-xl md:text-2xl">
+              When you join the Clarks Rewards app
+            </p>
+          </div>
 
-                    {/* Text (centered between phone + button) */}
-                    <div className="flex-1 flex flex-col justify-center items-center gap-1 mx-auto">
-                        <p className="font-['Oswald'] font-bold text-black text-2xl md:text-3xl text-center">
-                            Get 1,500 Points Free
-                        </p>
-                        <p className="font-['Oswald'] text-black text-xl md:text-2xl text-center">
-                            When you join the Clarks Rewards app
-                        </p>
-                    </div>
-
-                    {/* Button (right) */}
-                    <a
-                        href="#get-the-app"
-                        className="flex-shrink-0 inline-flex items-center justify-center
-               h-14 md:h-16 px-10
-               rounded-[62px] bg-[#263B95]
-               text-white font-['Oswald'] font-bold
-               text-xl md:text-2xl tracking-[0.33em]
-               whitespace-nowrap hover:opacity-95
-               focus:outline-none focus:ring-4 focus:ring-[#263B95]/30"
-                    >
-                        Get the App
-                    </a>
-                </div>
-
-            </div>
-        </section>
-    );
+          {/* Button */}
+          <a
+            href="#get-the-app"
+            className="flex-shrink-0 inline-flex items-center justify-center
+                       h-14 md:h-16 px-10
+                       rounded-[62px] bg-brand
+                       text-text-onBrand font-bold
+                       text-xl md:text-2xl tracking-[0.33em]
+                       whitespace-nowrap hover:opacity-95
+                       focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          >
+            Get the App
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }

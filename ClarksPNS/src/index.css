@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Load Oswald (variable or specific weights) */
+@import "@fontsource/oswald/400.css";
+@import "@fontsource/oswald/500.css";
+@import "@fontsource/oswald/600.css";
 
-html { scroll-behavior: smooth; }
-:root { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+/* If you prefer the variable font instead:
+@import "@fontsource/oswald/variable.css";
+*/
 
-
-/* simple menu icon fallback */
-.i-lucide-menu { display:inline-block; width:1.25rem; height:1.25rem; border-top:2px solid currentColor; border-bottom:2px solid currentColor; position:relative; }
-.i-lucide-menu::after { content:""; position:absolute; top:50%; left:0; right:0; border-top:2px solid currentColor; transform:translateY(-50%); }
+/* Optional: global defaults */
+:root {
+  color-scheme: light;
+}
+html, body, #root {
+  height: 100%;
+  background: theme('colors.surface.DEFAULT');
+  color: theme('colors.text.DEFAULT');
+  font-family: theme('fontFamily.sans');
+}
