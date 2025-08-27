@@ -7,6 +7,6 @@ html { scroll-behavior: smooth; }
 :root { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 
-/* Simple "menu" icon fallback */
+/* simple menu icon fallback */
 .i-lucide-menu { display:inline-block; width:1.25rem; height:1.25rem; border-top:2px solid currentColor; border-bottom:2px solid currentColor; position:relative; }
 .i-lucide-menu::after { content:""; position:absolute; top:50%; left:0; right:0; border-top:2px solid currentColor; transform:translateY(-50%); }
