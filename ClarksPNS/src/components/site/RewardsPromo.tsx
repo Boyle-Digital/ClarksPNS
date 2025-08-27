@@ -8,14 +8,7 @@ export default function RewardsPromo() {
 
             {/* White background full width */}
             <div className="relative z-[1] w-full h-64 bg-white overflow-hidden flex items-center justify-center px-6 md:px-10">
-                {/* Phone image on left
-                <div className="relative h-full flex-shrink-0">
-                    <img
-                        src="/clarksrewards.jpg"
-                        alt="Clarks Rewards app preview"
-                        className="h-[410px] w-auto relative bottom-[-40px]"
-                    />
-                </div> */}
+                
 
                 {/* Text + button on right */}
                 <div className="relative z-[1] w-full h-64 bg-white overflow-hidden flex items-center px-6 md:px-10">
