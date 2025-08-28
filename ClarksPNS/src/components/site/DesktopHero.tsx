@@ -1,5 +1,5 @@
 import React from "react";
-import bgVideo from "@/assets/videos/051425_clarkssecret_30_v1 (1).mp4";
+import bgVideo from "@/assets/videos/clarkssecret_1080.mp4";
 
 export function DesktopHero() {
   return (
