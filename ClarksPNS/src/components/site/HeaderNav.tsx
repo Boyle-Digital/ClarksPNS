@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MobileMenuDrawer from "./MobileMenuDrawer";
-import logoUrl from "@/assets/clarks-logo.png";
+import logoUrl from "@/assets/images/clarks-logo.png";
 import HamburgerIcon from "@/assets/icons/hamburger.svg?react";
 
 type HeaderNavProps = {

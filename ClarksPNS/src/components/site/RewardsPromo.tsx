@@ -1,4 +1,4 @@
-import rewardsImg from "@/assets/clarksrewards.jpg";
+import rewardsImg from "@/assets/images/clarksrewards.jpg";
 
 export default function RewardsPromo() {
   return (

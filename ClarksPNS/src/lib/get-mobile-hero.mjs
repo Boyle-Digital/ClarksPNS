@@ -58,9 +58,9 @@ async function main() {
 
   console.log(
     `\nImport example (JPG fallback):\n` +
-      `  import phone640 from "@/assets/phone-640.jpg";\n` +
-      `  import phone960 from "@/assets/phone-960.jpg";\n` +
-      `  import phone1440 from "@/assets/phone-1440.jpg";\n`
+      `  import phone640 from "@/assets/images/phone-640.jpg";\n` +
+      `  import phone960 from "@/assets/images/phone-960.jpg";\n` +
+      `  import phone1440 from "@/assets/images/phone-1440.jpg";\n`
   );
 }
 

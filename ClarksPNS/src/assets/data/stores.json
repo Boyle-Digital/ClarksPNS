@@ -1,0 +1,2251 @@
+{
+  "1": {
+    "name": "Westwood",
+    "address": "1805 Main Street",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41102.0",
+    "phone": "(606) 393-1121",
+    "food_programs": "KK/GG/H54",
+    "brand": "ARCO",
+    "store_hours": {
+      "total_hours": "122",
+      "hours": {
+        "sun": "7-11",
+        "mon": "5-11",
+        "tues": "5-11",
+        "wed": "5-11",
+        "thur": "5-11",
+        "fri": "5-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "2": {
+    "name": "Catlettsburg",
+    "address": "900 Center Street",
+    "city": "Catlettsburg",
+    "state": "KY",
+    "zip": "41129.0",
+    "phone": "(606) 363-7022",
+    "food_programs": "Café/GG/H54",
+    "brand": "ARCO",
+    "store_hours": {
+      "total_hours": "113",
+      "hours": {
+        "sun": "7-10",
+        "mon": "5-10",
+        "tues": "5-10",
+        "wed": "5-10",
+        "thur": "5-10",
+        "fri": "5-10",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "3": {
+    "name": "Greenup",
+    "address": "1024 Seaton Avenue",
+    "city": "Greenup",
+    "state": "KY",
+    "zip": "41144.0",
+    "phone": "(606)498-5986",
+    "food_programs": "KK/GG/H54",
+    "brand": "ARCO",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "5": {
+    "name": "Greenup",
+    "address": "1735 Ashland Road",
+    "city": "Greenup",
+    "state": "KY",
+    "zip": "41144.0",
+    "phone": "(606)254-0492",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "105",
+      "hours": {
+        "sun": "7-9",
+        "mon": "6-9",
+        "tues": "6-9",
+        "wed": "6-9",
+        "thur": "6-9",
+        "fri": "6-10",
+        "sat": "7-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "6": {
+    "name": "Wayne",
+    "address": "10045 Rt 152",
+    "city": "Wayne",
+    "state": "WV",
+    "zip": "25570.0",
+    "phone": "(304) 803-7219",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "7": {
+    "name": "Oak Hill",
+    "address": "199 N Jackson St.",
+    "city": "Oak Hill",
+    "state": "OH",
+    "zip": "45656.0",
+    "phone": "(740)932-4014",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "126",
+      "hours": {
+        "sun": "5-11",
+        "mon": "5-11",
+        "tues": "5-11",
+        "wed": "5-11",
+        "thur": "5-11",
+        "fri": "5-11",
+        "sat": "5-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "8": {
+    "name": "Diederich",
+    "address": "1000 Diederich Blvd",
+    "city": "Russell",
+    "state": "KY",
+    "zip": "41169.0",
+    "phone": "(606) 833-2634",
+    "brand": "ARCO",
+    "store_hours": {
+      "total_hours": "119",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "9": {
+    "name": "West Hamlin",
+    "address": "5742 McClellan HWY",
+    "city": "Branchland",
+    "state": "WV",
+    "zip": "25506.0",
+    "phone": "(304) 824-7740",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "110",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-10",
+        "sat": "7-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "10": {
+    "name": "Jackson",
+    "address": "90 Twin Oaks Drive",
+    "city": "Jackson",
+    "state": "OH",
+    "zip": "45640.0",
+    "phone": "(740)577-3382",
+    "food_programs": "Champs/GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "11": {
+    "name": "Hal Greer",
+    "address": "1587 Hal Greer Blvd",
+    "city": "Huntington",
+    "state": "WV",
+    "zip": "25701.0",
+    "phone": "(304) 803.7257",
+    "brand": "ARCO",
+    "store_hours": {
+      "total_hours": "113",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "13": {
+    "name": "Fraziers Bottom",
+    "address": "17513 Winfield Road",
+    "city": "Winfield",
+    "state": "WV",
+    "zip": "25213.0",
+    "phone": "(304) 937-3838",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "115",
+      "hours": {
+        "sun": "7.10",
+        "mon": "5-10",
+        "tues": "5-10",
+        "wed": "5-10",
+        "thur": "5-10",
+        "fri": "5-10",
+        "sat": "7-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "15": {
+    "name": "Lavalette",
+    "address": "4790 St Rt 152",
+    "city": "Lavalette",
+    "state": "WV",
+    "zip": "25535.0",
+    "phone": "(304) 803-7253",
+    "brand": "ARCO",
+    "store_hours": {
+      "total_hours": "111",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-10",
+        "sat": "6-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "18": {
+    "name": "Flemingsburg",
+    "address": "150  East Water St",
+    "city": "Flemingsburg",
+    "state": "KY",
+    "zip": "41041.0",
+    "phone": "(606) 363-0492",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "113",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "19": {
+    "name": "McArthur",
+    "address": "301 S. Market St",
+    "city": "McArthur",
+    "state": "OH",
+    "zip": "45651.0",
+    "phone": "(220) 201-7910",
+    "food_programs": "KK/H54",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "124",
+      "hours": {
+        "sun": "7-11",
+        "mon": "6-11",
+        "tues": "6-11",
+        "wed": "6-11",
+        "thur": "6-11",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "20": {
+    "name": "South Point",
+    "address": "132 Co Rd 450",
+    "city": "So. Point",
+    "state": "OH",
+    "zip": "45680.0",
+    "phone": "(740) 523-0074",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "21": {
+    "name": "JF Clark",
+    "address": "12649 US 60",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41102.0",
+    "phone": "(606)498-5982",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "112",
+      "hours": {
+        "sun": "6-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-10",
+        "sat": "6-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "23": {
+    "name": "13th Street",
+    "address": "3354 13th Street",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41102.0",
+    "phone": "(606) 324-5288",
+    "food_programs": "GG",
+    "brand": "ARCO",
+    "store_hours": {
+      "total_hours": "119",
+      "hours": {
+        "sun": "6-11",
+        "mon": "6-11",
+        "tues": "6-11",
+        "wed": "6-11",
+        "thur": "6-11",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "24": {
+    "name": "Huntington",
+    "address": "4430 Ohio River Rd",
+    "city": "Huntington",
+    "state": "WV",
+    "zip": "25702.0",
+    "phone": "(681) 258-8186",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "112",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "25": {
+    "name": "Proctorville",
+    "address": "7575 St Rt 7",
+    "city": "Proctorville",
+    "state": "OH",
+    "zip": "45669.0",
+    "phone": "(220) 204-5507",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "111",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-10",
+        "sat": "6-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "26": {
+    "name": "Chesapeake",
+    "address": "2927 Co Rd 44",
+    "city": "So. Point",
+    "state": "OH",
+    "zip": "45680.0",
+    "phone": "(740) 451-4100",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "104",
+      "hours": {
+        "sun": "8-10",
+        "mon": "7-10",
+        "tues": "7-10",
+        "wed": "7-10",
+        "thur": "7-10",
+        "fri": "7-10",
+        "sat": "7-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "28": {
+    "name": "West Liberty",
+    "address": "607 N. Main St",
+    "city": "West Liberty",
+    "state": "KY",
+    "zip": "41472.0",
+    "phone": "(606) 743-2842",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "120",
+      "hours": {
+        "sun": "6-10",
+        "mon": "5-10",
+        "tues": "5-10",
+        "wed": "5-10",
+        "thur": "5-10",
+        "fri": "5-11",
+        "sat": "5-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "30": {
+    "name": "Rio Grande",
+    "address": "11381 St Rt 588",
+    "city": "Rio Grande",
+    "state": "OH",
+    "zip": "45674.0",
+    "phone": "(740) 245-1211",
+    "food_programs": "GG",
+    "brand": "BP",
+    "store_hours": {
+      "total_hours": "114",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "32": {
+    "name": "Burnaugh",
+    "address": "28583 US 23",
+    "city": "Catlettsburg",
+    "state": "KY",
+    "zip": "41129.0",
+    "phone": "(606) 739-6055",
+    "food_programs": "Café/H54",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "33": {
+    "name": "Wheelersburg",
+    "address": "312 Center St",
+    "city": "Wheelersburg",
+    "state": "OH",
+    "zip": "45694.0",
+    "phone": "(740) 574-5655",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "34": {
+    "name": "Portsmouth",
+    "address": "3008 Scioto Trail",
+    "city": "Portsmouth",
+    "state": "OH",
+    "zip": "45662.0",
+    "phone": "(220) 204-5488",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "36": {
+    "name": "North Broadway",
+    "address": "1971 North Broadway",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40505.0",
+    "phone": "(859) 739-3515",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "37": {
+    "name": "Ironton",
+    "address": "824 Park Ave",
+    "city": "Ironton",
+    "state": "OH",
+    "zip": "45638.0",
+    "phone": "(220) 204-5502",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "129",
+      "hours": {
+        "sun": "7-11",
+        "mon": "5-12",
+        "tues": "5-12",
+        "wed": "5-12",
+        "thur": "5-12",
+        "fri": "5-12",
+        "sat": "6-12"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "38": {
+    "name": "Proctorville",
+    "address": "6288 St. Rt 7",
+    "city": "Proctorville",
+    "state": "OH",
+    "zip": "45669.0",
+    "phone": "(220) 204-5492",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "114",
+      "hours": {
+        "sun": "6-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "39": {
+    "name": "Waverly",
+    "address": "506 E Emmitt",
+    "city": "Waverly",
+    "state": "OH",
+    "zip": "45690.0",
+    "phone": "(740) 835-8150",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "111",
+      "hours": {
+        "sun": "8-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "40": {
+    "name": "South Shore",
+    "address": "28248 US 23",
+    "city": "South Shore",
+    "state": "KY",
+    "zip": "41175.0",
+    "phone": "(606)498-4212",
+    "food_programs": "KK/GG/H54",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "115",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-11",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "41": {
+    "name": "Piketon",
+    "address": "833 Beaver Creek Rd",
+    "city": "Piketon",
+    "state": "OH",
+    "zip": "45661.0",
+    "phone": "(220) 201-5476",
+    "food_programs": "Café",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "122",
+      "hours": {
+        "sun": "7-10",
+        "mon": "5-11",
+        "tues": "5-11",
+        "wed": "5-11",
+        "thur": "5-11",
+        "fri": "5-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "42": {
+    "name": "Route 3",
+    "address": "2250 St. Rt 3",
+    "city": "Catlettsburg",
+    "state": "KY",
+    "zip": "41129.0",
+    "phone": "(606)585-0028",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "116",
+      "hours": {
+        "sun": "7-10",
+        "mon": "5-10",
+        "tues": "5-10",
+        "wed": "5-10",
+        "thur": "5-10",
+        "fri": "5-10",
+        "sat": "6-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "43": {
+    "name": "Greenup Ave",
+    "address": "3000 Greenup Ave",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41101.0",
+    "phone": "606)393-1164.",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "118",
+      "hours": {
+        "sun": "6-10",
+        "mon": "6-11",
+        "tues": "6-11",
+        "wed": "6-11",
+        "thur": "6-11",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "44": {
+    "name": "Russell Cave",
+    "address": "313 West New Circle Rd.",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40502.0",
+    "phone": "(859) 444-6227",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "45": {
+    "name": "Rosemount Rd",
+    "address": "1701 State Route 139",
+    "city": "Portsmouth",
+    "state": "OH",
+    "zip": "45662.0",
+    "phone": "(740) 876-4103",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "116",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-11",
+        "tues": "6-11",
+        "wed": "6-11",
+        "thur": "6-11",
+        "fri": "6-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "46": {
+    "name": "University Mart",
+    "address": "1813 Liberty Ave.",
+    "city": "Ironton",
+    "state": "OH",
+    "zip": "45638.0",
+    "phone": "(740) 533-2309",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "109",
+      "hours": {
+        "sun": "8-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-10",
+        "sat": "7-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "47": {
+    "name": "Vanceburg",
+    "address": "67 Commercial Drive",
+    "city": "Vanceburg",
+    "state": "KY",
+    "zip": "41179.0",
+    "phone": "(606)363-7023",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "49": {
+    "name": "Greenhills",
+    "address": "373 St Rt. 716",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41102.0",
+    "phone": "(606) 928-4455",
+    "food_programs": "KK/H54",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "112",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-10",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "50": {
+    "name": "Stroble",
+    "address": "5197 State Route 141",
+    "city": "Ironton",
+    "state": "OH",
+    "zip": "45638.0",
+    "phone": "(220) 204-4054",
+    "food_programs": "Café",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "112",
+      "hours": {
+        "sun": "6-10",
+        "mon": "5-10",
+        "tues": "5-10",
+        "wed": "5-10",
+        "thur": "5-10",
+        "fri": "5-10",
+        "sat": "6-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "51": {
+    "name": "Piedmont Pantry",
+    "address": "4408 Piedmont Road",
+    "city": "Huntington",
+    "state": "WV",
+    "zip": "25704.0",
+    "phone": "(304) 719-4297",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "115",
+      "hours": {
+        "sun": "8-10",
+        "mon": "6-11",
+        "tues": "6-11",
+        "wed": "6-11",
+        "thur": "6-11",
+        "fri": "6-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "52": {
+    "name": "Grayson",
+    "address": "311 N. Carol Malone",
+    "city": "Grayson",
+    "state": "KY",
+    "zip": "41143.0",
+    "phone": "(606) 498-5983",
+    "brand": "ARCO",
+    "store_hours": {
+      "total_hours": "113",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "53": {
+    "name": "Clays Mill Rd",
+    "address": "3334 Clays Mill Road",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40503.0",
+    "phone": "(859)523-6606",
+    "food_programs": "KK/GG/H54",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "117",
+      "hours": {
+        "sun": "7-11",
+        "mon": "6-11",
+        "tues": "6-11",
+        "wed": "6-11",
+        "thur": "6-11",
+        "fri": "6-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "54": {
+    "store_hours": {
+      "total_hours": "113",
+      "hours": {
+        "sun": "7-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "55": {
+    "name": "Portsmouth",
+    "address": "2626 Gallia St",
+    "city": "Portsmouth",
+    "state": "OH",
+    "zip": "45662.0",
+    "phone": "(740) 353-1381",
+    "food_programs": "GG",
+    "brand": "BP",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "56": {
+    "name": "Olive Hill",
+    "address": "10824 West US 60",
+    "city": "Olive Hill",
+    "state": "Ky",
+    "zip": "41164.0",
+    "phone": "(606) 286-0264",
+    "food_programs": "Coopers/GG/H54/IC",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "57": {
+    "name": "Winchester Road",
+    "address": "922 Detroit Ave",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40505.0",
+    "phone": "(606)254-0486",
+    "food_programs": "KK/GG/H54",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "120",
+      "hours": {
+        "sun": "7-11",
+        "mon": "6-11",
+        "tues": "6-11",
+        "wed": "6-11",
+        "thur": "6-12",
+        "fri": "6-12",
+        "sat": "7-12"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "58": {
+    "name": "Exit 181",
+    "address": "1965 US Route 60",
+    "city": "Rush",
+    "state": "KY",
+    "zip": "41168.0",
+    "phone": "(606) 928-8175",
+    "food_programs": "Café/GG",
+    "brand": "ARCO",
+    "alt_hours": {
+      "total_hours": "116.0",
+      "hours": {
+        "sun": "7-10",
+        "mon": "5-10",
+        "tues": "5-10",
+        "wed": "5-10",
+        "thur": "5-10",
+        "fri": "5-10",
+        "sat": "6-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "59": {
+    "name": "Versailles Rd",
+    "address": "1419 Versailles Rd",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40504.0",
+    "phone": "(859)303-4543",
+    "food_programs": "KK/GG/H54",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "7-12",
+        "mon": "6-12",
+        "tues": "6-12",
+        "wed": "6-12",
+        "thur": "6-12",
+        "fri": "6-1",
+        "sat": "7-1"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "60": {
+    "name": "Coal Grove",
+    "address": "409 Marion Pike",
+    "city": "Coal Grove",
+    "state": "OH",
+    "zip": "45637.0",
+    "phone": "(740) 532-7442",
+    "brand": "UNBRANDED",
+    "alt_hours": {
+      "total_hours": "111.0",
+      "hours": {
+        "sun": "8-10",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "70": {
+    "alt_hours": {
+      "total_hours": "103.0",
+      "hours": {
+        "sun": "8-9",
+        "mon": "6-9",
+        "tues": "6-9",
+        "wed": "6-9",
+        "thur": "6-9",
+        "fri": "6-9",
+        "sat": "7-9"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "71": {
+    "name": "29th Street",
+    "address": "1920 29th St",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41101.0",
+    "phone": "(606) 329-8784",
+    "food_programs": "Café/GG/Champs/H54",
+    "brand": "ARCO",
+    "alt_hours": {
+      "total_hours": "124.0",
+      "hours": {
+        "sun": "6-11",
+        "mon": "5-11",
+        "tues": "5-11",
+        "wed": "5-11",
+        "thur": "5-11",
+        "fri": "5-11",
+        "sat": "6-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "72": {
+    "name": "Lloyd",
+    "address": "1233 KY 10",
+    "city": "Greenup",
+    "state": "KY",
+    "zip": "41144.0",
+    "phone": "(606) 473-7080",
+    "food_programs": "Champs/GG/H54/IC",
+    "brand": "Marathon",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "73": {
+    "name": "Clarks Café",
+    "address": "Donta Road",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41105.0",
+    "phone": "(606)922-6073",
+    "food_programs": "Café",
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "75": {
+    "name": "Rush",
+    "address": "9822 E. US Highway 60",
+    "city": "Rush",
+    "state": "KY",
+    "zip": "41168.0",
+    "phone": "(606) 498-5992",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "108.0",
+      "hours": {
+        "sun": "8-9",
+        "mon": "6-10",
+        "tues": "6-10",
+        "wed": "6-10",
+        "thur": "6-10",
+        "fri": "6-10",
+        "sat": "7-10"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "76": {
+    "name": "Lexington",
+    "address": "529 W Main St",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40507.0",
+    "phone": "(859)281-1008",
+    "food_programs": "Café/H54",
+    "alt_hours": {
+      "total_hours": "104.0",
+      "hours": {
+        "sun": "7-9",
+        "mon": "7-9",
+        "tues": "7-9",
+        "wed": "7-9",
+        "thur": "7-11",
+        "fri": "7-11",
+        "sat": "7-11"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "77": {
+    "name": "Midway",
+    "address": "300 Lacefield St",
+    "city": "Midway",
+    "state": "KY",
+    "zip": "40347.0",
+    "phone": "(859)403-2028",
+    "food_programs": "Coopers",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "78": {
+    "name": "Bethel",
+    "address": "100 Bethel Harvest Drive",
+    "city": "Nicholsville",
+    "state": "KY",
+    "zip": "40356.0",
+    "phone": "(859)309-0075",
+    "food_programs": "KK",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "79": {
+    "name": "Sandersville Rd.",
+    "address": "2670 Sandersville Rd",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511.0",
+    "phone": "(859)303-4378",
+    "food_programs": "KK",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "80": {
+    "alt_hours": {
+      "total_hours": "120.0",
+      "hours": {
+        "sun": "7-11",
+        "mon": "6-11",
+        "tues": "6-11",
+        "wed": "6-11",
+        "thur": "6-11",
+        "fri": "6-12",
+        "sat": "6-12"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "81": {
+    "name": "Winchester",
+    "address": "201 N Main St",
+    "city": "Winchester",
+    "state": "KY",
+    "zip": "40391.0",
+    "phone": "(606) 229-5606",
+    "food_programs": "KK/GG/H54",
+    "brand": "ARCO",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "82": {
+    "name": "Georgetown",
+    "address": "381 Cherry Blossom Way",
+    "city": "Georgetown",
+    "state": "KY",
+    "zip": "40324.0",
+    "phone": "(502) 642-4479",
+    "food_programs": "KK/GG/H54/IC",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "83": {
+    "name": "Georgetown",
+    "address": "2001 Paris Pike",
+    "city": "Georgetown",
+    "state": "KY",
+    "zip": "40324.0",
+    "phone": "(502) 603-8284",
+    "food_programs": "Café/GG/H54",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "84": {
+    "name": "Connector Rd",
+    "address": "480 Connector Rd",
+    "city": "Georgetown",
+    "state": "KY",
+    "zip": "40324.0",
+    "phone": "(502)385-5087",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "85": {
+    "name": "Canewood",
+    "address": "100 Canewood Ctr Dr",
+    "city": "Georgetown",
+    "state": "KY",
+    "zip": "40324.0",
+    "phone": "(502) 642-4583",
+    "food_programs": "KK",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "125.0",
+      "hours": {
+        "sun": "7-11",
+        "mon": "5-11",
+        "tues": "5-11",
+        "wed": "5-11",
+        "thur": "5-11",
+        "fri": "5-12",
+        "sat": "6-12"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "86": {
+    "name": "Versailles",
+    "address": "3590 Lexington Rd",
+    "city": "Versailles",
+    "state": "KY",
+    "zip": "40383.0",
+    "phone": "(859) 215-8139",
+    "food_programs": "GG",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "126.0",
+      "hours": {
+        "sun": "6-10",
+        "mon": "5-11",
+        "tues": "5-11",
+        "wed": "5-11",
+        "thur": "5-12",
+        "fri": "5-12",
+        "sat": "6-12"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "87": {
+    "name": "Lucille Dr.",
+    "address": "100 Lucille Dr",
+    "city": "Lexington",
+    "state": "Ky",
+    "zip": "40511.0",
+    "phone": "(859)469-8022",
+    "food_programs": "KK",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "88": {
+    "name": "Frankfort",
+    "address": "100 Isaac Shelby Cir W",
+    "city": "Frankfort",
+    "state": "Ky",
+    "zip": "40601.0",
+    "phone": "(502)352-9513",
+    "food_programs": "KK/H54/IC",
+    "brand": "MARATHON",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "89": {
+    "name": "Berea",
+    "address": "274 Paint Lick Rd.",
+    "city": "Berea",
+    "state": "KY",
+    "zip": "40403.0",
+    "phone": "(859) 986-0173",
+    "brand": "ARCO",
+    "alt_hours": {
+      "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": false,
+      "beerSales": false,
+      "e85": false,
+      "diesel": false,
+      "kerosene": false,
+      "open24Hours": false,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  }
+}

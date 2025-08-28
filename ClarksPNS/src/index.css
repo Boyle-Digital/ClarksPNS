@@ -40,6 +40,7 @@
 
 /* ---------- Components (reusable UI patterns) ---------- */
 @layer components {
+
   /* White rounded “pill” behind the header */
   .header-pill {
     @apply bg-surface shadow-soft rounded-b-2xl;
@@ -56,25 +57,20 @@
   }
 
   /* Icon-only buttons (hamburger/close) */
-  .icon-btn {
-    @apply h-11 w-11 grid place-items-center rounded-md bg-transparent border-0 text-text hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
-  }
+  .icon-btn { @apply h-11 w-11 grid place-items-center rounded-md bg-transparent border-0 text-text hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white; }
+
 
   /* Drawer overlay + panel */
   .drawer-overlay {
     @apply absolute inset-0 bg-black/40 backdrop-blur-[1px];
   }
 
-  .drawer-panel {
-    @apply absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-surface text-text shadow-2xl p-4 pt-6;
-  }
+  .drawer-panel { @apply absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-surface text-text shadow-2xl p-4 pt-6; }
+
 
   /* Drawer link */
-  .drawer-link {
-    @apply rounded-xl px-4 py-3 text-base font-semibold
-         !text-text hover:bg-neutral-100
-         focus:outline-none focus:ring-2 focus:ring-black/20;
-  }
+  .drawer-link { @apply rounded-xl px-4 py-3 text-base font-semibold text-text hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-black/20; }
+
 
   /* Desktop nav link */
   .nav-link {
