@@ -1,23 +1,87 @@
+/* Load Oswald (variable or specific weights) */
+@import '@fontsource/oswald/400.css';
+@import '@fontsource/oswald/500.css';
+@import '@fontsource/oswald/600.css';
+/* Or: @import "@fontsource/oswald/variable.css"; */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Load Oswald (variable or specific weights) */
-@import "@fontsource/oswald/400.css";
-@import "@fontsource/oswald/500.css";
-@import "@fontsource/oswald/600.css";
+/* ---------- Base (tokens + global defaults) ---------- */
+@layer base {
+  :root {
+    color-scheme: light;
 
-/* If you prefer the variable font instead:
-@import "@fontsource/oswald/variable.css";
-*/
+    /* Safe areas for iOS notches */
+    --safe-top: env(safe-area-inset-top);
+    --safe-bottom: env(safe-area-inset-bottom);
+  }
 
-/* Optional: global defaults */
-:root {
-  color-scheme: light;
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  /* Use your Tailwind tokens via @apply instead of theme() */
+  body {
+    @apply bg-surface text-text font-sans;
+  }
+
+  .header-safe {
+    padding-top: max(0.25rem, var(--safe-top));
+  }
+
+  .footer-safe {
+    padding-bottom: max(0.5rem, var(--safe-bottom));
+  }
 }
-html, body, #root {
-  height: 100%;
-  background: theme('colors.surface.DEFAULT');
-  color: theme('colors.text.DEFAULT');
-  font-family: theme('fontFamily.sans');
+
+/* ---------- Components (reusable UI patterns) ---------- */
+@layer components {
+  /* White rounded “pill” behind the header */
+  .header-pill {
+    @apply bg-surface shadow-soft rounded-b-2xl;
+  }
+
+  /* Mobile top bar (logo • title • hamburger) */
+  .mobile-header-bar {
+    @apply h-16 grid grid-cols-[auto_1fr_auto] items-center px-3;
+  }
+
+  /* Desktop 6-col nav grid */
+  .desktop-nav-grid {
+    @apply grid grid-cols-6 place-items-center gap-2;
+  }
+
+  /* Icon-only buttons (hamburger/close) */
+  .icon-btn {
+    @apply h-11 w-11 grid place-items-center rounded-md bg-transparent border-0 text-text hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+
+  /* Drawer overlay + panel */
+  .drawer-overlay {
+    @apply absolute inset-0 bg-black/40 backdrop-blur-[1px];
+  }
+
+  .drawer-panel {
+    @apply absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-surface text-text shadow-2xl p-4 pt-6;
+  }
+
+  /* Drawer link */
+  .drawer-link {
+    @apply rounded-xl px-4 py-3 text-base font-semibold
+         !text-text hover:bg-neutral-100
+         focus:outline-none focus:ring-2 focus:ring-black/20;
+  }
+
+  /* Desktop nav link */
+  .nav-link {
+    @apply inline-block text-nav text-center py-2 hover:text-brand;
+  }
+
+  .nav-link-active {
+    @apply text-brand;
+  }
 }
