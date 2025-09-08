@@ -6,67 +6,68 @@ export default function CarWash() {
   return (
     <main className="w-full overflow-x-clip bg-white">
       {/* === Hero (no video/image) === */}
-      <section
-        aria-label="Clarks Car Wash"
-        className="
-          relative isolate w-full
-          bg-gradient-to-br from-white via-white to-neutral-50
-        "
-      >
-        {/* Decorative background stripes (no assets) */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={{
-            background:
-              "repeating-linear-gradient(135deg, #0ea5e9 0 2px, transparent 2px 24px)",
-            // If your brand token is different, swap the hex above.
-          }}
-        />
-        {/* Subtle radial glow */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -inset-40 rounded-[64px] blur-3xl bg-brand/10"
-        />
+<section
+  aria-label="Clarks Car Wash"
+  className="
+    relative isolate z-0 w-full           
+    -mt-[16px] md:-mt-[20px]           
+    bg-gradient-to-br from-white via-white to-neutral-50
+  "
+>
+  {/* Decorative background stripes (no assets) */}
+  <div
+    aria-hidden
+    className="pointer-events-none absolute inset-0 opacity-[0.08]"
+    style={{
+      background:
+        "repeating-linear-gradient(135deg, #0ea5e9 0 2px, transparent 2px 24px)",
+    }}
+  />
+  {/* Subtle radial glow */}
+  <div
+    aria-hidden
+    className="pointer-events-none absolute -inset-40 rounded-[64px] blur-3xl bg-brand/10"
+  />
 
-        <div className="relative z-[1]">
-          <div className="container mx-auto px-6 md:px-10">
-            <div className="flex min-h-[56vh] md:min-h-[72vh] items-center">
-              <div className="inline-flex flex-col gap-4 md:gap-6 max-w-[760px]">
-                <h1 className="font-['Oswald'] font-bold text-black text-4xl md:text-6xl leading-tight">
-                  Clarks Car Wash
-                </h1>
-                <p className="text-black/70 text-lg md:text-2xl max-w-prose">
-                  Fast lanes. Gentle clean. Showroom shine—every time. Link your
-                  Rewards account for member pricing and bonus points.
-                </p>
+  <div className="relative z-[1] pt-[16px] md:pt-[20px]">   {/* counter the negative margin */}
+    <div className="container mx-auto px-6 md:px-10">
+      <div className="flex min-h-[56vh] md:min-h-[72vh] items-center">
+        <div className="inline-flex flex-col gap-4 md:gap-6 max-w-[760px]">
+          <h1 className="font-['Oswald'] font-bold text-black text-4xl md:text-6xl leading-tight">
+            Clarks Car Wash
+          </h1>
+          <p className="text-black/70 text-lg md:text-2xl max-w-prose">
+            Fast lanes. Gentle clean. Showroom shine—every time. Link your
+            Rewards account for member pricing and bonus points.
+          </p>
 
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <a
-                    href="#packages"
-                    className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/20 text-base md:text-lg"
-                  >
-                    View Packages
-                  </a>
-                  <Link
-                    to="/clarks-rewards"
-                    className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-neutral-100 hover:bg-neutral-200 transition-all text-base md:text-lg"
-                  >
-                    Save with Rewards
-                  </Link>
-                </div>
-
-                <div className="mt-2 text-xs text-black/50">
-                  Members get discounted washes and occasional free upgrades.
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a
+              href="#packages"
+              className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/20 text-base md:text-lg"
+            >
+              View Packages
+            </a>
+            <Link
+              to="/clarks-rewards"
+              className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-neutral-100 hover:bg-neutral-200 transition-all text-base md:text-lg"
+            >
+              Save with Rewards
+            </Link>
           </div>
 
-          {/* angled divider into next section */}
-          <div className="h-10 md:h-14 w-full bg-gradient-to-b from-transparent to-white" />
+          <div className="mt-2 text-xs text-black/50">
+            Members get discounted washes and occasional free upgrades.
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* angled divider into next section */}
+    <div className="h-10 md:h-14 w-full bg-gradient-to-b from-transparent to-white" />
+  </div>
+</section>
+
 
       {/* === Benefits === */}
       <section aria-label="Car Wash Benefits" className="py-12 md:py-20 bg-white">

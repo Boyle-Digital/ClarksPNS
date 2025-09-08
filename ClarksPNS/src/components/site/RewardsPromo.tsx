@@ -33,12 +33,12 @@ export default function RewardsPromo() {
           <a
             href="#get-the-app"
             className="flex-shrink-0 inline-flex items-center justify-center
-                       h-14 md:h-16 px-10
-                       rounded-[62px] bg-brand
-                       text-text-onBrand font-bold
-                       text-xl md:text-2xl tracking-[0.33em]
-                       whitespace-nowrap hover:opacity-95
-                       focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                      h-14 md:h-16 px-10
+                      rounded-[62px] bg-brand
+                      text-text-onBrand font-bold
+                      text-xl md:text-2xl tracking-[0.33em]
+                      whitespace-nowrap hover:opacity-95
+                      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             Get the App
           </a>
