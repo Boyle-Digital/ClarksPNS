@@ -1,7 +1,8 @@
 // src/pages/Locations.tsx
 import React from "react";
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
-import storesJson from "@/assets/data/stores.json";
+// ⬇️ use the precomputed file
+import storesJson from "@/assets/data/stores.geocoded.json";
 
 // ---------- Types for stores.json ----------
 export type Amenities = {
@@ -32,12 +33,21 @@ export type StoreEntry = {
   store_hours?: StoreHours;
   alt_hours?: StoreHours;
   amenities?: Amenities;
+
+  // ⬇️ new: precomputed coordinates from your build script
+  lat?: number;
+  lng?: number;
+  __addr?: string; // internal marker written by the script (safe to ignore in UI)
 };
 
 export type StoresMap = Record<string, StoreEntry>;
 
 // (optional, for Marker icon typing later)
-declare global { interface Window { google: any } }
+declare global {
+  interface Window {
+    google: any;
+  }
+}
 
 // Safe default used when a store has no amenities in JSON
 const DEFAULT_AMENITIES: Amenities = {
@@ -78,6 +88,8 @@ function haversineMiles(a: LatLng, b: LatLng): number {
 function directionsLink(addr: string) {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(addr)}`;
 }
+
+// Keep a tiny geocoder ONLY for the user's search input
 function encodeCacheKey(label: string) {
   return `geo:${label.trim().toLowerCase()}`;
 }
@@ -110,33 +122,19 @@ export default function Locations() {
   const [userPoint, setUserPoint] = React.useState<LatLng | null>(null);
   const [markers, setMarkers] = React.useState<Record<string, LatLng>>({});
   const [selectedStore, setSelectedStore] = React.useState<string | null>(null);
-  const [isGeocodingAll, setIsGeocodingAll] = React.useState(false);
 
-  // Geocode all stores (cached)
+  // ⬇️ NEW: initialize markers instantly from precomputed lat/lng
   React.useEffect(() => {
-    if (!GOOGLE_KEY || isGeocodingAll) return;
-    let cancelled = false;
-    (async () => {
-      setIsGeocodingAll(true);
-      const acc: Record<string, LatLng> = {};
-      const entries = Object.entries(stores);
-      for (let i = 0; i < entries.length; i++) {
-        const [id, s] = entries[i];
-        const addr = fullAddress(s);
-        if (addr) {
-          const loc = await geocodeAddress(addr, GOOGLE_KEY);
-          if (cancelled) return;
-          if (loc) acc[id] = loc;
-        }
-        if (i % 5 === 4) await new Promise((r) => setTimeout(r, 1000)); // gentle rate-limit
+    const acc: Record<string, LatLng> = {};
+    for (const [id, s] of Object.entries(stores)) {
+      if (typeof s.lat === "number" && typeof s.lng === "number") {
+        acc[id] = { lat: s.lat, lng: s.lng };
       }
-      if (!cancelled) setMarkers((m) => ({ ...m, ...acc }));
-      setIsGeocodingAll(false);
-    })();
-    return () => { cancelled = true; };
+    }
+    setMarkers(acc);
   }, [stores]);
 
-  // Geocode user input
+  // Geocode user input (only)
   const handleSearch = async (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!GOOGLE_KEY || !address.trim()) return;
@@ -204,13 +202,19 @@ export default function Locations() {
                     aria-label="Search radius"
                   >
                     {[10, 25, 50, 100].map((mi) => (
-                      <option key={mi} value={mi}>{mi} miles</option>
+                      <option key={mi} value={mi}>
+                        {mi} miles
+                      </option>
                     ))}
                   </select>
                   <button type="submit" className="rounded-xl bg-brand text-white px-5 py-3 hover:bg-brand/90 transition-colors">
                     Search
                   </button>
-                  <button type="button" onClick={handleUseMyLocation} className="rounded-xl bg-neutral-100 text-black px-4 py-3 hover:bg-neutral-200">
+                  <button
+                    type="button"
+                    onClick={handleUseMyLocation}
+                    className="rounded-xl bg-neutral-100 text-black px-4 py-3 hover:bg-neutral-200"
+                  >
                     Use my location
                   </button>
                 </div>
@@ -243,7 +247,10 @@ export default function Locations() {
                   const { id, entry, distance, addr } = r;
                   const a: Amenities = { ...DEFAULT_AMENITIES, ...(entry.amenities ?? {}) };
                   return (
-                    <article key={id} className="rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition-shadow">
+                    <article
+                      key={id}
+                      className="rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition-shadow"
+                    >
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <div className="font-['Oswald'] font-bold text-lg text-black">
@@ -282,14 +289,12 @@ export default function Locations() {
                       {/* Hours */}
                       {(entry.store_hours || entry.alt_hours) && (
                         <details className="mt-3 group">
-                          <summary className="cursor-pointer list-none text-sm font-semibold text-brand">View hours</summary>
+                          <summary className="cursor-pointer list-none text-sm font-semibold text-brand">
+                            View hours
+                          </summary>
                           <div className="mt-2 text-sm text-black/80">
-                            {entry.store_hours?.hours && (
-                              <HoursBlock title="Hours" hours={entry.store_hours.hours} />
-                            )}
-                            {entry.alt_hours?.hours && (
-                              <HoursBlock title="Alt Hours" hours={entry.alt_hours.hours} />
-                            )}
+                            {entry.store_hours?.hours && <HoursBlock title="Hours" hours={entry.store_hours.hours} />}
+                            {entry.alt_hours?.hours && <HoursBlock title="Alt Hours" hours={entry.alt_hours.hours} />}
                           </div>
                         </details>
                       )}
@@ -373,11 +378,7 @@ function MapCanvas({
     );
   }
   if (!isLoaded) {
-    return (
-      <div className="h-full w-full grid place-items-center text-black/60">
-        Loading map…
-      </div>
-    );
+    return <div className="h-full w-full grid place-items-center text-black/60">Loading map…</div>;
   }
 
   return (
@@ -416,12 +417,8 @@ function MapCanvas({
       {selectedStore && markers[selectedStore] && (
         <InfoWindow position={markers[selectedStore]} onCloseClick={() => setSelectedStore(null)}>
           <div className="max-w-[220px]">
-            <div className="font-semibold">
-              {stores[selectedStore]?.name || `Store #${selectedStore}`}
-            </div>
-            <div className="text-xs text-black/70">
-              {fullAddress(stores[selectedStore] || {})}
-            </div>
+            <div className="font-semibold">{stores[selectedStore]?.name || `Store #${selectedStore}`}</div>
+            <div className="text-xs text-black/70">{fullAddress(stores[selectedStore] || {})}</div>
             <a
               href={directionsLink(fullAddress(stores[selectedStore] || {}))}
               target="_blank"
@@ -439,7 +436,15 @@ function MapCanvas({
 
 function HoursBlock({ title, hours }: { title: string; hours: Record<string, string | undefined> }) {
   const order = ["sun", "mon", "tues", "wed", "thur", "fri", "sat"] as const;
-  const label: Record<(typeof order)[number], string> = { sun: "Sun", mon: "Mon", tues: "Tue", wed: "Wed", thur: "Thu", fri: "Fri", sat: "Sat" };
+  const label: Record<(typeof order)[number], string> = {
+    sun: "Sun",
+    mon: "Mon",
+    tues: "Tue",
+    wed: "Wed",
+    thur: "Thu",
+    fri: "Fri",
+    sat: "Sat",
+  };
   return (
     <div className="mt-1">
       <div className="font-semibold">{title}</div>
@@ -460,10 +465,7 @@ function HoursBlock({ title, hours }: { title: string; hours: Record<string, str
 function Amenity({ label, on }: { label: string; on: boolean }) {
   return (
     <li className="flex items-center gap-2">
-      <span
-        className={`inline-block h-2 w-2 rounded-full ${on ? "bg-brand" : "bg-neutral-300"}`}
-        aria-hidden
-      />
+      <span className={`inline-block h-2 w-2 rounded-full ${on ? "bg-brand" : "bg-neutral-300"}`} aria-hidden />
       <span className={on ? "text-black/90" : "text-black/50"}>{label}</span>
     </li>
   );
