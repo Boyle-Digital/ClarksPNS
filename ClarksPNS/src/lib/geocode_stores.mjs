@@ -2,21 +2,17 @@
 import fs from "node:fs/promises";
 import crypto from "node:crypto";
 
-// ── Load environment variables (local + vercel) ───────────────────────────────
+// ── Load env ──────────────────────────────────────────────────────────────────
 try {
-  // Prefer .env.local, then .env (both optional). This does nothing on Vercel.
   const { config } = await import("dotenv");
   config({ path: ".env.local", override: true });
   config({ path: ".env", override: false });
-} catch { /* dotenv not installed on prod; fine on Vercel */ }
+} catch { /* fine on Vercel */ }
 
-// Use your var name:
 const KEY = process.env.VITE_GOOGLE_MAPS_API_KEY;
-
 if (!KEY) {
   console.error("Missing VITE_GOOGLE_MAPS_API_KEY env var.");
-  console.error("• Locally: put it in .env.local (same folder as package.json)");
-  console.error("• Vercel: Project → Settings → Environment Variables");
+  console.error("• Locally: .env.local   • Vercel: Project → Settings → Environment Variables");
   process.exit(1);
 }
 
@@ -26,6 +22,7 @@ const STORES_OUT = "./src/assets/data/stores.geocoded.json";
 const FAIL_CSV   = "./src/assets/data/geocode_failures.csv";
 const PACE_EVERY = 5;
 const PACE_MS    = 150;
+const FORCE      = process.argv.includes("--force");
 
 // ── Utils ─────────────────────────────────────────────────────────────────────
 async function sha256(path) {
@@ -33,18 +30,32 @@ async function sha256(path) {
   return crypto.createHash("sha256").update(buf).digest("hex");
 }
 
+// ZIPs should always be strings without trailing ".0"
 function cleanZip(z) {
   if (z == null) return "";
   const s = String(z).trim();
+  // drop any trailing ".0"
   return s.endsWith(".0") ? s.slice(0, -2) : s;
+}
+
+function normalizeStore(s) {
+  return {
+    ...s,
+    // ensure nice strings for display + stable addresses
+    address: s.address?.toString().trim() || undefined,
+    city: s.city?.toString().trim() || undefined,
+    state: s.state?.toString().trim() || undefined,
+    // force ZIP to a clean string (no .0). Leave undefined if empty.
+    zip: cleanZip(s.zip) || undefined,
+  };
 }
 
 function fullAddress(s) {
   const parts = [
-    s.address?.trim(),
-    s.city?.trim(),
-    s.state?.trim(),
-    cleanZip(s.zip),
+    s.address,
+    s.city,
+    s.state,
+    s.zip, // already normalized string
   ].filter(Boolean);
   return parts.join(", ");
 }
@@ -52,7 +63,7 @@ function fullAddress(s) {
 async function geocode(id, address) {
   const url = "https://maps.googleapis.com/maps/api/geocode/json?address="
     + encodeURIComponent(address) + `&key=${KEY}`;
-  console.log(`➡️ [${id}] Request: ${url}`);
+  console.log(`➡️ [${id}] ${address}`);
 
   const r = await fetch(url);
   const j = await r.json();
@@ -62,23 +73,26 @@ async function geocode(id, address) {
     return { lat: +lat, lng: +lng };
   } else {
     const em = j.error_message || "";
-    console.error(`❌ [${id}] Geocode failed for "${address}" → ${j.status} ${em}`);
+    console.error(`❌ [${id}] Geocode failed → ${j.status} ${em}`);
     return { error: j.status, error_message: em };
   }
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
-const stores = JSON.parse(await fs.readFile(STORES_SRC, "utf8"));
+const raw = JSON.parse(await fs.readFile(STORES_SRC, "utf8"));
+/** Normalize all input rows up front so zips are clean strings. */
+const stores = Object.fromEntries(
+  Object.entries(raw).map(([id, s]) => [id, normalizeStore(s)])
+);
+
 let prevOut = null;
-try {
-  prevOut = JSON.parse(await fs.readFile(STORES_OUT, "utf8"));
-} catch { /* first run */ }
+try { prevOut = JSON.parse(await fs.readFile(STORES_OUT, "utf8")); } catch {}
 
 const srcHash = await sha256(STORES_SRC);
 const prevHash = prevOut?.__meta?.srcHash;
 
-if (prevHash === srcHash) {
-  console.log("🟰 stores.json unchanged — skipping geocode.");
+if (!FORCE && prevHash === srcHash) {
+  console.log("🟰 stores.json unchanged — skipping geocode. (Use --force to rebuild output formatting.)");
   process.exit(0);
 }
 
@@ -91,12 +105,12 @@ for (const [id, s] of Object.entries(stores)) {
 
   if (!addr) {
     console.warn(`⚠️ [${id}] Skipping — empty/malformed address`);
-    out[id] = { ...s };
+    out[id] = { ...s }; // normalized fields still saved
     failures.push({ id, address: "", status: "EMPTY_ADDRESS", error_message: "" });
     continue;
   }
 
-  // reuse previous lat/lng if address unchanged
+  // Reuse previous lat/lng if address unchanged
   const prev = prevOut?.[id];
   const prevAddr = prev?.__addr;
   if (prev && prevAddr === addr && typeof prev.lat === "number" && typeof prev.lng === "number") {
