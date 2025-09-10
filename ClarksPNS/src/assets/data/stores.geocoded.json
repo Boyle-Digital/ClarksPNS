@@ -4,7 +4,7 @@
     "address": "1805 Main Street",
     "city": "Ashland",
     "state": "KY",
-    "zip": "41102.0",
+    "zip": "41102",
     "phone": "(606) 393-1121",
     "food_programs": "KK/GG/H54",
     "brand": "ARCO",
@@ -31,14 +31,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.48386929999999,
+    "lng": -82.67155009999999,
+    "__addr": "1805 Main Street, Ashland, KY, 41102"
   },
   "2": {
     "name": "Catlettsburg",
     "address": "900 Center Street",
     "city": "Catlettsburg",
     "state": "KY",
-    "zip": "41129.0",
+    "zip": "41129",
     "phone": "(606) 363-7022",
     "food_programs": "Café/GG/H54",
     "brand": "ARCO",
@@ -65,14 +68,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4387631,
+    "lng": -82.6091163,
+    "__addr": "900 Center Street, Catlettsburg, KY, 41129"
   },
   "3": {
     "name": "Greenup",
     "address": "1024 Seaton Avenue",
     "city": "Greenup",
     "state": "KY",
-    "zip": "41144.0",
+    "zip": "41144",
     "phone": "(606)498-5986",
     "food_programs": "KK/GG/H54",
     "brand": "ARCO",
@@ -99,14 +105,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5676449,
+    "lng": -82.8309069,
+    "__addr": "1024 Seaton Avenue, Greenup, KY, 41144"
   },
   "5": {
     "name": "Greenup",
     "address": "1735 Ashland Road",
     "city": "Greenup",
     "state": "KY",
-    "zip": "41144.0",
+    "zip": "41144",
     "phone": "(606)254-0492",
     "brand": "MARATHON",
     "store_hours": {
@@ -132,14 +141,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5664199,
+    "lng": -82.8245727,
+    "__addr": "1735 Ashland Road, Greenup, KY, 41144"
   },
   "6": {
     "name": "Wayne",
     "address": "10045 Rt 152",
     "city": "Wayne",
     "state": "WV",
-    "zip": "25570.0",
+    "zip": "25570",
     "phone": "(304) 803-7219",
     "brand": "MARATHON",
     "store_hours": {
@@ -165,14 +177,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.2298221,
+    "lng": -82.4397609,
+    "__addr": "10045 Rt 152, Wayne, WV, 25570"
   },
   "7": {
     "name": "Oak Hill",
     "address": "199 N Jackson St.",
     "city": "Oak Hill",
     "state": "OH",
-    "zip": "45656.0",
+    "zip": "45656",
     "phone": "(740)932-4014",
     "brand": "MARATHON",
     "store_hours": {
@@ -198,14 +213,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.9009522,
+    "lng": -82.5694697,
+    "__addr": "199 N Jackson St., Oak Hill, OH, 45656"
   },
   "8": {
     "name": "Diederich",
     "address": "1000 Diederich Blvd",
     "city": "Russell",
     "state": "KY",
-    "zip": "41169.0",
+    "zip": "41169",
     "phone": "(606) 833-2634",
     "brand": "ARCO",
     "store_hours": {
@@ -231,14 +249,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.504036,
+    "lng": -82.692295,
+    "__addr": "1000 Diederich Blvd, Russell, KY, 41169"
   },
   "9": {
     "name": "West Hamlin",
     "address": "5742 McClellan HWY",
     "city": "Branchland",
     "state": "WV",
-    "zip": "25506.0",
+    "zip": "25506",
     "phone": "(304) 824-7740",
     "brand": "MARATHON",
     "store_hours": {
@@ -264,14 +285,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.2713331,
+    "lng": -82.200102,
+    "__addr": "5742 McClellan HWY, Branchland, WV, 25506"
   },
   "10": {
     "name": "Jackson",
     "address": "90 Twin Oaks Drive",
     "city": "Jackson",
     "state": "OH",
-    "zip": "45640.0",
+    "zip": "45640",
     "phone": "(740)577-3382",
     "food_programs": "Champs/GG",
     "brand": "MARATHON",
@@ -298,14 +322,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 39.0307293,
+    "lng": -82.6370263,
+    "__addr": "90 Twin Oaks Drive, Jackson, OH, 45640"
   },
   "11": {
     "name": "Hal Greer",
     "address": "1587 Hal Greer Blvd",
     "city": "Huntington",
     "state": "WV",
-    "zip": "25701.0",
+    "zip": "25701",
     "phone": "(304) 803.7257",
     "brand": "ARCO",
     "store_hours": {
@@ -331,14 +358,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4051196,
+    "lng": -82.4278211,
+    "__addr": "1587 Hal Greer Blvd, Huntington, WV, 25701"
   },
   "13": {
     "name": "Fraziers Bottom",
     "address": "17513 Winfield Road",
     "city": "Winfield",
     "state": "WV",
-    "zip": "25213.0",
+    "zip": "25213",
     "phone": "(304) 937-3838",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -365,14 +395,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5562386,
+    "lng": -81.9717268,
+    "__addr": "17513 Winfield Road, Winfield, WV, 25213"
   },
   "15": {
     "name": "Lavalette",
     "address": "4790 St Rt 152",
     "city": "Lavalette",
     "state": "WV",
-    "zip": "25535.0",
+    "zip": "25535",
     "phone": "(304) 803-7253",
     "brand": "ARCO",
     "store_hours": {
@@ -398,14 +431,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.3223768,
+    "lng": -82.445655,
+    "__addr": "4790 St Rt 152, Lavalette, WV, 25535"
   },
   "18": {
     "name": "Flemingsburg",
     "address": "150  East Water St",
     "city": "Flemingsburg",
     "state": "KY",
-    "zip": "41041.0",
+    "zip": "41041",
     "phone": "(606) 363-0492",
     "brand": "MARATHON",
     "store_hours": {
@@ -431,14 +467,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4207388,
+    "lng": -83.7324909,
+    "__addr": "150  East Water St, Flemingsburg, KY, 41041"
   },
   "19": {
     "name": "McArthur",
     "address": "301 S. Market St",
     "city": "McArthur",
     "state": "OH",
-    "zip": "45651.0",
+    "zip": "45651",
     "phone": "(220) 201-7910",
     "food_programs": "KK/H54",
     "brand": "MARATHON",
@@ -465,14 +504,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 39.2441312,
+    "lng": -82.4795908,
+    "__addr": "301 S. Market St, McArthur, OH, 45651"
   },
   "20": {
     "name": "South Point",
     "address": "132 Co Rd 450",
     "city": "So. Point",
     "state": "OH",
-    "zip": "45680.0",
+    "zip": "45680",
     "phone": "(740) 523-0074",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -499,14 +541,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4511223,
+    "lng": -82.5914353,
+    "__addr": "132 Co Rd 450, So. Point, OH, 45680"
   },
   "21": {
     "name": "JF Clark",
     "address": "12649 US 60",
     "city": "Ashland",
     "state": "KY",
-    "zip": "41102.0",
+    "zip": "41102",
     "phone": "(606)498-5982",
     "brand": "MARATHON",
     "store_hours": {
@@ -532,14 +577,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.3615261,
+    "lng": -82.77252299999999,
+    "__addr": "12649 US 60, Ashland, KY, 41102"
   },
   "23": {
     "name": "13th Street",
     "address": "3354 13th Street",
     "city": "Ashland",
     "state": "KY",
-    "zip": "41102.0",
+    "zip": "41102",
     "phone": "(606) 324-5288",
     "food_programs": "GG",
     "brand": "ARCO",
@@ -566,14 +614,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4573699,
+    "lng": -82.66693060000001,
+    "__addr": "3354 13th Street, Ashland, KY, 41102"
   },
   "24": {
     "name": "Huntington",
     "address": "4430 Ohio River Rd",
     "city": "Huntington",
     "state": "WV",
-    "zip": "25702.0",
+    "zip": "25702",
     "phone": "(681) 258-8186",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -600,14 +651,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4331091,
+    "lng": -82.3637385,
+    "__addr": "4430 Ohio River Rd, Huntington, WV, 25702"
   },
   "25": {
     "name": "Proctorville",
     "address": "7575 St Rt 7",
     "city": "Proctorville",
     "state": "OH",
-    "zip": "45669.0",
+    "zip": "45669",
     "phone": "(220) 204-5507",
     "brand": "MARATHON",
     "store_hours": {
@@ -633,14 +687,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4386318,
+    "lng": -82.3865081,
+    "__addr": "7575 St Rt 7, Proctorville, OH, 45669"
   },
   "26": {
     "name": "Chesapeake",
     "address": "2927 Co Rd 44",
     "city": "So. Point",
     "state": "OH",
-    "zip": "45680.0",
+    "zip": "45680",
     "phone": "(740) 451-4100",
     "brand": "MARATHON",
     "store_hours": {
@@ -666,14 +723,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5735159,
+    "lng": -82.6166637,
+    "__addr": "2927 Co Rd 44, So. Point, OH, 45680"
   },
   "28": {
     "name": "West Liberty",
     "address": "607 N. Main St",
     "city": "West Liberty",
     "state": "KY",
-    "zip": "41472.0",
+    "zip": "41472",
     "phone": "(606) 743-2842",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -700,14 +760,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 37.9110858,
+    "lng": -83.26562849999999,
+    "__addr": "607 N. Main St, West Liberty, KY, 41472"
   },
   "30": {
     "name": "Rio Grande",
     "address": "11381 St Rt 588",
     "city": "Rio Grande",
     "state": "OH",
-    "zip": "45674.0",
+    "zip": "45674",
     "phone": "(740) 245-1211",
     "food_programs": "GG",
     "brand": "BP",
@@ -734,14 +797,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.8855006,
+    "lng": -82.37668049999999,
+    "__addr": "11381 St Rt 588, Rio Grande, OH, 45674"
   },
   "32": {
     "name": "Burnaugh",
     "address": "28583 US 23",
     "city": "Catlettsburg",
     "state": "KY",
-    "zip": "41129.0",
+    "zip": "41129",
     "phone": "(606) 739-6055",
     "food_programs": "Café/H54",
     "brand": "MARATHON",
@@ -768,14 +834,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.266024,
+    "lng": -82.58156,
+    "__addr": "28583 US 23, Catlettsburg, KY, 41129"
   },
   "33": {
     "name": "Wheelersburg",
     "address": "312 Center St",
     "city": "Wheelersburg",
     "state": "OH",
-    "zip": "45694.0",
+    "zip": "45694",
     "phone": "(740) 574-5655",
     "brand": "MARATHON",
     "store_hours": {
@@ -801,14 +870,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.7285514,
+    "lng": -82.8592967,
+    "__addr": "312 Center St, Wheelersburg, OH, 45694"
   },
   "34": {
     "name": "Portsmouth",
     "address": "3008 Scioto Trail",
     "city": "Portsmouth",
     "state": "OH",
-    "zip": "45662.0",
+    "zip": "45662",
     "phone": "(220) 204-5488",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -835,14 +907,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.7595787,
+    "lng": -82.99032670000001,
+    "__addr": "3008 Scioto Trail, Portsmouth, OH, 45662"
   },
   "36": {
     "name": "North Broadway",
     "address": "1971 North Broadway",
     "city": "Lexington",
     "state": "KY",
-    "zip": "40505.0",
+    "zip": "40505",
     "phone": "(859) 739-3515",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -869,14 +944,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.0750011,
+    "lng": -84.4585489,
+    "__addr": "1971 North Broadway, Lexington, KY, 40505"
   },
   "37": {
     "name": "Ironton",
     "address": "824 Park Ave",
     "city": "Ironton",
     "state": "OH",
-    "zip": "45638.0",
+    "zip": "45638",
     "phone": "(220) 204-5502",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -903,14 +981,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5375698,
+    "lng": -82.6788055,
+    "__addr": "824 Park Ave, Ironton, OH, 45638"
   },
   "38": {
     "name": "Proctorville",
     "address": "6288 St. Rt 7",
     "city": "Proctorville",
     "state": "OH",
-    "zip": "45669.0",
+    "zip": "45669",
     "phone": "(220) 204-5492",
     "brand": "MARATHON",
     "store_hours": {
@@ -936,14 +1017,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.438587,
+    "lng": -82.3866434,
+    "__addr": "6288 St. Rt 7, Proctorville, OH, 45669"
   },
   "39": {
     "name": "Waverly",
     "address": "506 E Emmitt",
     "city": "Waverly",
     "state": "OH",
-    "zip": "45690.0",
+    "zip": "45690",
     "phone": "(740) 835-8150",
     "brand": "MARATHON",
     "store_hours": {
@@ -969,14 +1053,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 39.1309643,
+    "lng": -82.97941150000001,
+    "__addr": "506 E Emmitt, Waverly, OH, 45690"
   },
   "40": {
     "name": "South Shore",
     "address": "28248 US 23",
     "city": "South Shore",
     "state": "KY",
-    "zip": "41175.0",
+    "zip": "41175",
     "phone": "(606)498-4212",
     "food_programs": "KK/GG/H54",
     "brand": "MARATHON",
@@ -1003,14 +1090,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.728417,
+    "lng": -82.93582459999999,
+    "__addr": "28248 US 23, South Shore, KY, 41175"
   },
   "41": {
     "name": "Piketon",
     "address": "833 Beaver Creek Rd",
     "city": "Piketon",
     "state": "OH",
-    "zip": "45661.0",
+    "zip": "45661",
     "phone": "(220) 201-5476",
     "food_programs": "Café",
     "brand": "MARATHON",
@@ -1037,14 +1127,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 39.0530889,
+    "lng": -82.99509189999999,
+    "__addr": "833 Beaver Creek Rd, Piketon, OH, 45661"
   },
   "42": {
     "name": "Route 3",
     "address": "2250 St. Rt 3",
     "city": "Catlettsburg",
     "state": "KY",
-    "zip": "41129.0",
+    "zip": "41129",
     "phone": "(606)585-0028",
     "brand": "MARATHON",
     "store_hours": {
@@ -1070,14 +1163,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.358493,
+    "lng": -82.692797,
+    "__addr": "2250 St. Rt 3, Catlettsburg, KY, 41129"
   },
   "43": {
     "name": "Greenup Ave",
     "address": "3000 Greenup Ave",
     "city": "Ashland",
     "state": "KY",
-    "zip": "41101.0",
+    "zip": "41101",
     "phone": "606)393-1164.",
     "brand": "MARATHON",
     "store_hours": {
@@ -1103,14 +1199,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4696047,
+    "lng": -82.6214061,
+    "__addr": "3000 Greenup Ave, Ashland, KY, 41101"
   },
   "44": {
     "name": "Russell Cave",
     "address": "313 West New Circle Rd.",
     "city": "Lexington",
     "state": "KY",
-    "zip": "40502.0",
+    "zip": "40502",
     "phone": "(859) 444-6227",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -1137,14 +1236,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.0709239,
+    "lng": -84.4762434,
+    "__addr": "313 West New Circle Rd., Lexington, KY, 40502"
   },
   "45": {
     "name": "Rosemount Rd",
     "address": "1701 State Route 139",
     "city": "Portsmouth",
     "state": "OH",
-    "zip": "45662.0",
+    "zip": "45662",
     "phone": "(740) 876-4103",
     "brand": "MARATHON",
     "store_hours": {
@@ -1170,14 +1272,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.7768056,
+    "lng": -82.9442644,
+    "__addr": "1701 State Route 139, Portsmouth, OH, 45662"
   },
   "46": {
     "name": "University Mart",
     "address": "1813 Liberty Ave.",
     "city": "Ironton",
     "state": "OH",
-    "zip": "45638.0",
+    "zip": "45638",
     "phone": "(740) 533-2309",
     "brand": "MARATHON",
     "store_hours": {
@@ -1203,14 +1308,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5253992,
+    "lng": -82.66519029999999,
+    "__addr": "1813 Liberty Ave., Ironton, OH, 45638"
   },
   "47": {
     "name": "Vanceburg",
     "address": "67 Commercial Drive",
     "city": "Vanceburg",
     "state": "KY",
-    "zip": "41179.0",
+    "zip": "41179",
     "phone": "(606)363-7023",
     "brand": "MARATHON",
     "store_hours": {
@@ -1236,14 +1344,17 @@
       "showers": true,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5916237,
+    "lng": -83.3271666,
+    "__addr": "67 Commercial Drive, Vanceburg, KY, 41179"
   },
   "49": {
     "name": "Greenhills",
     "address": "373 St Rt. 716",
     "city": "Ashland",
     "state": "KY",
-    "zip": "41102.0",
+    "zip": "41102",
     "phone": "(606) 928-4455",
     "food_programs": "KK/H54",
     "brand": "MARATHON",
@@ -1270,14 +1381,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4403195,
+    "lng": -82.7078963,
+    "__addr": "373 St Rt. 716, Ashland, KY, 41102"
   },
   "50": {
     "name": "Stroble",
     "address": "5197 State Route 141",
     "city": "Ironton",
     "state": "OH",
-    "zip": "45638.0",
+    "zip": "45638",
     "phone": "(220) 204-4054",
     "food_programs": "Café",
     "brand": "MARATHON",
@@ -1304,14 +1418,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5523435,
+    "lng": -82.6112169,
+    "__addr": "5197 State Route 141, Ironton, OH, 45638"
   },
   "51": {
     "name": "Piedmont Pantry",
     "address": "4408 Piedmont Road",
     "city": "Huntington",
     "state": "WV",
-    "zip": "25704.0",
+    "zip": "25704",
     "phone": "(304) 719-4297",
     "brand": "MARATHON",
     "store_hours": {
@@ -1337,14 +1454,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.3982169,
+    "lng": -82.51661299999999,
+    "__addr": "4408 Piedmont Road, Huntington, WV, 25704"
   },
   "52": {
     "name": "Grayson",
     "address": "311 N. Carol Malone",
     "city": "Grayson",
     "state": "KY",
-    "zip": "41143.0",
+    "zip": "41143",
     "phone": "(606) 498-5983",
     "brand": "ARCO",
     "store_hours": {
@@ -1370,14 +1490,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.3345175,
+    "lng": -82.9452137,
+    "__addr": "311 N. Carol Malone, Grayson, KY, 41143"
   },
   "53": {
     "name": "Clays Mill Rd",
     "address": "3334 Clays Mill Road",
     "city": "Lexington",
     "state": "KY",
-    "zip": "40503.0",
+    "zip": "40503",
     "phone": "(859)523-6606",
     "food_programs": "KK/GG/H54",
     "brand": "MARATHON",
@@ -1404,7 +1527,10 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 37.9966193,
+    "lng": -84.5481819,
+    "__addr": "3334 Clays Mill Road, Lexington, KY, 40503"
   },
   "54": {
     "store_hours": {
@@ -1437,7 +1563,7 @@
     "address": "2626 Gallia St",
     "city": "Portsmouth",
     "state": "OH",
-    "zip": "45662.0",
+    "zip": "45662",
     "phone": "(740) 353-1381",
     "food_programs": "GG",
     "brand": "BP",
@@ -1464,14 +1590,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.7400141,
+    "lng": -82.9638078,
+    "__addr": "2626 Gallia St, Portsmouth, OH, 45662"
   },
   "56": {
     "name": "Olive Hill",
     "address": "10824 West US 60",
     "city": "Olive Hill",
     "state": "Ky",
-    "zip": "41164.0",
+    "zip": "41164",
     "phone": "(606) 286-0264",
     "food_programs": "Coopers/GG/H54/IC",
     "brand": "MARATHON",
@@ -1498,14 +1627,17 @@
       "showers": true,
       "rvDump": true,
       "fuel": false
-    }
+    },
+    "lat": 38.322679,
+    "lng": -83.1198385,
+    "__addr": "10824 West US 60, Olive Hill, Ky, 41164"
   },
   "57": {
     "name": "Winchester Road",
     "address": "922 Detroit Ave",
     "city": "Lexington",
     "state": "KY",
-    "zip": "40505.0",
+    "zip": "40505",
     "phone": "(606)254-0486",
     "food_programs": "KK/GG/H54",
     "brand": "MARATHON",
@@ -1532,14 +1664,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.0409941,
+    "lng": -84.4711718,
+    "__addr": "922 Detroit Ave, Lexington, KY, 40505"
   },
   "58": {
     "name": "Exit 181",
     "address": "1965 US Route 60",
     "city": "Rush",
     "state": "KY",
-    "zip": "41168.0",
+    "zip": "41168",
     "phone": "(606) 928-8175",
     "food_programs": "Café/GG",
     "brand": "ARCO",
@@ -1566,14 +1701,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.3701449,
+    "lng": -82.76656899999999,
+    "__addr": "1965 US Route 60, Rush, KY, 41168"
   },
   "59": {
     "name": "Versailles Rd",
     "address": "1419 Versailles Rd",
     "city": "Lexington",
     "state": "KY",
-    "zip": "40504.0",
+    "zip": "40504",
     "phone": "(859)303-4543",
     "food_programs": "KK/GG/H54",
     "brand": "MARATHON",
@@ -1600,14 +1738,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.04992310000001,
+    "lng": -84.527999,
+    "__addr": "1419 Versailles Rd, Lexington, KY, 40504"
   },
   "60": {
     "name": "Coal Grove",
     "address": "409 Marion Pike",
     "city": "Coal Grove",
     "state": "OH",
-    "zip": "45637.0",
+    "zip": "45637",
     "phone": "(740) 532-7442",
     "brand": "UNBRANDED",
     "alt_hours": {
@@ -1633,7 +1774,10 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.5018496,
+    "lng": -82.6462942,
+    "__addr": "409 Marion Pike, Coal Grove, OH, 45637"
   },
   "70": {
     "alt_hours": {
@@ -1666,7 +1810,7 @@
     "address": "1920 29th St",
     "city": "Ashland",
     "state": "KY",
-    "zip": "41101.0",
+    "zip": "41101",
     "phone": "(606) 329-8784",
     "food_programs": "Café/GG/Champs/H54",
     "brand": "ARCO",
@@ -1693,14 +1837,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4603099,
+    "lng": -82.6404804,
+    "__addr": "1920 29th St, Ashland, KY, 41101"
   },
   "72": {
     "name": "Lloyd",
     "address": "1233 KY 10",
     "city": "Greenup",
     "state": "KY",
-    "zip": "41144.0",
+    "zip": "41144",
     "phone": "(606) 473-7080",
     "food_programs": "Champs/GG/H54/IC",
     "brand": "Marathon",
@@ -1727,14 +1874,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.6455518,
+    "lng": -82.8764283,
+    "__addr": "1233 KY 10, Greenup, KY, 41144"
   },
   "73": {
     "name": "Clarks Café",
     "address": "Donta Road",
     "city": "Ashland",
     "state": "KY",
-    "zip": "41105.0",
+    "zip": "41105",
     "phone": "(606)922-6073",
     "food_programs": "Café",
     "amenities": {
@@ -1748,14 +1898,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.4552926,
+    "lng": -82.6960262,
+    "__addr": "Donta Road, Ashland, KY, 41105"
   },
   "75": {
     "name": "Rush",
     "address": "9822 E. US Highway 60",
     "city": "Rush",
     "state": "KY",
-    "zip": "41168.0",
+    "zip": "41168",
     "phone": "(606) 498-5992",
     "brand": "MARATHON",
     "alt_hours": {
@@ -1781,14 +1934,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.3614491,
+    "lng": -82.7728877,
+    "__addr": "9822 E. US Highway 60, Rush, KY, 41168"
   },
   "76": {
     "name": "Lexington",
     "address": "529 W Main St",
     "city": "Lexington",
     "state": "KY",
-    "zip": "40507.0",
+    "zip": "40507",
     "phone": "(859)281-1008",
     "food_programs": "Café/H54",
     "alt_hours": {
@@ -1814,14 +1970,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.0504487,
+    "lng": -84.5012586,
+    "__addr": "529 W Main St, Lexington, KY, 40507"
   },
   "77": {
     "name": "Midway",
     "address": "300 Lacefield St",
     "city": "Midway",
     "state": "KY",
-    "zip": "40347.0",
+    "zip": "40347",
     "phone": "(859)403-2028",
     "food_programs": "Coopers",
     "brand": "MARATHON",
@@ -1848,14 +2007,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.1621356,
+    "lng": -84.67659429999999,
+    "__addr": "300 Lacefield St, Midway, KY, 40347"
   },
   "78": {
     "name": "Bethel",
     "address": "100 Bethel Harvest Drive",
     "city": "Nicholsville",
     "state": "KY",
-    "zip": "40356.0",
+    "zip": "40356",
     "phone": "(859)309-0075",
     "food_programs": "KK",
     "brand": "MARATHON",
@@ -1882,14 +2044,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 37.9486108,
+    "lng": -84.5420362,
+    "__addr": "100 Bethel Harvest Drive, Nicholsville, KY, 40356"
   },
   "79": {
     "name": "Sandersville Rd.",
     "address": "2670 Sandersville Rd",
     "city": "Lexington",
     "state": "KY",
-    "zip": "40511.0",
+    "zip": "40511",
     "phone": "(859)303-4378",
     "food_programs": "KK",
     "brand": "MARATHON",
@@ -1916,7 +2081,10 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.0890767,
+    "lng": -84.53725899999999,
+    "__addr": "2670 Sandersville Rd, Lexington, KY, 40511"
   },
   "80": {
     "alt_hours": {
@@ -1949,7 +2117,7 @@
     "address": "201 N Main St",
     "city": "Winchester",
     "state": "KY",
-    "zip": "40391.0",
+    "zip": "40391",
     "phone": "(606) 229-5606",
     "food_programs": "KK/GG/H54",
     "brand": "ARCO",
@@ -1976,14 +2144,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 37.9973632,
+    "lng": -84.174588,
+    "__addr": "201 N Main St, Winchester, KY, 40391"
   },
   "82": {
     "name": "Georgetown",
     "address": "381 Cherry Blossom Way",
     "city": "Georgetown",
     "state": "KY",
-    "zip": "40324.0",
+    "zip": "40324",
     "phone": "(502) 642-4479",
     "food_programs": "KK/GG/H54/IC",
     "brand": "MARATHON",
@@ -2010,14 +2181,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.2750948,
+    "lng": -84.55529899999999,
+    "__addr": "381 Cherry Blossom Way, Georgetown, KY, 40324"
   },
   "83": {
     "name": "Georgetown",
     "address": "2001 Paris Pike",
     "city": "Georgetown",
     "state": "KY",
-    "zip": "40324.0",
+    "zip": "40324",
     "phone": "(502) 603-8284",
     "food_programs": "Café/GG/H54",
     "brand": "MARATHON",
@@ -2044,14 +2218,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.2145143,
+    "lng": -84.53961989999999,
+    "__addr": "2001 Paris Pike, Georgetown, KY, 40324"
   },
   "84": {
     "name": "Connector Rd",
     "address": "480 Connector Rd",
     "city": "Georgetown",
     "state": "KY",
-    "zip": "40324.0",
+    "zip": "40324",
     "phone": "(502)385-5087",
     "brand": "MARATHON",
     "alt_hours": {
@@ -2077,14 +2254,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.230517,
+    "lng": -84.53475139999999,
+    "__addr": "480 Connector Rd, Georgetown, KY, 40324"
   },
   "85": {
     "name": "Canewood",
     "address": "100 Canewood Ctr Dr",
     "city": "Georgetown",
     "state": "KY",
-    "zip": "40324.0",
+    "zip": "40324",
     "phone": "(502) 642-4583",
     "food_programs": "KK",
     "brand": "MARATHON",
@@ -2111,14 +2291,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.2090075,
+    "lng": -84.5941005,
+    "__addr": "100 Canewood Ctr Dr, Georgetown, KY, 40324"
   },
   "86": {
     "name": "Versailles",
     "address": "3590 Lexington Rd",
     "city": "Versailles",
     "state": "KY",
-    "zip": "40383.0",
+    "zip": "40383",
     "phone": "(859) 215-8139",
     "food_programs": "GG",
     "brand": "MARATHON",
@@ -2145,14 +2328,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.044971,
+    "lng": -84.6656057,
+    "__addr": "3590 Lexington Rd, Versailles, KY, 40383"
   },
   "87": {
     "name": "Lucille Dr.",
     "address": "100 Lucille Dr",
     "city": "Lexington",
     "state": "Ky",
-    "zip": "40511.0",
+    "zip": "40511",
     "phone": "(859)469-8022",
     "food_programs": "KK",
     "brand": "MARATHON",
@@ -2179,14 +2365,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.0852792,
+    "lng": -84.5509691,
+    "__addr": "100 Lucille Dr, Lexington, Ky, 40511"
   },
   "88": {
     "name": "Frankfort",
     "address": "100 Isaac Shelby Cir W",
     "city": "Frankfort",
     "state": "Ky",
-    "zip": "40601.0",
+    "zip": "40601",
     "phone": "(502)352-9513",
     "food_programs": "KK/H54/IC",
     "brand": "MARATHON",
@@ -2213,14 +2402,17 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 38.188186,
+    "lng": -84.810493,
+    "__addr": "100 Isaac Shelby Cir W, Frankfort, Ky, 40601"
   },
   "89": {
     "name": "Berea",
     "address": "274 Paint Lick Rd.",
     "city": "Berea",
     "state": "KY",
-    "zip": "40403.0",
+    "zip": "40403",
     "phone": "(859) 986-0173",
     "brand": "ARCO",
     "alt_hours": {
@@ -2246,6 +2438,13 @@
       "showers": false,
       "rvDump": false,
       "fuel": false
-    }
+    },
+    "lat": 37.5695196,
+    "lng": -84.3183829,
+    "__addr": "274 Paint Lick Rd., Berea, KY, 40403"
+  },
+  "__meta": {
+    "srcHash": "fbaa03fb17bb97d41b52c1edc49025e8c85973be467de998ff91673aa89b8815",
+    "generatedAt": "2025-09-09T18:38:14.105Z"
   }
 }

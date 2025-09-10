@@ -18,57 +18,62 @@ export default function ClarksRewards () {
   return (
     <main className='w-full overflow-x-clip bg-white'>
       {/* === Video Hero (no tint) – mobile & desktop === */}
-      <section aria-label='Clarks Rewards' className='relative isolate w-full'>
-        <div className='relative h-[68vh] md:h-[86vh] w-full overflow-hidden'>
-          <video
-            className='absolute inset-0 h-full w-full object-cover'
-            autoPlay
-            playsInline
-            muted
-            loop
-            poster={rewardsPoster}
-          >
-            <source src={rewardsVideo} type='video/mp4' />
-          </video>
+<section
+  aria-label='Clarks Rewards'
+  className='relative isolate z-0 w-full -mt-[16px] md:-mt-[20px]' // <-- pull up under nav
+>
+  <div className='relative h-[68vh] md:h-[86vh] w-full overflow-hidden pt-[16px] md:pt-[20px]'> 
+    {/*   ↑ counter the negative margin so layout height remains consistent */}
+    <video
+      className='absolute inset-0 h-full w-full object-cover'
+      autoPlay
+      playsInline
+      muted
+      loop
+      poster={rewardsPoster}
+    >
+      <source src={rewardsVideo} type='video/mp4' />
+    </video>
 
-          {/* Content */}
-          <div className='relative z-[1] h-full'>
-            <div className='container mx-auto h-full px-6 md:px-10'>
-              <div className='flex h-full items-center'>
-                <div className='inline-flex flex-col gap-4 md:gap-6 max-w-[680px]'>
-                  <h1 className="font-['Oswald'] font-bold text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.35)] text-4xl md:text-6xl leading-tight">
-                    Join Clarks Rewards
-                  </h1>
-                  <p className='text-white/95 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] text-lg md:text-2xl max-w-prose'>
-                    Earn on every fill-up, snack, and car wash—then redeem for
-                    free fuel, in-store savings, and members-only perks.
-                  </p>
-                  <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
-                    <Link
-                      to='/clarks-rewards#join'
-                      className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-black/20 text-base md:text-lg'
-                    >
-                      Get 1,500 Points Free
-                    </Link>
-                    <Link
-                      to='/clarks-rewards#how-it-works'
-                      className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-white/90 hover:bg-white transition-all text-base md:text-lg'
-                    >
-                      How it works
-                    </Link>
-                  </div>
-                  <p className='text-white/90 text-sm md:text-base'>
-                    New members only. Terms apply.
-                  </p>
-                </div>
-              </div>
+    {/* Content */}
+    <div className='relative z-[1] h-full'>
+      <div className='container mx-auto h-full px-6 md:px-10'>
+        <div className='flex h-full items-center'>
+          <div className='inline-flex flex-col gap-4 md:gap-6 max-w-[680px]'>
+            <h1 className="font-['Oswald'] font-bold text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.35)] text-4xl md:text-6xl leading-tight">
+              Join Clarks Rewards
+            </h1>
+            <p className='text-white/95 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] text-lg md:text-2xl max-w-prose'>
+              Earn on every fill-up, snack, and car wash—then redeem for
+              free fuel, in-store savings, and members-only perks.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
+              <Link
+                to='/clarks-rewards#join'
+                className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-black/20 text-base md:text-lg'
+              >
+                Get 1,500 Points Free
+              </Link>
+              <Link
+                to='/clarks-rewards#how-it-works'
+                className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-white/90 hover:bg-white transition-all text-base md:text-lg'
+              >
+                How it works
+              </Link>
             </div>
+            <p className='text-white/90 text-sm md:text-base'>
+              New members only. Terms apply.
+            </p>
           </div>
-
-          {/* subtle bottom fade to white to transition into page */}
-          <div className='pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white' />
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* subtle bottom fade to white to transition into page */}
+    <div className='pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white' />
+  </div>
+</section>
+
 
       {/* === Benefits Grid === */}
       <section
