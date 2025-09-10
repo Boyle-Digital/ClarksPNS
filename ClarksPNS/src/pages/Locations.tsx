@@ -223,7 +223,8 @@ export default function Locations () {
               Find a Clarks near you
             </h1>
             <p className='mt-2 text-black/70 text-lg md:text-xl max-w-prose'>
-              Enter an address to see the closest locations and what they offer.
+              To see nearby locations and available amenities, enter an address
+              or select “Use My Location.”
             </p>
 
             <form
@@ -297,10 +298,35 @@ export default function Locations () {
               <div className='mt-4 space-y-4'>
                 {results.map(r => {
                   const { id, entry, distance, addr } = r
-                  const a: Amenities = {
-                    ...DEFAULT_AMENITIES,
-                    ...(entry.amenities ?? {})
+                  const a = (entry.amenities ?? {}) as Partial<Amenities>
+                  const LABELS: Record<keyof Amenities, string> = {
+                    atm: 'ATM',
+                    beerCave: 'Beer cave',
+                    beerSales: 'Beer sales',
+                    e85: 'E85',
+                    diesel: 'Diesel',
+                    kerosene: 'Kerosene',
+                    open24Hours: '24 hours',
+                    showers: 'Showers',
+                    rvDump: 'RV dump',
+                    fuel: 'Fuel'
                   }
+
+                  const onList = (
+                    Object.keys(LABELS) as (keyof Amenities)[]
+                  ).filter(k => !!a[k])
+
+                  {
+                    onList.length > 0 && (
+                      <ul className='mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-black/80'>
+                        {onList.map(k => (
+                          <Amenity key={k} label={LABELS[k]} on={true} />
+                          // or: <Amenity key={k} label={LABELS[k]} on={!!a[k]} />
+                        ))}
+                      </ul>
+                    )
+                  }
+
                   return (
                     <article
                       key={id}
@@ -333,18 +359,22 @@ export default function Locations () {
                         </div>
                       </div>
 
-                      {/* Amenities */}
+                      {/* Amenities (only show truthy ones) */}
                       <ul className='mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-black/80'>
-                        <Amenity label='ATM' on={a.atm} />
-                        <Amenity label='Beer cave' on={a.beerCave} />
-                        <Amenity label='Beer sales' on={a.beerSales} />
-                        <Amenity label='E85' on={a.e85} />
-                        <Amenity label='Diesel' on={a.diesel} />
-                        <Amenity label='Kerosene' on={a.kerosene} />
-                        <Amenity label='24 hours' on={a.open24Hours} />
-                        <Amenity label='Showers' on={a.showers} />
-                        <Amenity label='RV dump' on={a.rvDump} />
-                        <Amenity label='Fuel' on={a.fuel} />
+                        {a.atm && <Amenity label='ATM' on={true} />}
+                        {a.beerCave && <Amenity label='Beer cave' on={true} />}
+                        {a.beerSales && (
+                          <Amenity label='Beer sales' on={true} />
+                        )}
+                        {a.e85 && <Amenity label='E85' on={true} />}
+                        {a.diesel && <Amenity label='Diesel' on={true} />}
+                        {a.kerosene && <Amenity label='Kerosene' on={true} />}
+                        {a.open24Hours && (
+                          <Amenity label='24 hours' on={true} />
+                        )}
+                        {a.showers && <Amenity label='Showers' on={true} />}
+                        {a.rvDump && <Amenity label='RV dump' on={true} />}
+                        {a.fuel && <Amenity label='Fuel' on={true} />}
                       </ul>
 
                       {/* Hours */}
