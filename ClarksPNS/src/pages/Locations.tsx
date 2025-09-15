@@ -155,6 +155,25 @@ const DEFAULT_FUEL: FuelProviders = {
   arco: false
 }
 
+function isStoreKey (k: string) {
+  return /^\d+$/.test(k)
+}
+
+function normalizeStores (raw: Record<string, any>): StoresMap {
+  const out: StoresMap = {}
+  for (const key of Object.keys(raw)) {
+    if (!isStoreKey(key)) continue // ignore non-numeric keys if any
+    const e = raw[key] ?? {}
+    out[key] = {
+      ...e,
+      amenities: { ...DEFAULT_AMENITIES, ...(e.amenities ?? {}) },
+      food: { ...DEFAULT_FOOD, ...(e.food ?? {}) },
+      fuel: { ...DEFAULT_FUEL, ...(e.fuel ?? {}) }
+    }
+  }
+  return out
+}
+
 // Keys for filters + display labels
 const AMENITY_KEYS = [
   'atm',
@@ -271,8 +290,10 @@ async function geocodeAddress (
 }
 
 export default function Locations () {
-  const stores: StoresMap = storesJson as StoresMap
-
+  const stores: StoresMap = React.useMemo(
+    () => normalizeStores(storesJson as Record<string, any>),
+    []
+  )
   const [address, setAddress] = React.useState('')
   const [radius, setRadius] = React.useState<number>(25)
   const [userPoint, setUserPoint] = React.useState<LatLng | null>(null)
