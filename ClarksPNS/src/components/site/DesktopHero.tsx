@@ -1,11 +1,11 @@
-import React from "react";
-import bgVideo from "@/assets/videos/clarkssecret_1080.mp4";
+import React from 'react'
+import bgVideo from '@/assets/videos/clarkssecret_1080.mp4'
 
-export function DesktopHero() {
+export function DesktopHero () {
   return (
     <section
-      aria-label="Hero"
-      className="
+      aria-label='Hero'
+      className='
 relative isolate
 -mt-[16px]
 w-full
@@ -13,11 +13,11 @@ h-[78vh] md:h-[86vh]
 overflow-hidden
 rounded-b-none
 hidden md:block
-"
+'
     >
       {/* Background video */}
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className='absolute inset-0 h-full w-full object-cover'
         src={bgVideo}
         autoPlay
         loop
@@ -26,15 +26,15 @@ hidden md:block
       />
 
       {/* Blue tint overlay (back again) */}
-      <div className="absolute inset-0 bg-brand/50 pointer-events-none" />
+      <div className='absolute inset-0 bg-brand/50 pointer-events-none' />
 
       {/* Subtle bottom gradient for legibility */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-black/20" />
+      <div className='pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-black/20' />
 
       {/* Content */}
-      <div className="relative z-[1] h-full flex items-center">
-        <div className="container max-w-screen-2xl px-6 md:px-10">
-          <div className="inline-flex flex-col gap-6 md:gap-8 w-full max-w-[720px]">
+      <div className='relative z-[1] h-full flex items-center'>
+        <div className='container max-w-screen-2xl px-6 md:px-10'>
+          <div className='inline-flex flex-col gap-6 md:gap-8 w-full max-w-[720px]'>
             <h1
               className="
 font-['Oswald'] font-extrabold text-white leading-[1.03]
@@ -44,13 +44,13 @@ drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]
             >
               Return.
               <br />
-              Refuel.
-              <br />
               Refresh.
+              <br />
+              Refuel.
             </h1>
 
             {/* Accent rule */}
-            <div className="h-2 w-64 sm:w-72 md:w-80 bg-white rounded-full shadow-[0_2px_12px_rgba(0,0,0,0.25)]" />
+            <div className='h-2 w-64 sm:w-72 md:w-80 bg-white rounded-full shadow-[0_2px_12px_rgba(0,0,0,0.25)]' />
 
             <p
               className="
@@ -62,28 +62,28 @@ drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]
               Your trusted stop for fuel, food, and friendly faces.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
               <a
-                href="/clarks-rewards#join"
-                className="
+                href='/clarks-rewards#join'
+                className='
 inline-flex items-center justify-center
 h-14 sm:h-16
 rounded-[56px] bg-white text-brand font-bold
 px-7 md:px-8 text-lg md:text-xl tracking-[0.18em] uppercase
 transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white
-"
+'
               >
                 Join Rewards
               </a>
               <a
-                href="/car-wash"
-                className="
+                href='/car-wash'
+                className='
 inline-flex items-center justify-center
 h-14 sm:h-16
 rounded-[56px] bg-white/90 text-black/90 font-semibold
 px-7 md:px-8 text-lg md:text-xl
 backdrop-blur-[2px] transition-all hover:bg-white
-"
+'
               >
                 See Car Wash
               </a>
@@ -92,5 +92,5 @@ backdrop-blur-[2px] transition-all hover:bg-white
         </div>
       </div>
     </section>
-  );
+  )
 }
