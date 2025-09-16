@@ -217,7 +217,7 @@ export default function DonationsPage() {
 
           <div className="mt-8 md:mt-10 max-w-7xl mx-auto">
             <Gallery images={scrambleImages} columns={4} />
-            <p className="mt-3 text-xs text-black/50 text-center">Moments from past outings</p>
+            {/* <p className="mt-3 text-xs text-black/50 text-center">Moments from past outings</p> */}
           </div>
         </div>
       </section>
@@ -275,7 +275,7 @@ export default function DonationsPage() {
         </div>
       </section>
 
-      {/* FOOTNOTE LINKS (optional quick access) */}
+      {/* FOOTNOTE LINKS (optional quick access)
       <section className="py-10 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="flex flex-wrap gap-3">
@@ -285,7 +285,7 @@ export default function DonationsPage() {
             <a href="/rewards" className="text-sm underline underline-offset-4 text-black/60 hover:text-black">Clark’s Rewards</a>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

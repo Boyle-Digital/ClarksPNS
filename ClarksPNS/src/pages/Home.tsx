@@ -174,8 +174,7 @@ export default function Home () {
               September Promotions
             </h2>
             <p className='mt-2 text-black/70 text-base md:text-lg'>
-              A rotating peek at what’s new—drops update automatically from your
-              promo folders.
+              A rotating peek at what’s new.
             </p>
           </div>
 
@@ -463,35 +462,35 @@ const FOOD_PARTNERS = [
     name: 'Champs Chicken',
     desc: 'Crispy tenders, sides, and sauces.',
     href: '/food#champs-chicken',
-    cta: 'View options',
+    cta: 'View Locations',
     logo: champsLogo
   },
   {
     name: 'Hangar 54 Pizza',
     desc: 'Slices and whole pies—perfectly melty.',
     href: '/food#hangar-54-pizza',
-    cta: 'View options',
+    cta: 'View Locations',
     logo: hangarLogo
   },
   {
     name: "Jack's Deli",
     desc: 'Stacked sandwiches and deli classics.',
     href: '/food#jacks-deli',
-    cta: 'View options',
+    cta: 'View Locations',
     logo: jacksLogo
   },
   {
     name: 'Clarks Cafe',
     desc: 'Breakfast sandwiches, pastries, and coffee.',
     href: '/food#clarks-cafe',
-    cta: 'View options',
+    cta: 'View Locations',
     logo: cafeLogo
   },
   {
     name: 'Krispy Krunchy Chicken',
     desc: 'Louisiana-style chicken + biscuits.',
     href: '/food#krispy-krunchy-chicken',
-    cta: 'View options',
+    cta: 'View Locations',
     logo: kkcLogo
   }
 ]

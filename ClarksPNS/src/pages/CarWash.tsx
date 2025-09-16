@@ -37,8 +37,7 @@ export default function CarWash() {
             Clarks Car Wash
           </h1>
           <p className="text-black/70 text-lg md:text-2xl max-w-prose">
-            Fast lanes. Gentle clean. Showroom shine—every time. Link your
-            Rewards account for member pricing and bonus points.
+            Fast lanes. Gentle clean. Showroom shine—every time.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -48,17 +47,17 @@ export default function CarWash() {
             >
               View Packages
             </a>
-            <Link
+            {/* <Link
               to="/clarks-rewards"
               className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-neutral-100 hover:bg-neutral-200 transition-all text-base md:text-lg"
             >
               Save with Rewards
-            </Link>
+            </Link> */}
           </div>
 
-          <div className="mt-2 text-xs text-black/50">
+          {/* <div className="mt-2 text-xs text-black/50">
             Members get discounted washes and occasional free upgrades.
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -157,12 +156,12 @@ export default function CarWash() {
                   >
                     {p.cta}
                   </a>
-                  <Link
+                  {/* <Link
                     to="/clarks-rewards"
                     className="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-white border border-black/10 hover:bg-neutral-100 text-black/90 transition-all"
                   >
                     Save with Rewards
-                  </Link>
+                  </Link> */}
                 </div>
               </article>
             ))}
@@ -175,7 +174,7 @@ export default function CarWash() {
       </section>
 
       {/* === How it works (drive-thru flow) === */}
-      <section id="how-it-works" aria-label="How It Works" className="py-12 md:py-20 bg-white">
+      {/* <section id="how-it-works" aria-label="How It Works" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
             <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
@@ -198,7 +197,7 @@ export default function CarWash() {
             ))}
           </ol>
         </div>
-      </section>
+      </section> */}
 
       {/* === Membership / Join CTA (no images) === */}
       <section id="join" aria-label="Car Wash Membership" className="py-12 md:py-20 bg-neutral-50 border-y border-black/10">
@@ -209,8 +208,7 @@ export default function CarWash() {
                 Go Unlimited. Go Shine.
               </h2>
               <p className="mt-3 text-black/70 text-base md:text-lg">
-                Wash as often as you want, cancel anytime. Link your Clarks Rewards account
-                for exclusive discounts and bonus points on every wash.
+                Wash as often as you want, cancel anytime.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -241,10 +239,10 @@ export default function CarWash() {
                   <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand" />
                   Family plan add-ons
                 </li>
-                <li className="flex items-start gap-2">
+                {/* <li className="flex items-start gap-2">
                   <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand" />
                   Member price on detailing add-ons
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -365,10 +363,10 @@ const FAQS = [
     q: "Is the wash safe for my vehicle?",
     a: "Our equipment and soaps are designed for modern clear coats, with soft-touch materials and filtered water.",
   },
-  {
-    q: "Can I use Rewards points on a wash?",
-    a: "Absolutely—earn on every wash and redeem for discounts when you link your Rewards account.",
-  },
+  // {
+  //   q: "Can I use Rewards points on a wash?",
+  //   a: "Absolutely—earn on every wash and redeem for discounts when you link your Rewards account.",
+  // },
   {
     q: "Where are wash locations?",
     a: "Use the Locations page or the app to find participating car wash sites near you.",

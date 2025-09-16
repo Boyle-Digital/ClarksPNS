@@ -44,7 +44,7 @@ export default function ClarksRewards () {
               Join Clarks Rewards
             </h1>
             <p className='text-white/95 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] text-lg md:text-2xl max-w-prose'>
-              Earn on every fill-up, snack, and car wash—then redeem for
+              Earn on every fill-up and snack—then redeem for
               free fuel, in-store savings, and members-only perks.
             </p>
             <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
@@ -201,10 +201,10 @@ export default function ClarksRewards () {
                   <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
                   Members-only weekly deals
                 </li>
-                <li className='flex items-start gap-2'>
+                {/* <li className='flex items-start gap-2'>
                   <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
                   Car Wash discounts
-                </li>
+                </li> */}
                 <li className='flex items-start gap-2'>
                   <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
                   Birthday bonus points
@@ -278,11 +278,11 @@ const BENEFITS = [
     title: 'Coffee & snacks',
     desc: 'Daily deals on hot coffee, fountain drinks, and fresh snacks.'
   },
-  {
-    icon: '🧼',
-    title: 'Car wash perks',
-    desc: 'Members get discounted washes and occasional free-wash promos.'
-  },
+  // {
+  //   icon: '🧼',
+  //   title: 'Car wash perks',
+  //   desc: 'Members get discounted washes and occasional free-wash promos.'
+  // },
   {
     icon: '🎁',
     title: 'Bonus boosts',
