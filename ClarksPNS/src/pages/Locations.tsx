@@ -12,6 +12,9 @@ import storesJson from '@/assets/data/stores.geocoded.json'
 // --- URL helpers for shareable filters ---
 type FilterState = Record<string, boolean>
 
+type AmenityKey = typeof AMENITY_KEYS[number]
+type AmenityFilterKey = typeof AMENITY_FILTER_KEYS[number]
+
 // Encode checked keys to comma lists: ?amenity=atm,diesel&food=clarkscafe&fuel=marathon
 function encodeFiltersToSearch (
   amenity: FilterState,
@@ -189,6 +192,20 @@ const AMENITY_KEYS = [
   'carwash'
 ] as const
 
+// Use this for the FILTER UI only (excludes the plain "fuel" amenity)
+const AMENITY_FILTER_KEYS = [
+  'atm',
+  'beerCave',
+  'beerSales',
+  'e85',
+  'diesel',
+  'kerosene',
+  'open24Hours',
+  'showers',
+  'rvDump',
+  'carwash'
+] as const
+
 const AMENITY_LABEL: Record<typeof AMENITY_KEYS[number], string> = {
   atm: 'ATM',
   beerCave: 'Beer cave',
@@ -326,7 +343,7 @@ export default function Locations () {
     const fp = { ...DEFAULT_FUEL, ...(s.fuel ?? {}) }
 
     // if any amenity is checked, the store must have all checked ones true
-    for (const k of Object.keys(amenityFilter)) {
+    for (const k of AMENITY_FILTER_KEYS as readonly AmenityFilterKey[]) {
       if (amenityFilter[k] && !a[k as keyof Amenities]) return false
     }
     for (const k of Object.keys(foodFilter)) {
@@ -572,10 +589,9 @@ export default function Locations () {
                   const f = { ...DEFAULT_FOOD, ...(entry.food ?? {}) }
                   const fp = { ...DEFAULT_FUEL, ...(entry.fuel ?? {}) }
 
-                  // dynamic amenities list (truthy only)
-                  const amenityOn = (
-                    AMENITY_KEYS as readonly (keyof Amenities)[]
-                  ).filter(k => !!a[k])
+                  const amenityOn: AmenityKey[] = (
+                    AMENITY_KEYS as readonly AmenityKey[]
+                  ).filter(k => !!a[k as keyof Amenities])
 
                   return (
                     <article
@@ -911,7 +927,7 @@ function FilterPanel ({
           Amenities
         </legend>
         <div className='mt-2 grid grid-cols-2 md:grid-cols-3 gap-2'>
-          {AMENITY_KEYS.map(k => (
+          {AMENITY_FILTER_KEYS.map(k => (
             <label key={k} className='flex items-center gap-2 text-sm'>
               <input
                 type='checkbox'
