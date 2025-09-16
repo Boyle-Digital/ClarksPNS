@@ -1,16 +1,14 @@
 // src/components/site/HeaderNav.tsx
 import { useEffect, useRef, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import MobileMenuDrawer from "./MobileMenuDrawer";
 import logoUrl from "@/assets/images/clarks-logo.png";
+import rewardsLogoUrl from "@/assets/images/Clarks-PNS-Main-Rewards-Logo.png";
 import HamburgerIcon from "@/assets/icons/hamburger.svg?react";
 
 type HeaderNavProps = {
   showAccentBar?: boolean; // kept for compatibility
 };
-
-// Top-level links shown in the center of the desktop bar (About Us handled separately below)
-const LINKS = ["Clarks Rewards", "Locations", "Food", "Car Wash"] as const;
 
 function toPath(label: string) {
   return "/" + label.toLowerCase().replace(/\s+/g, "-");
@@ -24,17 +22,49 @@ export default function HeaderNav({ showAccentBar = true }: HeaderNavProps) {
   const aboutBtnRef = useRef<HTMLButtonElement | null>(null);
   const aboutMenuRef = useRef<HTMLDivElement | null>(null);
 
-  // Close About menu on outside click or Escape
+  // === LOCATIONS DROPDOWN (desktop) ===
+  const [locOpen, setLocOpen] = useState(false);
+  const locBtnRef = useRef<HTMLButtonElement | null>(null);
+  const locMenuRef = useRef<HTMLDivElement | null>(null);
+
+  // Debounced close
+  const closeTimers = useRef<{ about: number | ReturnType<typeof setTimeout> | null; loc: number | ReturnType<typeof setTimeout> | null }>({
+    about: null,
+    loc: null,
+  });
+  const CLOSE_DELAY = 200;
+  const cancelClose = (w: "about" | "loc") => {
+    const t = closeTimers.current[w];
+    if (t) {
+      clearTimeout(t as number);
+      closeTimers.current[w] = null;
+    }
+  };
+  const scheduleClose = (w: "about" | "loc") => {
+    cancelClose(w);
+    closeTimers.current[w] = setTimeout(() => {
+      if (w === "about") setAboutOpen(false);
+      else setLocOpen(false);
+      closeTimers.current[w] = null;
+    }, CLOSE_DELAY);
+  };
+
+  // Outside click / ESC
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
-      if (!aboutOpen) return;
       const t = e.target as Node;
-      if (aboutBtnRef.current?.contains(t)) return;
-      if (aboutMenuRef.current?.contains(t)) return;
-      setAboutOpen(false);
+      if (aboutOpen) {
+        if (!aboutBtnRef.current?.contains(t) && !aboutMenuRef.current?.contains(t)) setAboutOpen(false);
+      }
+      if (locOpen) {
+        if (!locBtnRef.current?.contains(t) && !locMenuRef.current?.contains(t)) setLocOpen(false);
+      }
     }
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setAboutOpen(false);
+      if (e.key === "Escape") {
+        setAboutOpen(false);
+        setLocOpen(false);
+      }
     }
     document.addEventListener("mousedown", onDocClick);
     document.addEventListener("keydown", onKey);
@@ -42,38 +72,55 @@ export default function HeaderNav({ showAccentBar = true }: HeaderNavProps) {
       document.removeEventListener("mousedown", onDocClick);
       document.removeEventListener("keydown", onKey);
     };
-  }, [aboutOpen]);
+  }, [aboutOpen, locOpen]);
 
-  // Drawer contains everything EXCEPT the center “Clarks Rewards” (visible on the mobile bar)
-  // Replace single "About Us" with two explicit items for mobile: Our Story (existing About page) + Charity
-  const drawerLinks = [
-    { label: "Locations", href: toPath("Locations") },
-    { label: "Food", href: toPath("Food") },
-    { label: "Car Wash", href: toPath("Car Wash") },
-    { label: "Our Story", href: toPath("About Us") },
-    { label: "Charity", href: "/charity" },
+  // Close on route change
+  const location = useLocation();
+  useEffect(() => {
+    setAboutOpen(false);
+    setLocOpen(false);
+  }, [location.pathname]);
+
+  // --- NEW: grouped structure for the mobile drawer (mirrors desktop) ---
+  const mobileGroups = [
+    { type: "link" as const, label: "Clarks Rewards", href: toPath("Clarks Rewards") },
+
+    {
+      type: "group" as const,
+      label: "Locations",
+      items: [
+        { label: "All Locations", href: toPath("Locations") },
+        { label: "Car Wash", href: toPath("Car Wash") },
+      ],
+    },
+
+    { type: "link" as const, label: "Food", href: toPath("Food") },
+    { type: "link" as const, label: "Careers", href: toPath("Careers") },
+
+    {
+      type: "group" as const,
+      label: "About Us",
+      items: [
+        { label: "Our Story", href: toPath("About Us") },
+        { label: "Charity", href: "/charity" },
+      ],
+    },
   ];
 
   return (
     <header className="sticky top-0 z-header w-full">
-      {/* White bar with rounded bottom (your original pill) */}
       <div className="bg-surface shadow-soft rounded-b-2xl">
         {/* --- MOBILE BAR (<= md) --- */}
         <div className="md:hidden h-16 grid grid-cols-[auto_1fr_auto] items-center px-3">
-          {/* Left: Logo (flush to the left with small padding) */}
           <Link to="/" className="inline-flex items-center -ml-1" aria-label="Clarks Home">
             <img src={logoUrl} alt="Clark’s Pump-N-Shop" className="h-8 w-auto" />
           </Link>
-
-          {/* Center: Clarks Rewards */}
           <NavLink
             to={toPath("Clarks Rewards")}
             className="justify-self-center truncate text-base font-semibold tracking-tight text-text"
           >
             Clarks Rewards
           </NavLink>
-
-          {/* Right: Hamburger */}
           <button
             aria-label="Open menu"
             aria-expanded={open}
@@ -84,49 +131,162 @@ export default function HeaderNav({ showAccentBar = true }: HeaderNavProps) {
           </button>
         </div>
 
-        {/* --- DESKTOP BAR (md+) — full-width 3-col grid to center links while pinning logo left --- */}
+        {/* --- DESKTOP BAR (md+) --- */}
         <div className="hidden md:block">
           <div className="h-header grid items-center">
-            {/* Use a full-width grid, not a centered .container, so the logo can sit against the window edge */}
             <div className="grid grid-cols-[auto_1fr_auto] items-center h-header">
-              {/* Col 1: Logo pinned to the far-left with a little breathing room */}
-              <div className="pl-4">
+              {/* Left logo */}
+              <div className="pl-8">
                 <Link to="/" className="inline-flex items-center" aria-label="Clarks Home">
                   <img src={logoUrl} alt="Clark’s Pump-N-Shop" className="h-9 w-auto" />
                 </Link>
               </div>
 
-              {/* Col 2: Nav perfectly centered in the bar */}
+              {/* Center nav — Rewards → Locations▼ → Food → Careers → About▼ */}
               <nav className="justify-self-center">
                 <ul className="flex items-center gap-6 xl:gap-8">
-                  {LINKS.map((label) => (
-                    <li key={label}>
-                      <NavLink
-                        to={toPath(label)}
-                        className={({ isActive }) =>
-                          [
-                            "inline-block text-nav text-center leading-none",
-                            "py-2",
-                            isActive ? "text-brand" : "text-text hover:text-brand",
-                            "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
-                          ].join(" ")
-                        }
-                      >
-                        {label}
-                      </NavLink>
-                    </li>
-                  ))}
+                  <li>
+                    <NavLink
+                      to={toPath("Clarks Rewards")}
+                      className={({ isActive }) =>
+                        [
+                          "inline-block text-nav text-center leading-none py-2",
+                          isActive ? "text-brand" : "text-text hover:text-brand",
+                          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
+                        ].join(" ")
+                      }
+                    >
+                      Clarks Rewards
+                    </NavLink>
+                  </li>
 
-                  {/* About Us dropdown */}
-                  <li className="relative">
+                  {/* Locations dropdown */}
+                  <li
+                    className="relative"
+                    onMouseEnter={() => {
+                      cancelClose("loc");
+                      setLocOpen(true);
+                    }}
+                    onMouseLeave={() => scheduleClose("loc")}
+                  >
+                    <button
+                      ref={locBtnRef}
+                      type="button"
+                      aria-haspopup="menu"
+                      aria-expanded={locOpen}
+                      onClick={() => setLocOpen((v) => !v)}
+                      className="inline-flex items-center gap-1 py-2 text-nav leading-none text-text hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                      onFocus={() => {
+                        cancelClose("loc");
+                        setLocOpen(true);
+                      }}
+                      onBlur={() => scheduleClose("loc")}
+                    >
+                      Locations
+                      <svg
+                        aria-hidden
+                        className={`h-3 w-3 transition-transform ${locOpen ? "rotate-180" : "rotate-0"}`}
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.172l3.71-3.94a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" />
+                      </svg>
+                    </button>
+
+                    <div
+                      ref={locMenuRef}
+                      className={`absolute left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl border border-black/10 bg-white shadow-lg ring-1 ring-black/5 transition-[opacity,transform] duration-100 ${
+                        locOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                      }`}
+                      role="menu"
+                      onMouseEnter={() => {
+                        cancelClose("loc");
+                        setLocOpen(true);
+                      }}
+                      onMouseLeave={() => scheduleClose("loc")}
+                    >
+                      <div className="py-1">
+                        <NavLink
+                          to={toPath("Locations")}
+                          className={({ isActive }) =>
+                            [
+                              "block px-4 py-2 text-sm",
+                              isActive ? "text-brand" : "text-black hover:bg-brand/5 hover:text-brand",
+                            ].join(" ")
+                          }
+                          onClick={() => setLocOpen(false)}
+                          role="menuitem"
+                        >
+                          All Locations
+                        </NavLink>
+                        <NavLink
+                          to={toPath("Car Wash")}
+                          className={({ isActive }) =>
+                            [
+                              "block px-4 py-2 text-sm",
+                              isActive ? "text-brand" : "text-black hover:bg-brand/5 hover:text-brand",
+                            ].join(" ")
+                          }
+                          onClick={() => setLocOpen(false)}
+                          role="menuitem"
+                        >
+                          Car Wash
+                        </NavLink>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <NavLink
+                      to={toPath("Food")}
+                      className={({ isActive }) =>
+                        [
+                          "inline-block text-nav text-center leading-none py-2",
+                          isActive ? "text-brand" : "text-text hover:text-brand",
+                          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
+                        ].join(" ")
+                      }
+                    >
+                      Food
+                    </NavLink>
+                  </li>
+
+                  <li>
+                    <NavLink
+                      to={toPath("Careers")}
+                      className={({ isActive }) =>
+                        [
+                          "inline-block text-nav text-center leading-none py-2",
+                          isActive ? "text-brand" : "text-text hover:text-brand",
+                          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
+                        ].join(" ")
+                      }
+                    >
+                      Careers
+                    </NavLink>
+                  </li>
+
+                  {/* About dropdown */}
+                  <li
+                    className="relative"
+                    onMouseEnter={() => {
+                      cancelClose("about");
+                      setAboutOpen(true);
+                    }}
+                    onMouseLeave={() => scheduleClose("about")}
+                  >
                     <button
                       ref={aboutBtnRef}
                       type="button"
                       aria-haspopup="menu"
                       aria-expanded={aboutOpen}
                       onClick={() => setAboutOpen((v) => !v)}
-                      onMouseEnter={() => setAboutOpen(true)}
                       className="inline-flex items-center gap-1 py-2 text-nav leading-none text-text hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                      onFocus={() => {
+                        cancelClose("about");
+                        setAboutOpen(true);
+                      }}
+                      onBlur={() => scheduleClose("about")}
                     >
                       About Us
                       <svg
@@ -139,14 +299,17 @@ export default function HeaderNav({ showAccentBar = true }: HeaderNavProps) {
                       </svg>
                     </button>
 
-                    {/* Menu */}
                     <div
                       ref={aboutMenuRef}
-                      onMouseLeave={() => setAboutOpen(false)}
-                      className={`absolute left-1/2 -translate-x-1/2 mt-2 w-48 rounded-xl border border-black/10 bg-white shadow-lg ring-1 ring-black/5 transition-opacity ${
+                      className={`absolute left-1/2 -translate-x-1/2 mt-2 w-48 rounded-xl border border-black/10 bg-white shadow-lg ring-1 ring-black/5 transition-[opacity,transform] duration-100 ${
                         aboutOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                       }`}
                       role="menu"
+                      onMouseEnter={() => {
+                        cancelClose("about");
+                        setAboutOpen(true);
+                      }}
+                      onMouseLeave={() => scheduleClose("about")}
                     >
                       <div className="py-1">
                         <NavLink
@@ -181,17 +344,27 @@ export default function HeaderNav({ showAccentBar = true }: HeaderNavProps) {
                 </ul>
               </nav>
 
-              {/* Col 3: Invisible logo clone as a dynamic spacer to keep the center truly centered */}
-              <div className="pr-4 invisible select-none" aria-hidden="true">
-                <img src={logoUrl} alt="" className="h-9 w-auto" />
+              {/* Right logo */}
+              <div className="pr-8">
+                <Link
+                  to={toPath("Clarks Rewards")}
+                  className="inline-flex items-center"
+                  aria-label="Clarks Rewards"
+                >
+                  <img src={rewardsLogoUrl} alt="Clarks Rewards" className="h-9 w-auto" />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile drawer sheet */}
-      <MobileMenuDrawer open={open} onClose={() => setOpen(false)} links={drawerLinks} />
+      {/* Mobile drawer — now passes grouped structure */}
+      <MobileMenuDrawer
+        open={open}
+        onClose={() => setOpen(false)}
+        groups={mobileGroups}
+      />
     </header>
   );
 }
