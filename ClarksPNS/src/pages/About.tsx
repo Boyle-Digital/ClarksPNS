@@ -74,7 +74,7 @@ export default function About() {
           </h1>
           <p className="mt-4 text-white/90 text-base md:text-lg">
             What began as one store in Westwood, Kentucky has grown into a regional network
-            serving communities across Kentucky, Ohio, West Virginia, and Florida—still run by the Clark family.
+            serving communities across Kentucky, Ohio, and West Virginia—still run by the Clark family.
           </p>
           <nav className="mt-6 flex flex-wrap gap-2">
             {[
@@ -126,11 +126,11 @@ export default function About() {
                 In the 1990s, the company—by then at 18 locations—was purchased by John’s
                 three sons: Rick, Rodney, and Brent Clark. The footprint expanded through
                 group acquisitions in central Kentucky and new-store construction across the
-                Tri-State area and into Florida.
+                Tri-State area.
               </p>
               <p>
                 Fast forward to 2019: Clark’s Pump-N-Shop operates 67 convenience stores
-                in Kentucky, Ohio, West Virginia, and Florida, supported by more than 700
+                in Kentucky, Ohio, and West Virginia, supported by more than 700
                 team members and a home office in Ashland, KY. Today the company is owned
                 and operated by Rick and Brent Clark.
               </p>
@@ -177,7 +177,7 @@ export default function About() {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2">
-            {['Kentucky', 'Ohio', 'West Virginia', 'Florida'].map((s) => (
+            {['Kentucky', 'Ohio', 'West Virginia'].map((s) => (
               <span
                 key={s}
                 className="rounded-full bg-white border border-black/10 px-4 py-2 text-sm text-black"
@@ -314,7 +314,7 @@ export default function About() {
             /> */}
           </div>
 
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <a
               href="https://www.instagram.com/clarkspumpnshop/?hl=en"
               target="_blank"
@@ -323,11 +323,11 @@ export default function About() {
             >
               Follow us on Instagram
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
-      {/* POLICY LINKS */}
+      {/* POLICY LINKS
       <section className="py-10 md:py-12 bg-neutral-50 border-t border-black/10">
         <div className="container mx-auto px-6 md:px-10">
           <ul className="flex flex-wrap gap-3 text-sm text-black/70">
@@ -342,7 +342,7 @@ export default function About() {
             © Clark’s Pump-N-Shop, Inc. 2023 • Site created and maintained by Local Brand Reach
           </p>
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }

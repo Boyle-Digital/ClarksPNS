@@ -56,9 +56,9 @@ const Footer: React.FC<FooterProps> = ({
                 <span className="font-semibold">Email:</span>{" "}
                 <a
                   className="underline underline-offset-4 hover:text-text-onBrand"
-                  href="mailto:brian.unrue@clarkspns.com"
+                  href="mailto:contactus@clarkspns.com"
                 >
-                  brian.unrue@clarkspns.com
+                  contactus@clarkspns.com
                 </a>
               </p>
               <p>
@@ -135,7 +135,7 @@ const Footer: React.FC<FooterProps> = ({
 
           {/* Copyright */}
           <p className="text-sm text-text-onBrand/80 text-center md:text-right">
-            © {year} Clark’s Pump-N-Shop. All rights reserved.
+            © {year} Boyle Digital. All rights reserved.
           </p>
         </div>
       </div>

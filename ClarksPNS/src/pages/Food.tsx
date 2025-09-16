@@ -75,6 +75,9 @@ export default function Food() {
         </div>
       </section>
 
+      {/* Menus */}
+      <BrandMenus />
+
       {/* Gallery */}
       <section aria-label="Food Gallery" className="py-12 md:py-20 bg-neutral-50 border-y border-black/10">
         <div className="container mx-auto px-6 md:px-10">
@@ -97,8 +100,7 @@ export default function Food() {
         </div>
       </section>
 
-      {/* Menus */}
-      <BrandMenus />
+      
     </main>
   );
 }
@@ -112,7 +114,7 @@ function BrandMenus() {
     <section aria-label="Restaurant Menus" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-6 md:px-10">
         <div className="max-w-3xl">
-          <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">Our In-Store Kitchens</h2>
+          {/* <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">Our In-Store Kitchens</h2> */}
         </div>
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <MenuBlock id="champs-chicken" brandKey="champs" logo={champsLogo} name="Champs Chicken" desc="Crispy tenders, signature sides, and sauces." />

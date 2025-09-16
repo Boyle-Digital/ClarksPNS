@@ -9,6 +9,59 @@ import {
 // ⬇️ use the precomputed file
 import storesJson from '@/assets/data/stores.geocoded.json'
 
+// --- URL helpers for shareable filters ---
+type FilterState = Record<string, boolean>
+
+// Encode checked keys to comma lists: ?amenity=atm,diesel&food=clarkscafe&fuel=marathon
+function encodeFiltersToSearch (
+  amenity: FilterState,
+  food: FilterState,
+  fuel: FilterState
+): string {
+  const params = new URLSearchParams(window.location.search)
+
+  const toCsv = (o: FilterState) =>
+    Object.keys(o)
+      .filter(k => o[k])
+      .join(',')
+
+  const aCsv = toCsv(amenity)
+  const fCsv = toCsv(food)
+  const fpCsv = toCsv(fuel)
+
+  if (aCsv) params.set('amenity', aCsv)
+  else params.delete('amenity')
+  if (fCsv) params.set('food', fCsv)
+  else params.delete('food')
+  if (fpCsv) params.set('fuel', fpCsv)
+  else params.delete('fuel')
+
+  return params.toString()
+}
+
+function decodeFiltersFromSearch (): {
+  amenity: FilterState
+  food: FilterState
+  fuel: FilterState
+} {
+  const params = new URLSearchParams(window.location.search)
+  const toState = (csv: string | null) =>
+    (csv || '')
+      .split(',')
+      .map(s => s.trim())
+      .filter(Boolean)
+      .reduce<FilterState>((acc, k) => {
+        acc[k] = true
+        return acc
+      }, {})
+
+  return {
+    amenity: toState(params.get('amenity')),
+    food: toState(params.get('food')),
+    fuel: toState(params.get('fuel'))
+  }
+}
+
 // ---------- Types for stores.json ----------
 export type Amenities = {
   atm: boolean
@@ -21,6 +74,21 @@ export type Amenities = {
   showers: boolean
   rvDump: boolean
   fuel: boolean
+  carwash: boolean // NEW
+}
+
+export type FoodPrograms = {
+  clarkscafe: boolean
+  krispykrunchy: boolean
+  champs: boolean
+  hangar: boolean
+  jacks: boolean
+  grabngo?: boolean // seen in your JSON
+}
+
+export type FuelProviders = {
+  marathon: boolean
+  arco: boolean
 }
 
 export type StoreHours = {
@@ -40,7 +108,8 @@ export type StoreEntry = {
   store_hours?: StoreHours
   alt_hours?: StoreHours
   amenities?: Amenities
-
+  food?: FoodPrograms // NEW
+  fuel?: FuelProviders // NEW
   // ⬇️ new: precomputed coordinates from your build script
   lat?: number
   lng?: number
@@ -67,7 +136,95 @@ const DEFAULT_AMENITIES: Amenities = {
   open24Hours: false,
   showers: false,
   rvDump: false,
-  fuel: false
+  fuel: false,
+  carwash: false
+}
+
+// Default “shapes” for optional blocks
+const DEFAULT_FOOD: FoodPrograms = {
+  clarkscafe: false,
+  krispykrunchy: false,
+  champs: false,
+  hangar: false,
+  jacks: false,
+  grabngo: false
+}
+
+const DEFAULT_FUEL: FuelProviders = {
+  marathon: true, // your requested defaults
+  arco: false
+}
+
+function isStoreKey (k: string) {
+  return /^\d+$/.test(k)
+}
+
+function normalizeStores (raw: Record<string, any>): StoresMap {
+  const out: StoresMap = {}
+  for (const key of Object.keys(raw)) {
+    if (!isStoreKey(key)) continue // ignore non-numeric keys if any
+    const e = raw[key] ?? {}
+    out[key] = {
+      ...e,
+      amenities: { ...DEFAULT_AMENITIES, ...(e.amenities ?? {}) },
+      food: { ...DEFAULT_FOOD, ...(e.food ?? {}) },
+      fuel: { ...DEFAULT_FUEL, ...(e.fuel ?? {}) }
+    }
+  }
+  return out
+}
+
+// Keys for filters + display labels
+const AMENITY_KEYS = [
+  'atm',
+  'beerCave',
+  'beerSales',
+  'e85',
+  'diesel',
+  'kerosene',
+  'open24Hours',
+  'showers',
+  'rvDump',
+  'fuel',
+  'carwash'
+] as const
+
+const AMENITY_LABEL: Record<typeof AMENITY_KEYS[number], string> = {
+  atm: 'ATM',
+  beerCave: 'Beer cave',
+  beerSales: 'Beer sales',
+  e85: 'E85',
+  diesel: 'Diesel',
+  kerosene: 'Kerosene',
+  open24Hours: '24 hours',
+  showers: 'Showers',
+  rvDump: 'RV dump',
+  fuel: 'Fuel',
+  carwash: 'Car wash'
+}
+
+const FOOD_KEYS = [
+  'clarkscafe',
+  'krispykrunchy',
+  'champs',
+  'hangar',
+  'jacks',
+  'grabngo'
+] as const
+
+const FOOD_LABEL: Record<typeof FOOD_KEYS[number], string> = {
+  clarkscafe: "Clark's Cafe",
+  krispykrunchy: 'Krispy Krunchy',
+  champs: 'Champs',
+  hangar: 'Hangar 54',
+  jacks: "Jack's Deli",
+  grabngo: 'Grab & Go'
+}
+
+const FUEL_KEYS = ['marathon', 'arco'] as const
+const FUEL_LABEL: Record<typeof FUEL_KEYS[number], string> = {
+  marathon: 'Marathon',
+  arco: 'ARCO'
 }
 
 // ---------- Component ----------
@@ -133,13 +290,53 @@ async function geocodeAddress (
 }
 
 export default function Locations () {
-  const stores: StoresMap = storesJson as StoresMap
-
+  const stores: StoresMap = React.useMemo(
+    () => normalizeStores(storesJson as Record<string, any>),
+    []
+  )
   const [address, setAddress] = React.useState('')
   const [radius, setRadius] = React.useState<number>(25)
   const [userPoint, setUserPoint] = React.useState<LatLng | null>(null)
   const [markers, setMarkers] = React.useState<Record<string, LatLng>>({})
   const [selectedStore, setSelectedStore] = React.useState<string | null>(null)
+  // collapsed by default
+  const [filtersOpen, setFiltersOpen] = React.useState(false)
+
+  // Filter state (multi-select via checkbox)
+  const [amenityFilter, setAmenityFilter] = React.useState<
+    Record<string, boolean>
+  >({})
+  const [foodFilter, setFoodFilter] = React.useState<Record<string, boolean>>(
+    {}
+  )
+  const [fuelFilter, setFuelFilter] = React.useState<Record<string, boolean>>(
+    {}
+  )
+
+  const clearFilters = () => {
+    setAmenityFilter({})
+    setFoodFilter({})
+    setFuelFilter({})
+  }
+
+  // Helper: does store satisfy all selected filters?
+  function matchesFilters (s: StoreEntry): boolean {
+    const a = { ...DEFAULT_AMENITIES, ...(s.amenities ?? {}) }
+    const f = { ...DEFAULT_FOOD, ...(s.food ?? {}) }
+    const fp = { ...DEFAULT_FUEL, ...(s.fuel ?? {}) }
+
+    // if any amenity is checked, the store must have all checked ones true
+    for (const k of Object.keys(amenityFilter)) {
+      if (amenityFilter[k] && !a[k as keyof Amenities]) return false
+    }
+    for (const k of Object.keys(foodFilter)) {
+      if (foodFilter[k] && !f[k as keyof FoodPrograms]) return false
+    }
+    for (const k of Object.keys(fuelFilter)) {
+      if (fuelFilter[k] && !fp[k as keyof FuelProviders]) return false
+    }
+    return true
+  }
 
   React.useEffect(() => {
     const acc: Record<string, LatLng> = {}
@@ -150,6 +347,32 @@ export default function Locations () {
     }
     setMarkers(acc)
   }, [stores])
+
+  // On mount: read filters from URL
+  React.useEffect(() => {
+    const { amenity, food, fuel } = decodeFiltersFromSearch()
+    if (Object.keys(amenity).length) setAmenityFilter(amenity)
+    if (Object.keys(food).length) setFoodFilter(food)
+    if (Object.keys(fuel).length) setFuelFilter(fuel)
+    // If any filters are preselected, open the panel
+    if (
+      Object.keys(amenity).length ||
+      Object.keys(food).length ||
+      Object.keys(fuel).length
+    ) {
+      setFiltersOpen(true)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Whenever filters change, write them to the URL (without reloading)
+  React.useEffect(() => {
+    const qs = encodeFiltersToSearch(amenityFilter, foodFilter, fuelFilter)
+    const newUrl = qs
+      ? `${window.location.pathname}?${qs}`
+      : window.location.pathname
+    window.history.replaceState(null, '', newUrl)
+  }, [amenityFilter, foodFilter, fuelFilter])
 
   const handleSearch = async (e?: React.FormEvent) => {
     e?.preventDefault()
@@ -199,9 +422,18 @@ export default function Locations () {
     }>
     return arr
       .filter(r => r.distance <= radius)
+      .filter(r => matchesFilters(r.entry))
       .sort((a, b) => a.distance - b.distance)
       .slice(0, 30)
-  }, [userPoint, radius, markers, stores])
+  }, [
+    userPoint,
+    radius,
+    markers,
+    stores,
+    amenityFilter,
+    foodFilter,
+    fuelFilter
+  ])
 
   const mapCenter = userPoint || results[0]?.latlng || initialCenter
 
@@ -288,44 +520,62 @@ export default function Locations () {
                 <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
                   Nearby stores
                 </h2>
-                <span className='text-black/60 text-sm'>
-                  {userPoint
-                    ? `${results.length} within ${radius} mi`
-                    : 'Enter an address'}
-                </span>
+                <div className='flex items-center gap-3'>
+                  {userPoint && (
+                    <span className='text-black/60 text-sm hidden sm:inline'>
+                      {results.length} within {radius} mi
+                    </span>
+                  )}
+                  <button
+                    type='button'
+                    onClick={() => setFiltersOpen(o => !o)}
+                    className='text-sm rounded-xl border border-black/10 bg-white px-3 py-2 hover:bg-neutral-100'
+                    aria-expanded={filtersOpen}
+                    aria-controls='filters-panel'
+                  >
+                    {filtersOpen ? 'Hide filters' : 'Filters'}
+                  </button>
+                </div>
               </div>
 
+              {/* Filters */}
+              {filtersOpen && (
+                <div
+                  id='filters-panel'
+                  className='mt-3 rounded-2xl border border-black/10 bg-white p-4'
+                >
+                  <FilterPanel
+                    amenityFilter={amenityFilter}
+                    setAmenityFilter={setAmenityFilter}
+                    foodFilter={foodFilter}
+                    setFoodFilter={setFoodFilter}
+                    fuelFilter={fuelFilter}
+                    setFuelFilter={setFuelFilter}
+                    clearFilters={() => {
+                      clearFilters()
+                      // also clear URL immediately
+                      window.history.replaceState(
+                        null,
+                        '',
+                        window.location.pathname
+                      )
+                    }}
+                  />
+                </div>
+              )}
+
+              {/* Results */}
               <div className='mt-4 space-y-4'>
                 {results.map(r => {
                   const { id, entry, distance, addr } = r
-                  const a = (entry.amenities ?? {}) as Partial<Amenities>
-                  const LABELS: Record<keyof Amenities, string> = {
-                    atm: 'ATM',
-                    beerCave: 'Beer cave',
-                    beerSales: 'Beer sales',
-                    e85: 'E85',
-                    diesel: 'Diesel',
-                    kerosene: 'Kerosene',
-                    open24Hours: '24 hours',
-                    showers: 'Showers',
-                    rvDump: 'RV dump',
-                    fuel: 'Fuel'
-                  }
+                  const a = { ...DEFAULT_AMENITIES, ...(entry.amenities ?? {}) }
+                  const f = { ...DEFAULT_FOOD, ...(entry.food ?? {}) }
+                  const fp = { ...DEFAULT_FUEL, ...(entry.fuel ?? {}) }
 
-                  const onList = (
-                    Object.keys(LABELS) as (keyof Amenities)[]
+                  // dynamic amenities list (truthy only)
+                  const amenityOn = (
+                    AMENITY_KEYS as readonly (keyof Amenities)[]
                   ).filter(k => !!a[k])
-
-                  {
-                    onList.length > 0 && (
-                      <ul className='mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-black/80'>
-                        {onList.map(k => (
-                          <Amenity key={k} label={LABELS[k]} on={true} />
-                          // or: <Amenity key={k} label={LABELS[k]} on={!!a[k]} />
-                        ))}
-                      </ul>
-                    )
-                  }
 
                   return (
                     <article
@@ -359,23 +609,36 @@ export default function Locations () {
                         </div>
                       </div>
 
-                      {/* Amenities (only show truthy ones) */}
-                      <ul className='mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-black/80'>
-                        {a.atm && <Amenity label='ATM' on={true} />}
-                        {a.beerCave && <Amenity label='Beer cave' on={true} />}
-                        {a.beerSales && (
-                          <Amenity label='Beer sales' on={true} />
-                        )}
-                        {a.e85 && <Amenity label='E85' on={true} />}
-                        {a.diesel && <Amenity label='Diesel' on={true} />}
-                        {a.kerosene && <Amenity label='Kerosene' on={true} />}
-                        {a.open24Hours && (
-                          <Amenity label='24 hours' on={true} />
-                        )}
-                        {a.showers && <Amenity label='Showers' on={true} />}
-                        {a.rvDump && <Amenity label='RV dump' on={true} />}
-                        {a.fuel && <Amenity label='Fuel' on={true} />}
-                      </ul>
+                      {/* Amenities (truthy only, dynamic) */}
+                      {amenityOn.length > 0 && (
+                        <ul className='mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-black/80'>
+                          {amenityOn.map(k => (
+                            <Amenity
+                              key={k}
+                              label={AMENITY_LABEL[k]}
+                              on={true}
+                            />
+                          ))}
+                        </ul>
+                      )}
+
+                      {/* Food (truthy only) */}
+                      {FOOD_KEYS.filter(k => f[k]).length > 0 && (
+                        <ul className='mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-black/80'>
+                          {FOOD_KEYS.filter(k => f[k]).map(k => (
+                            <Amenity key={k} label={FOOD_LABEL[k]} on={true} />
+                          ))}
+                        </ul>
+                      )}
+
+                      {/* Fuel Providers (truthy only) */}
+                      {FUEL_KEYS.filter(k => fp[k]).length > 0 && (
+                        <ul className='mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-black/80'>
+                          {FUEL_KEYS.filter(k => fp[k]).map(k => (
+                            <Amenity key={k} label={FUEL_LABEL[k]} on={true} />
+                          ))}
+                        </ul>
+                      )}
 
                       {/* Hours */}
                       {(entry.store_hours || entry.alt_hours) && (
@@ -414,7 +677,8 @@ export default function Locations () {
 
                 {userPoint && results.length === 0 && (
                   <div className='rounded-xl border border-black/10 p-5 text-black/70'>
-                    No stores within {radius} miles. Try a larger radius.
+                    No stores within {radius} miles. Try a larger radius or
+                    adjust filters.
                   </div>
                 )}
               </div>
@@ -601,5 +865,98 @@ function Amenity ({ label, on }: { label: string; on: boolean }) {
       />
       <span className={on ? 'text-black/90' : 'text-black/50'}>{label}</span>
     </li>
+  )
+}
+
+function FilterPanel ({
+  amenityFilter,
+  setAmenityFilter,
+  foodFilter,
+  setFoodFilter,
+  fuelFilter,
+  setFuelFilter,
+  clearFilters
+}: {
+  amenityFilter: Record<string, boolean>
+  setAmenityFilter: React.Dispatch<
+    React.SetStateAction<Record<string, boolean>>
+  >
+  foodFilter: Record<string, boolean>
+  setFoodFilter: React.Dispatch<React.SetStateAction<Record<string, boolean>>>
+  fuelFilter: Record<string, boolean>
+  setFuelFilter: React.Dispatch<React.SetStateAction<Record<string, boolean>>>
+  clearFilters: () => void
+}) {
+  const toggle =
+    (set: React.Dispatch<React.SetStateAction<Record<string, boolean>>>) =>
+    (key: string) =>
+      set(prev => ({ ...prev, [key]: !prev[key] }))
+
+  return (
+    <div className='space-y-3'>
+      <div className='flex items-center justify-between'>
+        <div className="font-['Oswald'] text-lg font-bold">Filter</div>
+        <button
+          type='button'
+          onClick={clearFilters}
+          className='text-sm underline underline-offset-2 text-black/70 hover:text-black'
+        >
+          Clear all
+        </button>
+      </div>
+
+      {/* Amenities */}
+      <fieldset>
+        <legend className='text-sm font-semibold text-black/80'>
+          Amenities
+        </legend>
+        <div className='mt-2 grid grid-cols-2 md:grid-cols-3 gap-2'>
+          {AMENITY_KEYS.map(k => (
+            <label key={k} className='flex items-center gap-2 text-sm'>
+              <input
+                type='checkbox'
+                checked={!!amenityFilter[k]}
+                onChange={() => toggle(setAmenityFilter)(k)}
+              />
+              <span>{AMENITY_LABEL[k]}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      {/* Food */}
+      <fieldset>
+        <legend className='text-sm font-semibold text-black/80'>Food</legend>
+        <div className='mt-2 grid grid-cols-2 md:grid-cols-3 gap-2'>
+          {FOOD_KEYS.map(k => (
+            <label key={k} className='flex items-center gap-2 text-sm'>
+              <input
+                type='checkbox'
+                checked={!!foodFilter[k]}
+                onChange={() => toggle(setFoodFilter)(k)}
+              />
+              <span>{FOOD_LABEL[k]}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      {/* Fuel Providers */}
+      <fieldset>
+        <legend className='text-sm font-semibold text-black/80'>Fuel</legend>
+        <div className='mt-2 grid grid-cols-2 md:grid-cols-3 gap-2'>
+          {FUEL_KEYS.map(k => (
+            <label key={k} className='flex items-center gap-2 text-sm'>
+              <input
+                type='checkbox'
+                checked={!!fuelFilter[k]}
+                onChange={() => toggle(setFuelFilter)(k)}
+              />
+              <span>{FUEL_LABEL[k]}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    </div>
   )
 }
