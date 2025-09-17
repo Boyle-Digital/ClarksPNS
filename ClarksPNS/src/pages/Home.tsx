@@ -49,7 +49,7 @@ const gstv1600 = Object.values(
 ) as string[]
 
 // Merge into a single pool for the carousel
-const PROMO_IMAGES = [...brandy800, ...cody1035, ...cody1080, ...gstv1600]
+const PROMO_IMAGES = [...brandy800]
 
 export default function Home () {
   // --- Simple rotating triplet for Promotions ---
@@ -64,7 +64,7 @@ export default function Home () {
         setIdx(i => (i + 3) % Math.max(PROMO_IMAGES.length, 1))
         setFading(false)
       }, 220)
-    }, 4000)
+    }, 6000)
     return () => clearInterval(timer)
   }, [])
 
