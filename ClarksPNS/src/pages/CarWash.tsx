@@ -47,12 +47,12 @@ export default function CarWash() {
             >
               View Packages
             </a>
-            {/* <Link
-              to="/clarks-rewards"
+            <Link
+              to="/locations?amenity=carwash"
               className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-neutral-100 hover:bg-neutral-200 transition-all text-base md:text-lg"
             >
-              Save with Rewards
-            </Link> */}
+              Find a Car Wash Near You
+            </Link>
           </div>
 
           {/* <div className="mt-2 text-xs text-black/50">
