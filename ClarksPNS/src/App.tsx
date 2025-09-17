@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from '@/components/site/HeaderNav'
 import Footer from '@/components/Footer'
+import ScrollToTop from '@/components/util/ScrollToTop'
+
 import Home from '@/pages/Home'
 import About from '@/pages/About'
 import Charity from '@/pages/Charity'
@@ -14,6 +16,8 @@ import Locations from '@/pages/Locations'
 export default function App () {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <div className='min-h-dvh bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50'>
         <Header />
         <Routes>
@@ -27,7 +31,6 @@ export default function App () {
           <Route path='/Charity' element={<Charity />} />
           <Route path='/Food' element={<Food />} />
           <Route path='/Sponsorship' element={<Sponsorship />} />
-
         </Routes>
         <Footer />
       </div>
