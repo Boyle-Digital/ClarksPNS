@@ -248,7 +248,7 @@ export default function CarWash() {
               <h3 className="font-['Oswald'] text-xl font-bold text-black">$50 Gift Card</h3>
               <p className="mt-2 text-sm text-black/70">Great for a few quick washes.</p>
               <a
-                href="https://checkout.myclarkspns.com/checkout/9fe66ecf-bb7f-46a3-80e5-7098b22c3d76"
+                href="https://checkout.myclarkspns.com/checkout/buy/33396"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center justify-center rounded-2xl px-5 py-3 text-white bg-brand hover:bg-brand/90 transition-all"
@@ -261,7 +261,7 @@ export default function CarWash() {
               <h3 className="font-['Oswald'] text-xl font-bold text-black">$150 Gift Card</h3>
               <p className="mt-2 text-sm text-black/70">Perfect for gifting a season of shine.</p>
               <a
-                href="https://checkout.myclarkspns.com/checkout/9fe66ecf-bb7f-46a3-80e5-7098b22c3d76"
+                href="https://checkout.myclarkspns.com/checkout/buy/33397"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center justify-center rounded-2xl px-5 py-3 text-white bg-brand hover:bg-brand/90 transition-all"
