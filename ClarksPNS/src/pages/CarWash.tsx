@@ -51,7 +51,7 @@ export default function CarWash() {
               to="/locations?amenity=carwash"
               className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-neutral-100 hover:bg-neutral-200 transition-all text-base md:text-lg"
             >
-              Find a Carwash Near You
+              Find a Car Wash Near You
             </Link>
           </div>
 
