@@ -5,68 +5,136 @@ import { Link } from "react-router-dom";
 export default function CarWash() {
   return (
     <main className="w-full overflow-x-clip bg-white">
-      {/* === Hero (no video/image) === */}
-<section
-  aria-label="Clarks Car Wash"
-  className="
-    relative isolate z-0 w-full           
-    -mt-[16px] md:-mt-[20px]           
-    bg-gradient-to-br from-white via-white to-neutral-50
-  "
->
-  {/* Decorative background stripes (no assets) */}
-  <div
-    aria-hidden
-    className="pointer-events-none absolute inset-0 opacity-[0.08]"
-    style={{
-      background:
-        "repeating-linear-gradient(135deg, #0ea5e9 0 2px, transparent 2px 24px)",
-    }}
-  />
-  {/* Subtle radial glow */}
-  <div
-    aria-hidden
-    className="pointer-events-none absolute -inset-40 rounded-[64px] blur-3xl bg-brand/10"
-  />
+      {/* === Hero === */}
+      <section
+        aria-label="Clarks Car Wash"
+        className="
+          relative isolate z-0 w-full
+          -mt-[16px] md:-mt-[20px]
+          bg-gradient-to-br from-white via-white to-neutral-50
+        "
+      >
+        {/* Decorative background */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.08]"
+          style={{
+            background:
+              "repeating-linear-gradient(135deg, #0ea5e9 0 2px, transparent 2px 24px)",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -inset-40 rounded-[64px] blur-3xl bg-brand/10"
+        />
 
-  <div className="relative z-[1] pt-[16px] md:pt-[20px]">   {/* counter the negative margin */}
-    <div className="container mx-auto px-6 md:px-10">
-      <div className="flex min-h-[56vh] md:min-h-[72vh] items-center">
-        <div className="inline-flex flex-col gap-4 md:gap-6 max-w-[760px]">
-          <h1 className="font-['Oswald'] font-bold text-black text-4xl md:text-6xl leading-tight">
-            Clarks Car Wash
-          </h1>
-          <p className="text-black/70 text-lg md:text-2xl max-w-prose">
-            Fast lanes. Gentle clean. Showroom shine—every time.
-          </p>
+        <div className="relative z-[1] pt-[16px] md:pt-[20px]">
+          <div className="container mx-auto px-6 md:px-10">
+            {/* ↓ reduced height here */}
+            <div className="flex min-h-[40vh] md:min-h-[50vh] items-center">
+              <div className="inline-flex flex-col gap-4 md:gap-6 max-w-[760px]">
+                <h1 className="font-['Oswald'] font-bold text-black text-4xl md:text-6xl leading-tight">
+                  Clarks Car Wash
+                </h1>
+                <p className="text-black/70 text-lg md:text-2xl max-w-prose">
+                  Fast lanes. Gentle clean. Showroom shine—every time.
+                </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a
-              href="#packages"
-              className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/20 text-base md:text-lg"
-            >
-              View Packages
-            </a>
-            <Link
-              to="/locations?amenity=carwash"
-              className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-neutral-100 hover:bg-neutral-200 transition-all text-base md:text-lg"
-            >
-              Find a Car Wash Near You
-            </Link>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <a
+                    href="#packages"
+                    className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/20 text-base md:text-lg"
+                  >
+                    View Packages
+                  </a>
+                  <Link
+                    to="/locations?amenity=carwash"
+                    className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-neutral-100 hover:bg-neutral-200 transition-all text-base md:text-lg"
+                  >
+                    Find a Car Wash Near You
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* <div className="mt-2 text-xs text-black/50">
-            Members get discounted washes and occasional free upgrades.
-          </div> */}
+          <div className="h-10 md:h-14 w-full bg-gradient-to-b from-transparent to-white" />
         </div>
-      </div>
-    </div>
+      </section>
 
-    {/* angled divider into next section */}
-    <div className="h-10 md:h-14 w-full bg-gradient-to-b from-transparent to-white" />
-  </div>
-</section>
+      {/* === Keep It Clean Club (moved here, right after hero) === */}
+      <section
+        id="club"
+        aria-label="Keep It Clean Club"
+        className="py-12 md:py-20 bg-neutral-50 border-y border-black/10"
+      >
+        <div className="container mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+            <div className="order-2 lg:order-1">
+              <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+                Keep It Clean Club
+              </h2>
+              <p className="mt-3 text-black/70 text-base md:text-lg">
+                Go unlimited, manage your plan, and keep that glossy finish—always.
+              </p>
 
+              <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <a
+                  href="https://checkout.myclarkspns.com/checkout/9fe66ecf-bb7f-46a3-80e5-7098b22c3d76"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/25"
+                >
+                  Sign up
+                </a>
+                <a
+                  href="https://checkout.myclarkspns.com/account/auth/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-2xl px-6 py-3 bg-white border border-black/10 hover:bg-neutral-100 text-black/90 transition-all"
+                >
+                  Log in
+                </a>
+              </div>
+
+              <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-black/70">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand" />
+                  Wash as often as you like
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand" />
+                  Manage plan online
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand" />
+                  Fast lane access
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand" />
+                  Cancel anytime
+                </li>
+              </ul>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="relative mx-auto w-full max-w-[520px]">
+                <div className="grid grid-cols-2 gap-4">
+                  {Array.from({ length: 4 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="rounded-2xl border border-black/10 h-32 bg-gradient-to-br from-white to-neutral-50"
+                    >
+                      <div className="h-full w-full rounded-2xl bg-brand/5" />
+                    </div>
+                  ))}
+                </div>
+                <div className="pointer-events-none absolute -inset-2 -z-10 rounded-[32px] bg-brand/10 blur-xl" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* === Benefits === */}
       <section aria-label="Car Wash Benefits" className="py-12 md:py-20 bg-white">
@@ -94,12 +162,8 @@ export default function CarWash() {
                     <b className="text-xl">{b.icon}</b>
                   </span>
                 </div>
-                <h3 className="font-['Oswald'] text-xl font-bold text-black">
-                  {b.title}
-                </h3>
-                <p className="mt-2 text-black/70 text-sm leading-relaxed">
-                  {b.desc}
-                </p>
+                <h3 className="font-['Oswald'] text-xl font-bold text-black">{b.title}</h3>
+                <p className="mt-2 text-black/70 text-sm leading-relaxed">{b.desc}</p>
               </article>
             ))}
           </div>
@@ -156,12 +220,6 @@ export default function CarWash() {
                   >
                     {p.cta}
                   </a>
-                  {/* <Link
-                    to="/clarks-rewards"
-                    className="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-white border border-black/10 hover:bg-neutral-100 text-black/90 transition-all"
-                  >
-                    Save with Rewards
-                  </Link> */}
                 </div>
               </article>
             ))}
@@ -173,34 +231,60 @@ export default function CarWash() {
         </div>
       </section>
 
-      {/* === How it works (drive-thru flow) === */}
-      {/* <section id="how-it-works" aria-label="How It Works" className="py-12 md:py-20 bg-white">
+      {/* === NEW: Gift Cards === */}
+      <section id="giftcards" aria-label="Car Wash Gift Cards" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
             <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
-              In. Clean. Out.
+              Gift cards
             </h2>
             <p className="mt-2 text-black/70 text-base md:text-lg">
-              Three simple steps to that fresh-off-the-lot shine.
+              Give the gift of a showroom shine. Digital delivery through myclarkspns.com.
             </p>
           </div>
 
-          <ol className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {STEPS.map((s, i) => (
-              <li key={s.title} className="relative rounded-2xl bg-white p-6 border border-black/10">
-                <div className="absolute -top-3 -left-3 flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-white font-bold">
-                  {i + 1}
-                </div>
-                <h3 className="font-['Oswald'] text-xl font-bold text-black pl-8">{s.title}</h3>
-                <p className="mt-2 text-black/70 text-sm leading-relaxed pl-8">{s.desc}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section> */}
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <article className="rounded-2xl border border-black/10 bg-white p-6 hover:shadow-md transition-shadow">
+              <h3 className="font-['Oswald'] text-xl font-bold text-black">$50 Gift Card</h3>
+              <p className="mt-2 text-sm text-black/70">Great for a few quick washes.</p>
+              <a
+                href="https://checkout.myclarkspns.com/checkout/9fe66ecf-bb7f-46a3-80e5-7098b22c3d76"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center justify-center rounded-2xl px-5 py-3 text-white bg-brand hover:bg-brand/90 transition-all"
+              >
+                Buy $50 Gift Card
+              </a>
+            </article>
 
-      {/* === Membership / Join CTA (no images) === */}
-      <section id="join" aria-label="Car Wash Membership" className="py-12 md:py-20 bg-neutral-50 border-y border-black/10">
+            <article className="rounded-2xl border border-black/10 bg-white p-6 hover:shadow-md transition-shadow">
+              <h3 className="font-['Oswald'] text-xl font-bold text-black">$150 Gift Card</h3>
+              <p className="mt-2 text-sm text-black/70">Perfect for gifting a season of shine.</p>
+              <a
+                href="https://checkout.myclarkspns.com/checkout/9fe66ecf-bb7f-46a3-80e5-7098b22c3d76"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center justify-center rounded-2xl px-5 py-3 text-white bg-brand hover:bg-brand/90 transition-all"
+              >
+                Buy $150 Gift Card
+              </a>
+            </article>
+          </div>
+
+          <p className="mt-6 text-xs text-black/60">
+            Gift cards are redeemable at participating locations and online where available.
+          </p>
+        </div>
+      </section>
+
+      
+
+      {/* === Membership / Join CTA (kept from your original) === */}
+      <section
+        id="join"
+        aria-label="Car Wash Membership"
+        className="py-12 md:py-20 bg-neutral-50 border-b border-black/10"
+      >
         <div className="container mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
             <div className="order-2 lg:order-1">
@@ -239,17 +323,12 @@ export default function CarWash() {
                   <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand" />
                   Family plan add-ons
                 </li>
-                {/* <li className="flex items-start gap-2">
-                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand" />
-                  Member price on detailing add-ons
-                </li> */}
               </ul>
             </div>
 
-            {/* Visual-only column (no images) */}
+            {/* Visual-only column */}
             <div className="order-1 lg:order-2">
               <div className="relative mx-auto w-full max-w-[520px]">
-                {/* Decorative card grid to echo app-phone layout but purely CSS */}
                 <div className="grid grid-cols-2 gap-4">
                   {Array.from({ length: 4 }).map((_, i) => (
                     <div
@@ -291,9 +370,7 @@ export default function CarWash() {
                     +
                   </span>
                 </summary>
-                <p className="mt-3 text-black/70 text-sm leading-relaxed">
-                  {f.a}
-                </p>
+                <p className="mt-3 text-black/70 text-sm leading-relaxed">{f.a}</p>
               </details>
             ))}
           </div>
@@ -324,12 +401,7 @@ const PACKAGES = [
     tagline: "Shine + protect",
     price: 14,
     freq: "per wash",
-    features: [
-      "Everything in Basic",
-      "Triple-foam polish",
-      "Wheel clean",
-      "Clear coat protectant",
-    ],
+    features: ["Everything in Basic", "Triple-foam polish", "Wheel clean", "Clear coat protectant"],
     cta: "Choose Premium",
     featured: true,
   },
@@ -338,16 +410,12 @@ const PACKAGES = [
     tagline: "Maximum gloss",
     price: 20,
     freq: "per wash",
-    features: [
-      "Everything in Premium",
-      "Ceramic seal",
-      "Undercarriage wash",
-      "Tire shine",
-    ],
+    features: ["Everything in Premium", "Ceramic seal", "Undercarriage wash", "Tire shine"],
     cta: "Go Ultimate",
   },
 ];
 
+// Keeping STEPS for potential future use
 const STEPS = [
   { title: "Choose your wash", desc: "Pick at the kiosk or in the app—Rewards members save automatically." },
   { title: "Roll through", desc: "Follow the guide rails and neutral—our team handles the rest." },
@@ -363,10 +431,6 @@ const FAQS = [
     q: "Is the wash safe for my vehicle?",
     a: "Our equipment and soaps are designed for modern clear coats, with soft-touch materials and filtered water.",
   },
-  // {
-  //   q: "Can I use Rewards points on a wash?",
-  //   a: "Absolutely—earn on every wash and redeem for discounts when you link your Rewards account.",
-  // },
   {
     q: "Where are wash locations?",
     a: "Use the Locations page or the app to find participating car wash sites near you.",
