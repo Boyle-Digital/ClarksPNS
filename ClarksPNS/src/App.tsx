@@ -5,6 +5,7 @@ import Home from '@/pages/Home'
 import About from '@/pages/About'
 import Charity from '@/pages/Charity'
 import Food from '@/pages/Food'
+import Sponsorship from '@/pages/Sponsorship'
 
 import ClarksRewards from '@/pages/clarksrewards'
 import CarWash from '@/pages/CarWash'
@@ -25,6 +26,7 @@ export default function App () {
           <Route path='/about-us' element={<About />} />
           <Route path='/Charity' element={<Charity />} />
           <Route path='/Food' element={<Food />} />
+          <Route path='/Sponsorship' element={<Sponsorship />} />
 
         </Routes>
         <Footer />
