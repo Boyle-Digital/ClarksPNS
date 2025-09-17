@@ -22,7 +22,7 @@ const Card = ({
   cta,
 }: {
   eyebrow?: string;
-  title: string;
+  title: React.ReactNode;
   children: React.ReactNode;
   cta?: { href: string; label: string }[];
 }) => (
@@ -30,7 +30,7 @@ const Card = ({
     {eyebrow && (
       <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">{eyebrow}</p>
     )}
-    <h3 className="mt-1 font-['Oswald'] text-2xl md:text-3xl font-bold">{title}</h3>
+    <h3 className="mt-1 font-['Oswald'] text-2xl md:text-3xl font-bold text-black">{title}</h3>
     <div className="prose prose-neutral mt-3 max-w-none text-black/80">{children}</div>
     {cta && (
       <div className="mt-5 flex flex-wrap gap-3">
@@ -79,7 +79,7 @@ const Gallery = ({
               className="h-full w-full object-cover hover:opacity-95 transition"
             />
           ) : (
-            <div className="aspect-[4/3] w-full bg-black/5 grid place-items-center text-black/40 text-xs">
+            <div className="aspect-[4/3] w-full bg-black/5 grid place-items-center text-black/60 text-xs">
               Image coming soon
             </div>
           )}
@@ -101,8 +101,6 @@ const highSchoolSponsors = [
     blurb:
       "Supporting student-athletes on and off the field with uniforms, equipment, and community events.",
     images: new Array(8).fill(null) as ({ src?: string; alt?: string } | null)[],
-    // When assets are ready, replace with imports like:
-    // images: [{ src: hs1, alt: "Team photo" }, ...]
   },
   {
     name: "Boyd County High School",
@@ -182,7 +180,6 @@ export default function SponsorshipsPage() {
           <div className="md:col-span-5 flex md:justify-end">
             <div className="rounded-2xl overflow-hidden border border-white/20 bg-white/10 shadow-sm p-3">
               <div className="h-64 w-64 md:h-72 md:w-72 rounded-xl overflow-hidden grid place-items-center">
-                {/* Swap with a real collage or logo when available */}
                 <div className="text-center text-white/85 text-sm leading-relaxed px-4">
                   Sponsor photos
                   <br />
@@ -219,7 +216,7 @@ export default function SponsorshipsPage() {
 
           <div className="mt-8 md:mt-10 grid gap-6 md:gap-8">
             {highSchoolSponsors.map((s, idx) => (
-              <Card key={idx} eyebrow={s.location} title={`${s.name} — ${s.sport}`}>
+              <Card key={idx} eyebrow={s.location} title={<span className="text-black">{`${s.name} — ${s.sport}`}</span>}>
                 <p>{s.blurb}</p>
                 <div className="mt-5">
                   <Gallery images={s.images} columns={4} caption="Photos courtesy of school athletics." />
@@ -243,7 +240,7 @@ export default function SponsorshipsPage() {
 
           <div className="mt-8 md:mt-10 grid gap-6 md:gap-8">
             {youthLeagues.map((s, idx) => (
-              <Card key={idx} eyebrow={s.location} title={`${s.name} — ${s.sport}`}>
+              <Card key={idx} eyebrow={s.location} title={<span className="text-black">{`${s.name} — ${s.sport}`}</span>}>
                 <p>{s.blurb}</p>
                 <div className="mt-5">
                   <Gallery images={s.images} columns={4} caption="League snapshots" />
@@ -267,7 +264,7 @@ export default function SponsorshipsPage() {
 
           <div className="mt-8 md:mt-10 grid gap-6 md:gap-8">
             {communityEvents.map((e, idx) => (
-              <Card key={idx} eyebrow={e.location} title={e.name}>
+              <Card key={idx} eyebrow={e.location} title={<span className="text-black">{e.name}</span>}>
                 <p>{e.blurb}</p>
                 <div className="mt-5">
                   <Gallery images={e.images} columns={4} caption="Event highlights" />
@@ -303,19 +300,6 @@ export default function SponsorshipsPage() {
           </div>
         </div>
       </section>
-
-      {/* QUICK LINKS (optional) */}
-      {/*
-      <section className="py-10 bg-white">
-        <div className="container mx-auto px-6 md:px-10">
-          <div className="flex flex-wrap gap-3">
-            <a href="/charity" className="text-sm underline underline-offset-4 text-black/60 hover:text-black">Clark Family Charity</a>
-            <a href="/careers" className="text-sm underline underline-offset-4 text-black/60 hover:text-black">Careers</a>
-            <a href="/locations" className="text-sm underline underline-offset-4 text-black/60 hover:text-black">Find a Location</a>
-          </div>
-        </div>
-      </section>
-      */}
     </main>
   );
 }
