@@ -119,7 +119,7 @@ export default function Careers() {
             <PerkCard title="Flexible Schedules">
               <p>
                 Full-time and part-time options, multiple shifts, and stores
-                across Kentucky & Ohio—work where and when it fits your life.
+                across Kentucky, Ohio, & West Virginia—work where and when it fits your life.
               </p>
             </PerkCard>
             <PerkCard title="Grow With Us">

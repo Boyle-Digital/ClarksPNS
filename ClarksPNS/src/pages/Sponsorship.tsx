@@ -198,7 +198,7 @@ export default function SponsorshipsPage() {
             <Stat value="$250k+" label="Annual sponsorships" />
             <Stat value="60+" label="Schools & teams" />
             <Stat value="100+" label="Community events" />
-            <Stat value="KY • OH" label="Regions served" />
+            <Stat value="KY • OH • WV" label="Regions served" />
           </div>
         </div>
       </section>
