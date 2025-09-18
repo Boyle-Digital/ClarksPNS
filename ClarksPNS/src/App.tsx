@@ -8,10 +8,10 @@ import About from '@/pages/About'
 import Charity from '@/pages/Charity'
 import Food from '@/pages/Food'
 import Sponsorship from '@/pages/Sponsorship'
-
 import ClarksRewards from '@/pages/clarksrewards'
 import CarWash from '@/pages/CarWash'
 import Locations from '@/pages/Locations'
+import Careers from '@/pages/Careers'
 
 export default function App () {
   return (
@@ -30,6 +30,7 @@ export default function App () {
           <Route path='/about-us' element={<About />} />
           <Route path='/Charity' element={<Charity />} />
           <Route path='/Food' element={<Food />} />
+          <Route path='/Careers' element={<Careers />} />
           <Route path='/Sponsorship' element={<Sponsorship />} />
         </Routes>
         <Footer />
