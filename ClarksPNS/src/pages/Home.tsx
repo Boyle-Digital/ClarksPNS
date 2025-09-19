@@ -259,7 +259,7 @@ export default function Home () {
         </div>
       </section>
 
-      {/* Follow Clarks — expandable social cards (black text, black icons on buttons) */}
+      {/* Follow Clarks — expandable social cards (updated embeds) */}
       <section
         aria-label='Follow Clarks'
         className='py-12 md:py-20 bg-white'
@@ -276,7 +276,7 @@ export default function Home () {
           </div>
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-black'>
-            {/* Facebook — embedded timeline */}
+            {/* Facebook — embedded timeline (unchanged) */}
             <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
@@ -303,14 +303,14 @@ export default function Home () {
                   />
                 </div>
                 <SocialButton
-                  href='https://www.facebook.com/clarkspumpnshop'
+                  href='https://www.facebook.com/clarkspumpnshop/'
                   icon={fbIcon}
                   label='Open Facebook'
                 />
               </div>
             </details>
 
-            {/* Instagram — no explanatory text; button only */}
+            {/* Instagram — single reel */}
             <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
@@ -322,16 +322,22 @@ export default function Home () {
                 </span>
               </summary>
 
-              <div className='mt-4'>
+              <div className='mt-4 space-y-3'>
+                {/* Embed a specific reel/post */}
+                <div className='rounded-xl overflow-hidden border border-black/10'>
+                  <InstagramPost url='https://www.instagram.com/clarkspumpnshop/reel/DOv4VlbFZLj/' />
+                </div>
+
+                {/* Fallback/open button */}
                 <SocialButton
-                  href='https://www.instagram.com/clarkspumpnshop/?hl=en'
+                  href='https://www.instagram.com/clarkspumpnshop/'
                   icon={igIcon}
                   label='Open Instagram'
                 />
               </div>
             </details>
 
-            {/* TikTok — button only */}
+            {/* TikTok — single video */}
             <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
@@ -343,7 +349,12 @@ export default function Home () {
                 </span>
               </summary>
 
-              <div className='mt-4'>
+              <div className='mt-4 space-y-3'>
+                <TikTokEmbed
+                  videoUrl='https://www.tiktok.com/@clarkspumpnshop/video/7522153675645668621'
+                  maxWidth={560}
+                  minWidth={325}
+                />
                 <SocialButton
                   href='https://www.tiktok.com/@clarkspumpnshop'
                   icon={ttIcon}
@@ -352,7 +363,7 @@ export default function Home () {
               </div>
             </details>
 
-            {/* LinkedIn — button only (use company page, not admin link) */}
+            {/* LinkedIn — single company post */}
             <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
@@ -364,9 +375,14 @@ export default function Home () {
                 </span>
               </summary>
 
-              <div className='mt-4'>
+              <div className='mt-4 space-y-3'>
+                {/* Activity ID pulled from your URL: ...activity-7351075127880499200-... */}
+                <LinkedInPost
+                  activityUrn='urn:li:activity:7351075127880499200'
+                  height={520}
+                />
                 <SocialButton
-                  href='https://www.linkedin.com/company/10955109/'
+                  href="https://www.linkedin.com/company/clark's-pump-n-shop/"
                   icon={liIcon}
                   label='Open LinkedIn'
                 />
@@ -501,3 +517,164 @@ const FOOD_PARTNERS = [
     logo: kkcLogo
   }
 ]
+
+// ——— Shared: load a script once, safely ———
+function useScriptOnce (src: string) {
+  React.useEffect(() => {
+    if (document.querySelector(`script[src="${src}"]`)) return
+    const s = document.createElement('script')
+    s.src = src
+    s.async = true
+    document.body.appendChild(s)
+    return () => {
+      // keep it for subsequent embeds; do not remove on unmount
+    }
+  }, [src])
+}
+
+function InstagramPost ({ url }: { url: string }) {
+  const ref = React.useRef<HTMLDivElement | null>(null)
+
+  // Load IG script once
+  useScriptOnce('https://www.instagram.com/embed.js')
+
+  // Helper to (re)process embeds safely
+  const process = React.useCallback(() => {
+    window.instgrm?.Embeds?.process?.()
+  }, [])
+
+  React.useEffect(() => {
+    if (!ref.current) return
+
+    const permalink = url.endsWith('/') ? url : `${url}/`
+
+    ref.current.innerHTML = `
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="${permalink}"
+        data-instgrm-version="14"
+        style="margin:0 auto; max-width:540px; width:100%;"
+      ></blockquote>
+    `
+
+    // Give DOM a tick, then process
+    const id = window.setTimeout(process, 0)
+    return () => window.clearTimeout(id)
+  }, [url, process])
+
+  // Re-process when the <details> containing this embed is opened
+  React.useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    const details = el.closest('details')
+    if (!details) return
+
+    const onToggle = () => {
+      if ((details as HTMLDetailsElement).open) {
+        // run again when it becomes visible
+        process()
+      }
+    }
+
+    details.addEventListener('toggle', onToggle)
+    return () => details.removeEventListener('toggle', onToggle)
+  }, [process])
+
+  // Re-process when the blockquote actually enters the viewport
+  React.useEffect(() => {
+    const el = ref.current
+    if (!el || !('IntersectionObserver' in window)) return
+
+    const io = new IntersectionObserver(
+      entries => {
+        if (entries.some(e => e.isIntersecting)) {
+          process()
+        }
+      },
+      { rootMargin: '200px' }
+    )
+
+    io.observe(el)
+    return () => io.disconnect()
+  }, [process])
+
+  return (
+    <div className='rounded-xl overflow-hidden border border-black/10'>
+      <div ref={ref} />
+    </div>
+  )
+}
+
+/** TikTok (single video) */
+function TikTokEmbed ({
+  videoUrl,
+  maxWidth = 560,
+  minWidth = 325
+}: {
+  videoUrl: string
+  maxWidth?: number
+  minWidth?: number
+}) {
+  const ref = React.useRef<HTMLDivElement | null>(null)
+
+  // Ensure TikTok embed.js is available
+  useScriptOnce('https://www.tiktok.com/embed.js')
+
+  React.useEffect(() => {
+    if (!ref.current) return
+
+    // Extract the numeric ID at the end of the URL
+    const match = videoUrl.match(/video\/(\d+)/)
+    const videoId = match?.[1]
+    if (!videoId) {
+      ref.current.innerHTML = `<div style="padding:16px;color:#b00;">Invalid TikTok URL</div>`
+      return
+    }
+
+    ref.current.innerHTML = `
+      <blockquote
+        class="tiktok-embed"
+        cite="${videoUrl}"
+        data-video-id="${videoId}"
+        style="max-width:${maxWidth}px; min-width:${minWidth}px; margin:0 auto;"
+      >
+        <section></section>
+      </blockquote>
+    `
+
+    // The TikTok script auto-processes new blockquotes on insertion.
+  }, [videoUrl, maxWidth, minWidth])
+
+  return (
+    <div className='rounded-xl overflow-hidden border border-black/10'>
+      <div ref={ref} />
+    </div>
+  )
+}
+
+/** LinkedIn (single post by activity URN) */
+function LinkedInPost ({
+  activityUrn,
+  height = 520
+}: {
+  activityUrn: string
+  height?: number
+}) {
+  // LinkedIn supports iframe pointing to /embed/feed/update/ + URN
+  const src = `https://www.linkedin.com/embed/feed/update/${encodeURIComponent(
+    activityUrn
+  )}`
+  return (
+    <div className='rounded-xl overflow-hidden border border-black/10'>
+      <iframe
+        src={src}
+        height={height}
+        width='100%'
+        frameBorder={0}
+        allowFullScreen
+        title='LinkedIn Post'
+      />
+    </div>
+  )
+}
