@@ -459,37 +459,44 @@ const SOCIAL_LINKS = [
 
 const FOOD_PARTNERS = [
   {
-    name: 'Champs Chicken',
-    desc: 'Crispy tenders, sides, and sauces.',
-    href: '/food#champs-chicken',
-    cta: 'View Locations',
-    logo: champsLogo
-  },
-  {
-    name: 'Hangar 54 Pizza',
-    desc: 'Slices and whole pies—perfectly melty.',
-    href: '/food#hangar-54-pizza',
-    cta: 'View Locations',
-    logo: hangarLogo
-  },
-  {
-    name: "Jack's Deli",
-    desc: 'Stacked sandwiches and deli classics.',
-    href: '/food#jacks-deli',
-    cta: 'View Locations',
-    logo: jacksLogo
-  },
-  {
     name: 'Clarks Cafe',
     desc: 'Breakfast sandwiches, pastries, and coffee.',
-    href: '/food#clarks-cafe',
+    href: '/locations?food=clarkscafe',
     cta: 'View Locations',
     logo: cafeLogo
   },
   {
     name: 'Krispy Krunchy Chicken',
     desc: 'Louisiana-style chicken + biscuits.',
-    href: '/food#krispy-krunchy-chicken',
+    href: '/locations?food=krispykrunchy',
+    cta: 'View Locations',
+    logo: kkcLogo
+  },
+  {
+    name: 'Champs Chicken',
+    desc: 'Crispy tenders, sides, and sauces.',
+    href: '/locations?food=champs',
+    cta: 'View Locations',
+    logo: champsLogo
+  },
+  {
+    name: 'Hangar 54 Pizza',
+    desc: 'Slices and whole pies—perfectly melty.',
+    href: '/locations?food=hangar',
+    cta: 'View Locations',
+    logo: hangarLogo
+  },
+  {
+    name: "Jack's Deli",
+    desc: 'Stacked sandwiches and deli classics.',
+    href: '/locations?food=jacks',
+    cta: 'View Locations',
+    logo: jacksLogo
+  },
+  {
+    name: 'Grab-N-Go',
+    desc: 'Quick bites, immediate satisfaction.',
+    href: '/locations?food=grabngo',
     cta: 'View Locations',
     logo: kkcLogo
   }
