@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import MobileMenuDrawer from './MobileMenuDrawer'
 import logoUrl from '@/assets/images/clarks-logo.png'
-import rewardsLogoUrl from '@/assets/images/Clarks-PNS-Main-Rewards-Logo.png'
+import rewardsLogoUrl from '@/assets/images/Clarks-PNS-Main-Rewards-Logo-Cropped.png'
 import HamburgerIcon from '@/assets/icons/hamburger.svg?react'
 
 type HeaderNavProps = {
-  showAccentBar?: boolean // kept for compatibility
+  showAccentBar?: boolean
 }
 
 function toPath (label: string) {
@@ -82,21 +82,18 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
     }
   }, [aboutOpen, locOpen])
 
-  // Close on route change
   const location = useLocation()
   useEffect(() => {
     setAboutOpen(false)
     setLocOpen(false)
   }, [location.pathname])
 
-  // --- NEW: grouped structure for the mobile drawer (mirrors desktop) ---
   const mobileGroups = [
     {
       type: 'link' as const,
       label: 'Clarks Rewards',
       href: toPath('Clarks Rewards')
     },
-
     {
       type: 'group' as const,
       label: 'Locations',
@@ -105,10 +102,8 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
         { label: 'Car Wash', href: toPath('Car Wash') }
       ]
     },
-
     { type: 'link' as const, label: 'Food', href: toPath('Food') },
     { type: 'link' as const, label: 'Careers', href: toPath('Careers') },
-
     {
       type: 'group' as const,
       label: 'About Us',
@@ -125,6 +120,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
       <div className='bg-surface shadow-soft rounded-b-2xl'>
         {/* --- MOBILE BAR (<= md) --- */}
         <div className='md:hidden h-16 grid grid-cols-[auto_1fr_auto] items-center px-3'>
+          {/* Logo on left */}
           <Link
             to='/'
             className='inline-flex items-center -ml-1'
@@ -133,15 +129,12 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
             <img
               src={logoUrl}
               alt='Clark’s Pump-N-Shop'
-              className='h-8 w-auto'
+              className='h-9 w-auto'
             />
           </Link>
-          <NavLink
-            to={toPath('Clarks Rewards')}
-            className='justify-self-center truncate text-base font-semibold tracking-tight text-text'
-          >
-            Clarks Rewards
-          </NavLink>
+          {/* empty center cell */}
+          <div />
+          {/* hamburger on right */}
           <button
             aria-label='Open menu'
             aria-expanded={open}
@@ -156,7 +149,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
         <div className='hidden md:block'>
           <div className='h-header grid items-center'>
             <div className='grid grid-cols-[auto_1fr_auto] items-center h-header'>
-              {/* Left logo */}
+              {/* Left logo larger */}
               <div className='pl-8'>
                 <Link
                   to='/'
@@ -166,7 +159,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                   <img
                     src={logoUrl}
                     alt='Clark’s Pump-N-Shop'
-                    className='h-9 w-auto'
+                    className='h-11 w-auto'
                   />
                 </Link>
               </div>
@@ -410,26 +403,34 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                 </ul>
               </nav>
 
-              {/* Right logo */}
-              <div className='pr-8'>
-                <Link
-                  to={toPath('Clarks Rewards')}
-                  className='inline-flex items-center'
-                  aria-label='Clarks Rewards'
-                >
-                  <img
-                    src={rewardsLogoUrl}
-                    alt='Clarks Rewards'
-                    className='h-9 w-auto'
-                  />
-                </Link>
+              {/* Right Rewards logo + Sign In/Up */}
+              <div className='pr-10'>
+                <div className='inline-flex flex-col items-start'>
+                  <Link
+                    to={toPath('Clarks Rewards')}
+                    className='inline-flex items-center ml-1'
+                    aria-label='Clarks Rewards'
+                  >
+                    <img
+                      src={rewardsLogoUrl}
+                      alt='Clarks Rewards'
+                      className='h-8 w-auto' // slightly smaller
+                    />
+                  </Link>
+                  <a
+                    href='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
+                    className='mt-0.5 text-xs font-semibold text-text underline underline-offset-2 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 rounded ml-12'
+                  >
+                    Sign In / Sign Up
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile drawer — now passes grouped structure */}
+      {/* Mobile drawer */}
       <MobileMenuDrawer
         open={open}
         onClose={() => setOpen(false)}
