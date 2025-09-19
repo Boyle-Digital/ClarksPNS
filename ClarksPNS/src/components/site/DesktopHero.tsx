@@ -1,3 +1,4 @@
+// src/components/site/DesktopHero.tsx
 import React from 'react'
 import bgVideo from '@/assets/videos/clarkssecret_1080.mp4'
 
@@ -9,10 +10,10 @@ export function DesktopHero () {
 relative isolate
 -mt-[16px]
 w-full
-h-[78vh] md:h-[86vh]
+h-[68vh] sm:h-[76vh] md:h-[86vh]
 overflow-hidden
 rounded-b-none
-hidden md:block
+block   /* <-- was "hidden md:block"; now renders on mobile too */
 '
     >
       {/* Background video */}
@@ -38,7 +39,7 @@ hidden md:block
             <h1
               className="
 font-['Oswald'] font-extrabold text-white leading-[1.03]
-text-5xl sm:text-6xl md:text-7xl xl:text-8xl tracking-tight
+text-4xl sm:text-5xl md:text-7xl xl:text-8xl tracking-tight
 drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]
 "
             >
@@ -50,12 +51,12 @@ drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]
             </h1>
 
             {/* Accent rule */}
-            <div className='h-2 w-64 sm:w-72 md:w-80 bg-white rounded-full shadow-[0_2px_12px_rgba(0,0,0,0.25)]' />
+            <div className='h-2 w-48 sm:w-64 md:w-80 bg-white rounded-full shadow-[0_2px_12px_rgba(0,0,0,0.25)]' />
 
             <p
               className="
 font-['Oswald'] font-semibold text-white/95
-text-xl sm:text-2xl md:text-3xl
+text-lg sm:text-xl md:text-3xl
 drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]
 "
             >
@@ -67,9 +68,9 @@ drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]
                 href='/clarks-rewards#join'
                 className='
 inline-flex items-center justify-center
-h-14 sm:h-16
+h-12 sm:h-14 md:h-16
 rounded-[56px] bg-white text-brand font-bold
-px-7 md:px-8 text-lg md:text-xl tracking-[0.18em] uppercase
+px-6 md:px-8 text-base sm:text-lg md:text-xl tracking-[0.18em] uppercase
 transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white
 '
               >
@@ -79,9 +80,9 @@ transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 
                 href='/car-wash'
                 className='
 inline-flex items-center justify-center
-h-14 sm:h-16
+h-12 sm:h-14 md:h-16
 rounded-[56px] bg-white/90 text-black/90 font-semibold
-px-7 md:px-8 text-lg md:text-xl
+px-6 md:px-8 text-base sm:text-lg md:text-xl
 backdrop-blur-[2px] transition-all hover:bg-white
 '
               >

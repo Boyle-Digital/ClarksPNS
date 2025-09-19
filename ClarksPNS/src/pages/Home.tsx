@@ -1,5 +1,5 @@
 import React from 'react'
-import MobileHero from '@/components/site/MobileHero'
+// import MobileHero from '@/components/site/MobileHero'
 import { DesktopHero } from '@/components/site/DesktopHero'
 
 // MobileHero images (keep as-is)
@@ -51,6 +51,213 @@ const gstv1600 = Object.values(
 // Merge into a single pool for the carousel
 const PROMO_IMAGES = [...brandy800]
 
+function MonthlyPromotions ({
+  title,
+  subtitle,
+  images,
+  intervalMs = 5000,
+  autoPlay = true
+}: {
+  title: string
+  subtitle?: string
+  images: string[]
+  intervalMs?: number
+  autoPlay?: boolean
+}) {
+  const scrollerRef = React.useRef<HTMLDivElement | null>(null)
+  const timerRef = React.useRef<number | null>(null)
+  const userPausedRef = React.useRef(false)
+  const [openSrc, setOpenSrc] = React.useState<string | null>(null)
+
+  const clear = React.useCallback(() => {
+    if (timerRef.current) {
+      window.clearInterval(timerRef.current)
+      timerRef.current = null
+    }
+  }, [])
+
+  const scrollStep = React.useCallback((dir: 1 | -1 = 1) => {
+    const el = scrollerRef.current
+    if (!el) return
+    const amount = Math.min(el.clientWidth * 0.9, 520)
+    const atEnd =
+      Math.round(el.scrollLeft + el.clientWidth) >= el.scrollWidth - 2
+    if (dir === 1 && atEnd) {
+      el.scrollTo({ left: 0, behavior: 'smooth' })
+    } else {
+      el.scrollBy({ left: dir * amount, behavior: 'smooth' })
+    }
+  }, [])
+
+  const start = React.useCallback(() => {
+    if (!autoPlay || openSrc) return
+    const reduced =
+      window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false
+    if (reduced || timerRef.current) return
+    timerRef.current = window.setInterval(() => {
+      if (!userPausedRef.current) scrollStep(1)
+    }, intervalMs) as unknown as number
+  }, [autoPlay, intervalMs, scrollStep, openSrc])
+
+  React.useEffect(() => {
+    start()
+    return clear
+  }, [start, clear])
+
+  // Pause on hover/focus; resume on leave
+  const onUserEnter = () => {
+    userPausedRef.current = true
+    clear()
+  }
+  const onUserLeave = () => {
+    userPausedRef.current = false
+    start()
+  }
+
+  // Close on ESC when lightbox is open
+  React.useEffect(() => {
+    if (!openSrc) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpenSrc(null)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [openSrc])
+
+  return (
+    <section
+      aria-label='Monthly Promotions'
+      className='py-12 md:py-20 bg-neutral-50'
+    >
+      {/* Headings inside container */}
+      <div className='container mx-auto px-6 md:px-10'>
+        <div className='max-w-3xl'>
+          <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            {title}
+          </h2>
+          {subtitle && (
+            <p className='mt-2 text-black/70 text-base md:text-lg'>
+              {subtitle}
+            </p>
+          )}
+        </div>
+      </div>
+
+      {/* Full-bleed rail with container-matched padding */}
+      <div className='mt-8 relative overflow-visible'>
+        <div
+          ref={scrollerRef}
+          onMouseEnter={onUserEnter}
+          onMouseLeave={onUserLeave}
+          onFocusCapture={onUserEnter}
+          onBlurCapture={onUserLeave}
+          className='
+            flex gap-4 overflow-x-auto overscroll-x-contain snap-x snap-mandatory
+            [scrollbar-width:none] [-ms-overflow-style:none]
+            pl-[max(1.5rem,calc((100vw-1280px)/2))]
+            pr-[max(1.5rem,calc((100vw-1280px)/2))]
+          '
+          style={{
+            scrollbarWidth: 'none',
+            scrollbarGutter: 'stable both-edges'
+          }}
+        >
+          <style>{`.hide-scrollbar::-webkit-scrollbar{display:none}`}</style>
+
+          {images.map(src => (
+            <button
+              key={src}
+              type='button'
+              onClick={() => setOpenSrc(src)}
+              className='group relative flex-none snap-center hide-scrollbar w-[82%] xs:w-[72%] sm:w-[58%] md:w-1/3'
+              title='Open promotion'
+              aria-label='Open promotion'
+            >
+              <div className='aspect-square overflow-hidden rounded-2xl border border-black/10 bg-white'>
+                <img
+                  src={src}
+                  alt='Monthly promotion'
+                  loading='lazy'
+                  className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]'
+                />
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Prev/Next buttons (SVG chevrons, brand color, centered) */}
+        <div className='pointer-events-none absolute inset-y-0 left-0 right-0 hidden md:block'>
+          <button
+            onClick={() => scrollStep(-1)}
+            type='button'
+            aria-label='Previous'
+            className='pointer-events-auto absolute top-1/2 -translate-y-1/2 left-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow ring-1 ring-black/10 hover:bg-white'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              className='h-6 w-6 text-brand'
+            >
+              <path
+                fillRule='evenodd'
+                d='M15.78 4.22a.75.75 0 010 1.06L9.06 12l6.72 6.72a.75.75 0 11-1.06 1.06l-7.25-7.25a.75.75 0 010-1.06l7.25-7.25a.75.75 0 011.06 0z'
+                clipRule='evenodd'
+              />
+            </svg>
+          </button>
+          <button
+            onClick={() => scrollStep(1)}
+            type='button'
+            aria-label='Next'
+            className='pointer-events-auto absolute top-1/2 -translate-y-1/2 right-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow ring-1 ring-black/10 hover:bg-white'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              className='h-6 w-6 text-brand'
+            >
+              <path
+                fillRule='evenodd'
+                d='M8.22 19.78a.75.75 0 010-1.06L14.94 12 8.22 5.28a.75.75 0 111.06-1.06l7.25 7.25a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0z'
+                clipRule='evenodd'
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* LIGHTBOX (fit to image size) */}
+{openSrc && (
+  <div
+    role="dialog"
+    aria-modal="true"
+    className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4"
+    onClick={(e) => {
+      if (e.target === e.currentTarget) setOpenSrc(null) // click backdrop to close
+    }}
+  >
+    <div className="relative">
+      <button
+        onClick={() => setOpenSrc(null)}
+        className="absolute -top-3 -right-3 bg-brand text-white rounded-full px-3 py-1 shadow-lg"
+        aria-label="Close"
+        type="button"
+      >
+        ✕
+      </button>
+      <img
+        src={openSrc}
+        alt="Promotion full view"
+        className="max-w-[90vw] max-h-[90vh] object-contain rounded-xl bg-white"
+      />
+    </div>
+  </div>
+)}
+
+    </section>
+  )
+}
+
 export default function Home () {
   // --- Simple rotating triplet for Promotions ---
   const [idx, setIdx] = React.useState(0)
@@ -77,7 +284,7 @@ export default function Home () {
 
   return (
     <main className='w-full overflow-x-clip'>
-      {/* Mobile hero */}
+      {/* Mobile hero
       <MobileHero
         title='Get 1,500 Points Free'
         subtitle='When you join the Clarks Rewards app'
@@ -89,9 +296,9 @@ export default function Home () {
           src1440: phone1440,
           alt: 'Rewards App preview'
         }}
-      />
+      /> */}
 
-      {/* Desktop hero (with blue tint) */}
+      {/* Desktop hero , now contains mobile responsive version as well */}
       <DesktopHero />
 
       {/* Rewards Phone Animation */}
@@ -164,51 +371,11 @@ export default function Home () {
       </section>
 
       {/* Monthly Promotions — Auto-rotating triple image */}
-      <section
-        aria-label='Monthly Promotions'
-        className='py-12 md:py-20 bg-neutral-50'
-      >
-        <div className='container mx-auto px-6 md:px-10'>
-          <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
-              September Promotions
-            </h2>
-            <p className='mt-2 text-black/70 text-base md:text-lg'>
-              A rotating peek at what’s new.
-            </p>
-          </div>
-
-          {/* Triple image stage (square tiles, no layout shift) */}
-          <div
-            className={`
-    mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4
-    transition-opacity duration-300
-    ${fading ? 'opacity-0' : 'opacity-100'}
-  `}
-          >
-            {promoSet.map(src => (
-              <a
-                key={src}
-                href={src}
-                target='_blank'
-                rel='noreferrer'
-                className='group block'
-                title='Open full image'
-              >
-                {/* Square wrapper */}
-                <div className='relative aspect-square overflow-hidden rounded-2xl border border-black/10 bg-white'>
-                  <img
-                    src={src}
-                    alt='Monthly promotion'
-                    loading='lazy'
-                    className='absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]'
-                  />
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <MonthlyPromotions
+        title='September Promotions'
+        subtitle='A rotating peek at what’s new.'
+        images={PROMO_IMAGES}
+      />
 
       {/* Rodney the Rewards Ranger — Full-bleed banner */}
       <section
@@ -259,7 +426,7 @@ export default function Home () {
         </div>
       </section>
 
-      {/* Follow Clarks — expandable social cards (black text, black icons on buttons) */}
+      {/* Follow Clarks — expandable social cards (updated embeds) */}
       <section
         aria-label='Follow Clarks'
         className='py-12 md:py-20 bg-white'
@@ -276,7 +443,7 @@ export default function Home () {
           </div>
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-black'>
-            {/* Facebook — embedded timeline */}
+            {/* Facebook — embedded timeline (unchanged) */}
             <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
@@ -303,14 +470,14 @@ export default function Home () {
                   />
                 </div>
                 <SocialButton
-                  href='https://www.facebook.com/clarkspumpnshop'
+                  href='https://www.facebook.com/clarkspumpnshop/'
                   icon={fbIcon}
                   label='Open Facebook'
                 />
               </div>
             </details>
 
-            {/* Instagram — no explanatory text; button only */}
+            {/* Instagram — single reel */}
             <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
@@ -322,16 +489,22 @@ export default function Home () {
                 </span>
               </summary>
 
-              <div className='mt-4'>
+              <div className='mt-4 space-y-3'>
+                {/* Embed a specific reel/post */}
+                <div className='rounded-xl overflow-hidden border border-black/10'>
+                  <InstagramPost url='https://www.instagram.com/clarkspumpnshop/reel/DOv4VlbFZLj/' />
+                </div>
+
+                {/* Fallback/open button */}
                 <SocialButton
-                  href='https://www.instagram.com/clarkspumpnshop/?hl=en'
+                  href='https://www.instagram.com/clarkspumpnshop/'
                   icon={igIcon}
                   label='Open Instagram'
                 />
               </div>
             </details>
 
-            {/* TikTok — button only */}
+            {/* TikTok — single video */}
             <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
@@ -343,7 +516,12 @@ export default function Home () {
                 </span>
               </summary>
 
-              <div className='mt-4'>
+              <div className='mt-4 space-y-3'>
+                <TikTokEmbed
+                  videoUrl='https://www.tiktok.com/@clarkspumpnshop/video/7522153675645668621'
+                  maxWidth={560}
+                  minWidth={325}
+                />
                 <SocialButton
                   href='https://www.tiktok.com/@clarkspumpnshop'
                   icon={ttIcon}
@@ -352,7 +530,7 @@ export default function Home () {
               </div>
             </details>
 
-            {/* LinkedIn — button only (use company page, not admin link) */}
+            {/* LinkedIn — single company post */}
             <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
@@ -364,9 +542,14 @@ export default function Home () {
                 </span>
               </summary>
 
-              <div className='mt-4'>
+              <div className='mt-4 space-y-3'>
+                {/* Activity ID pulled from your URL: ...activity-7351075127880499200-... */}
+                <LinkedInPost
+                  activityUrn='urn:li:activity:7351075127880499200'
+                  height={520}
+                />
                 <SocialButton
-                  href='https://www.linkedin.com/company/10955109/'
+                  href="https://www.linkedin.com/company/clark's-pump-n-shop/"
                   icon={liIcon}
                   label='Open LinkedIn'
                 />
@@ -459,38 +642,206 @@ const SOCIAL_LINKS = [
 
 const FOOD_PARTNERS = [
   {
-    name: 'Champs Chicken',
-    desc: 'Crispy tenders, sides, and sauces.',
-    href: '/food#champs-chicken',
-    cta: 'View Locations',
-    logo: champsLogo
-  },
-  {
-    name: 'Hangar 54 Pizza',
-    desc: 'Slices and whole pies—perfectly melty.',
-    href: '/food#hangar-54-pizza',
-    cta: 'View Locations',
-    logo: hangarLogo
-  },
-  {
-    name: "Jack's Deli",
-    desc: 'Stacked sandwiches and deli classics.',
-    href: '/food#jacks-deli',
-    cta: 'View Locations',
-    logo: jacksLogo
-  },
-  {
     name: 'Clarks Cafe',
     desc: 'Breakfast sandwiches, pastries, and coffee.',
-    href: '/food#clarks-cafe',
+    href: '/locations?food=clarkscafe',
     cta: 'View Locations',
     logo: cafeLogo
   },
   {
     name: 'Krispy Krunchy Chicken',
     desc: 'Louisiana-style chicken + biscuits.',
-    href: '/food#krispy-krunchy-chicken',
+    href: '/locations?food=krispykrunchy',
+    cta: 'View Locations',
+    logo: kkcLogo
+  },
+  {
+    name: 'Champs Chicken',
+    desc: 'Crispy tenders, sides, and sauces.',
+    href: '/locations?food=champs',
+    cta: 'View Locations',
+    logo: champsLogo
+  },
+  {
+    name: 'Hangar 54 Pizza',
+    desc: 'Slices and whole pies—perfectly melty.',
+    href: '/locations?food=hangar',
+    cta: 'View Locations',
+    logo: hangarLogo
+  },
+  {
+    name: "Jack's Deli",
+    desc: 'Stacked sandwiches and deli classics.',
+    href: '/locations?food=jacks',
+    cta: 'View Locations',
+    logo: jacksLogo
+  },
+  {
+    name: 'Grab-N-Go',
+    desc: 'Quick bites, immediate satisfaction.',
+    href: '/locations?food=grabngo',
     cta: 'View Locations',
     logo: kkcLogo
   }
 ]
+
+// ——— Shared: load a script once, safely ———
+function useScriptOnce (src: string) {
+  React.useEffect(() => {
+    if (document.querySelector(`script[src="${src}"]`)) return
+    const s = document.createElement('script')
+    s.src = src
+    s.async = true
+    document.body.appendChild(s)
+    return () => {
+      // keep it for subsequent embeds; do not remove on unmount
+    }
+  }, [src])
+}
+
+function InstagramPost ({ url }: { url: string }) {
+  const ref = React.useRef<HTMLDivElement | null>(null)
+
+  // Load IG script once
+  useScriptOnce('https://www.instagram.com/embed.js')
+
+  // Helper to (re)process embeds safely
+  const process = React.useCallback(() => {
+    window.instgrm?.Embeds?.process?.()
+  }, [])
+
+  React.useEffect(() => {
+    if (!ref.current) return
+
+    const permalink = url.endsWith('/') ? url : `${url}/`
+
+    ref.current.innerHTML = `
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="${permalink}"
+        data-instgrm-version="14"
+        style="margin:0 auto; max-width:540px; width:100%;"
+      ></blockquote>
+    `
+
+    // Give DOM a tick, then process
+    const id = window.setTimeout(process, 0)
+    return () => window.clearTimeout(id)
+  }, [url, process])
+
+  // Re-process when the <details> containing this embed is opened
+  React.useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    const details = el.closest('details')
+    if (!details) return
+
+    const onToggle = () => {
+      if ((details as HTMLDetailsElement).open) {
+        // run again when it becomes visible
+        process()
+      }
+    }
+
+    details.addEventListener('toggle', onToggle)
+    return () => details.removeEventListener('toggle', onToggle)
+  }, [process])
+
+  // Re-process when the blockquote actually enters the viewport
+  React.useEffect(() => {
+    const el = ref.current
+    if (!el || !('IntersectionObserver' in window)) return
+
+    const io = new IntersectionObserver(
+      entries => {
+        if (entries.some(e => e.isIntersecting)) {
+          process()
+        }
+      },
+      { rootMargin: '200px' }
+    )
+
+    io.observe(el)
+    return () => io.disconnect()
+  }, [process])
+
+  return (
+    <div className='rounded-xl overflow-hidden border border-black/10'>
+      <div ref={ref} />
+    </div>
+  )
+}
+
+/** TikTok (single video) */
+function TikTokEmbed ({
+  videoUrl,
+  maxWidth = 560,
+  minWidth = 325
+}: {
+  videoUrl: string
+  maxWidth?: number
+  minWidth?: number
+}) {
+  const ref = React.useRef<HTMLDivElement | null>(null)
+
+  // Ensure TikTok embed.js is available
+  useScriptOnce('https://www.tiktok.com/embed.js')
+
+  React.useEffect(() => {
+    if (!ref.current) return
+
+    // Extract the numeric ID at the end of the URL
+    const match = videoUrl.match(/video\/(\d+)/)
+    const videoId = match?.[1]
+    if (!videoId) {
+      ref.current.innerHTML = `<div style="padding:16px;color:#b00;">Invalid TikTok URL</div>`
+      return
+    }
+
+    ref.current.innerHTML = `
+      <blockquote
+        class="tiktok-embed"
+        cite="${videoUrl}"
+        data-video-id="${videoId}"
+        style="max-width:${maxWidth}px; min-width:${minWidth}px; margin:0 auto;"
+      >
+        <section></section>
+      </blockquote>
+    `
+
+    // The TikTok script auto-processes new blockquotes on insertion.
+  }, [videoUrl, maxWidth, minWidth])
+
+  return (
+    <div className='rounded-xl overflow-hidden border border-black/10'>
+      <div ref={ref} />
+    </div>
+  )
+}
+
+/** LinkedIn (single post by activity URN) */
+function LinkedInPost ({
+  activityUrn,
+  height = 520
+}: {
+  activityUrn: string
+  height?: number
+}) {
+  // LinkedIn supports iframe pointing to /embed/feed/update/ + URN
+  const src = `https://www.linkedin.com/embed/feed/update/${encodeURIComponent(
+    activityUrn
+  )}`
+  return (
+    <div className='rounded-xl overflow-hidden border border-black/10'>
+      <iframe
+        src={src}
+        height={height}
+        width='100%'
+        frameBorder={0}
+        allowFullScreen
+        title='LinkedIn Post'
+      />
+    </div>
+  )
+}
