@@ -128,67 +128,147 @@ function BrandMenus() {
   );
 }
 
-function MenuBlock({ id, brandKey, logo, name, desc }: { id: string; brandKey: string; logo: string; name: string; desc: string }) {
+function MenuBlock({
+  id,
+  brandKey,
+  logo,
+  name,
+  desc,
+}: {
+  id: string;
+  brandKey: string;
+  logo: string;
+  name: string;
+  desc: string;
+}) {
   const { pdfs, images } = collectMenus(brandKey);
   const [lightbox, setLightbox] = React.useState<string | null>(null);
 
+  // Accordion state (collapsed by default). Auto-open if URL hash matches this block's id.
+  const [open, setOpen] = React.useState(false);
+  React.useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash === `#${id}`) {
+      setOpen(true);
+      // small scroll nudge so the opened content is visible under sticky headers, if any
+      setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
+    }
+  }, [id]);
+
   return (
-    <article id={id} className="rounded-2xl border border-black/10 bg-neutral-50 p-6">
-      <div className="mb-4 h-12 flex items-center">
-        <img src={logo} alt={`${name} logo`} className="h-full w-auto object-contain" />
-      </div>
-      <h3 className="font-['Oswald'] text-xl md:text-2xl font-bold text-black">{name}</h3>
-      <p className="mt-1 text-black/70 text-sm md:text-base">{desc}</p>
+    <article id={id} className="rounded-2xl border border-black/10 bg-neutral-50">
+      {/* Toggle header */}
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="flex w-full items-center gap-4 p-6 text-left"
+        aria-expanded={open}
+        aria-controls={`${id}-panel`}
+      >
+        <div className="h-12 shrink-0 flex items-center">
+          <img src={logo} alt={`${name} logo`} className="h-12 w-auto object-contain" />
+        </div>
+        <div className="min-w-0 grow">
+          <h3 className="font-['Oswald'] text-xl md:text-2xl font-bold text-black">{name}</h3>
+          <p className="mt-1 text-black/70 text-sm md:text-base line-clamp-2">{desc}</p>
+        </div>
+<Chevron open={open} className="text-brand" />
+      </button>
 
-      <div className="mt-4 space-y-4">
-        {pdfs.length ? (
-          <div className="flex flex-wrap gap-2">
-            {pdfs.map((url, i) => (
-              <a key={url} href={url} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-xl px-4 py-2 bg-brand text-white hover:bg-brand/90 transition-colors">
-                Open Menu PDF{i > 0 ? ` ${i + 1}` : ""}
-              </a>
-            ))}
+      {/* Animated panel */}
+      <div
+        id={`${id}-panel`}
+        className={`
+          grid transition-[grid-template-rows] duration-300 ease-out
+          ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}
+        `}
+      >
+        <div className="overflow-hidden">
+          <div className="px-6 pb-6 space-y-4">
+            {/* PDFs */}
+            {pdfs.length ? (
+              <div className="flex flex-wrap gap-2">
+                {pdfs.map((url, i) => (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center rounded-xl px-4 py-2 bg-brand text-white hover:bg-brand/90 transition-colors"
+                  >
+                    Open Menu PDF{i > 0 ? ` ${i + 1}` : ""}
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <p className="text-black/60 text-sm">Menu PDF coming soon.</p>
+            )}
+
+            {/* Images */}
+            {images.length ? (
+              <div className="grid grid-cols-1 gap-3">
+                {images.map((src) => (
+                  <button
+                    key={src}
+                    onClick={() => setLightbox(src)}
+                    className="group block w-full"
+                    title={`${name} menu image`}
+                  >
+                    <div className="relative overflow-hidden rounded-xl border border-black/10 bg-white">
+                      <img
+                        src={src}
+                        alt={`${name} menu`}
+                        loading="lazy"
+                        className="w-full h-auto object-contain"
+                      />
+                    </div>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <p className="text-black/60 text-sm">Menu images coming soon.</p>
+            )}
           </div>
-        ) : (
-          <p className="text-black/60 text-sm">Menu PDF coming soon.</p>
-        )}
-
-        {images.length ? (
-          <div className="grid grid-cols-1 gap-3">
-            {images.map((src) => (
-              <button
-                key={src}
-                onClick={() => setLightbox(src)}
-                className="group block w-full"
-                title={`${name} menu image`}
-              >
-                <div className="relative overflow-hidden rounded-xl border border-black/10 bg-white">
-                  <img src={src} alt={`${name} menu`} loading="lazy" className="w-full h-auto object-contain" />
-                </div>
-              </button>
-            ))}
-          </div>
-        ) : (
-          <p className="text-black/60 text-sm">Menu images coming soon.</p>
-        )}
+        </div>
       </div>
 
+      {/* Lightbox (unchanged) */}
       {lightbox && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
           <div className="relative w-[90%] max-h-[90%]">
             <button
               onClick={() => setLightbox(null)}
               className="absolute top-2 right-2 bg-brand text-white rounded-full px-3 py-1 shadow-lg"
+              aria-label="Close image"
             >
               ✕
             </button>
-            <img src={lightbox} alt="Menu full view" className="w-full h-auto max-h-[90vh] object-contain rounded-xl" />
+            <img
+              src={lightbox}
+              alt="Menu full view"
+              className="w-full h-auto max-h-[90vh] object-contain rounded-xl"
+            />
           </div>
         </div>
       )}
     </article>
   );
 }
+
+/* Simple chevron icon that rotates when open */
+function Chevron({ open, className = "" }: { open: boolean; className?: string }) {
+  return (
+    <svg
+      className={`h-6 w-6 shrink-0 transition-transform duration-300 ${open ? "rotate-180" : "rotate-0"} ${className}`}
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.24 4.38a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06z" />
+    </svg>
+  );
+}
+
+
 
 function GalleryImage({ src }: { src: string }) {
   const [open, setOpen] = React.useState(false);
