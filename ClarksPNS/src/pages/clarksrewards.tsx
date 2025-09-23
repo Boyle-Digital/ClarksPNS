@@ -1,17 +1,14 @@
 // src/pages/ClarksRewards.tsx
-// put this at the top of your file
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // Reuse your existing components if they're part of the global layout.
-// If Header/Footer are layout-level, you don't need to import them here.
 import MobileHero from '@/components/site/MobileHero'
 import { DesktopHero } from '@/components/site/DesktopHero'
 
-// Assets (swap these with your actual files)
+// Assets
 import rewardsPoster from '@/assets/images/clarkshero.png'
 import rewardsVideo from '@/assets/videos/Ray Ward Introduction - CPNS.mp4'
-
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
 // import qrCode from "@/assets/images/qr-clarks-rewards.png"; // optional QR for app link
 
@@ -24,8 +21,32 @@ const FAQ_OVERLAP = ' -mt-[20rem] lg:-mt-[24rem] xl:-mt-[28rem]'
 const MASK_HEIGHT = ' h-16 sm:h-20 md:h-24 lg:h-28'
 
 export default function ClarksRewards () {
+  // FAQ on-load fade/slide
   const [faqIn, setFaqIn] = useState(false)
   useEffect(() => setFaqIn(true), [])
+
+  // Phone scroll-into-view animation
+  const phoneRef = useRef<HTMLDivElement>(null)
+  const [phoneIn, setPhoneIn] = useState(false)
+  useEffect(() => {
+    const mql = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (mql.matches) {
+      setPhoneIn(true)
+      return
+    }
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setPhoneIn(true)
+          obs.disconnect() // animate once
+        }
+      },
+      { threshold: 0.3, root: null, rootMargin: '0px 0px -10% 0px' }
+    )
+    if (phoneRef.current) obs.observe(phoneRef.current)
+    return () => obs.disconnect()
+  }, [])
+
   return (
     <main className='w-full overflow-x-clip bg-white'>
       {/* === Video Hero (no tint) – mobile & desktop === */}
@@ -106,7 +127,6 @@ export default function ClarksRewards () {
                 key={b.title}
                 className='rounded-2xl border border-black/10 p-6 hover:shadow-md transition-shadow bg-white'
               >
-                {/* Simple inline icon shape to avoid external libs */}
                 <div className='mb-4'>
                   <span
                     aria-hidden
@@ -177,7 +197,7 @@ export default function ClarksRewards () {
 
         <div className='container mx-auto px-6 md:px-10 pt-6 md:pt-8 pb-12 md:pb-16'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:min-h-[560px] items-start'>
-            {/* LEFT: Text — unchanged positioning */}
+            {/* LEFT: Text — positioned lower as requested */}
             <div className='order-2 lg:order-1 relative z-20 flex items-start'>
               <div className='max-w-lg mt-16 md:mt-24 lg:mt-32 pb-16 md:pb-20 lg:pb-28'>
                 <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
@@ -215,16 +235,22 @@ export default function ClarksRewards () {
               </div>
             </div>
 
-            {/* RIGHT: Phone — LIFTED UP & sits *under* the FAQ via z-index */}
+            {/* RIGHT: Phone — LIFTED & slides up on scroll */}
             <div className='order-1 lg:order-2 relative z-0 flex items-center justify-center'>
               <div
+                ref={phoneRef}
                 className={`relative mx-auto w-full max-w-[520px] ${PHONE_LIFT}`}
               >
-                <img
-                  src={appPhone}
-                  alt='Clarks Rewards app preview'
-                  className='w-full h-auto object-contain'
-                />
+                <div
+                  className={`transition-all duration-1500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform
+                              ${phoneIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                >
+                  <img
+                    src={appPhone}
+                    alt='Clarks Rewards app preview'
+                    className='w-full h-auto object-contain'
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -237,11 +263,8 @@ export default function ClarksRewards () {
         // Pull the entire FAQ *up* with negative margin so it covers the lifted phone.
         className={`relative bg-neutral-50 py-12 md:py-20 z-20 shadow-[0_-12px_24px_-12px_rgba(0,0,0,0.15)]${FAQ_OVERLAP}
               transition-all duration-700 ease-out
-              ${
-                faqIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-              }`}
+              ${faqIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       >
-        {/* Optional: rounded top to sell the "card sliding over" effect */}
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
             <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
@@ -287,11 +310,6 @@ const BENEFITS = [
     title: 'Coffee & snacks',
     desc: 'Daily deals on hot coffee, fountain drinks, and fresh snacks.'
   },
-  // {
-  //   icon: '🧼',
-  //   title: 'Car wash perks',
-  //   desc: 'Members get discounted washes and occasional free-wash promos.'
-  // },
   {
     icon: '🎁',
     title: 'Bonus boosts',
