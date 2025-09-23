@@ -117,6 +117,58 @@ const scholarshipImages = Object.entries(scholarshipImports)
   .sort(([a], [b]) => a.localeCompare(b))
   .map(([, url]) => url)
 
+const ScrollPlayVideo = ({
+  src,
+  className,
+}: {
+  src: string
+  className?: string
+}) => {
+  const ref = React.useRef<HTMLVideoElement>(null)
+
+  React.useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
+
+    const handle = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !prefersReducedMotion) {
+          // Autoplay must be muted to be allowed on most browsers
+          el.muted = true
+          // start or resume
+          const p = el.play()
+          if (p && typeof p.catch === 'function') p.catch(() => {})
+        } else {
+          el.pause()
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(handle, { threshold: 0.6 })
+    observer.observe(el)
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <video
+      ref={ref}
+      src={src}
+      // Keep controls for accessibility; remove if you want a clean hero
+      controls
+      // Required for mobile autoplay
+      muted
+      playsInline
+      // Optional: keep looping once visible
+      loop
+      preload="metadata"
+      className={className}
+    />
+  )
+}
+
 export default function DonationsPage() {
   return (
     <main id="donations" className="flex flex-col -mt-[16px]">
@@ -260,17 +312,13 @@ export default function DonationsPage() {
           </div>
 
           {/* NEW: Scramble video + dynamic photo gallery */}
-          <div className="mt-8 md:mt-10 max-w-7xl mx-auto space-y-6">
-            <div className="rounded-2xl overflow-hidden border border-black/10 bg-black">
-              <video
-                src={scrambleVideo}
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full h-auto"
-              />
-            </div>
-
+<div className="mt-8 md:mt-10 max-w-7xl mx-auto space-y-6">
+  <div className="rounded-2xl overflow-hidden border border-black/10 bg-black">
+    <ScrollPlayVideo
+      src={scrambleVideo}
+      className="w-full h-auto"
+    />
+  </div>
             <Gallery images={rodneyFall25Images} columns={4} />
             {/* <p className="mt-3 text-xs text-black/50 text-center">Moments from past outings</p> */}
           </div>
