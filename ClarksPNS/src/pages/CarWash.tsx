@@ -2,6 +2,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import img1 from '@/assets/images/carwashphotos/DJI_0019.jpg'
+import img2 from '@/assets/images/carwashphotos/DSC02583.jpg'
+import img3 from '@/assets/images/carwashphotos/DSC03955.jpg'
+import img4 from '@/assets/images/carwashphotos/DSC04072.jpg'
+
 export default function CarWash () {
   return (
     <main className='w-full overflow-x-clip bg-white'>
@@ -118,20 +123,25 @@ export default function CarWash () {
             </div>
 
             <div className='order-1 lg:order-2'>
-              <div className='relative mx-auto w-full max-w-[520px]'>
-                <div className='grid grid-cols-2 gap-4'>
-                  {Array.from({ length: 4 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className='rounded-2xl border border-black/10 h-32 bg-gradient-to-br from-white to-neutral-50'
-                    >
-                      <div className='h-full w-full rounded-2xl bg-brand/5' />
-                    </div>
-                  ))}
-                </div>
-                <div className='pointer-events-none absolute -inset-2 -z-10 rounded-[32px] bg-brand/10 blur-xl' />
-              </div>
-            </div>
+  <div className='relative mx-auto w-full max-w-[520px]'>
+    <div className='grid grid-cols-2 gap-4'>
+      {[img1, img2, img3, img4].map((src, i) => (
+        <div
+          key={i}
+          className='overflow-hidden rounded-2xl border border-black/10 h-32'
+        >
+          <img
+            src={src}
+            alt={`Car wash photo ${i + 1}`}
+            className='h-full w-full object-cover'
+          />
+        </div>
+      ))}
+    </div>
+    <div className='pointer-events-none absolute -inset-2 -z-10 rounded-[32px] bg-brand/10 blur-xl' />
+  </div>
+</div>
+
           </div>
         </div>
       </section>
