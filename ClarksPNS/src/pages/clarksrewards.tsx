@@ -324,8 +324,8 @@ const FAQS = [
     a: 'Use points in store on eligible items or for fuel discounts at participating Clarks locations.'
   },
   {
-    q: 'Do points expire?',
-    a: 'Points remain active as long as you make a qualifying purchase every 6 months. We’ll remind you before anything expires.'
+    q: 'How many points do I earn per purchase?',
+    a: 'You earn 10 points for every $1 spent in-store and 20 points for every gallon of fuel purchased.'
   },
   {
     q: 'Can I combine with other offers?',
