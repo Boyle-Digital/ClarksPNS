@@ -29,7 +29,7 @@ const Footer: React.FC<FooterProps> = ({
   year = new Date().getFullYear(),
 }) => {
   return (
-    <footer className="bg-brand text-text-onBrand">
+    <footer id="footer-contact" className="bg-brand text-text-onBrand">
       {/* Top sections */}
       <div className="container max-w-screen-2xl">
         <div className="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-text-onBrand/20">
