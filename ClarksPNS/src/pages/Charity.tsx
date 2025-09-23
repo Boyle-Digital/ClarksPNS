@@ -100,9 +100,10 @@ const Gallery = ({
 // --- Dynamic galleries ---
 // Rodney Fall 2025 gallery
 const rodneyFall25Imports = import.meta.glob<string>(
-  '@/assets/images/Charity/Rodney Fall 2025/*.{jpg,jpeg,png,webp}',
+  '@/assets/images/Charity/Rodney Fall 2025 1080p/*.{jpg,jpeg,png,webp}',
   { eager: true, import: 'default' }
 )
+
 const rodneyFall25Images = Object.entries(rodneyFall25Imports)
   .sort(([a], [b]) => a.localeCompare(b))
   .map(([, url]) => url)
