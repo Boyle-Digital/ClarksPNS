@@ -185,7 +185,7 @@ export default function SponsorshipsFeatured () {
             </div>
           </div>
 
-          <div className='md:col-span-5 flex md:justify-end'>
+          {/* <div className='md:col-span-5 flex md:justify-end'>
             <div className='rounded-2xl overflow-hidden border border-white/20 bg-white/10 shadow-sm p-3'>
               <div className='h-64 w-64 md:h-72 md:w-72 rounded-xl overflow-hidden grid place-items-center'>
                 <div className='text-center text-white/85 text-sm leading-relaxed px-4'>
@@ -195,7 +195,7 @@ export default function SponsorshipsFeatured () {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
