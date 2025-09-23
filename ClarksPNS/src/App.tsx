@@ -12,6 +12,7 @@ import ClarksRewards from '@/pages/clarksrewards'
 import CarWash from '@/pages/CarWash'
 import Locations from '@/pages/Locations'
 import Careers from '@/pages/Careers'
+// test
 
 export default function App () {
   return (
