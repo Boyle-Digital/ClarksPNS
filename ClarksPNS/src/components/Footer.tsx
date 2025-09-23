@@ -25,7 +25,7 @@ interface FooterProps {
   nav?: NavLink[]
   year?: number
 }
-
+// test
 const Footer: React.FC<FooterProps> = ({
   nav = defaultNav,
   year = new Date().getFullYear()
