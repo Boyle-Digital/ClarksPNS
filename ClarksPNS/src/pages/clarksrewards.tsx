@@ -10,13 +10,14 @@ import { DesktopHero } from '@/components/site/DesktopHero'
 import rewardsPoster from '@/assets/images/clarkshero.png'
 import rewardsVideo from '@/assets/videos/Ray Ward Introduction - CPNS.mp4'
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
+import halloweenAd from '@/assets/videos/Halloween_Ad_1_CPNS.mp4'
 // import qrCode from "@/assets/images/qr-clarks-rewards.png"; // optional QR for app link
 
 // --- TUNABLES ---
 // Lift the phone up without affecting the text block.
 const PHONE_LIFT = ' translate-y-2 md:-translate-y-0 lg:-translate-y-2'
 // How much the FAQ overlaps upward over the phone (negative margin).
-const FAQ_OVERLAP = ' -mt-[20rem] lg:-mt-[24rem] xl:-mt-[28rem]'
+const FAQ_OVERLAP = ' -mt-[5rem] lg:-mt-[24rem] xl:-mt-[28rem]'
 // How tall the bottom mask is on the promo section (keeps text safe above the seam).
 const MASK_HEIGHT = ' h-16 sm:h-20 md:h-24 lg:h-28'
 
@@ -44,6 +45,33 @@ export default function ClarksRewards () {
       { threshold: 0.3, root: null, rootMargin: '0px 0px -10% 0px' }
     )
     if (phoneRef.current) obs.observe(phoneRef.current)
+    return () => obs.disconnect()
+  }, [])
+
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const el = videoRef.current
+    if (!el) return
+
+    const mql = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (mql.matches) {
+      // Don’t autoplay if user prefers reduced motion
+      return
+    }
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.play().catch(() => {})
+        } else {
+          el.pause()
+        }
+      },
+      { threshold: 0.5 } // play when at least 50% visible
+    )
+
+    obs.observe(el)
     return () => obs.disconnect()
   }, [])
 
@@ -147,6 +175,27 @@ export default function ClarksRewards () {
         </div>
       </section>
 
+      {/* === Featured Video (between Perks and How it Works) === */}
+      <section
+        aria-label='Rewards Spotlight Video'
+        className='py-10 md:py-16 bg-neutral-50 border-y border-black/10'
+      >
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='mx-auto w-full max-w-6xl rounded-2xl overflow-hidden border border-black/10 shadow-sm bg-black'>
+            <div className='relative w-full aspect-video'>
+              <video
+                ref={videoRef}
+                src={halloweenAd}
+                muted
+                playsInline
+                preload='metadata'
+                className='absolute inset-0 h-full w-full object-cover'
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* === How it works === */}
       <section
         id='how-it-works'
@@ -214,7 +263,7 @@ export default function ClarksRewards () {
                     href='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
                     className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/25'
                   >
-                    Join &amp; Get 1,500 Points
+                    Join Clarks Rewards
                   </a>
                 </div>
 
@@ -243,7 +292,11 @@ export default function ClarksRewards () {
               >
                 <div
                   className={`transition-all duration-1500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform
-                              ${phoneIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                              ${
+                                phoneIn
+                                  ? 'opacity-100 translate-y-0'
+                                  : 'opacity-0 translate-y-6'
+                              }`}
                 >
                   <img
                     src={appPhone}
@@ -263,7 +316,9 @@ export default function ClarksRewards () {
         // Pull the entire FAQ *up* with negative margin so it covers the lifted phone.
         className={`relative bg-neutral-50 py-12 md:py-20 z-20 shadow-[0_-12px_24px_-12px_rgba(0,0,0,0.15)]${FAQ_OVERLAP}
               transition-all duration-700 ease-out
-              ${faqIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+              ${
+                faqIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              }`}
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
