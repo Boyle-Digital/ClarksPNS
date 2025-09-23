@@ -408,7 +408,7 @@ export default function Home () {
                       href='/clarks-rewards#join'
                       className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-brand bg-white hover:bg-white/90 transition-all shadow-lg'
                     >
-                      Join Rewards
+                      Join Clarks Rewards
                     </a>
                     <a
                       href='/locations'

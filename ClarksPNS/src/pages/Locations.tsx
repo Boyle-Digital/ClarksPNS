@@ -92,6 +92,7 @@ export type FoodPrograms = {
 export type FuelProviders = {
   marathon: boolean
   arco: boolean
+  BP: boolean
 }
 
 export type StoreHours = {
@@ -155,7 +156,8 @@ const DEFAULT_FOOD: FoodPrograms = {
 
 const DEFAULT_FUEL: FuelProviders = {
   marathon: true, // your requested defaults
-  arco: false
+  arco: false,
+  BP: false
 }
 
 function isStoreKey (k: string) {
@@ -238,10 +240,11 @@ const FOOD_LABEL: Record<typeof FOOD_KEYS[number], string> = {
   grabngo: 'Grab & Go'
 }
 
-const FUEL_KEYS = ['marathon', 'arco'] as const
+const FUEL_KEYS = ['marathon', 'arco', 'BP'] as const
 const FUEL_LABEL: Record<typeof FUEL_KEYS[number], string> = {
   marathon: 'Marathon',
-  arco: 'ARCO'
+  arco: 'ARCO',
+  BP: 'BP',
 }
 
 // ---------- Component ----------

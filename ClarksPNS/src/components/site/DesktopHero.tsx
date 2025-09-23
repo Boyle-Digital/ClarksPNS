@@ -74,7 +74,7 @@ px-6 md:px-8 text-base sm:text-lg md:text-xl tracking-[0.18em] uppercase
 transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white
 '
               >
-                Join Rewards
+                Join Clarks Rewards
               </a>
               <a
                 href='/car-wash'

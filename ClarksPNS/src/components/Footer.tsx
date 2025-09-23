@@ -37,7 +37,7 @@ const Footer: React.FC<FooterProps> = ({
         <div className='grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-text-onBrand/20'>
           {/* INFO & LOCATION */}
           <section className='py-8 md:py-12 md:col-span-6 md:pr-12 text-left'>
-            <div className='flex items-center gap-4 mb-4 -ml-12'>
+            <div className='flex items-center gap-4 mb-4 -ml-0'>
               <img
                 src={logoWhite}
                 alt="Clark's Pump-N-Shop logo"

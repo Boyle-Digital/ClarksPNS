@@ -84,7 +84,7 @@ export default function ClarksRewards () {
                       to='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
                       className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-black/20 text-base md:text-lg'
                     >
-                      Get 1,500 Points Free
+                      Join Clarks Rewards
                     </Link>
                     <Link
                       to='/clarks-rewards#how-it-works'
