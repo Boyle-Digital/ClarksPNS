@@ -109,7 +109,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
       label: 'About Us',
       items: [
         { label: 'Our Story', href: toPath('About Us') },
-        { label: 'Charity', href: '/charity' },
+        { label: 'Clarks Charity', href: '/charity' },
         { label: 'Sponsorships', href: '/sponsorship' }
       ]
     }
@@ -380,7 +380,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                           onClick={() => setAboutOpen(false)}
                           role='menuitem'
                         >
-                          Charity
+                          Clarks Charity
                         </NavLink>
                         <NavLink
                           to='/sponsorship'
