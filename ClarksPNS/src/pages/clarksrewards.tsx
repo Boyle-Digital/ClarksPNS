@@ -1,5 +1,6 @@
 // src/pages/ClarksRewards.tsx
-import React from 'react'
+// put this at the top of your file
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // Reuse your existing components if they're part of the global layout.
@@ -14,66 +15,75 @@ import rewardsVideo from '@/assets/videos/Ray Ward Introduction - CPNS.mp4'
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
 // import qrCode from "@/assets/images/qr-clarks-rewards.png"; // optional QR for app link
 
+// --- TUNABLES ---
+// Lift the phone up without affecting the text block.
+const PHONE_LIFT = ' translate-y-2 md:-translate-y-0 lg:-translate-y-2'
+// How much the FAQ overlaps upward over the phone (negative margin).
+const FAQ_OVERLAP = ' -mt-[20rem] lg:-mt-[24rem] xl:-mt-[28rem]'
+// How tall the bottom mask is on the promo section (keeps text safe above the seam).
+const MASK_HEIGHT = ' h-16 sm:h-20 md:h-24 lg:h-28'
+
 export default function ClarksRewards () {
+  const [faqIn, setFaqIn] = useState(false)
+  useEffect(() => setFaqIn(true), [])
   return (
     <main className='w-full overflow-x-clip bg-white'>
       {/* === Video Hero (no tint) – mobile & desktop === */}
-<section
-  aria-label='Clarks Rewards'
-  className='relative isolate z-0 w-full -mt-[16px] md:-mt-[20px]' // <-- pull up under nav
->
-  <div className='relative h-[68vh] md:h-[86vh] w-full overflow-hidden pt-[16px] md:pt-[20px]'> 
-    {/*   ↑ counter the negative margin so layout height remains consistent */}
-    <video
-      className='absolute inset-0 h-full w-full object-cover'
-      autoPlay
-      playsInline
-      muted
-      loop
-      poster={rewardsPoster}
-    >
-      <source src={rewardsVideo} type='video/mp4' />
-    </video>
+      <section
+        aria-label='Clarks Rewards'
+        className='relative isolate z-0 w-full -mt-[16px] md:-mt-[20px]' // <-- pull up under nav
+      >
+        <div className='relative h-[68vh] md:h-[86vh] w-full overflow-hidden pt-[16px] md:pt-[20px]'>
+          {/*   ↑ counter the negative margin so layout height remains consistent */}
+          <video
+            className='absolute inset-0 h-full w-full object-cover'
+            autoPlay
+            playsInline
+            muted
+            loop
+            poster={rewardsPoster}
+          >
+            <source src={rewardsVideo} type='video/mp4' />
+          </video>
 
-    {/* Content */}
-    <div className='relative z-[1] h-full'>
-      <div className='container mx-auto h-full px-6 md:px-10'>
-        <div className='flex h-full items-center'>
-          <div className='inline-flex flex-col gap-4 md:gap-6 max-w-[680px]'>
-            <h1 className="font-['Oswald'] font-bold text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.35)] text-4xl md:text-6xl leading-tight">
-              Join Clarks Rewards
-            </h1>
-            <p className='text-white/95 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] text-lg md:text-2xl max-w-prose'>
-              Earn on every fill-up and snack—then redeem for
-              free fuel, in-store savings, and members-only perks.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
-              <Link
-                to='/clarks-rewards#join'
-                className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-black/20 text-base md:text-lg'
-              >
-                Get 1,500 Points Free
-              </Link>
-              <Link
-                to='/clarks-rewards#how-it-works'
-                className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-white/90 hover:bg-white transition-all text-base md:text-lg'
-              >
-                How it works
-              </Link>
+          {/* Content */}
+          <div className='relative z-[1] h-full'>
+            <div className='container mx-auto h-full px-6 md:px-10'>
+              <div className='flex h-full items-center'>
+                <div className='inline-flex flex-col gap-4 md:gap-6 max-w-[680px]'>
+                  <h1 className="font-['Oswald'] font-bold text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.35)] text-4xl md:text-6xl leading-tight">
+                    Join Clarks Rewards
+                  </h1>
+                  <p className='text-white/95 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] text-lg md:text-2xl max-w-prose'>
+                    Earn on every fill-up and snack—then redeem for free fuel,
+                    in-store savings, and members-only perks.
+                  </p>
+                  <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
+                    <Link
+                      to='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
+                      className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-black/20 text-base md:text-lg'
+                    >
+                      Get 1,500 Points Free
+                    </Link>
+                    <Link
+                      to='/clarks-rewards#how-it-works'
+                      className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-black/90 bg-white/90 hover:bg-white transition-all text-base md:text-lg'
+                    >
+                      How it works
+                    </Link>
+                  </div>
+                  <p className='text-white/90 text-sm md:text-base'>
+                    New members only. Terms apply.
+                  </p>
+                </div>
+              </div>
             </div>
-            <p className='text-white/90 text-sm md:text-base'>
-              New members only. Terms apply.
-            </p>
           </div>
+
+          {/* subtle bottom fade to white to transition into page */}
+          <div className='pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white' />
         </div>
-      </div>
-    </div>
-
-    {/* subtle bottom fade to white to transition into page */}
-    <div className='pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white' />
-  </div>
-</section>
-
+      </section>
 
       {/* === Benefits Grid === */}
       <section
@@ -90,7 +100,7 @@ export default function ClarksRewards () {
             </p>
           </div>
 
-          <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto'>
             {BENEFITS.map(b => (
               <article
                 key={b.title}
@@ -157,71 +167,64 @@ export default function ClarksRewards () {
       {/* === App Promo / Join CTA === */}
       <section
         aria-label='Get the App'
-        className='py-12 md:py-20 bg-white border-y border-black/10'
+        className='relative bg-white border-y border-black/10'
       >
-        <div className='container mx-auto px-6 md:px-10'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-10'>
-            <div className='order-2 lg:order-1'>
-              <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
-                The Clarks Rewards App
-              </h2>
-              <p className='mt-3 text-black/70 text-base md:text-lg'>
-                Track points, find nearby locations, and redeem at checkout.
-                Activate limited-time Boosts for extra earnings on coffee,
-                snacks, and fuel.
-              </p>
+        {/* Bottom mask (lighter; just softens the seam) */}
+        <div
+          aria-hidden
+          className={`pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-neutral-50${MASK_HEIGHT}`}
+        />
 
-              <div className='mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4'>
-                <a
-                  href='/rewards/signup'
-                  className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/25'
-                >
-                  Join &amp; Get 1,500 Points
-                </a>
+        <div className='container mx-auto px-6 md:px-10 pt-6 md:pt-8 pb-12 md:pb-16'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:min-h-[560px] items-start'>
+            {/* LEFT: Text — unchanged positioning */}
+            <div className='order-2 lg:order-1 relative z-20 flex items-start'>
+              <div className='max-w-lg mt-16 md:mt-24 lg:mt-32 pb-16 md:pb-20 lg:pb-28'>
+                <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+                  The Clarks Rewards App
+                </h2>
+                <p className='mt-3 text-black/70 text-base md:text-lg'>
+                  Track points, find nearby locations, and redeem at checkout.
+                  Activate limited-time Boosts for extra earnings on coffee,
+                  snacks, and fuel.
+                </p>
 
-                {/* <div className="flex items-center gap-4">
-                  <img
-                    src={qrCode}
-                    alt="Scan to download the Clarks Rewards app"
-                    className="h-20 w-20 rounded-md border border-black/10"
-                  />
-                  <div className="text-xs text-black/60">
-                    Scan to get the app <br />
-                    or visit the app store.
-                  </div>
-                </div> */}
+                <div className='mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4'>
+                  <a
+                    href='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
+                    className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/25'
+                  >
+                    Join &amp; Get 1,500 Points
+                  </a>
+                </div>
+
+                <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-black/70'>
+                  <li className='flex items-start gap-2'>
+                    <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
+                    Redeem at pump &amp; register
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
+                    Members-only weekly deals
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
+                    Birthday bonus points
+                  </li>
+                </ul>
               </div>
-
-              <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-black/70'>
-                <li className='flex items-start gap-2'>
-                  <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
-                  Redeem at pump &amp; register
-                </li>
-                <li className='flex items-start gap-2'>
-                  <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
-                  Members-only weekly deals
-                </li>
-                {/* <li className='flex items-start gap-2'>
-                  <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
-                  Car Wash discounts
-                </li> */}
-                <li className='flex items-start gap-2'>
-                  <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />
-                  Birthday bonus points
-                </li>
-              </ul>
             </div>
 
-            <div className='order-1 lg:order-2'>
-              <div className='relative mx-auto w-full max-w-[520px]'>
-                <div className='rounded-[28px] border border-black/10 shadow-xl overflow-hidden bg-white'>
-                  <img
-                    src={appPhone}
-                    alt='Clarks Rewards app preview'
-                    className='w-full h-auto object-contain'
-                  />
-                </div>
-                <div className='pointer-events-none absolute -inset-2 -z-10 rounded-[32px] bg-brand/10 blur-xl' />
+            {/* RIGHT: Phone — LIFTED UP & sits *under* the FAQ via z-index */}
+            <div className='order-1 lg:order-2 relative z-0 flex items-center justify-center'>
+              <div
+                className={`relative mx-auto w-full max-w-[520px] ${PHONE_LIFT}`}
+              >
+                <img
+                  src={appPhone}
+                  alt='Clarks Rewards app preview'
+                  className='w-full h-auto object-contain'
+                />
               </div>
             </div>
           </div>
@@ -231,8 +234,14 @@ export default function ClarksRewards () {
       {/* === FAQ === */}
       <section
         aria-label='Rewards FAQ'
-        className='py-12 md:py-20 bg-neutral-50'
+        // Pull the entire FAQ *up* with negative margin so it covers the lifted phone.
+        className={`relative bg-neutral-50 py-12 md:py-20 z-20 shadow-[0_-12px_24px_-12px_rgba(0,0,0,0.15)]${FAQ_OVERLAP}
+              transition-all duration-700 ease-out
+              ${
+                faqIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              }`}
       >
+        {/* Optional: rounded top to sell the "card sliding over" effect */}
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
             <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
