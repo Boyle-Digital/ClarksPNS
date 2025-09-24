@@ -168,7 +168,7 @@ export default function SponsorshipsFeatured () {
                 href='#rowan-football'
                 className='rounded-2xl px-5 py-2.5 border border-white/40 text-white hover:bg-white/10'
               >
-                Rowan County Football
+                Ashland Football
               </a>
               <a
                 href='#marshall-football'
@@ -237,11 +237,11 @@ export default function SponsorshipsFeatured () {
       <section id='rowan-football' className='py-12 md:py-16 bg-white'>
         <div className='container mx-auto px-6 md:px-10'>
           <Card
-            eyebrow='Morehead, KY'
-            title={<span className='text-black'>Rowan County — Football</span>}
+            eyebrow='Ashland, KY'
+            title={<span className='text-black'>Clark's Pump-N-Shop - Putnam Stadium</span>}
           >
             <p>
-              Friday-night lights with Rowan County—amplifying school spirit
+              Friday-night lights with Ashland Football—amplifying school spirit
               through facilities, signage, and events.
             </p>
             <div className='mt-5 rounded-2xl overflow-hidden border border-black/10 bg-black'>
