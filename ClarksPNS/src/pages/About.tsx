@@ -201,7 +201,7 @@ export default function About () {
               Where we are
             </h2>
             <p className='mt-2 text-black/70'>
-              You’ll find us across four states—and always close to your next
+              You’ll find us across three states—and always close to your next
               stop.
             </p>
           </div>

@@ -159,7 +159,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                   <img
                     src={logoUrl}
                     alt='Clark’s Pump-N-Shop'
-                    className='h-11 w-auto'
+                    className='h-14 w-auto'
                   />
                 </Link>
               </div>

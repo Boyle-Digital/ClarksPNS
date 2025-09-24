@@ -6,6 +6,8 @@ import jacksLogo from "@/assets/images/jacksdelilogo.webp";
 import cafeLogo from "@/assets/images/clarkscafelogo.webp";
 import kkcLogo from "@/assets/images/krispykrunchychickenlogo.webp";
 
+import foodHeroVideo from "@/assets/videos/30sFoodVideo_1080.mp4";
+
 /** === Auto-import: sitewide food gallery === */
 const ALL_GALLERY = Object.values(
   import.meta.glob("@/assets/food-gallery/**/*.{jpg,jpeg,png,webp,avif}", {
@@ -60,20 +62,56 @@ export default function Food() {
   return (
     <main className="relative -mt-6 w-full overflow-x-clip bg-white">
       {/* Hero */}
-      <section
-        aria-label="Food at Clarks"
-        className="relative isolate w-full bg-gradient-to-br from-white via-white to-neutral-50"
-      >
-        <div className="relative mx-auto container px-6 md:px-10 py-14 md:py-20">
-          <h1 className="font-['Oswald'] text-4xl md:text-5xl font-bold text-black">
-            Hot, fresh, and fast—right inside select locations
-          </h1>
-          <p className="mt-3 text-black/70 text-base md:text-lg max-w-prose">
-            From crispy tenders and deli stacks to melty pizza and breakfast favorites, our in-store
-            kitchens serve up crowd-pleasers every day.
-          </p>
+      {/* === Video Hero (no tint) – mobile & desktop === */}
+{/* === Video Hero (bottom-left content, tinted) === */}
+<section
+  aria-label="Food at Clarks"
+  className="relative isolate z-0 w-full -mt-[16px] md:-mt-[20px]"
+>
+  <div className="relative h-[64vh] md:h-[84vh] w-full overflow-hidden pt-[16px] md:pt-[20px]">
+    {/* Background video */}
+    <video
+      className="absolute inset-0 h-full w-full object-cover"
+      autoPlay
+      playsInline
+      muted
+      loop
+    >
+      <source src={foodHeroVideo} type="video/mp4" />
+    </video>
+
+    {/* Soft brand tint for legibility */}
+    <div aria-hidden className="absolute inset-0 bg-brand/30 mix-blend-multiply" />
+
+    {/* Content pinned bottom-left, raised up slightly */}
+    <div className="relative z-[1] h-full">
+      <div className="container mx-auto h-full px-6 md:px-10">
+        <div className="flex h-full items-end">
+          <div className="pb-16 md:pb-24 lg:pb-28 max-w-[900px]">
+            <h1 className="font-['Oswald'] font-bold text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)] text-4xl md:text-6xl leading-tight">
+              Hot, fresh, and fast.
+              <br />
+              right inside select locations
+            </h1>
+
+            {/* Accent rule (longer than before) */}
+            <div className="mt-4 h-1 w-50 rounded bg-white/90" />
+
+            <p className="mt-5 text-white/95 drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] text-lg md:text-2xl max-w-prose">
+              From crispy tenders and deli stacks to melty pizza and breakfast
+              favorites, our in-store kitchens serve up crowd-pleasers every day.
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* fade to white at bottom to segue into page */}
+    {/* <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" /> */}
+  </div>
+</section>
+
+
 
       {/* Menus */}
       <BrandMenus />
