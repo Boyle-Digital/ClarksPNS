@@ -279,21 +279,21 @@ export default function DonationsPage() {
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
             <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
-              April 28, 2025 · Nicholasville, KY
+              2026 Dates Coming Soon
             </p>
             <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
               Rodney Clark Memorial Golf Outing
             </h2>
             <div className="mt-3 text-black/70">
               <p>
-                Join us at Keene Trace Golf Club — Champions Course. Check-in &
+                Join us at Keene Trace Golf Club & Bellefonte Country Club — Champions Course. Check-in &
                 breakfast at 8:00 AM, shotgun start at 9:00 AM. Lunch, awards,
                 and silent auction to follow.
               </p>
-              <p className="mt-2">
+              {/* <p className="mt-2">
                 Limited to the first 25 teams. Registration closes April 11,
                 2025.
-              </p>
+              </p> */}
             </div>
             <div className="mt-5 flex flex-wrap gap-3">
               <a
@@ -343,7 +343,7 @@ export default function DonationsPage() {
                 eligible to renew annually for up to eight semesters.
               </p>
               <p className="mt-2">
-                <strong>2024 recipients:</strong> Alayna Reynolds (West Carter HS)
+                <strong>2024 recipients:</strong> Alayna G. Reynolds (West Carter HS)
                 and Madilyn Smith (South Point HS).
               </p>
             </div>
