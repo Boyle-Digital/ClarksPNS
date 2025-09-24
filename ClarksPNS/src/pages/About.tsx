@@ -121,7 +121,7 @@ export default function About () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <ul className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-            <StatCard k='63+' v='Stores' />
+            <StatCard k='63' v='Stores' />
             <StatCard k='700+' v='Team Members' />
             <StatCard k='3' v='States' />
             <StatCard k='1976' v='Founded' />
