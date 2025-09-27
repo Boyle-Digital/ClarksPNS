@@ -1,21 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Charset + mobile -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/src/assets/icons/clarks-favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clark's Pump-N-Shop</title>
-<script async src="https://www.instagram.com/embed.js"></script>
+    <!-- Primary SEO -->
+    <title>
+      Clark’s Pump-N-Shop | Fresh Food, Coffee & Fuel • Rewards & Car Wash
+    </title>
+    <meta
+      name="description"
+      content="Clark’s Pump-N-Shop serves fresh hot food, great coffee, and quality fuel with friendly service and easy rewards. Find locations, car wash options, and app perks."
+    />
+    <!-- Optional: helps long-tail matching; not a ranking factor, but harmless -->
+    <meta
+      name="keywords"
+      content="Clarks Pump N Shop, convenience store, hot food, coffee, fuel, car wash, rewards, Kentucky"
+    />
 
-</head>
+    <!-- Canonical (prevents duplicate URL issues for an SPA) -->
+    <link rel="canonical" href="https://clarkspumpnshop.com/" />
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+    <!-- Open Graph (Facebook/LinkedIn/Discord/etc.) -->
+    <meta property="og:site_name" content="Clark’s Pump-N-Shop" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Clark’s Pump-N-Shop | Fresh Food, Coffee & Fuel"
+    />
+    <meta
+      property="og:description"
+      content="Hot meals, fresh coffee, fuel, rewards, and car wash — all in one stop."
+    />
+    <!-- Use an absolute URL to a 1200×630 image; swap to your actual asset -->
+    <meta
+      property="og:image"
+      content="https://clarkspumpnshop.com/social/clarks-og.jpg"
+    />
+    <meta property="og:url" content="https://clarkspumpnshop.com/" />
+    <meta property="og:locale" content="en_US" />
 
+    <!-- Twitter (X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Clark’s Pump-N-Shop | Fresh Food, Coffee & Fuel"
+    />
+    <meta
+      name="twitter:description"
+      content="Hot meals, fresh coffee, fuel, rewards, and car wash — all in one stop."
+    />
+    <meta
+      name="twitter:image"
+      content="https://clarkspumpnshop.com/social/clarks-og.jpg"
+    />
+
+    <!-- Robots -->
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="googlebot" content="index,follow" />
+
+    <!-- Brand / PWA niceties (safe even if you’re not a full PWA) -->
+    <meta name="theme-color" content="#263B95" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/assets/icons/clarks-favicon.png"
+    />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Performance: keep your font preconnects; add font-display if you load fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Example font (uncomment and adjust if you ship Google Fonts)
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  -->
+
+    <!-- Social embeds you’re already using -->
+    <script async src="https://www.instagram.com/embed.js"></script>
+
+    <!-- Structured data (JSON-LD): Organization + Website for rich results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Clark’s Pump-N-Shop",
+        "url": "https://clarkspumpnshop.com/",
+        "logo": "https://clarkspumpnshop.com/social/clarks-logo-512.png"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Clark’s Pump-N-Shop",
+        "url": "https://clarkspumpnshop.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://clarkspumpnshop.com/search?q={query}",
+          "query-input": "required name=query"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
