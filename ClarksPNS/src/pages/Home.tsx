@@ -354,7 +354,7 @@ export default function Home () {
 
       {/* Monthly Promotions — Auto-rotating triple image */}
       <MonthlyPromotions
-        title='September Promotions'
+        title='October Promotions'
         // subtitle='A rotating peek at what’s new.'
         images={PROMO_IMAGES}
       />
