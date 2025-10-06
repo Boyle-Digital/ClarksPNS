@@ -12,6 +12,8 @@ import ClarksRewards from '@/pages/clarksrewards'
 import CarWash from '@/pages/CarWash'
 import Locations from '@/pages/Locations'
 import Careers from '@/pages/Careers'
+import MenuTest from '@/pages/menuTest'
+
 // test
 
 export default function App () {
@@ -33,6 +35,7 @@ export default function App () {
           <Route path='/Food' element={<Food />} />
           <Route path='/Careers' element={<Careers />} />
           <Route path='/Sponsorship' element={<Sponsorship />} />
+          <Route path='/menuTest' element={<MenuTest />} />
         </Routes>
         <Footer />
       </div>

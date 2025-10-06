@@ -1,5 +1,8 @@
 // src/pages/Locations.tsx
 import React from 'react'
+import { SEO } from '@/lib/seo'
+import { buildLocationsItemList } from '@/lib/locations-schema'
+
 import {
   GoogleMap,
   Marker,
@@ -457,7 +460,16 @@ export default function Locations () {
 
   const mapCenter = userPoint || results[0]?.latlng || initialCenter
 
+    const json = buildLocationsItemList()
+
   return (
+    <>
+      <SEO
+        title="Find a Clark’s Pump-N-Shop Near You"
+        description="Search locations for fuel, fresh food, coffee, car wash, and more."
+        path="/locations"
+        jsonLd={[json]}
+      />
     <main className='w-full overflow-x-clip bg-white -mt-5'>
       {/* Header / Search */}
       <section className='relative isolate w-full bg-gradient-to-br from-white via-white to-neutral-50'>
@@ -729,6 +741,7 @@ export default function Locations () {
         </div>
       </section>
     </main>
+    </>
   )
 }
 

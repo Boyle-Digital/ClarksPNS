@@ -30,24 +30,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.48386929999999,
     "lng": -82.67155009999999,
-    "__addr": "1805 Main Street, Ashland, KY, 41102",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": true
-    }
+    "__addr": "1805 Main Street, Ashland, KY, 41102"
   },
   "2": {
     "name": "Catlettsburg",
@@ -80,24 +67,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4387631,
     "lng": -82.6091163,
-    "__addr": "900 Center Street, Catlettsburg, KY, 41129",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": true
-    }
+    "__addr": "900 Center Street, Catlettsburg, KY, 41129"
   },
   "3": {
     "name": "Greenup",
@@ -130,24 +104,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5676449,
     "lng": -82.8309069,
-    "__addr": "1024 Seaton Avenue, Greenup, KY, 41144",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": true
-    }
+    "__addr": "1024 Seaton Avenue, Greenup, KY, 41144"
   },
   "5": {
     "name": "Greenup",
@@ -179,24 +140,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5664199,
     "lng": -82.8245727,
-    "__addr": "1735 Ashland Road, Greenup, KY, 41144",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "1735 Ashland Road, Greenup, KY, 41144"
   },
   "6": {
     "name": "Wayne",
@@ -228,24 +176,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.2298221,
     "lng": -82.4397609,
-    "__addr": "10045 Rt 152, Wayne, WV, 25570",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "10045 Rt 152, Wayne, WV, 25570"
   },
   "7": {
     "name": "Oak Hill",
@@ -277,24 +212,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.9009522,
     "lng": -82.5694697,
-    "__addr": "199 N Jackson St., Oak Hill, OH, 45656",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "199 N Jackson St., Oak Hill, OH, 45656"
   },
   "8": {
     "name": "Diederich",
@@ -326,24 +248,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.504036,
     "lng": -82.692295,
-    "__addr": "1000 Diederich Blvd, Russell, KY, 41169",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "1000 Diederich Blvd, Russell, KY, 41169"
   },
   "9": {
     "name": "West Hamlin",
@@ -375,24 +284,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.2713331,
     "lng": -82.200102,
-    "__addr": "5742 McClellan HWY, Branchland, WV, 25506",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "5742 McClellan HWY, Branchland, WV, 25506"
   },
   "10": {
     "name": "Jackson",
@@ -425,24 +321,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 39.0307293,
     "lng": -82.6370263,
-    "__addr": "90 Twin Oaks Drive, Jackson, OH, 45640",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": true,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "90 Twin Oaks Drive, Jackson, OH, 45640"
   },
   "11": {
     "name": "Hal Greer",
@@ -474,24 +357,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4051196,
     "lng": -82.4278211,
-    "__addr": "1587 Hal Greer Blvd, Huntington, WV, 25701",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "1587 Hal Greer Blvd, Huntington, WV, 25701"
   },
   "13": {
     "name": "Fraziers Bottom",
@@ -524,24 +394,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5562386,
     "lng": -81.9717268,
-    "__addr": "17513 Winfield Road, Winfield, WV, 25213",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "17513 Winfield Road, Winfield, WV, 25213"
   },
   "15": {
     "name": "Lavalette",
@@ -573,24 +430,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.3223768,
     "lng": -82.445655,
-    "__addr": "4790 St Rt 152, Lavalette, WV, 25535",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "4790 St Rt 152, Lavalette, WV, 25535"
   },
   "18": {
     "name": "Flemingsburg",
@@ -622,24 +466,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4207388,
     "lng": -83.7324909,
-    "__addr": "150  East Water St, Flemingsburg, KY, 41041",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "150  East Water St, Flemingsburg, KY, 41041"
   },
   "19": {
     "name": "McArthur",
@@ -672,24 +503,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 39.2441312,
     "lng": -82.4795908,
-    "__addr": "301 S. Market St, McArthur, OH, 45651",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "301 S. Market St, McArthur, OH, 45651"
   },
   "20": {
     "name": "South Point",
@@ -722,24 +540,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4511223,
     "lng": -82.5914353,
-    "__addr": "132 Co Rd 450, So. Point, OH, 45680",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "132 Co Rd 450, So. Point, OH, 45680"
   },
   "21": {
     "name": "JF Clark",
@@ -771,24 +576,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.3615261,
     "lng": -82.77252299999999,
-    "__addr": "12649 US 60, Ashland, KY, 41102",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "12649 US 60, Ashland, KY, 41102"
   },
   "23": {
     "name": "13th Street",
@@ -821,24 +613,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4573699,
     "lng": -82.66693060000001,
-    "__addr": "3354 13th Street, Ashland, KY, 41102",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": true
-    }
+    "__addr": "3354 13th Street, Ashland, KY, 41102"
   },
   "24": {
     "name": "Huntington",
@@ -871,24 +650,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4331091,
     "lng": -82.3637385,
-    "__addr": "4430 Ohio River Rd, Huntington, WV, 25702",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "4430 Ohio River Rd, Huntington, WV, 25702"
   },
   "25": {
     "name": "Proctorville",
@@ -920,24 +686,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4386318,
     "lng": -82.3865081,
-    "__addr": "7575 St Rt 7, Proctorville, OH, 45669",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "7575 St Rt 7, Proctorville, OH, 45669"
   },
   "26": {
     "name": "Chesapeake",
@@ -969,24 +722,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5735159,
     "lng": -82.6166637,
-    "__addr": "2927 Co Rd 44, So. Point, OH, 45680",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "2927 Co Rd 44, So. Point, OH, 45680"
   },
   "28": {
     "name": "West Liberty",
@@ -1019,24 +759,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 37.9110858,
     "lng": -83.26562849999999,
-    "__addr": "607 N. Main St, West Liberty, KY, 41472",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "607 N. Main St, West Liberty, KY, 41472"
   },
   "30": {
     "name": "Rio Grande",
@@ -1069,25 +796,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.8855006,
     "lng": -82.37668049999999,
-    "__addr": "11381 St Rt 588, Rio Grande, OH, 45674",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": false,
-      "BP": true
-    }
+    "__addr": "11381 St Rt 588, Rio Grande, OH, 45674"
   },
   "32": {
     "name": "Burnaugh",
@@ -1120,24 +833,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.266024,
     "lng": -82.58156,
-    "__addr": "28583 US 23, Catlettsburg, KY, 41129",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "28583 US 23, Catlettsburg, KY, 41129"
   },
   "33": {
     "name": "Wheelersburg",
@@ -1169,24 +869,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.7285514,
     "lng": -82.8592967,
-    "__addr": "312 Center St, Wheelersburg, OH, 45694",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "312 Center St, Wheelersburg, OH, 45694"
   },
   "34": {
     "name": "Portsmouth",
@@ -1219,24 +906,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.7595787,
     "lng": -82.99032670000001,
-    "__addr": "3008 Scioto Trail, Portsmouth, OH, 45662",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "3008 Scioto Trail, Portsmouth, OH, 45662"
   },
   "36": {
     "name": "North Broadway",
@@ -1269,24 +943,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.0750011,
     "lng": -84.4585489,
-    "__addr": "1971 North Broadway, Lexington, KY, 40505",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "1971 North Broadway, Lexington, KY, 40505"
   },
   "37": {
     "name": "Ironton",
@@ -1319,24 +980,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5375698,
     "lng": -82.6788055,
-    "__addr": "824 Park Ave, Ironton, OH, 45638",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "824 Park Ave, Ironton, OH, 45638"
   },
   "38": {
     "name": "Proctorville",
@@ -1368,24 +1016,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.438587,
     "lng": -82.3866434,
-    "__addr": "6288 St. Rt 7, Proctorville, OH, 45669",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "6288 St. Rt 7, Proctorville, OH, 45669"
   },
   "39": {
     "name": "Waverly",
@@ -1417,24 +1052,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 39.1309643,
     "lng": -82.97941150000001,
-    "__addr": "506 E Emmitt, Waverly, OH, 45690",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "506 E Emmitt, Waverly, OH, 45690"
   },
   "40": {
     "name": "South Shore",
@@ -1467,24 +1089,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.728417,
     "lng": -82.93582459999999,
-    "__addr": "28248 US 23, South Shore, KY, 41175",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "28248 US 23, South Shore, KY, 41175"
   },
   "41": {
     "name": "Piketon",
@@ -1517,24 +1126,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 39.0530889,
     "lng": -82.99509189999999,
-    "__addr": "833 Beaver Creek Rd, Piketon, OH, 45661",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "833 Beaver Creek Rd, Piketon, OH, 45661"
   },
   "42": {
     "name": "Route 3",
@@ -1566,24 +1162,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.358493,
     "lng": -82.692797,
-    "__addr": "2250 St. Rt 3, Catlettsburg, KY, 41129",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "2250 St. Rt 3, Catlettsburg, KY, 41129"
   },
   "43": {
     "name": "Greenup Ave",
@@ -1615,24 +1198,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4696047,
     "lng": -82.6214061,
-    "__addr": "3000 Greenup Ave, Ashland, KY, 41101",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "3000 Greenup Ave, Ashland, KY, 41101"
   },
   "44": {
     "name": "Russell Cave",
@@ -1665,24 +1235,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.0709239,
     "lng": -84.4762434,
-    "__addr": "313 West New Circle Rd., Lexington, KY, 40502",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "313 West New Circle Rd., Lexington, KY, 40502"
   },
   "45": {
     "name": "Rosemount Rd",
@@ -1714,24 +1271,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.7768056,
     "lng": -82.9442644,
-    "__addr": "1701 State Route 139, Portsmouth, OH, 45662",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "1701 State Route 139, Portsmouth, OH, 45662"
   },
   "46": {
     "name": "University Mart",
@@ -1763,24 +1307,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5253992,
     "lng": -82.66519029999999,
-    "__addr": "1813 Liberty Ave., Ironton, OH, 45638",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "1813 Liberty Ave., Ironton, OH, 45638"
   },
   "47": {
     "name": "Vanceburg",
@@ -1812,24 +1343,11 @@
       "open24Hours": true,
       "showers": true,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5916237,
     "lng": -83.3271666,
-    "__addr": "67 Commercial Drive, Vanceburg, KY, 41179",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "67 Commercial Drive, Vanceburg, KY, 41179"
   },
   "49": {
     "name": "Greenhills",
@@ -1862,24 +1380,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4403195,
     "lng": -82.7078963,
-    "__addr": "373 St Rt. 716, Ashland, KY, 41102",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "373 St Rt. 716, Ashland, KY, 41102"
   },
   "50": {
     "name": "Stroble",
@@ -1912,24 +1417,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5523435,
     "lng": -82.6112169,
-    "__addr": "5197 State Route 141, Ironton, OH, 45638",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "5197 State Route 141, Ironton, OH, 45638"
   },
   "51": {
     "name": "Piedmont Pantry",
@@ -1961,24 +1453,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.3982169,
     "lng": -82.51661299999999,
-    "__addr": "4408 Piedmont Road, Huntington, WV, 25704",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "4408 Piedmont Road, Huntington, WV, 25704"
   },
   "52": {
     "name": "Grayson",
@@ -2010,24 +1489,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.3345175,
     "lng": -82.9452137,
-    "__addr": "311 N. Carol Malone, Grayson, KY, 41143",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "311 N. Carol Malone, Grayson, KY, 41143"
   },
   "53": {
     "name": "Clays Mill Rd",
@@ -2060,24 +1526,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 37.9966193,
     "lng": -84.5481819,
-    "__addr": "3334 Clays Mill Road, Lexington, KY, 40503",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "3334 Clays Mill Road, Lexington, KY, 40503"
   },
   "54": {
     "store_hours": {
@@ -2102,20 +1555,7 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
-    },
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
+      "fuel": false
     }
   },
   "55": {
@@ -2149,25 +1589,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.7400141,
     "lng": -82.9638078,
-    "__addr": "2626 Gallia St, Portsmouth, OH, 45662",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false,
-      "BP": true
-    }
+    "__addr": "2626 Gallia St, Portsmouth, OH, 45662"
   },
   "56": {
     "name": "Olive Hill",
@@ -2200,24 +1626,11 @@
       "open24Hours": true,
       "showers": true,
       "rvDump": true,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.322679,
     "lng": -83.1198385,
-    "__addr": "10824 West US 60, Olive Hill, Ky, 41164",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "10824 West US 60, Olive Hill, Ky, 41164"
   },
   "57": {
     "name": "Winchester Road",
@@ -2250,24 +1663,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.0409941,
     "lng": -84.4711718,
-    "__addr": "922 Detroit Ave, Lexington, KY, 40505",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "922 Detroit Ave, Lexington, KY, 40505"
   },
   "58": {
     "name": "Exit 181",
@@ -2300,24 +1700,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.3701449,
     "lng": -82.76656899999999,
-    "__addr": "1965 US Route 60, Rush, KY, 41168",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": true
-    }
+    "__addr": "1965 US Route 60, Rush, KY, 41168"
   },
   "59": {
     "name": "Versailles Rd",
@@ -2350,24 +1737,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.04992310000001,
     "lng": -84.527999,
-    "__addr": "1419 Versailles Rd, Lexington, KY, 40504",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "1419 Versailles Rd, Lexington, KY, 40504"
   },
   "60": {
     "name": "Coal Grove",
@@ -2399,24 +1773,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.5018496,
     "lng": -82.6462942,
-    "__addr": "409 Marion Pike, Coal Grove, OH, 45637",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "409 Marion Pike, Coal Grove, OH, 45637"
   },
   "70": {
     "alt_hours": {
@@ -2441,20 +1802,7 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
-    },
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
+      "fuel": false
     }
   },
   "71": {
@@ -2488,24 +1836,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4603099,
     "lng": -82.6404804,
-    "__addr": "1920 29th St, Ashland, KY, 41101",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": true,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": true
-    }
+    "__addr": "1920 29th St, Ashland, KY, 41101"
   },
   "72": {
     "name": "Lloyd",
@@ -2538,24 +1873,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.6455518,
     "lng": -82.8764283,
-    "__addr": "1233 KY 10, Greenup, KY, 41144",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": true,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "1233 KY 10, Greenup, KY, 41144"
   },
   "73": {
     "name": "Clarks Café",
@@ -2575,24 +1897,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.4552926,
     "lng": -82.6960262,
-    "__addr": "Donta Road, Ashland, KY, 41105",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": false
-    }
+    "__addr": "Donta Road, Ashland, KY, 41105"
   },
   "75": {
     "name": "Rush",
@@ -2624,24 +1933,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.3614491,
     "lng": -82.7728877,
-    "__addr": "9822 E. US Highway 60, Rush, KY, 41168",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "9822 E. US Highway 60, Rush, KY, 41168"
   },
   "76": {
     "name": "Lexington",
@@ -2673,24 +1969,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.0504487,
     "lng": -84.5012586,
-    "__addr": "529 W Main St, Lexington, KY, 40507",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": false
-    }
+    "__addr": "529 W Main St, Lexington, KY, 40507"
   },
   "77": {
     "name": "Midway",
@@ -2723,24 +2006,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.1621356,
     "lng": -84.67659429999999,
-    "__addr": "300 Lacefield St, Midway, KY, 40347",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "300 Lacefield St, Midway, KY, 40347"
   },
   "78": {
     "name": "Bethel",
@@ -2773,24 +2043,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 37.9486108,
     "lng": -84.5420362,
-    "__addr": "100 Bethel Harvest Drive, Nicholsville, KY, 40356",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "100 Bethel Harvest Drive, Nicholsville, KY, 40356"
   },
   "79": {
     "name": "Sandersville Rd.",
@@ -2823,24 +2080,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.0890767,
     "lng": -84.53725899999999,
-    "__addr": "2670 Sandersville Rd, Lexington, KY, 40511",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "2670 Sandersville Rd, Lexington, KY, 40511"
   },
   "80": {
     "alt_hours": {
@@ -2865,20 +2109,7 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
-    },
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
+      "fuel": false
     }
   },
   "81": {
@@ -2912,24 +2143,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 37.9973632,
     "lng": -84.174588,
-    "__addr": "201 N Main St, Winchester, KY, 40391",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": false,
-      "arco": true
-    }
+    "__addr": "201 N Main St, Winchester, KY, 40391"
   },
   "82": {
     "name": "Georgetown",
@@ -2962,24 +2180,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.2750948,
     "lng": -84.55529899999999,
-    "__addr": "381 Cherry Blossom Way, Georgetown, KY, 40324",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "381 Cherry Blossom Way, Georgetown, KY, 40324"
   },
   "83": {
     "name": "Georgetown",
@@ -3012,24 +2217,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.2145143,
     "lng": -84.53961989999999,
-    "__addr": "2001 Paris Pike, Georgetown, KY, 40324",
-    "food": {
-      "clarkscafe": true,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "2001 Paris Pike, Georgetown, KY, 40324"
   },
   "84": {
     "name": "Connector Rd",
@@ -3061,24 +2253,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.230517,
     "lng": -84.53475139999999,
-    "__addr": "480 Connector Rd, Georgetown, KY, 40324",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "480 Connector Rd, Georgetown, KY, 40324"
   },
   "85": {
     "name": "Canewood",
@@ -3111,24 +2290,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.2090075,
     "lng": -84.5941005,
-    "__addr": "100 Canewood Ctr Dr, Georgetown, KY, 40324",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "100 Canewood Ctr Dr, Georgetown, KY, 40324"
   },
   "86": {
     "name": "Versailles",
@@ -3161,24 +2327,11 @@
       "open24Hours": false,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.044971,
     "lng": -84.6656057,
-    "__addr": "3590 Lexington Rd, Versailles, KY, 40383",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": true
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "3590 Lexington Rd, Versailles, KY, 40383"
   },
   "87": {
     "name": "Lucille Dr.",
@@ -3211,24 +2364,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.0852792,
     "lng": -84.5509691,
-    "__addr": "100 Lucille Dr, Lexington, Ky, 40511",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "100 Lucille Dr, Lexington, Ky, 40511"
   },
   "88": {
     "name": "Frankfort",
@@ -3261,24 +2401,11 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 38.188186,
     "lng": -84.810493,
-    "__addr": "100 Isaac Shelby Cir W, Frankfort, Ky, 40601",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": true,
-      "champs": false,
-      "hangar": true,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "100 Isaac Shelby Cir W, Frankfort, Ky, 40601"
   },
   "89": {
     "name": "Berea",
@@ -3310,23 +2437,14 @@
       "open24Hours": true,
       "showers": false,
       "rvDump": false,
-      "fuel": false,
-      "carwash": false
+      "fuel": false
     },
     "lat": 37.5695196,
     "lng": -84.3183829,
-    "__addr": "274 Paint Lick Rd., Berea, KY, 40403",
-    "food": {
-      "clarkscafe": false,
-      "krispykrunchy": false,
-      "champs": false,
-      "hangar": false,
-      "jacks": false,
-      "grabngo": false
-    },
-    "fuel": {
-      "marathon": true,
-      "arco": false
-    }
+    "__addr": "274 Paint Lick Rd., Berea, KY, 40403"
+  },
+  "__meta": {
+    "srcHash": "fbaa03fb17bb97d41b52c1edc49025e8c85973be467de998ff91673aa89b8815",
+    "generatedAt": "2025-10-06T15:54:41.456Z"
   }
 }
