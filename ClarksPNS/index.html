@@ -1,53 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Charset + mobile -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Canonical (fallback; per-page canonicals set via Helmet) -->
-    <link rel="canonical" href="https://www.myclarkspns.com/" />
+    <!-- Primary SEO -->
+    <title>
+      Clark’s Pump-N-Shop | Fresh Food, Coffee & Fuel • Rewards & Car Wash
+    </title>
+    <meta
+      name="description"
+      content="Clark’s Pump-N-Shop serves fresh hot food, great coffee, and quality fuel with friendly service and easy rewards. Find locations, car wash options, and app perks."
+    />
+    <!-- Optional: helps long-tail matching; not a ranking factor, but harmless -->
+    <meta
+      name="keywords"
+      content="Clarks Pump N Shop, convenience store, hot food, coffee, fuel, car wash, rewards, Kentucky"
+    />
 
-    <!-- Icons & PWA -->
-    <link rel="icon" href="/icons/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" href="/icons/icon-192.png" />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#263B95" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Canonical (prevents duplicate URL issues for an SPA) -->
+    <link rel="canonical" href="https://clarkspumpnshop.com/" />
 
-    <!-- Brand/UI -->
-    <meta name="theme-color" content="#263B95" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-    <!-- Preconnects -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Primary Meta (fallbacks; page-level overrides via Helmet) -->
-    <title>Clark’s Pump-N-Shop</title>
-    <meta name="description" content="Clark’s Pump-N-Shop — Return. Refresh. Refuel. Fast fuel, fresh food, and friendly service." />
-    <meta name="robots" content="index,follow" />
-
-    <!-- Open Graph defaults -->
+    <!-- Open Graph (Facebook/LinkedIn/Discord/etc.) -->
     <meta property="og:site_name" content="Clark’s Pump-N-Shop" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.myclarkspns.com/" />
-    <meta property="og:title" content="Clark’s Pump-N-Shop — Return. Refresh. Refuel." />
-    <meta property="og:description" content="Fast fuel, fresh food, and friendly service across our stores. Return. Refresh. Refuel." />
-    <meta property="og:image" content="/og/og-default.jpg" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@clarkspnsbti" />
-
-    <!-- Optional (fill later)
+    <meta
+      property="og:title"
+      content="Clark’s Pump-N-Shop | Fresh Food, Coffee & Fuel"
+    />
+    <meta
+      property="og:description"
+      content="Hot meals, fresh coffee, fuel, rewards, and car wash — all in one stop."
+    />
+    <!-- Use an absolute URL to a 1200×630 image; swap to your actual asset -->
+    <meta
+      property="og:image"
+      content="https://clarkspumpnshop.com/social/clarks-og.jpg"
+    />
+    <meta property="og:url" content="https://clarkspumpnshop.com/" />
     <meta property="og:locale" content="en_US" />
-    <meta name="format-detection" content="telephone=no" />
-    -->
 
-    <!-- Keep Instagram embed if you use it -->
+    <!-- Twitter (X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Clark’s Pump-N-Shop | Fresh Food, Coffee & Fuel"
+    />
+    <meta
+      name="twitter:description"
+      content="Hot meals, fresh coffee, fuel, rewards, and car wash — all in one stop."
+    />
+    <meta
+      name="twitter:image"
+      content="https://clarkspumpnshop.com/social/clarks-og.jpg"
+    />
+
+    <!-- Robots -->
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="googlebot" content="index,follow" />
+
+    <!-- Brand / PWA niceties (safe even if you’re not a full PWA) -->
+    <meta name="theme-color" content="#263B95" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/assets/icons/clarks-favicon.png"
+    />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Performance: keep your font preconnects; add font-display if you load fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Example font (uncomment and adjust if you ship Google Fonts)
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  -->
+
+    <!-- Social embeds you’re already using -->
     <script async src="https://www.instagram.com/embed.js"></script>
+
+    <!-- Structured data (JSON-LD): Organization + Website for rich results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Clark’s Pump-N-Shop",
+        "url": "https://clarkspumpnshop.com/",
+        "logo": "https://clarkspumpnshop.com/social/clarks-logo-512.png"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Clark’s Pump-N-Shop",
+        "url": "https://clarkspumpnshop.com/",
+
+      }
+    </script>
   </head>
 
   <body>

@@ -25,33 +25,15 @@ import rewardsPhoneVideo from "@/assets/videos/Halloween_Ad_2_CPNS.mp4"
 import rodneyBanner from "@/assets/images/clarks-site-sample-9.png";
 
 /** Auto-import Monthly Promotions from the provided folders */
-const brandy800 = Object.values(
+const PromoImages = Object.values(
   import.meta.glob(
-    '@/assets/WebImages-September2025/WebImages-September2025/Brandy/800x800/*.jpg',
-    { eager: true, as: 'url' }
-  )
-) as string[]
-const cody1035 = Object.values(
-  import.meta.glob(
-    '@/assets/WebImages-September2025/WebImages-September2025/Cody/1035x712/*.jpg',
-    { eager: true, as: 'url' }
-  )
-) as string[]
-const cody1080 = Object.values(
-  import.meta.glob(
-    '@/assets/WebImages-September2025/WebImages-September2025/Cody/1080x1920/*.jpg',
-    { eager: true, as: 'url' }
-  )
-) as string[]
-const gstv1600 = Object.values(
-  import.meta.glob(
-    '@/assets/WebImages-September2025/WebImages-September2025/GSTV/1600x1200/*.jpg',
+    '@/assets/PromoImages/800x800/*.jpg',
     { eager: true, as: 'url' }
   )
 ) as string[]
 
 // Merge into a single pool for the carousel
-const PROMO_IMAGES = [...brandy800]
+const PROMO_IMAGES = [...PromoImages]
 
 function MonthlyPromotions ({
   title,
@@ -400,7 +382,7 @@ export default function Home () {
 
       {/* Monthly Promotions — Auto-rotating triple image */}
       <MonthlyPromotions
-        title='September Promotions'
+        title='October Promotions'
         // subtitle='A rotating peek at what’s new.'
         images={PROMO_IMAGES}
       />
