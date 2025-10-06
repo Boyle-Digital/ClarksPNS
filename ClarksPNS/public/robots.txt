@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow any non-SEO pages when you add them:
+# Disallow: /admin
+# Disallow: /preview
+# Disallow: /search
+# Disallow: /privacy
+# Disallow: /terms
+
+Sitemap: https://www.myclarkspns.com/sitemap.xml

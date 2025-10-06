@@ -17,7 +17,9 @@
     "prebuild": "node src/lib/geocode_stores.mjs",
     "build": "tsc -b && vite build",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "icons": "node scripts/make-icons.mjs",
+    "geocode": "node src/lib/geocode_stores.mjs"
   },
   "dependencies": {
     "@fontsource/oswald": "^5.2.6",
@@ -41,6 +43,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "png-to-ico": "^3.0.1",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "sharp": "^0.34.3",

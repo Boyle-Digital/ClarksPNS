@@ -1,6 +1,8 @@
 // src/pages/ClarksRewards.tsx
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { SEO } from '@/lib/seo'
+
 
 // Reuse your existing components if they're part of the global layout.
 import MobileHero from '@/components/site/MobileHero'
@@ -76,6 +78,30 @@ export default function ClarksRewards () {
   }, [])
 
   return (
+    <>
+      <SEO
+        title="Clark’s Rewards — Save on Fuel & Food"
+        description="Join Clark’s Rewards for member-only pricing and perks. Return. Refresh. Refuel."
+        path="/rewards"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Clark’s Pump-N-Shop",
+            "operatingSystem": "iOS",
+            "applicationCategory": "LifestyleApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "url": "https://apps.apple.com/us/app/clarks-pump-n-shop/id1238295486"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Clark’s Rewards",
+            "url": "https://www.myclarkspns.com/rewards",
+            "isPartOf": { "@type": "WebSite", "name": "Clark’s Pump-N-Shop", "url": "https://www.myclarkspns.com/" }
+          }
+        ]}
+      />
     <main className='w-full overflow-x-clip bg-white'>
       {/* === Video Hero (no tint) – mobile & desktop === */}
       <section
@@ -351,6 +377,7 @@ export default function ClarksRewards () {
         </div>
       </section>
     </main>
+    </>
   )
 }
 

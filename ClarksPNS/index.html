@@ -1,21 +1,57 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/src/assets/icons/clarks-favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clark's Pump-N-Shop</title>
-<script async src="https://www.instagram.com/embed.js"></script>
+    <!-- Canonical (fallback; per-page canonicals set via Helmet) -->
+    <link rel="canonical" href="https://www.myclarkspns.com/" />
 
-</head>
+    <!-- Icons & PWA -->
+    <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#263B95" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+    <!-- Brand/UI -->
+    <meta name="theme-color" content="#263B95" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Primary Meta (fallbacks; page-level overrides via Helmet) -->
+    <title>Clark’s Pump-N-Shop</title>
+    <meta name="description" content="Clark’s Pump-N-Shop — Return. Refresh. Refuel. Fast fuel, fresh food, and friendly service." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph defaults -->
+    <meta property="og:site_name" content="Clark’s Pump-N-Shop" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.myclarkspns.com/" />
+    <meta property="og:title" content="Clark’s Pump-N-Shop — Return. Refresh. Refuel." />
+    <meta property="og:description" content="Fast fuel, fresh food, and friendly service across our stores. Return. Refresh. Refuel." />
+    <meta property="og:image" content="/og/og-default.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@clarkspnsbti" />
+
+    <!-- Optional (fill later)
+    <meta property="og:locale" content="en_US" />
+    <meta name="format-detection" content="telephone=no" />
+    -->
+
+    <!-- Keep Instagram embed if you use it -->
+    <script async src="https://www.instagram.com/embed.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

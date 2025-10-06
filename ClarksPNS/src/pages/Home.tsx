@@ -1,6 +1,8 @@
 import React from 'react'
 // import MobileHero from '@/components/site/MobileHero'
 import { DesktopHero } from '@/components/site/DesktopHero'
+import { SEO } from '@/lib/seo'
+
 
 // MobileHero images (keep as-is)
 import phone640 from '@/assets/images/phone-640.jpg'
@@ -20,7 +22,7 @@ import ttIcon from '@/assets/icons/tiktok.svg'
 import rewardsPhoneVideo from "@/assets/videos/Halloween_Ad_2_CPNS.mp4"
 
 // Rodney banner (full-bleed). Note: filename includes a typographic apostrophe.
-import rodneyBanner from '@/assets/images/Clark’s Site Sample (9).png'
+import rodneyBanner from "@/assets/images/clarks-site-sample-9.png";
 
 /** Auto-import Monthly Promotions from the provided folders */
 const brandy800 = Object.values(
@@ -123,6 +125,31 @@ function MonthlyPromotions ({
   }, [openSrc])
 
   return (
+    <>
+    <SEO
+        title="Clark’s Pump-N-Shop — Return. Refresh. Refuel."
+        description="Fuel up fast, grab fresh food, and get on your way—Clark’s Pump-N-Shop has you covered."
+        path="/"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Clark’s Pump-N-Shop, Inc.",
+            "url": "https://www.myclarkspns.com/",
+            "logo": "https://www.myclarkspns.com/icons/icon-512.png",
+            "sameAs": [
+              "https://www.facebook.com/clarkspumpnshop",
+              "https://www.instagram.com/clarkspumpnshop/?hl=en",
+              "https://x.com/clarkspnsbti",
+              "https://www.linkedin.com/company/clark's-pump-n-shop",
+              "https://www.tiktok.com/@clarkspumpnshop"
+            ],
+            "description": "Family-run convenience stores offering fuel, fresh food programs, and friendly service throughout our communities. Return. Refresh. Refuel."
+            // "contactPoint": [{ "@type": "ContactPoint", "telephone": "", "contactType": "customer service" }]
+            // "address": { "@type": "PostalAddress", "streetAddress": "", "addressLocality": "", "addressRegion": "", "postalCode": "", "addressCountry": "US" }
+          }
+        ]}
+      />
     <section
       aria-label='Monthly Promotions'
       className='py-12 md:py-20 bg-neutral-50'
@@ -255,6 +282,7 @@ function MonthlyPromotions ({
 )}
 
     </section>
+    </>
   )
 }
 
