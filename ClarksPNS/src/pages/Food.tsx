@@ -16,27 +16,58 @@ const ALL_GALLERY = Object.values(
   })
 ) as string[]
 
-/** === Auto-import: menus (PDFs + images) === */
-const MENU_PDFS = import.meta.glob('@/assets/menus/**/*.{pdf}', {
+
+/** === Auto-import: menus (PDFs + images) — merged sources === */
+
+/** === Auto-import: menus (PDFs + images) — search ANY menus/ under /src/** === */
+
+// 1) Alias-prefixed (covers @/)
+const _MENU_PDFS_A = import.meta.glob('@/**/menus/**/*.{pdf}', {
+  eager: true,
+  as: 'url'
+}) as Record<string, string>
+const _MENU_IMAGES_A = import.meta.glob('@/**/menus/**/*.{jpg,jpeg,png,webp,avif}', {
   eager: true,
   as: 'url'
 }) as Record<string, string>
 
-const MENU_IMAGES = import.meta.glob(
-  '@/assets/menus/**/*.{jpg,jpeg,png,webp,avif}',
-  {
-    eager: true,
-    as: 'url'
-  }
-) as Record<string, string>
+// 2) Absolute from project root (covers /src/**)
+const _MENU_PDFS_B = import.meta.glob('/src/**/menus/**/*.{pdf}', {
+  eager: true,
+  as: 'url'
+}) as Record<string, string>
+const _MENU_IMAGES_B = import.meta.glob('/src/**/menus/**/*.{jpg,jpeg,png,webp,avif}', {
+  eager: true,
+  as: 'url'
+}) as Record<string, string>
 
+// 3) Merge both
+const MENU_PDFS: Record<string, string> = { ..._MENU_PDFS_A, ..._MENU_PDFS_B }
+const MENU_IMAGES: Record<string, string> = { ..._MENU_IMAGES_A, ..._MENU_IMAGES_B }
+
+// --- helpers (place right under MENU_IMAGES) ---
+function brandFromPath (p: string) {
+  // Normalize slashes for Windows/posix and lowercase
+  const norm = p.replace(/\\/g, '/').toLowerCase()
+  const marker = '/menus/'
+  const at = norm.indexOf(marker)
+  if (at === -1) return ''
+  const after = norm.slice(at + marker.length)
+  const brand = after.split('/')[0] || ''
+  return brand
+}
+
+function pickByBrand<T extends Record<string, string>> (files: T, key: string) {
+  const target = key.toLowerCase()
+  return Object.entries(files)
+    .filter(([path]) => brandFromPath(path) === target)
+    .map(([, url]) => url)
+}
+
+// --- collectMenus (replace your existing one) ---
 function collectMenus (brandKey: string) {
-  const pdfs = Object.entries(MENU_PDFS)
-    .filter(([path]) => path.includes(`/menus/${brandKey}/`))
-    .map(([, url]) => url)
-  const images = Object.entries(MENU_IMAGES)
-    .filter(([path]) => path.includes(`/menus/${brandKey}/`))
-    .map(([, url]) => url)
+  const pdfs = pickByBrand(MENU_PDFS, brandKey)
+  const images = pickByBrand(MENU_IMAGES, brandKey)
   return { pdfs, images }
 }
 
@@ -70,52 +101,54 @@ export default function Food () {
       {/* === Video Hero (no tint) – mobile & desktop === */}
       {/* === Video Hero (bottom-left content, tinted) === */}
       <section
-  aria-label="Food at Clarks"
-  className="relative isolate z-0 w-full -mt-[16px] md:-mt-[20px] bg-gradient-to-br from-white via-white to-neutral-50"
->
-  <div className="container mx-auto px-6 md:px-10 py-10 md:py-14">
-    <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-10">
-      {/* Text (left) */}
-      <div className="w-full lg:flex-1">
-        <div className="max-w-[900px]">
-          <h1 className="font-['Oswald'] font-bold text-black text-4xl md:text-6xl leading-tight">
-            Hot, fresh, and fast.
-            <br />
-            right inside select locations
-          </h1>
+        aria-label='Food at Clarks'
+        className='relative isolate z-0 w-full -mt-[16px] md:-mt-[20px] bg-gradient-to-br from-white via-white to-neutral-50'
+      >
+        <div className='container mx-auto px-6 md:px-10 py-10 md:py-14'>
+          <div className='flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-10'>
+            {/* Text (left) */}
+            <div className='w-full lg:flex-1'>
+              <div className='max-w-[900px]'>
+                <h1 className="font-['Oswald'] font-bold text-black text-4xl md:text-6xl leading-tight">
+                  Hot, fresh, and fast.
+                  <br />
+                  right inside select locations
+                </h1>
 
-          {/* Longer accent rule */}
-          <div className="mt-4 h-1 w-56 rounded bg-brand" />
+                {/* Longer accent rule */}
+                <div className='mt-4 h-1 w-56 rounded bg-brand' />
 
-          <p className="mt-5 text-black/70 text-lg md:text-2xl max-w-prose">
-            From crispy tenders and deli stacks to melty pizza and breakfast
-            favorites, our in-store kitchens serve up crowd-pleasers every day.
-          </p>
+                <p className='mt-5 text-black/70 text-lg md:text-2xl max-w-prose'>
+                  From crispy tenders and deli stacks to melty pizza and
+                  breakfast favorites, our in-store kitchens serve up
+                  crowd-pleasers every day.
+                </p>
+              </div>
+            </div>
+
+            {/* Video (right) — slightly larger box */}
+            <div className='w-full lg:w-auto'>
+              <div className='rounded-2xl overflow-hidden border border-black/10 shadow-lg max-w-[640px] mx-auto'>
+                <video
+                  className='block w-full h-auto' /* scales naturally */
+                  autoPlay
+                  playsInline
+                  muted
+                  loop
+                >
+                  <source src={foodHeroVideo} type='video/mp4' />
+                </video>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Video (right) — slightly larger box */}
-<div className="w-full lg:w-auto">
-  <div className="rounded-2xl overflow-hidden border border-black/10 shadow-lg max-w-[640px] mx-auto">
-    <video
-      className="block w-full h-auto" /* scales naturally */
-      autoPlay
-      playsInline
-      muted
-      loop
-    >
-      <source src={foodHeroVideo} type="video/mp4" />
-    </video>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Menus */}
       <BrandMenus />
+
+      {/* DEV: show glob keys with ?debug=menus */}
+<MenusDiagnostics />
 
       {/* Gallery */}
       <section
@@ -194,11 +227,55 @@ function BrandMenus () {
             name='Krispy Krunchy Chicken'
             desc='Louisiana-style chicken, biscuits, and sides.'
           />
+          <MenuBlock
+            id='coopers-chicken'
+            brandKey='coopers'
+            logo={kkcLogo} // or replace with a Coopers logo if you have one
+            name="Cooper's Chicken"
+            desc='Famous fried chicken and homestyle sides.'
+          />
         </div>
       </div>
     </section>
   )
 }
+
+function MenusDiagnostics() {
+  const [show, setShow] = React.useState(
+    typeof window !== 'undefined' &&
+    new URLSearchParams(window.location.search).get('debug') === 'menus'
+  )
+
+  if (!show) return null
+  return (
+    <section className="fixed bottom-3 right-3 z-[9999] max-w-[90vw] rounded-xl border border-black/20 bg-white/95 p-4 shadow-lg text-xs text-black">
+      <div className="flex items-center justify-between gap-3">
+        <strong>Menus Diagnostics</strong>
+        <button
+          onClick={() => setShow(false)}
+          className="rounded-md px-2 py-1 bg-black text-white"
+        >
+          Close
+        </button>
+      </div>
+      <div className="mt-2 grid gap-2">
+        <div><b>MENU_IMAGES keys:</b> {Object.keys(MENU_IMAGES).length}</div>
+        <div className="max-h-40 overflow-auto">
+          <pre className="whitespace-pre-wrap break-all">
+{JSON.stringify(Object.keys(MENU_IMAGES).slice(0, 30), null, 2)}
+          </pre>
+        </div>
+        <div><b>MENU_PDFS keys:</b> {Object.keys(MENU_PDFS).length}</div>
+        <div className="max-h-40 overflow-auto">
+          <pre className="whitespace-pre-wrap break-all">
+{JSON.stringify(Object.keys(MENU_PDFS).slice(0, 30), null, 2)}
+          </pre>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 
 function MenuBlock ({
   id,
@@ -214,6 +291,14 @@ function MenuBlock ({
   desc: string
 }) {
   const { pdfs, images } = collectMenus(brandKey)
+// TEMP DEBUG (use log, not debug)
+console.log('[menus]', {
+  brandKey,
+  pdfsCount: pdfs.length,
+  imagesCount: images.length,
+  sampleImageKeys: Object.keys(MENU_IMAGES).slice(0, 5),
+  samplePdfKeys: Object.keys(MENU_PDFS).slice(0, 5),
+})
   const [lightbox, setLightbox] = React.useState<string | null>(null)
 
   // Accordion state (collapsed by default). Auto-open if URL hash matches this block's id.
