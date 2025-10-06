@@ -5,6 +5,8 @@ import hangarLogo from '@/assets/images/Hangar54Logo_02-1.png'
 import jacksLogo from '@/assets/images/jacksdelilogo.webp'
 import cafeLogo from '@/assets/images/clarkscafelogo.webp'
 import kkcLogo from '@/assets/images/krispykrunchychickenlogo.webp'
+import coopersLogo from '@/assets/images/CoopersExpressLogo.png'
+
 
 import foodHeroVideo from '@/assets/videos/30sFoodVideo_1080.mp4'
 
@@ -230,7 +232,7 @@ function BrandMenus () {
           <MenuBlock
             id='coopers-chicken'
             brandKey='coopers'
-            logo={kkcLogo} // or replace with a Coopers logo if you have one
+            logo={coopersLogo} // or replace with a Coopers logo if you have one
             name="Cooper's Chicken"
             desc='Famous fried chicken and homestyle sides.'
           />
