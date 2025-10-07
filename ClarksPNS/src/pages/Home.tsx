@@ -3,7 +3,6 @@ import React from 'react'
 import { DesktopHero } from '@/components/site/DesktopHero'
 import { SEO } from '@/lib/seo'
 
-
 // MobileHero images (keep as-is)
 import phone640 from '@/assets/images/phone-640.jpg'
 import phone960 from '@/assets/images/phone-960.jpg'
@@ -19,17 +18,17 @@ import liIcon from '@/assets/icons/linkedin.svg'
 import ttIcon from '@/assets/icons/tiktok.svg'
 
 // Rewards phone animation video
-import rewardsPhoneVideo from "@/assets/videos/Halloween_Ad_2_CPNS.mp4"
+import rewardsPhoneVideo from '@/assets/videos/Halloween_Ad_2_CPNS.mp4'
 
 // Rodney banner (full-bleed). Note: filename includes a typographic apostrophe.
-import rodneyBanner from "@/assets/images/clarks-site-sample-9.png";
+import rodneyBanner from '@/assets/images/clarks-site-sample-9.png'
 
 /** Auto-import Monthly Promotions from the provided folders */
 const PromoImages = Object.values(
-  import.meta.glob(
-    '@/assets/PromoImages/800x800/*.jpg',
-    { eager: true, as: 'url' }
-  )
+  import.meta.glob('@/assets/PromoImages/800x800/*.jpg', {
+    eager: true,
+    as: 'url'
+  })
 ) as string[]
 
 // Merge into a single pool for the carousel
@@ -108,162 +107,196 @@ function MonthlyPromotions ({
 
   return (
     <>
-    <SEO
-        title="Clark’s Pump-N-Shop — Return. Refresh. Refuel."
-        description="Fuel up fast, grab fresh food, and get on your way—Clark’s Pump-N-Shop has you covered."
-        path="/"
-        jsonLd={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Clark’s Pump-N-Shop, Inc.",
-            "url": "https://www.myclarkspns.com/",
-            "logo": "https://www.myclarkspns.com/icons/icon-512.png",
-            "sameAs": [
-              "https://www.facebook.com/clarkspumpnshop",
-              "https://www.instagram.com/clarkspumpnshop/?hl=en",
-              "https://x.com/clarkspnsbti",
-              "https://www.linkedin.com/company/clark's-pump-n-shop",
-              "https://www.tiktok.com/@clarkspumpnshop"
-            ],
-            "description": "Family-run convenience stores offering fuel, fresh food programs, and friendly service throughout our communities. Return. Refresh. Refuel."
-            // "contactPoint": [{ "@type": "ContactPoint", "telephone": "", "contactType": "customer service" }]
-            // "address": { "@type": "PostalAddress", "streetAddress": "", "addressLocality": "", "addressRegion": "", "postalCode": "", "addressCountry": "US" }
-          }
-        ]}
-      />
-    <section
-      aria-label='Monthly Promotions'
-      className='py-12 md:py-20 bg-neutral-50'
-    >
-      {/* Headings inside container */}
-      <div className='container mx-auto px-6 md:px-10'>
-        <div className='max-w-3xl'>
-          <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
-            {title}
-          </h2>
-          {subtitle && (
-            <p className='mt-2 text-black/70 text-base md:text-lg'>
-              {subtitle}
-            </p>
-          )}
-        </div>
-      </div>
+      <SEO
+  title="Clark’s Pump-N-Shop — Return. Refresh. Refuel."
+  description="Fuel up fast, grab fresh food, and get on your way—Clark’s Pump-N-Shop has you covered."
+  path="/"
+  jsonLd={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Clark’s Pump-N-Shop, Inc.",
+      "url": "https://www.myclarkspns.com/",
+      "logo": "https://www.myclarkspns.com/icons/icon-512.png",
+      "image": "https://www.myclarkspns.com/og/og-default.jpg",
+      "slogan": "Return. Refresh. Refuel.",
+      "telephone": "+1-606-325-8536",
+      "email": "mailto:contactus@clarkspns.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "101 Wheatley Rd",
+        "addressLocality": "Ashland",
+        "addressRegion": "KY",
+        "postalCode": "41101",
+        "addressCountry": "US"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+1-606-325-8536",
+          "email": "mailto:contactus@clarkspns.com",
+          "areaServed": "US",
+          "availableLanguage": ["English"],
+          "hoursAvailable": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:00",
+              "closes": "17:00"
+            }
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/clarkspumpnshop",
+        "https://www.instagram.com/clarkspumpnshop/?hl=en",
+        "https://x.com/clarkspnsbti",
+        "https://www.linkedin.com/company/clark%27s-pump-n-shop",
+        "https://www.tiktok.com/@clarkspumpnshop"
+      ],
+      "description": "Family-run convenience stores offering fuel, fresh food programs, and friendly service throughout our communities. Return. Refresh. Refuel."
+    }
+  ]}
+/>
 
-      {/* Full-bleed rail with container-matched padding */}
-      <div className='mt-8 relative overflow-visible'>
-        <div
-          ref={scrollerRef}
-          onMouseEnter={onUserEnter}
-          onMouseLeave={onUserLeave}
-          onFocusCapture={onUserEnter}
-          onBlurCapture={onUserLeave}
-          className='
+      <section
+        aria-label='Monthly Promotions'
+        className='py-12 md:py-20 bg-neutral-50'
+      >
+        {/* Headings inside container */}
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='max-w-3xl'>
+            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+              {title}
+            </h2>
+            {subtitle && (
+              <p className='mt-2 text-black/70 text-base md:text-lg'>
+                {subtitle}
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* Full-bleed rail with container-matched padding */}
+        <div className='mt-8 relative overflow-visible'>
+          <div
+            ref={scrollerRef}
+            onMouseEnter={onUserEnter}
+            onMouseLeave={onUserLeave}
+            onFocusCapture={onUserEnter}
+            onBlurCapture={onUserLeave}
+            className='
             flex gap-4 overflow-x-auto overscroll-x-contain snap-x snap-mandatory
             [scrollbar-width:none] [-ms-overflow-style:none]
             pl-[max(1.5rem,calc((100vw-1280px)/2))]
             pr-[max(1.5rem,calc((100vw-1280px)/2))]
           '
-          style={{
-            scrollbarWidth: 'none',
-            scrollbarGutter: 'stable both-edges'
-          }}
-        >
-          <style>{`.hide-scrollbar::-webkit-scrollbar{display:none}`}</style>
+            style={{
+              scrollbarWidth: 'none',
+              scrollbarGutter: 'stable both-edges'
+            }}
+          >
+            <style>{`.hide-scrollbar::-webkit-scrollbar{display:none}`}</style>
 
-          {images.map(src => (
+            {images.map(src => (
+              <button
+                key={src}
+                type='button'
+                onClick={() => setOpenSrc(src)}
+                className='group relative flex-none snap-center hide-scrollbar w-[82%] xs:w-[72%] sm:w-[58%] md:w-1/3'
+                title='Open promotion'
+                aria-label='Open promotion'
+              >
+                <div className='aspect-square overflow-hidden rounded-2xl border border-black/10 bg-white'>
+                  <img
+                    src={src}
+                    alt='Monthly promotion'
+                    loading='lazy'
+                    className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]'
+                  />
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {/* Prev/Next buttons (SVG chevrons, brand color, centered) */}
+          <div className='pointer-events-none absolute inset-y-0 left-0 right-0 hidden md:block'>
             <button
-              key={src}
+              onClick={() => scrollStep(-1)}
               type='button'
-              onClick={() => setOpenSrc(src)}
-              className='group relative flex-none snap-center hide-scrollbar w-[82%] xs:w-[72%] sm:w-[58%] md:w-1/3'
-              title='Open promotion'
-              aria-label='Open promotion'
+              aria-label='Previous'
+              className='pointer-events-auto absolute top-1/2 -translate-y-1/2 left-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow ring-1 ring-black/10 hover:bg-white'
             >
-              <div className='aspect-square overflow-hidden rounded-2xl border border-black/10 bg-white'>
-                <img
-                  src={src}
-                  alt='Monthly promotion'
-                  loading='lazy'
-                  className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]'
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                className='h-6 w-6 text-brand'
+              >
+                <path
+                  fillRule='evenodd'
+                  d='M15.78 4.22a.75.75 0 010 1.06L9.06 12l6.72 6.72a.75.75 0 11-1.06 1.06l-7.25-7.25a.75.75 0 010-1.06l7.25-7.25a.75.75 0 011.06 0z'
+                  clipRule='evenodd'
                 />
-              </div>
+              </svg>
             </button>
-          ))}
+            <button
+              onClick={() => scrollStep(1)}
+              type='button'
+              aria-label='Next'
+              className='pointer-events-auto absolute top-1/2 -translate-y-1/2 right-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow ring-1 ring-black/10 hover:bg-white'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                className='h-6 w-6 text-brand'
+              >
+                <path
+                  fillRule='evenodd'
+                  d='M8.22 19.78a.75.75 0 010-1.06L14.94 12 8.22 5.28a.75.75 0 111.06-1.06l7.25 7.25a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0z'
+                  clipRule='evenodd'
+                />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        {/* Prev/Next buttons (SVG chevrons, brand color, centered) */}
-        <div className='pointer-events-none absolute inset-y-0 left-0 right-0 hidden md:block'>
-          <button
-            onClick={() => scrollStep(-1)}
-            type='button'
-            aria-label='Previous'
-            className='pointer-events-auto absolute top-1/2 -translate-y-1/2 left-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow ring-1 ring-black/10 hover:bg-white'
+        {/* LIGHTBOX (fit to image size) */}
+        {openSrc && (
+          <div
+            role='dialog'
+            aria-modal='true'
+            className='fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4'
+            onClick={e => {
+              if (e.target === e.currentTarget) setOpenSrc(null) // click backdrop to close
+            }}
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='currentColor'
-              className='h-6 w-6 text-brand'
-            >
-              <path
-                fillRule='evenodd'
-                d='M15.78 4.22a.75.75 0 010 1.06L9.06 12l6.72 6.72a.75.75 0 11-1.06 1.06l-7.25-7.25a.75.75 0 010-1.06l7.25-7.25a.75.75 0 011.06 0z'
-                clipRule='evenodd'
+            <div className='relative'>
+              <button
+                onClick={() => setOpenSrc(null)}
+                className='absolute -top-3 -right-3 bg-brand text-white rounded-full px-3 py-1 shadow-lg'
+                aria-label='Close'
+                type='button'
+              >
+                ✕
+              </button>
+              <img
+                src={openSrc}
+                alt='Promotion full view'
+                className='max-w-[90vw] max-h-[90vh] object-contain rounded-xl bg-white'
               />
-            </svg>
-          </button>
-          <button
-            onClick={() => scrollStep(1)}
-            type='button'
-            aria-label='Next'
-            className='pointer-events-auto absolute top-1/2 -translate-y-1/2 right-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow ring-1 ring-black/10 hover:bg-white'
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='currentColor'
-              className='h-6 w-6 text-brand'
-            >
-              <path
-                fillRule='evenodd'
-                d='M8.22 19.78a.75.75 0 010-1.06L14.94 12 8.22 5.28a.75.75 0 111.06-1.06l7.25 7.25a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0z'
-                clipRule='evenodd'
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* LIGHTBOX (fit to image size) */}
-{openSrc && (
-  <div
-    role="dialog"
-    aria-modal="true"
-    className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4"
-    onClick={(e) => {
-      if (e.target === e.currentTarget) setOpenSrc(null) // click backdrop to close
-    }}
-  >
-    <div className="relative">
-      <button
-        onClick={() => setOpenSrc(null)}
-        className="absolute -top-3 -right-3 bg-brand text-white rounded-full px-3 py-1 shadow-lg"
-        aria-label="Close"
-        type="button"
-      >
-        ✕
-      </button>
-      <img
-        src={openSrc}
-        alt="Promotion full view"
-        className="max-w-[90vw] max-h-[90vh] object-contain rounded-xl bg-white"
-      />
-    </div>
-  </div>
-)}
-
-    </section>
+            </div>
+          </div>
+        )}
+      </section>
     </>
   )
 }
@@ -467,17 +500,21 @@ export default function Home () {
 
               <div className='mt-4 space-y-3'>
                 <div className='rounded-xl overflow-hidden border border-black/10'>
-                  <iframe
-                    title='Facebook Page'
-                    className='w-full'
-                    style={{ height: 520 }}
-                    src={`https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(
-                      'https://www.facebook.com/clarkspumpnshop'
-                    )}&tabs=timeline&width=500&height=520&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false`}
-                    scrolling='no'
-                    frameBorder='0'
-                    allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share'
-                  />
+                  <RenderWhenDetailsOpen>
+                    <iframe
+                      title='Facebook Page'
+                      loading='lazy'
+                      className='w-full'
+                      style={{ height: 520 }}
+                      src={`https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(
+                        'https://www.facebook.com/clarkspumpnshop'
+                      )}&tabs=timeline&width=500&height=520&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false`}
+                      scrolling='no'
+                      frameBorder='0'
+                      referrerPolicy='strict-origin-when-cross-origin'
+                      allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share'
+                    />
+                  </RenderWhenDetailsOpen>
                 </div>
                 <SocialButton
                   href='https://www.facebook.com/clarkspumpnshop/'
@@ -554,10 +591,12 @@ export default function Home () {
 
               <div className='mt-4 space-y-3'>
                 {/* Activity ID pulled from your URL: ...activity-7351075127880499200-... */}
-                <LinkedInPost
-                  activityUrn='urn:li:activity:7351075127880499200'
-                  height={520}
-                />
+                <RenderWhenDetailsOpen>
+                  <LinkedInPost
+                    activityUrn='urn:li:activity:7351075127880499200'
+                    height={520}
+                  />
+                </RenderWhenDetailsOpen>
                 <SocialButton
                   href="https://www.linkedin.com/company/clark's-pump-n-shop/"
                   icon={liIcon}
@@ -707,6 +746,21 @@ function useScriptOnce (src: string) {
       // keep it for subsequent embeds; do not remove on unmount
     }
   }, [src])
+}
+function RenderWhenDetailsOpen ({ children }: { children: React.ReactNode }) {
+  const ref = React.useRef<HTMLDivElement | null>(null)
+  const [open, setOpen] = React.useState(false)
+
+  React.useEffect(() => {
+    const el = ref.current?.closest('details')
+    if (!el) return
+    const onToggle = () => setOpen((el as HTMLDetailsElement).open)
+    el.addEventListener('toggle', onToggle)
+    setOpen((el as HTMLDetailsElement).open)
+    return () => el.removeEventListener('toggle', onToggle)
+  }, [])
+
+  return <div ref={ref}>{open ? children : null}</div>
 }
 
 function InstagramPost ({ url }: { url: string }) {
