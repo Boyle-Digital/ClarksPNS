@@ -2,12 +2,17 @@
 import React, { useEffect, useRef } from 'react'
 
 // ---- Local helpers (same look/feel as your current page) ----
-const Stat = ({ label, value }: { label: string; value: string }) => (
+const Stat = ({ label, value }: { label: React.ReactNode; value: string }) => (
   <div className='rounded-2xl border border-black/10 bg-white p-4 text-center shadow-sm'>
-    <div className='text-3xl md:text-4xl font-bold text-brand'>{value}</div>
-    <div className='mt-1 text-sm text-black/60'>{label}</div>
+    <div className='text-2xl sm:text-3xl md:text-4xl font-bold text-brand'>
+      {value}
+    </div>
+    <div className='mt-1 text-xs sm:text-sm text-black/60 whitespace-nowrap'>
+      {label}
+    </div>
   </div>
 )
+
 
 const Card = ({
   eyebrow,
@@ -206,7 +211,7 @@ export default function SponsorshipsFeatured () {
             <Stat value='$250k+' label='Annual sponsorships' />
             <Stat value='60+' label='Schools & teams' />
             <Stat value='100+' label='Community events' />
-            <Stat value='KY • OH • WV' label='Regions served' />
+<Stat value={'KY\u00A0•\u00A0OH\u00A0•\u00A0WV'} label='Regions served' />
           </div>
         </div>
       </section>
