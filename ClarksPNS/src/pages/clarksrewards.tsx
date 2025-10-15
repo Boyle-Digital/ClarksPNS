@@ -10,7 +10,7 @@ import { DesktopHero } from '@/components/site/DesktopHero'
 
 // Assets
 import rewardsPoster from '@/assets/images/clarkshero.png'
-import rewardsVideo from '@/assets/videos/Ray_Ward_Intro_1080p.mp4'
+import rewardsVideo from '@/assets/videos/RewardsRangerVideo.mp4'
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
 import halloweenAd from '@/assets/videos/Halloween_Ad_1_CPNS.mp4'
 // import qrCode from "@/assets/images/qr-clarks-rewards.png"; // optional QR for app link
