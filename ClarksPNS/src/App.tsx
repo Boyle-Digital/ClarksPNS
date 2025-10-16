@@ -13,6 +13,7 @@ import CarWash from '@/pages/CarWash'
 import Locations from '@/pages/Locations'
 import Careers from '@/pages/Careers'
 import MenuTest from '@/pages/menuTest'
+import NotFound from '@/pages/NotFound'
 
 // test
 
@@ -36,6 +37,7 @@ export default function App () {
           <Route path='/Careers' element={<Careers />} />
           <Route path='/Sponsorship' element={<Sponsorship />} />
           <Route path='/menuTest' element={<MenuTest />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
       </div>
