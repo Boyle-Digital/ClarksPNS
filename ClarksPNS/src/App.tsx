@@ -15,8 +15,6 @@ import Careers from '@/pages/Careers'
 import MenuTest from '@/pages/menuTest'
 import NotFound from '@/pages/NotFound'
 
-import { SpeedInsights } from '@vercel/speed-insights/react'
-
 // test
 
 export default function App () {
@@ -42,7 +40,6 @@ export default function App () {
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
-      <SpeedInsights />
       </div>
     </BrowserRouter>
   )
