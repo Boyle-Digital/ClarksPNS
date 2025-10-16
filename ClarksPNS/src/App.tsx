@@ -15,6 +15,8 @@ import Careers from '@/pages/Careers'
 import MenuTest from '@/pages/menuTest'
 import NotFound from '@/pages/NotFound'
 
+import { Analytics } from '@vercel/analytics/next'
+
 // test
 
 export default function App () {
@@ -40,6 +42,7 @@ export default function App () {
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
+        <Analytics />
       </div>
     </BrowserRouter>
   )
