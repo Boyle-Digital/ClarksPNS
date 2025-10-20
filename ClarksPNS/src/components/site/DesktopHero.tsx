@@ -77,7 +77,7 @@ transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 
                 Join Clarks Rewards
               </a>
               <a
-                href='/car-wash'
+                href='/locations'
                 className='
 inline-flex items-center justify-center
 h-12 sm:h-14 md:h-16

@@ -145,7 +145,16 @@ const Footer: React.FC<FooterProps> = ({
 
           {/* Copyright */}
           <p className='text-sm text-text-onBrand/80 text-center md:text-right'>
-            © {year} Boyle Digital. All rights reserved.
+            © {year} Clark's Pump-N-Shop. All rights reserved — website by{' '}
+            <a
+              href='https://www.boyledigital.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='underline hover:text-text-onBrand transition-colors'
+            >
+              Boyle Digital
+            </a>
+            .
           </p>
         </div>
       </div>
