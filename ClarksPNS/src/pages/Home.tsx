@@ -18,7 +18,7 @@ import liIcon from '@/assets/icons/linkedin.svg'
 import ttIcon from '@/assets/icons/tiktok.svg'
 
 // Rewards phone animation video
-import rewardsPhoneVideo from '@/assets/videos/Halloween_Ad_2_CPNS.mp4'
+import HomePageVideoAd from '@/assets/videos/Thanksgiving_Ad_1_CPNS.mp4'
 
 // Rodney banner (full-bleed). Note: filename includes a typographic apostrophe.
 import rodneyBanner from '@/assets/images/clarks-site-sample-9.png'
@@ -403,7 +403,7 @@ export default function Home () {
                     muted
                     loop
                   >
-                    <source src={rewardsPhoneVideo} type='video/mp4' />
+                    <source src={HomePageVideoAd} type='video/mp4' />
                   </video>
                 </div>
                 <div className='pointer-events-none absolute -inset-2 -z-10 rounded-[32px] bg-brand/10 blur-xl' />
