@@ -2,8 +2,8 @@ name: Merge PR at Midnight ET (Nov 1, 2025)
 
 on:
   schedule:
-    # Runs at 04:00 UTC on Nov 1 (which is midnight ET)
-    - cron: '0 4 1 11 *'
+    # Runs at 04:15 UTC on Nov 1 (which is 12:15 AM ET)
+    - cron: '15 4 1 11 *'
 
 permissions:
   contents: write
