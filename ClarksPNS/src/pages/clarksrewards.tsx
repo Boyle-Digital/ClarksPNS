@@ -12,7 +12,7 @@ import { DesktopHero } from '@/components/site/DesktopHero'
 import rewardsPoster from '@/assets/images/clarkshero.png'
 import rewardsVideo from '@/assets/videos/RewardsRangerVideo.mp4'
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
-import halloweenAd from '@/assets/videos/Halloween_Ad_1_CPNS.mp4'
+import RewardsPageVideoAd from '@/assets/videos/Thanksgiving_Ad_2_CPNS.mp4'
 // import qrCode from "@/assets/images/qr-clarks-rewards.png"; // optional QR for app link
 
 // --- TUNABLES ---
@@ -211,8 +211,9 @@ export default function ClarksRewards () {
             <div className='relative w-full aspect-video'>
               <video
                 ref={videoRef}
-                src={halloweenAd}
+                src={RewardsPageVideoAd}
                 muted
+                loop
                 playsInline
                 preload='metadata'
                 className='absolute inset-0 h-full w-full object-cover'
