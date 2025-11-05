@@ -165,14 +165,14 @@ export default function SponsorshipsFeatured () {
             <div className='mt-6 flex flex-wrap gap-3'>
               <a
                 href='#uk-basketball'
-                className='rounded-2xl px-5 py-2.5 border border-white/40 text-white hover:bg-white/10'
+                className='rounded-2xl px-5 py-2.5 bg-white text-brand hover:bg-white/90 shadow-md'
               >
                 UK Basketball
               </a>
 
               <a
                 href='#uk-baseball'
-                className='rounded-2xl px-5 py-2.5 bg-white text-brand hover:bg-white/90 shadow-md'
+                className='rounded-2xl px-5 py-2.5 border border-white/40 text-white hover:bg-white/10'
               >
                 UK Baseball
               </a>
