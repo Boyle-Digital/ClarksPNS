@@ -382,7 +382,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                         >
                           Clarks Charity
                         </NavLink>
-                        {/* <NavLink
+                        <NavLink
                           to='/sponsorship'
                           className={({ isActive }) =>
                             [
@@ -396,7 +396,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                           role='menuitem'
                         >
                           Sponsorship
-                        </NavLink> */}
+                        </NavLink>
                       </div>
                     </div>
                   </li>
