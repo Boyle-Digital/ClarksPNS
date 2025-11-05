@@ -13,7 +13,6 @@ const Stat = ({ label, value }: { label: React.ReactNode; value: string }) => (
   </div>
 )
 
-
 const Card = ({
   eyebrow,
   title,
@@ -58,6 +57,7 @@ import ukBaseballVideo from '@/assets/videos/UK_Baseball_1080.mp4'
 import rowanFootballVideo from '@/assets/videos/Rowan_Football_1080.mp4'
 import marshallFootballImg from "@/assets/images/Clark's - Marshall Football Magazine (1) (1).png"
 import ashlandFootballImg from "@/assets/images/Ashland FB - Clark's football AD (8.75 × 11.125 in) (1).png"
+import clarksChandlerSlam from "@/assets/videos/Clark's_Chandler_Slam.mp4"
 
 function AutoPlayVideo ({
   src,
@@ -164,6 +164,13 @@ export default function SponsorshipsFeatured () {
             {/* Nav tabs to sections */}
             <div className='mt-6 flex flex-wrap gap-3'>
               <a
+                href='#uk-basketball'
+                className='rounded-2xl px-5 py-2.5 border border-white/40 text-white hover:bg-white/10'
+              >
+                UK Basketball
+              </a>
+
+              <a
                 href='#uk-baseball'
                 className='rounded-2xl px-5 py-2.5 bg-white text-brand hover:bg-white/90 shadow-md'
               >
@@ -211,8 +218,36 @@ export default function SponsorshipsFeatured () {
             <Stat value='$250k+' label='Annual sponsorships' />
             <Stat value='60+' label='Schools & teams' />
             <Stat value='100+' label='Community events' />
-<Stat value={'KY\u00A0•\u00A0OH\u00A0•\u00A0WV'} label='Regions served' />
+            <Stat
+              value={'KY\u00A0•\u00A0OH\u00A0•\u00A0WV'}
+              label='Regions served'
+            />
           </div>
+        </div>
+      </section>
+
+      {/* UK BASKETBALL */}
+      <section id='uk-basketball' className='py-12 md:py-16 bg-white'>
+        <div className='container mx-auto px-6 md:px-10'>
+          <Card
+            eyebrow='Lexington, KY'
+            title={
+              <span className='text-black'>
+                University of Kentucky — Basketball
+              </span>
+            }
+          >
+            <p>
+              Clark’s Pump-N-Shop proudly supports UK Basketball, celebrating
+              the energy and tradition that make the Wildcats a cornerstone of
+              Kentucky sports.
+            </p>
+
+            {/* Video highlight */}
+            <div className='mt-5 rounded-2xl overflow-hidden border border-black/10 bg-black'>
+              <AutoPlayVideo src={clarksChandlerSlam} />
+            </div>
+          </Card>
         </div>
       </section>
 
@@ -243,7 +278,11 @@ export default function SponsorshipsFeatured () {
         <div className='container mx-auto px-6 md:px-10'>
           <Card
             eyebrow='Ashland, KY'
-            title={<span className='text-black'>Clark's Pump-N-Shop - Putnam Stadium</span>}
+            title={
+              <span className='text-black'>
+                Clark's Pump-N-Shop - Putnam Stadium
+              </span>
+            }
           >
             <p>
               Friday-night lights with Ashland Football—amplifying school spirit

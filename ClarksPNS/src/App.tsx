@@ -7,7 +7,7 @@ import Home from '@/pages/Home'
 import About from '@/pages/About'
 import Charity from '@/pages/Charity'
 import Food from '@/pages/Food'
-// import Sponsorship from '@/pages/Sponsorship'
+import Sponsorship from '@/pages/Sponsorship'
 import ClarksRewards from '@/pages/clarksrewards'
 import CarWash from '@/pages/CarWash'
 import Locations from '@/pages/Locations'
@@ -37,7 +37,7 @@ export default function App () {
           <Route path='/Charity' element={<Charity />} />
           <Route path='/Food' element={<Food />} />
           <Route path='/Careers' element={<Careers />} />
-          {/* <Route path='/Sponsorship' element={<Sponsorship />} /> */}
+          <Route path='/Sponsorship' element={<Sponsorship />} />
           <Route path='/menuTest' element={<MenuTest />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
