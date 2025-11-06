@@ -85,7 +85,7 @@ export default function CarWash () {
 
               <div className='mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4'>
                 <a
-                  href='https://checkout.myclarkspns.com/checkout/9fe66ecf-bb7f-46a3-80e5-7098b22c3d76'
+                  href='https://checkout.myclarkspns.com/checkout/buy/33394'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/25'
