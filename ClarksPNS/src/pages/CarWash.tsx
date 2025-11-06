@@ -178,8 +178,10 @@ export default function CarWash () {
           </div>
         </div>
       </section> */}
+
+      
       {/* === Packages / Pricing === */}
-      <section
+      {/* <section
         id='packages'
         aria-label='Wash Packages'
         className='py-12 md:py-20 bg-neutral-50'
@@ -245,7 +247,10 @@ export default function CarWash () {
             * Unlimited plans billed monthly. Manage anytime in the app.
           </p>
         </div>
-      </section>
+      </section> */}
+
+
+
       {/* === NEW: Gift Cards === */}
       <section
         id='giftcards'
