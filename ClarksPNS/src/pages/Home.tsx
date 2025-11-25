@@ -18,7 +18,7 @@ import liIcon from '@/assets/icons/linkedin.svg'
 import ttIcon from '@/assets/icons/tiktok.svg'
 
 // Rewards phone animation video
-import HomePageVideoAd from '@/assets/videos/Thanksgiving_Ad_1_CPNS.mp4'
+import HomePageVideoAd from '@/assets/videos/Christmas_Ad_2_CPNS.mp4'
 
 // Rodney banner (full-bleed). Note: filename includes a typographic apostrophe.
 import rodneyBanner from '@/assets/images/clarks-site-sample-9.png'
