@@ -8,6 +8,15 @@ import rodneyClark from '@/assets/images/Charity/Rodney_Clark.jpg'
 // --- Scramble video (new) ---
 import scrambleVideo from '@/assets/videos/091125_clarks_golfscramble_1080p.mp4'
 
+const scholarshipCentralPdf = new URL(
+  '../assets/files/2026 Scholarship Application (Central) (01226829x9F876) (1).PDF',
+  import.meta.url
+).href
+const scholarshipEasternPdf = new URL(
+  '../assets/files/2026 Scholarship Application (Eastern) (01226827x9F876) (1).PDF',
+  import.meta.url
+).href
+
 // ---- Helpers ----
 const Stat = ({ label, value }: { label: string; value: string }) => (
   <div className="rounded-2xl border border-black/10 bg-white p-4 text-center shadow-sm">
@@ -349,13 +358,19 @@ export default function DonationsPage() {
             </div>
             <div className="mt-5 flex flex-wrap gap-3">
               <a
-                href="/charity/apply-scholarship-eastern"
+                href={scholarshipEasternPdf}
+                download="2026 Scholarship Application (Eastern).PDF"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-2xl px-5 py-2.5 text-white bg-brand hover:bg-brand/90 shadow-md"
               >
                 Apply (Eastern KY / OH)
               </a>
               <a
-                href="/charity/apply-scholarship-central"
+                href={scholarshipCentralPdf}
+                download="2026 Scholarship Application (Central).PDF"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-2xl px-5 py-2.5 border border-brand/20 text-brand hover:bg-brand/5"
               >
                 Apply (Central KY)
