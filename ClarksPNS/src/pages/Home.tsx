@@ -18,7 +18,7 @@ import liIcon from '@/assets/icons/linkedin.svg'
 import ttIcon from '@/assets/icons/tiktok.svg'
 
 // Rewards phone animation video
-import HomePageVideoAd from '@/assets/videos/Christmas_Ad_2_CPNS.mp4'
+import HomePageVideoAd from '@/assets/videos/ClarksRewardsPhoneAnimation1080.mp4'
 
 // Rodney banner (full-bleed). Note: filename includes a typographic apostrophe.
 import rodneyBanner from '@/assets/images/clarks-site-sample-9.png'
@@ -415,7 +415,7 @@ export default function Home () {
 
       {/* Monthly Promotions — Auto-rotating triple image */}
       <MonthlyPromotions
-        title='October Promotions'
+        title='Monthly Specials'
         // subtitle='A rotating peek at what’s new.'
         images={PROMO_IMAGES}
       />
