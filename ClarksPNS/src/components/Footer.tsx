@@ -57,9 +57,9 @@ const Footer: React.FC<FooterProps> = ({
                 <span className='font-semibold'>Phone:</span>{' '}
                 <a
                   className='underline underline-offset-4 hover:text-text-onBrand'
-                  href='tel:16063258536'
+                  href='tel:16063272775'
                 >
-                  606-325-8536
+                  606-327-2775
                 </a>
               </p>
               <p>
