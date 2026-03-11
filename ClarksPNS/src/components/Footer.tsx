@@ -19,6 +19,7 @@ const defaultNav: NavLink[] = [
   { label: 'Our Story', href: '/about-us' },
   { label: 'Clarks Charity', href: '/charity' },
   { label: 'Sponsorship', href: '/sponsorship' }
+  { label: "Rewards Terms & Conditions", href: "/clarks-rewards-legal-terms.pdf" }
 ]
 
 interface FooterProps {
