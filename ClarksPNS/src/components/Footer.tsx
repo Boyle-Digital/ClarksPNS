@@ -144,7 +144,7 @@ const Footer: React.FC<FooterProps> = ({
           </div>
 
           <p className='text-sm text-text-onBrand/80 text-center md:text-right'>
-  © {year} Clark's Pump-N-Shop. All rights reserved |
+  © {year} Clark's Pump-N-Shop. All rights reserved {' | '}
   <a
     href="/clarks-rewards-legal-terms.pdf"
     target="_blank"
@@ -153,7 +153,7 @@ const Footer: React.FC<FooterProps> = ({
   >
     Rewards Terms & Conditions
   </a>
-  {' '}— website by{' '}
+  {' | '}Website by{' '}
   <a
     href="https://www.boyledigital.com"
     target="_blank"
