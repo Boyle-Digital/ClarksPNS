@@ -19,7 +19,6 @@ const defaultNav: NavLink[] = [
   { label: 'Our Story', href: '/about-us' },
   { label: 'Clarks Charity', href: '/charity' },
   { label: 'Sponsorship', href: '/sponsorship' }
-  { label: "Rewards Terms & Conditions", href: "/clarks-rewards-legal-terms.pdf" }
 ]
 
 interface FooterProps {
@@ -144,19 +143,26 @@ const Footer: React.FC<FooterProps> = ({
             </a>
           </div>
 
-          {/* Copyright */}
           <p className='text-sm text-text-onBrand/80 text-center md:text-right'>
-            © {year} Clark's Pump-N-Shop. All rights reserved — website by{' '}
-            <a
-              href='https://www.boyledigital.com'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='underline hover:text-text-onBrand transition-colors'
-            >
-              Boyle Digital
-            </a>
-            .
-          </p>
+  © {year} Clark's Pump-N-Shop. All rights reserved |
+  <a
+    href="/clarks-rewards-legal-terms.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:text-text-onBrand transition-colors"
+  >
+    Rewards Terms & Conditions
+  </a>
+  {' '}— website by{' '}
+  <a
+    href="https://www.boyledigital.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:text-text-onBrand transition-colors"
+  >
+    Boyle Digital
+  </a>
+</p>         
         </div>
       </div>
     </footer>
