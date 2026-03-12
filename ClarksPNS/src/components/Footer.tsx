@@ -151,7 +151,7 @@ const Footer: React.FC<FooterProps> = ({
     rel="noopener noreferrer"
     className="underline hover:text-text-onBrand transition-colors"
   >
-    Rewards Terms & Conditions
+    Terms & Conditions
   </a>
   {' | '}Website by{' '}
   <a
