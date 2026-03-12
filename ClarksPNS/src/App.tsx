@@ -12,6 +12,7 @@ import ClarksRewards from '@/pages/clarksrewards'
 import CarWash from '@/pages/CarWash'
 import Locations from '@/pages/Locations'
 import Careers from '@/pages/Careers'
+import Terms from '@/pages/Terms'
 import MenuTest from '@/pages/menuTest'
 import NotFound from '@/pages/NotFound'
 
@@ -37,6 +38,7 @@ export default function App () {
           <Route path='/Charity' element={<Charity />} />
           <Route path='/Food' element={<Food />} />
           <Route path='/Careers' element={<Careers />} />
+          <Route path='/terms' element={<Terms />} />
           {/* <Route path='/Sponsorship' element={<Sponsorship />} /> */}
           <Route path='/menuTest' element={<MenuTest />} />
           <Route path='*' element={<NotFound />} />
