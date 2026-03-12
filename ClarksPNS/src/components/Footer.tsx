@@ -146,7 +146,7 @@ const Footer: React.FC<FooterProps> = ({
           <p className='text-sm text-text-onBrand/80 text-center md:text-right'>
   © {year} Clark's Pump-N-Shop. All rights reserved {' | '}
   <a
-    href="/clarks-rewards-legal-terms.pdf"
+    href="/terms"
     target="_blank"
     rel="noopener noreferrer"
     className="underline hover:text-text-onBrand transition-colors"
