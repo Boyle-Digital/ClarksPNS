@@ -153,6 +153,15 @@ const Footer: React.FC<FooterProps> = ({
   >
     Terms & Conditions
   </a>
+{' | '}
+<a
+  href="/privacy"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="underline hover:text-text-onBrand transition-colors"
+>
+  Privacy Policy
+</a>
   {' | '}Website by{' '}
   <a
     href="https://www.boyledigital.com"
