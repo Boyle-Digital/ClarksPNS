@@ -98,13 +98,13 @@ const Footer: React.FC<FooterProps> = ({
       </div>
 
       {/* Divider */}
-      101 <div className='border-t border-text-onBrand/10' />
+      <div className='border-t border-text-onBrand/10' />
 
       {/* Bottom bar */}
       <div className='container max-w-screen-2xl'>
         <div className='flex flex-col md:flex-row items-center justify-between gap-4 py-6'>
           {/* Socials */}
-          107 <div className='flex items-center gap-6'>
+          <div className='flex items-center gap-6'>
             <a
               href='https://www.tiktok.com/@clarkspns'
               aria-label='TikTok'
@@ -143,7 +143,7 @@ const Footer: React.FC<FooterProps> = ({
             </a>
           </div>
 
-         146 <p className='text-[14px] text-text-onBrand/80 text-center md:text-right'>
+         <p className='text-[14px] text-text-onBrand/80 text-center md:text-right'>
   © {year} Clark's Pump-N-Shop. All rights reserved {' | '}
   <a
     href="/terms"
