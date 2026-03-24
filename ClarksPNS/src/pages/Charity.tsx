@@ -16,6 +16,10 @@ const scholarshipEasternPdf = new URL(
   '../assets/files/2026 Scholarship Application (Eastern) (01226827x9F876) (1).PDF',
   import.meta.url
 ).href
+const golfOutingPdf = new URL(
+  '../assets/files/2026 Rodney Clark Memorial Golf Outing - Keene Trace Champions Course 2026.pdf',
+  import.meta.url
+).href
 
 // ---- Helpers ----
 const Stat = ({ label, value }: { label: string; value: string }) => (
@@ -306,7 +310,8 @@ export default function DonationsPage() {
             </div>
             <div className="mt-5 flex flex-wrap gap-3">
               <a
-                href="/charity/register-team"
+                href={golfOutingPdf}
+                target="_blank"
                 className="rounded-2xl px-5 py-2.5 text-white bg-brand hover:bg-brand/90 shadow-md"
               >
                 Register a Team
