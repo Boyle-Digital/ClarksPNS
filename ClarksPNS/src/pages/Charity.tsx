@@ -311,12 +311,6 @@ export default function DonationsPage() {
               >
                 Register a Team
               </a>
-              <a
-                href="/charity/apply-rodney-scholarship"
-                className="rounded-2xl px-5 py-2.5 border border-brand/20 text-brand hover:bg-brand/5"
-              >
-                Apply: Rodney Clark Scholarship
-              </a>
             </div>
           </div>
 
