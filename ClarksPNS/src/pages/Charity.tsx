@@ -351,8 +351,11 @@ export default function DonationsPage() {
                 eligible to renew annually for up to eight semesters.
               </p>
               <p className="mt-2">
-                <strong>2024 recipients:</strong> Alayna G. Reynolds (West Carter HS)
-                and Madilyn Smith (South Point HS).
+              <strong>2025 recipients:</strong><br />
+                  Braeden Hatter<br />
+                  Carson Probst<br />
+                  Alexander Marcum<br />
+                  Addison Tiller
               </p>
             </div>
             <div className="mt-5 flex flex-wrap gap-3">
