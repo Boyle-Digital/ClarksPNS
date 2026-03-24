@@ -103,7 +103,7 @@ export default function Privacy() {
               <p className='mt-3 leading-7'>
                 You may opt out of marketing messages at any time using the instructions
                 provided in those messages. Transactional or account-related messages may
-                still be sent.
+                still be sent. Text messaging originator opt-in data and consent will not be shared with any third parties.
               </p>
             </div>
 
