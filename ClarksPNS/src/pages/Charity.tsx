@@ -292,17 +292,19 @@ export default function DonationsPage() {
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
             <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
-              2026 Dates Coming Soon
+              Monday, May 11th, 2026
             </p>
             <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
               Rodney Clark Memorial Golf Outing
             </h2>
             <div className="mt-3 text-black/70">
-              <p>
-                Join us at Keene Trace Golf Club & Bellefonte Country Club — Champions Course. Check-in &
-                breakfast at 8:00 AM, shotgun start at 9:00 AM. Lunch, awards,
-                and silent auction to follow.
-              </p>
+            <p>
+    We invite you to join us for the 2026 Rodney Clark Memorial Golf Outing on Monday, May 11th at 
+    Keene Trace Golf Club — Champions Course in Nicholasville, KY. 
+    Registration and breakfast begin at 8:00 AM, followed by a 9:00 AM shotgun start. 
+    Following play, guests will enjoy lunch, awards, and a silent auction. 
+    Participation is limited to the first 25 teams.
+            </p>
               {/* <p className="mt-2">
                 Limited to the first 25 teams. Registration closes April 11,
                 2025.
