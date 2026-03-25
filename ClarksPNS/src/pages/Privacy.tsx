@@ -20,6 +20,9 @@ export default function Privacy() {
           <h1 className="mt-2 font-['Oswald'] text-3xl md:text-5xl font-bold leading-tight">
             Privacy Policy
           </h1>
+          <p className="mt-2 text-sm text-white/80">
+            Last Updated: 3/24/2026
+            </p>
 
           <p className='mt-3 text-white/90 max-w-3xl'>
             Please review the privacy policy for the Clark&apos;s Rewards loyalty program.
@@ -185,16 +188,7 @@ export default function Privacy() {
               </p>
             </div>
 
-            <div className='pt-6'>
-              <a
-                href='/privacy.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='underline hover:text-brand transition-colors'
-              >
-                Download PDF Version
-              </a>
-            </div>
+            
           </div>
         </div>
       </section>
