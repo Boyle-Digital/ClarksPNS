@@ -19,6 +19,9 @@ export default function Terms() {
           <h1 className="mt-2 font-['Oswald'] text-3xl md:text-5xl font-bold leading-tight">
             Terms & Conditions
           </h1>
+          <p className="mt-2 text-sm text-white/80">
+            Last Updated: 3/24/2026
+          </p>
           <p className='mt-3 text-white/90 max-w-3xl'>
             Please review the official terms & conditions for the Clark&apos;s Rewards program.
           </p>
@@ -404,16 +407,7 @@ export default function Terms() {
               </p>
             </div>
 
-            <div className='pt-4'>
-              <a
-                href='/terms.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='underline hover:text-brand transition-colors'
-              >
-                Download PDF Version
-              </a>
-            </div>
+          
           </div>
         </div>
       </section>
