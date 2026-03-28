@@ -7,6 +7,8 @@ import rodneyClark from '@/assets/images/Charity/Rodney_Clark.jpg'
 
 // --- Scramble video (new) ---
 import scrambleVideo from '@/assets/videos/091125_clarks_golfscramble_1080p.mp4'
+import scholarshipCentralPdf from '../assets/files/2026 Scholarship Application (Central) (01226829x9F876) (1).PDF'
+import scholarshipEasternPdf from '../assets/files/2026 Scholarship Application (Eastern) (01226827x9F876) (1).PDF'
 
 const scholarshipCentralPdf = new URL(
   '../assets/files/2026 Scholarship Application (Central) (01226829x9F876) (1).PDF',
