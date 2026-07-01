@@ -105,6 +105,12 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
     { type: 'link' as const, label: 'Food', href: toPath('Food') },
     { type: 'link' as const, label: 'Careers', href: toPath('Careers') },
     {
+      type: 'link' as const,
+      label: 'Fleet Card',
+      href: 'https://www.marathonfleetcard.com/associations/?cc=M00528',
+      external: true
+    },
+    {
       type: 'group' as const,
       label: 'About Us',
       items: [
@@ -164,7 +170,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                 </Link>
               </div>
 
-              {/* Center nav — Rewards → Locations▼ → Food → Careers → About▼ */}
+              {/* Center nav — Rewards → Locations▼ → Food → Careers → Fleet Card → About▼ */}
               <nav className='justify-self-center'>
                 <ul className='flex items-center gap-6 xl:gap-8'>
                   <li>
@@ -300,6 +306,18 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                     >
                       Careers
                     </NavLink>
+                  </li>
+
+                  {/* Fleet Card — external link, WEX/Marathon association tracking */}
+                  <li>
+                    <a
+                      href='https://www.marathonfleetcard.com/associations/?cc=M00528'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='inline-block text-nav text-center leading-none py-2 text-text hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand'
+                    >
+                      Fleet Card
+                    </a>
                   </li>
 
                   {/* About dropdown */}
