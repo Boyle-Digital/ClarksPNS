@@ -5,7 +5,7 @@ import rewardsLogoUrl from "@/assets/images/Clarks-PNS-Main-Rewards-Logo.png";
 
 type FlatLink = { label: string; href: string };
 type Group =
-  | { type: "link"; label: string; href: string }
+  | { type: "link"; label: string; href: string; external?: boolean }
   | { type: "group"; label: string; items: FlatLink[] };
 
 type MobileMenuDrawerProps = {
@@ -116,6 +116,22 @@ export default function MobileMenuDrawer({
           <ul className="flex flex-col">
             {content.map((item, idx) => {
               if (item.type === "link") {
+                if (item.external) {
+                  return (
+                    <li key={`link-${idx}`}>
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={onClose}
+                        className="block px-3 py-3 text-base rounded-md text-black hover:bg-black/5 hover:text-brand"
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  );
+                }
+
                 return (
                   <li key={`link-${idx}`}>
                     <NavLink
