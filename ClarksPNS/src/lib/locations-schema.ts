@@ -1,14 +1,19 @@
 import stores from '@/assets/data/stores.geocoded.json'
+import { allStores } from '@/lib/stores'
+
+const SLUG_BY_ID: Record<string, string> = Object.fromEntries(
+  allStores.map(s => [s.id, s.slug])
+)
 
 // Generates a lightweight ItemList of LocalBusiness entries for the Locations page.
-// If you later create individual store pages, switch to per-store JSON-LD on those pages instead.
+// Each item now links to that store's own page.
 export function buildLocationsItemList(siteUrl = 'https://www.myclarkspns.com') {
   const items = Object.entries(stores).map(([id, s]: any, idx) => {
     const address = `${s.address}, ${s.city}, ${s.state} ${s.zip}`
     return {
       "@type": "ListItem",
       "position": idx + 1,
-      "url": `${siteUrl}/locations`, // replace with store detail URL if/when you have it
+      "url": SLUG_BY_ID[id] ? `${siteUrl}/locations/${SLUG_BY_ID[id]}` : `${siteUrl}/locations`,
       "item": {
         "@type": ["ConvenienceStore","GasStation"],
         "name": `Clark’s Pump-N-Shop — ${s.name}`,

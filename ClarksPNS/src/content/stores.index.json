@@ -1,0 +1,4514 @@
+[
+  {
+    "id": "1",
+    "slug": "westwood-ashland-ky",
+    "name": "Westwood",
+    "address": "1805 Main Street",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41102",
+    "phone": "(606) 393-1121",
+    "fuelBrand": "ARCO",
+    "foodRaw": "KK/GG/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      },
+      "mon": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.48386929999999,
+    "lng": -82.67155009999999
+  },
+  {
+    "id": "2",
+    "slug": "catlettsburg-catlettsburg-ky",
+    "name": "Catlettsburg",
+    "address": "900 Center Street",
+    "city": "Catlettsburg",
+    "state": "KY",
+    "zip": "41129",
+    "phone": "(606) 363-7022",
+    "fuelBrand": "ARCO",
+    "foodRaw": "Café/GG/H54",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4387631,
+    "lng": -82.6091163
+  },
+  {
+    "id": "3",
+    "slug": "greenup-greenup-ky",
+    "name": "Greenup",
+    "address": "1024 Seaton Avenue",
+    "city": "Greenup",
+    "state": "KY",
+    "zip": "41144",
+    "phone": "(606)498-5986",
+    "fuelBrand": "ARCO",
+    "foodRaw": "KK/GG/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.5676449,
+    "lng": -82.8309069
+  },
+  {
+    "id": "5",
+    "slug": "greenup-greenup-ky-5",
+    "name": "Greenup",
+    "address": "1735 Ashland Road",
+    "city": "Greenup",
+    "state": "KY",
+    "zip": "41144",
+    "phone": "(606)254-0492",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 21,
+        "label": "7:00 AM – 9:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 21,
+        "label": "6:00 AM – 9:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 21,
+        "label": "6:00 AM – 9:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 21,
+        "label": "6:00 AM – 9:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 21,
+        "label": "6:00 AM – 9:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.5664199,
+    "lng": -82.8245727
+  },
+  {
+    "id": "6",
+    "slug": "wayne-wayne-wv",
+    "name": "Wayne",
+    "address": "10045 Rt 152",
+    "city": "Wayne",
+    "state": "WV",
+    "zip": "25570",
+    "phone": "(304) 803-7219",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.2298221,
+    "lng": -82.4397609
+  },
+  {
+    "id": "7",
+    "slug": "oak-hill-oak-hill-oh",
+    "name": "Oak Hill",
+    "address": "199 N Jackson St.",
+    "city": "Oak Hill",
+    "state": "OH",
+    "zip": "45656",
+    "phone": "(740)932-4014",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "mon": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.9009522,
+    "lng": -82.5694697
+  },
+  {
+    "id": "8",
+    "slug": "diederich-russell-ky",
+    "name": "Diederich",
+    "address": "1000 Diederich Blvd",
+    "city": "Russell",
+    "state": "KY",
+    "zip": "41169",
+    "phone": "(606) 833-2634",
+    "fuelBrand": "ARCO",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.504036,
+    "lng": -82.692295
+  },
+  {
+    "id": "9",
+    "slug": "west-hamlin-branchland-wv",
+    "name": "West Hamlin",
+    "address": "5742 McClellan HWY",
+    "city": "Branchland",
+    "state": "WV",
+    "zip": "25506",
+    "phone": "(304) 824-7740",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.2713331,
+    "lng": -82.200102
+  },
+  {
+    "id": "10",
+    "slug": "jackson-jackson-oh",
+    "name": "Jackson",
+    "address": "90 Twin Oaks Drive",
+    "city": "Jackson",
+    "state": "OH",
+    "zip": "45640",
+    "phone": "(740)577-3382",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "Champs/GG",
+    "kitchens": [
+      {
+        "code": "Champs",
+        "name": "Champs Pizza"
+      },
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 39.0307293,
+    "lng": -82.6370263
+  },
+  {
+    "id": "11",
+    "slug": "hal-greer-huntington-wv",
+    "name": "Hal Greer",
+    "address": "1587 Hal Greer Blvd",
+    "city": "Huntington",
+    "state": "WV",
+    "zip": "25701",
+    "phone": "(304) 803.7257",
+    "fuelBrand": "ARCO",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4051196,
+    "lng": -82.4278211
+  },
+  {
+    "id": "13",
+    "slug": "fraziers-bottom-winfield-wv",
+    "name": "Fraziers Bottom",
+    "address": "17513 Winfield Road",
+    "city": "Winfield",
+    "state": "WV",
+    "zip": "25213",
+    "phone": "(304) 937-3838",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "7.10"
+      },
+      "mon": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.5562386,
+    "lng": -81.9717268
+  },
+  {
+    "id": "15",
+    "slug": "lavalette-lavalette-wv",
+    "name": "Lavalette",
+    "address": "4790 St Rt 152",
+    "city": "Lavalette",
+    "state": "WV",
+    "zip": "25535",
+    "phone": "(304) 803-7253",
+    "fuelBrand": "ARCO",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.3223768,
+    "lng": -82.445655
+  },
+  {
+    "id": "18",
+    "slug": "flemingsburg-flemingsburg-ky",
+    "name": "Flemingsburg",
+    "address": "150  East Water St",
+    "city": "Flemingsburg",
+    "state": "KY",
+    "zip": "41041",
+    "phone": "(606) 363-0492",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4207388,
+    "lng": -83.7324909
+  },
+  {
+    "id": "19",
+    "slug": "mcarthur-mcarthur-oh",
+    "name": "McArthur",
+    "address": "301 S. Market St",
+    "city": "McArthur",
+    "state": "OH",
+    "zip": "45651",
+    "phone": "(220) 201-7910",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 39.2441312,
+    "lng": -82.4795908
+  },
+  {
+    "id": "20",
+    "slug": "south-point-so-point-oh",
+    "name": "South Point",
+    "address": "132 Co Rd 450",
+    "city": "So. Point",
+    "state": "OH",
+    "zip": "45680",
+    "phone": "(740) 523-0074",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4511223,
+    "lng": -82.5914353
+  },
+  {
+    "id": "21",
+    "slug": "jf-clark-ashland-ky",
+    "name": "JF Clark",
+    "address": "12649 US 60",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41102",
+    "phone": "(606)498-5982",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.3615261,
+    "lng": -82.77252299999999
+  },
+  {
+    "id": "23",
+    "slug": "13th-street-ashland-ky",
+    "name": "13th Street",
+    "address": "3354 13th Street",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41102",
+    "phone": "(606) 324-5288",
+    "fuelBrand": "ARCO",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": true,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4573699,
+    "lng": -82.66693060000001
+  },
+  {
+    "id": "24",
+    "slug": "huntington-huntington-wv",
+    "name": "Huntington",
+    "address": "4430 Ohio River Rd",
+    "city": "Huntington",
+    "state": "WV",
+    "zip": "25702",
+    "phone": "(681) 258-8186",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4331091,
+    "lng": -82.3637385
+  },
+  {
+    "id": "25",
+    "slug": "proctorville-proctorville-oh",
+    "name": "Proctorville",
+    "address": "7575 St Rt 7",
+    "city": "Proctorville",
+    "state": "OH",
+    "zip": "45669",
+    "phone": "(220) 204-5507",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4386318,
+    "lng": -82.3865081
+  },
+  {
+    "id": "26",
+    "slug": "chesapeake-so-point-oh",
+    "name": "Chesapeake",
+    "address": "2927 Co Rd 44",
+    "city": "So. Point",
+    "state": "OH",
+    "zip": "45680",
+    "phone": "(740) 451-4100",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 8,
+        "close": 22,
+        "label": "8:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.5735159,
+    "lng": -82.6166637
+  },
+  {
+    "id": "28",
+    "slug": "west-liberty-west-liberty-ky",
+    "name": "West Liberty",
+    "address": "607 N. Main St",
+    "city": "West Liberty",
+    "state": "KY",
+    "zip": "41472",
+    "phone": "(606) 743-2842",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 37.9110858,
+    "lng": -83.26562849999999
+  },
+  {
+    "id": "30",
+    "slug": "rio-grande-rio-grande-oh",
+    "name": "Rio Grande",
+    "address": "11381 St Rt 588",
+    "city": "Rio Grande",
+    "state": "OH",
+    "zip": "45674",
+    "phone": "(740) 245-1211",
+    "fuelBrand": "BP",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.8855006,
+    "lng": -82.37668049999999
+  },
+  {
+    "id": "32",
+    "slug": "burnaugh-catlettsburg-ky",
+    "name": "Burnaugh",
+    "address": "28583 US 23",
+    "city": "Catlettsburg",
+    "state": "KY",
+    "zip": "41129",
+    "phone": "(606) 739-6055",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "Café/H54",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "24"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.266024,
+    "lng": -82.58156
+  },
+  {
+    "id": "33",
+    "slug": "wheelersburg-wheelersburg-oh",
+    "name": "Wheelersburg",
+    "address": "312 Center St",
+    "city": "Wheelersburg",
+    "state": "OH",
+    "zip": "45694",
+    "phone": "(740) 574-5655",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.7285514,
+    "lng": -82.8592967
+  },
+  {
+    "id": "34",
+    "slug": "portsmouth-portsmouth-oh",
+    "name": "Portsmouth",
+    "address": "3008 Scioto Trail",
+    "city": "Portsmouth",
+    "state": "OH",
+    "zip": "45662",
+    "phone": "(220) 204-5488",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.7595787,
+    "lng": -82.99032670000001
+  },
+  {
+    "id": "36",
+    "slug": "north-broadway-lexington-ky",
+    "name": "North Broadway",
+    "address": "1971 North Broadway",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40505",
+    "phone": "(859) 739-3515",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.0750011,
+    "lng": -84.4585489
+  },
+  {
+    "id": "37",
+    "slug": "ironton-ironton-oh",
+    "name": "Ironton",
+    "address": "824 Park Ave",
+    "city": "Ironton",
+    "state": "OH",
+    "zip": "45638",
+    "phone": "(220) 204-5502",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      },
+      "mon": {
+        "open": 5,
+        "close": 12,
+        "label": "5:00 AM – 12:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 12,
+        "label": "5:00 AM – 12:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 12,
+        "label": "5:00 AM – 12:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 12,
+        "label": "5:00 AM – 12:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 12,
+        "label": "5:00 AM – 12:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 12,
+        "label": "6:00 AM – 12:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.5375698,
+    "lng": -82.6788055
+  },
+  {
+    "id": "38",
+    "slug": "proctorville-proctorville-oh-38",
+    "name": "Proctorville",
+    "address": "6288 St. Rt 7",
+    "city": "Proctorville",
+    "state": "OH",
+    "zip": "45669",
+    "phone": "(220) 204-5492",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.438587,
+    "lng": -82.3866434
+  },
+  {
+    "id": "39",
+    "slug": "waverly-waverly-oh",
+    "name": "Waverly",
+    "address": "506 E Emmitt",
+    "city": "Waverly",
+    "state": "OH",
+    "zip": "45690",
+    "phone": "(740) 835-8150",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 8,
+        "close": 22,
+        "label": "8:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 39.1309643,
+    "lng": -82.97941150000001
+  },
+  {
+    "id": "40",
+    "slug": "south-shore-south-shore-ky",
+    "name": "South Shore",
+    "address": "28248 US 23",
+    "city": "South Shore",
+    "state": "KY",
+    "zip": "41175",
+    "phone": "(606)498-4212",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK/GG/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.728417,
+    "lng": -82.93582459999999
+  },
+  {
+    "id": "41",
+    "slug": "piketon-piketon-oh",
+    "name": "Piketon",
+    "address": "833 Beaver Creek Rd",
+    "city": "Piketon",
+    "state": "OH",
+    "zip": "45661",
+    "phone": "(220) 201-5476",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "Café",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 23,
+        "label": "5:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 39.0530889,
+    "lng": -82.99509189999999
+  },
+  {
+    "id": "42",
+    "slug": "route-3-catlettsburg-ky",
+    "name": "Route 3",
+    "address": "2250 St. Rt 3",
+    "city": "Catlettsburg",
+    "state": "KY",
+    "zip": "41129",
+    "phone": "(606)585-0028",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.358493,
+    "lng": -82.692797
+  },
+  {
+    "id": "43",
+    "slug": "greenup-ave-ashland-ky",
+    "name": "Greenup Ave",
+    "address": "3000 Greenup Ave",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41101",
+    "phone": "606)393-1164.",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4696047,
+    "lng": -82.6214061
+  },
+  {
+    "id": "44",
+    "slug": "russell-cave-lexington-ky",
+    "name": "Russell Cave",
+    "address": "313 West New Circle Rd.",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40502",
+    "phone": "(859) 444-6227",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.0709239,
+    "lng": -84.4762434
+  },
+  {
+    "id": "45",
+    "slug": "rosemount-rd-portsmouth-oh",
+    "name": "Rosemount Rd",
+    "address": "1701 State Route 139",
+    "city": "Portsmouth",
+    "state": "OH",
+    "zip": "45662",
+    "phone": "(740) 876-4103",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.7768056,
+    "lng": -82.9442644
+  },
+  {
+    "id": "46",
+    "slug": "university-mart-ironton-oh",
+    "name": "University Mart",
+    "address": "1813 Liberty Ave.",
+    "city": "Ironton",
+    "state": "OH",
+    "zip": "45638",
+    "phone": "(740) 533-2309",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 8,
+        "close": 22,
+        "label": "8:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.5253992,
+    "lng": -82.66519029999999
+  },
+  {
+    "id": "47",
+    "slug": "vanceburg-vanceburg-ky",
+    "name": "Vanceburg",
+    "address": "67 Commercial Drive",
+    "city": "Vanceburg",
+    "state": "KY",
+    "zip": "41179",
+    "phone": "(606)363-7023",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": true,
+      "e85": false,
+      "showers": true,
+      "rvDump": false
+    },
+    "lat": 38.5916237,
+    "lng": -83.3271666
+  },
+  {
+    "id": "49",
+    "slug": "greenhills-ashland-ky",
+    "name": "Greenhills",
+    "address": "373 St Rt. 716",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41102",
+    "phone": "(606) 928-4455",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4403195,
+    "lng": -82.7078963
+  },
+  {
+    "id": "50",
+    "slug": "stroble-ironton-oh",
+    "name": "Stroble",
+    "address": "5197 State Route 141",
+    "city": "Ironton",
+    "state": "OH",
+    "zip": "45638",
+    "phone": "(220) 204-4054",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "Café",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 5,
+        "close": 22,
+        "label": "5:00 AM – 10:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.5523435,
+    "lng": -82.6112169
+  },
+  {
+    "id": "51",
+    "slug": "piedmont-pantry-huntington-wv",
+    "name": "Piedmont Pantry",
+    "address": "4408 Piedmont Road",
+    "city": "Huntington",
+    "state": "WV",
+    "zip": "25704",
+    "phone": "(304) 719-4297",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 8,
+        "close": 22,
+        "label": "8:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.3982169,
+    "lng": -82.51661299999999
+  },
+  {
+    "id": "52",
+    "slug": "grayson-grayson-ky",
+    "name": "Grayson",
+    "address": "311 N. Carol Malone",
+    "city": "Grayson",
+    "state": "KY",
+    "zip": "41143",
+    "phone": "(606) 498-5983",
+    "fuelBrand": "ARCO",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 22,
+        "label": "7:00 AM – 10:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 22,
+        "label": "6:00 AM – 10:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.3345175,
+    "lng": -82.9452137
+  },
+  {
+    "id": "53",
+    "slug": "clays-mill-rd-lexington-ky",
+    "name": "Clays Mill Rd",
+    "address": "3334 Clays Mill Road",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40503",
+    "phone": "(859)523-6606",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK/GG/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 37.9966193,
+    "lng": -84.5481819
+  },
+  {
+    "id": "55",
+    "slug": "portsmouth-portsmouth-oh-55",
+    "name": "Portsmouth",
+    "address": "2626 Gallia St",
+    "city": "Portsmouth",
+    "state": "OH",
+    "zip": "45662",
+    "phone": "(740) 353-1381",
+    "fuelBrand": "BP",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.7400141,
+    "lng": -82.9638078
+  },
+  {
+    "id": "56",
+    "slug": "olive-hill-olive-hill-ky",
+    "name": "Olive Hill",
+    "address": "10824 West US 60",
+    "city": "Olive Hill",
+    "state": "Ky",
+    "zip": "41164",
+    "phone": "(606) 286-0264",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "Coopers/GG/H54/IC",
+    "kitchens": [
+      {
+        "code": "Coopers",
+        "name": "Coopers"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      },
+      {
+        "code": "IC",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": true,
+      "rvDump": true
+    },
+    "lat": 38.322679,
+    "lng": -83.1198385
+  },
+  {
+    "id": "57",
+    "slug": "winchester-road-lexington-ky",
+    "name": "Winchester Road",
+    "address": "922 Detroit Ave",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40505",
+    "phone": "(606)254-0486",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK/GG/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 7,
+        "close": 23,
+        "label": "7:00 AM – 11:00 PM"
+      },
+      "mon": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "tues": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "wed": {
+        "open": 6,
+        "close": 23,
+        "label": "6:00 AM – 11:00 PM"
+      },
+      "thur": {
+        "open": 6,
+        "close": 12,
+        "label": "6:00 AM – 12:00 PM"
+      },
+      "fri": {
+        "open": 6,
+        "close": 12,
+        "label": "6:00 AM – 12:00 PM"
+      },
+      "sat": {
+        "open": 7,
+        "close": 12,
+        "label": "7:00 AM – 12:00 PM"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.0409941,
+    "lng": -84.4711718
+  },
+  {
+    "id": "58",
+    "slug": "exit-181-rush-ky",
+    "name": "Exit 181",
+    "address": "1965 US Route 60",
+    "city": "Rush",
+    "state": "KY",
+    "zip": "41168",
+    "phone": "(606) 928-8175",
+    "fuelBrand": "ARCO",
+    "foodRaw": "Café/GG",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      },
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.3701449,
+    "lng": -82.76656899999999
+  },
+  {
+    "id": "59",
+    "slug": "versailles-rd-lexington-ky",
+    "name": "Versailles Rd",
+    "address": "1419 Versailles Rd",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40504",
+    "phone": "(859)303-4543",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK/GG/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.04992310000001,
+    "lng": -84.527999
+  },
+  {
+    "id": "60",
+    "slug": "coal-grove-coal-grove-oh",
+    "name": "Coal Grove",
+    "address": "409 Marion Pike",
+    "city": "Coal Grove",
+    "state": "OH",
+    "zip": "45637",
+    "phone": "(740) 532-7442",
+    "fuelBrand": "UNBRANDED",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.5018496,
+    "lng": -82.6462942
+  },
+  {
+    "id": "71",
+    "slug": "29th-street-ashland-ky",
+    "name": "29th Street",
+    "address": "1920 29th St",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41101",
+    "phone": "(606) 329-8784",
+    "fuelBrand": "ARCO",
+    "foodRaw": "Café/GG/Champs/H54",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "Champs",
+        "name": "Champs Pizza"
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4603099,
+    "lng": -82.6404804
+  },
+  {
+    "id": "72",
+    "slug": "lloyd-greenup-ky",
+    "name": "Lloyd",
+    "address": "1233 KY 10",
+    "city": "Greenup",
+    "state": "KY",
+    "zip": "41144",
+    "phone": "(606) 473-7080",
+    "fuelBrand": "Marathon",
+    "foodRaw": "Champs/GG/H54/IC",
+    "kitchens": [
+      {
+        "code": "Champs",
+        "name": "Champs Pizza"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      },
+      {
+        "code": "IC",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.6455518,
+    "lng": -82.8764283
+  },
+  {
+    "id": "73",
+    "slug": "clarks-caf-ashland-ky",
+    "name": "Clarks Café",
+    "address": "Donta Road",
+    "city": "Ashland",
+    "state": "KY",
+    "zip": "41105",
+    "phone": "(606)922-6073",
+    "fuelBrand": "",
+    "foodRaw": "Café",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.4552926,
+    "lng": -82.6960262
+  },
+  {
+    "id": "75",
+    "slug": "rush-rush-ky",
+    "name": "Rush",
+    "address": "9822 E. US Highway 60",
+    "city": "Rush",
+    "state": "KY",
+    "zip": "41168",
+    "phone": "(606) 498-5992",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": false,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.3614491,
+    "lng": -82.7728877
+  },
+  {
+    "id": "76",
+    "slug": "lexington-lexington-ky",
+    "name": "Lexington",
+    "address": "529 W Main St",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40507",
+    "phone": "(859)281-1008",
+    "fuelBrand": "",
+    "foodRaw": "Café/H54",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": false,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.0504487,
+    "lng": -84.5012586
+  },
+  {
+    "id": "77",
+    "slug": "midway-midway-ky",
+    "name": "Midway",
+    "address": "300 Lacefield St",
+    "city": "Midway",
+    "state": "KY",
+    "zip": "40347",
+    "phone": "(859)403-2028",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "Coopers",
+    "kitchens": [
+      {
+        "code": "Coopers",
+        "name": "Coopers"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.1621356,
+    "lng": -84.67659429999999
+  },
+  {
+    "id": "78",
+    "slug": "bethel-nicholsville-ky",
+    "name": "Bethel",
+    "address": "100 Bethel Harvest Drive",
+    "city": "Nicholsville",
+    "state": "KY",
+    "zip": "40356",
+    "phone": "(859)309-0075",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 37.9486108,
+    "lng": -84.5420362
+  },
+  {
+    "id": "79",
+    "slug": "sandersville-rd-lexington-ky",
+    "name": "Sandersville Rd.",
+    "address": "2670 Sandersville Rd",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511",
+    "phone": "(859)303-4378",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.0890767,
+    "lng": -84.53725899999999
+  },
+  {
+    "id": "81",
+    "slug": "winchester-winchester-ky",
+    "name": "Winchester",
+    "address": "201 N Main St",
+    "city": "Winchester",
+    "state": "KY",
+    "zip": "40391",
+    "phone": "(606) 229-5606",
+    "fuelBrand": "ARCO",
+    "foodRaw": "KK/GG/H54",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 37.9973632,
+    "lng": -84.174588
+  },
+  {
+    "id": "82",
+    "slug": "georgetown-georgetown-ky",
+    "name": "Georgetown",
+    "address": "381 Cherry Blossom Way",
+    "city": "Georgetown",
+    "state": "KY",
+    "zip": "40324",
+    "phone": "(502) 642-4479",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK/GG/H54/IC",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      },
+      {
+        "code": "IC",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.2750948,
+    "lng": -84.55529899999999
+  },
+  {
+    "id": "83",
+    "slug": "georgetown-georgetown-ky-83",
+    "name": "Georgetown",
+    "address": "2001 Paris Pike",
+    "city": "Georgetown",
+    "state": "KY",
+    "zip": "40324",
+    "phone": "(502) 603-8284",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "Café/GG/H54",
+    "kitchens": [
+      {
+        "code": "Café",
+        "name": "Clark's Café"
+      },
+      {
+        "code": "GG",
+        "name": null
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.2145143,
+    "lng": -84.53961989999999
+  },
+  {
+    "id": "84",
+    "slug": "connector-rd-georgetown-ky",
+    "name": "Connector Rd",
+    "address": "480 Connector Rd",
+    "city": "Georgetown",
+    "state": "KY",
+    "zip": "40324",
+    "phone": "(502)385-5087",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.230517,
+    "lng": -84.53475139999999
+  },
+  {
+    "id": "85",
+    "slug": "canewood-georgetown-ky",
+    "name": "Canewood",
+    "address": "100 Canewood Ctr Dr",
+    "city": "Georgetown",
+    "state": "KY",
+    "zip": "40324",
+    "phone": "(502) 642-4583",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": true,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.2090075,
+    "lng": -84.5941005
+  },
+  {
+    "id": "86",
+    "slug": "versailles-versailles-ky",
+    "name": "Versailles",
+    "address": "3590 Lexington Rd",
+    "city": "Versailles",
+    "state": "KY",
+    "zip": "40383",
+    "phone": "(859) 215-8139",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "GG",
+    "kitchens": [
+      {
+        "code": "GG",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "mon": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "tues": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "wed": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "thur": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "fri": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      },
+      "sat": {
+        "open": null,
+        "close": null,
+        "label": "Call for hours"
+      }
+    },
+    "open24": false,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.044971,
+    "lng": -84.6656057
+  },
+  {
+    "id": "87",
+    "slug": "lucille-dr-lexington-ky",
+    "name": "Lucille Dr.",
+    "address": "100 Lucille Dr",
+    "city": "Lexington",
+    "state": "Ky",
+    "zip": "40511",
+    "phone": "(859)469-8022",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.0852792,
+    "lng": -84.5509691
+  },
+  {
+    "id": "88",
+    "slug": "frankfort-frankfort-ky",
+    "name": "Frankfort",
+    "address": "100 Isaac Shelby Cir W",
+    "city": "Frankfort",
+    "state": "Ky",
+    "zip": "40601",
+    "phone": "(502)352-9513",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "KK/H54/IC",
+    "kitchens": [
+      {
+        "code": "KK",
+        "name": "Krispy Krunchy Chicken"
+      },
+      {
+        "code": "H54",
+        "name": "Hangar 54"
+      },
+      {
+        "code": "IC",
+        "name": null
+      }
+    ],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.188186,
+    "lng": -84.810493
+  },
+  {
+    "id": "89",
+    "slug": "berea-berea-ky",
+    "name": "Berea",
+    "address": "274 Paint Lick Rd.",
+    "city": "Berea",
+    "state": "KY",
+    "zip": "40403",
+    "phone": "(859) 986-0173",
+    "fuelBrand": "ARCO",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 37.5695196,
+    "lng": -84.3183829
+  }
+]

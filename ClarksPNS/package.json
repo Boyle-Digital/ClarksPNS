@@ -19,7 +19,8 @@
     "dev": "vite",
     "preview": "vite preview",
     "icons": "node scripts/make-icons.mjs",
-    "geocode": "node src/lib/geocode_stores.mjs"
+    "geocode": "node src/lib/geocode_stores.mjs",
+    "stores": "node scripts/build-stores.mjs"
   },
   "dependencies": {
     "@fontsource/oswald": "^5.2.6",
