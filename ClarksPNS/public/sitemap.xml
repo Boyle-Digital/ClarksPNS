@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.myclarkspns.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.myclarkspns.com/food</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.myclarkspns.com/food/krispy-krunchy</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.myclarkspns.com/food/hangar-54</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.myclarkspns.com/food/clarks-cafe</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.myclarkspns.com/food/champs</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.myclarkspns.com/food/coopers</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://www.myclarkspns.com/clarks-rewards</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://www.myclarkspns.com/car-wash</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://www.myclarkspns.com/locations</loc><changefreq>daily</changefreq></url>

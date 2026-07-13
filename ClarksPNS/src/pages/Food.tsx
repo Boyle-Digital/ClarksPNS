@@ -1,5 +1,6 @@
 // src/pages/Food.tsx
 import React from 'react'
+import { Link } from 'react-router-dom'
 import champsLogo from '@/assets/images/champschickenlogo.png'
 import hangarLogo from '@/assets/images/Hangar54Logo_02-1.png'
 import jacksLogo from '@/assets/images/jacksdelilogo.webp'
@@ -279,6 +280,15 @@ function MenusDiagnostics() {
 }
 
 
+/** Brands with a dedicated menu page at /food/<slug> */
+const MENU_PAGE_SLUG: Record<string, string> = {
+  champs: 'champs',
+  hangar54: 'hangar-54',
+  'clarks-cafe': 'clarks-cafe',
+  'krispy-krunchy': 'krispy-krunchy',
+  coopers: 'coopers'
+}
+
 function MenuBlock ({
   id,
   brandKey,
@@ -293,14 +303,7 @@ function MenuBlock ({
   desc: string
 }) {
   const { pdfs, images } = collectMenus(brandKey)
-// TEMP DEBUG (use log, not debug)
-console.log('[menus]', {
-  brandKey,
-  pdfsCount: pdfs.length,
-  imagesCount: images.length,
-  sampleImageKeys: Object.keys(MENU_IMAGES).slice(0, 5),
-  samplePdfKeys: Object.keys(MENU_PDFS).slice(0, 5),
-})
+  const menuPage = MENU_PAGE_SLUG[brandKey]
   const [lightbox, setLightbox] = React.useState<string | null>(null)
 
   // Accordion state (collapsed by default). Auto-open if URL hash matches this block's id.
@@ -360,6 +363,16 @@ console.log('[menus]', {
       >
         <div className='overflow-hidden'>
           <div className='px-6 pb-6 space-y-4'>
+            {/* Full menu page */}
+            {menuPage && (
+              <Link
+                to={`/food/${menuPage}`}
+                className='inline-flex items-center justify-center rounded-xl px-4 py-2 bg-brand text-white hover:bg-brand/90 transition-colors'
+              >
+                View full menu →
+              </Link>
+            )}
+
             {/* PDFs */}
             {pdfs.length ? (
               <div className='flex flex-wrap gap-2'>
@@ -375,9 +388,9 @@ console.log('[menus]', {
                   </a>
                 ))}
               </div>
-            ) : (
+            ) : !menuPage ? (
               <p className='text-black/60 text-sm'>Menu PDF coming soon.</p>
-            )}
+            ) : null}
 
             {/* Images */}
             {images.length ? (
