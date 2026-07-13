@@ -21,8 +21,8 @@ const FOOD_MAP = {
   H54: 'Hangar 54',
   'Café': "Clark's Café",
   Cafe: "Clark's Café",
-  Champs: 'Champs Pizza',
-  Coopers: 'Coopers'
+  Champs: 'Champs Chicken',
+  Coopers: "Cooper's Express"
 }
 
 const kebab = s =>
@@ -123,6 +123,11 @@ writeFileSync(
 const staticUrls = [
   { loc: '/', changefreq: 'daily', priority: '1.0' },
   { loc: '/food', changefreq: 'weekly' },
+  { loc: '/food/krispy-krunchy', changefreq: 'monthly' },
+  { loc: '/food/hangar-54', changefreq: 'monthly' },
+  { loc: '/food/clarks-cafe', changefreq: 'monthly' },
+  { loc: '/food/champs', changefreq: 'monthly' },
+  { loc: '/food/coopers', changefreq: 'monthly' },
   { loc: '/clarks-rewards', changefreq: 'monthly' },
   { loc: '/car-wash', changefreq: 'monthly' },
   { loc: '/locations', changefreq: 'daily' },

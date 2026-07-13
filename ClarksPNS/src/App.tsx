@@ -12,6 +12,7 @@ import ClarksRewards from '@/pages/clarksrewards'
 import CarWash from '@/pages/CarWash'
 import Locations from '@/pages/Locations'
 import StoreDetail from '@/pages/StoreDetail'
+import FoodBrand from '@/pages/FoodBrand'
 import Careers from '@/pages/Careers'
 import Terms from '@/pages/Terms'
 import Privacy from '@/pages/Privacy'
@@ -41,6 +42,7 @@ export default function App () {
           <Route path='/about-us' element={<About />} />
           <Route path='/Charity' element={<Charity />} />
           <Route path='/Food' element={<Food />} />
+          <Route path='/food/:slug' element={<FoodBrand />} />
           <Route path='/Careers' element={<Careers />} />
           <Route path='/terms' element={<Terms />} />
           <Route path='/privacy' element={<Privacy />} />

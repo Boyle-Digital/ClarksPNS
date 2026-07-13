@@ -564,7 +564,7 @@
     "kitchens": [
       {
         "code": "Champs",
-        "name": "Champs Pizza"
+        "name": "Champs Chicken"
       },
       {
         "code": "GG",
@@ -2931,7 +2931,7 @@
     "kitchens": [
       {
         "code": "Coopers",
-        "name": "Coopers"
+        "name": "Cooper's Express"
       },
       {
         "code": "GG",
@@ -3311,7 +3311,7 @@
       },
       {
         "code": "Champs",
-        "name": "Champs Pizza"
+        "name": "Champs Chicken"
       },
       {
         "code": "H54",
@@ -3384,7 +3384,7 @@
     "kitchens": [
       {
         "code": "Champs",
-        "name": "Champs Pizza"
+        "name": "Champs Chicken"
       },
       {
         "code": "GG",
@@ -3671,7 +3671,7 @@
     "kitchens": [
       {
         "code": "Coopers",
-        "name": "Coopers"
+        "name": "Cooper's Express"
       }
     ],
     "hours": {

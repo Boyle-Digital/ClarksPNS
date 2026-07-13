@@ -4,6 +4,7 @@ import { SEO } from '@/lib/seo'
 import FindUsMap from '@/components/site/FindUsMap'
 import StoreGallery from '@/components/site/StoreGallery'
 import storeMedia from '@/content/store-media.json'
+import { FOOD_BRANDS } from '@/content/menus'
 import {
   DAY_LABEL,
   DAY_ORDER,
@@ -210,14 +211,31 @@ export default function StoreDetail() {
                   <h2 className="mt-1 font-['Oswald'] text-2xl font-bold text-black md:text-3xl">Hot, fresh, and fast.</h2>
                   <p className='mt-1 text-black/70'>Made-to-order, right inside this location.</p>
                   <div className='mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2'>
-                    {kitchens.map(k => (
-                      <div key={k} className='flex items-center gap-3 rounded-xl border border-black/10 bg-surface-alt p-3'>
-                        <span className='grid h-11 w-11 flex-none place-items-center rounded-lg bg-brand text-sm font-bold text-white'>
-                          {k.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
-                        </span>
-                        <span className='font-medium text-black'>{k}</span>
-                      </div>
-                    ))}
+                    {kitchens.map(k => {
+                      const brand = FOOD_BRANDS.find(b => b.kitchenName === k)
+                      const inner = (
+                        <>
+                          <span className='grid h-11 w-11 flex-none place-items-center rounded-lg bg-brand text-sm font-bold text-white'>
+                            {k.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
+                          </span>
+                          <span className='min-w-0 grow font-medium text-black'>{k}</span>
+                          {brand && <span className='shrink-0 text-sm font-medium text-brand'>Menu →</span>}
+                        </>
+                      )
+                      return brand ? (
+                        <Link
+                          key={k}
+                          to={`/food/${brand.slug}`}
+                          className='flex items-center gap-3 rounded-xl border border-black/10 bg-surface-alt p-3 transition-colors hover:border-brand'
+                        >
+                          {inner}
+                        </Link>
+                      ) : (
+                        <div key={k} className='flex items-center gap-3 rounded-xl border border-black/10 bg-surface-alt p-3'>
+                          {inner}
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
               )}
