@@ -68,6 +68,14 @@ const entries = Object.entries(raw)
 const seen = new Map()
 const stores = []
 
+// Source data has inconsistent phone formats ("606)393-1164.", "(304) 803.7257");
+// normalize to (XXX) XXX-XXXX so tel: links and display are always valid.
+function formatPhone(raw) {
+  const digits = String(raw || '').replace(/\D/g, '').replace(/^1(?=\d{10}$)/, '')
+  if (digits.length !== 10) return String(raw || '').trim()
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
+}
+
 for (const [id, s] of entries) {
   if (!s || !s.name || !s.address || !s.city || !s.state) continue // skip bulk plants / blank rows
   let slug = kebab(`${s.name}-${s.city}-${s.state}`)
@@ -83,7 +91,7 @@ for (const [id, s] of entries) {
     city: s.city,
     state: s.state,
     zip: s.zip || '',
-    phone: s.phone || '',
+    phone: formatPhone(s.phone),
     fuelBrand: s.brand || '',
     foodRaw: s.food_programs || '',
     kitchens: parseFood(s.food_programs),
