@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
+import FindUsMap from '@/components/site/FindUsMap'
+import StoreGallery from '@/components/site/StoreGallery'
 import storeMedia from '@/content/store-media.json'
 import {
   DAY_LABEL,
@@ -17,7 +19,13 @@ import {
   type Store
 } from '@/lib/stores'
 
-type Media = { image?: string; video?: string; poster?: string }
+type Media = {
+  image?: string
+  video?: string
+  poster?: string
+  gallery?: string[]
+  thumbs?: string[]
+}
 const MEDIA = storeMedia as Record<string, Media>
 
 // Matches the site's eyebrow style: font-['Oswald'] tracking-wide text-xs uppercase text-brand
@@ -250,29 +258,38 @@ export default function StoreDetail() {
             <div className='lg:col-span-5'>
               <div className='rounded-2xl border border-black/10 bg-white p-6 shadow-soft'>
                 <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">Find us</h2>
-                <a
-                  href={directionsHref(store)}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='mt-3 block overflow-hidden rounded-xl border border-black/10'
-                  aria-label='Open directions in Google Maps'
-                >
-                  <svg viewBox='0 0 400 180' width='100%' height='100%' className='block'>
-                    <rect width='400' height='180' fill='#eef1f7' />
-                    <path d='M0 115 C90 95 150 145 240 123 C320 103 360 135 400 121' fill='none' stroke='#d4d9e6' strokeWidth='3' />
-                    <path d='M60 40 C150 30 200 90 300 70' fill='none' stroke='#d4d9e6' strokeWidth='3' />
-                    <circle cx='200' cy='95' r='8' fill='#263B95' />
-                    <circle cx='200' cy='95' r='15' fill='none' stroke='#0084FF' strokeWidth='2' />
-                  </svg>
-                </a>
+                <div className='mt-3'>
+                  <FindUsMap store={store} />
+                </div>
                 <div className='mt-4 space-y-2 text-[15px] text-black/80'>
                   <div>{fullAddress(store)}</div>
                   {store.phone && <div className='text-black/60'>{store.phone}</div>}
+                  <a
+                    href={directionsHref(store)}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='inline-flex items-center gap-1 font-medium text-brand hover:underline'
+                  >
+                    Open in Google Maps →
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Store gallery — every shot from this store's folder */}
+        {(MEDIA[store.slug]?.gallery?.length ?? 0) > 0 && (
+          <section className='container mx-auto px-6 pb-10 md:px-10'>
+            <div className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">Store gallery</div>
+            <h2 className="mt-1 font-['Oswald'] text-2xl font-bold text-black md:text-3xl">Take a look around.</h2>
+            <StoreGallery
+              images={MEDIA[store.slug]!.gallery!}
+              thumbs={MEDIA[store.slug]!.thumbs}
+              storeName={store.name}
+            />
+          </section>
+        )}
 
         {/* Rewards — Clarks voice */}
         <section className='container mx-auto px-6 pb-10 md:px-10'>

@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Store media is hosted externally (CDN) — never commit binaries.
+# Local dev copies land here via scripts; regenerate with wire-media.
+public/stores
