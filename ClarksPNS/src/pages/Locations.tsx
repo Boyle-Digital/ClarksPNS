@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import { buildLocationsItemList } from '@/lib/locations-schema'
-import { allStores } from '@/lib/stores'
+import { allStores, formatPhone } from '@/lib/stores'
 
 // Map a store id (key in stores.geocoded.json) to its store-page slug.
 const SLUG_BY_ID: Record<string, string> = Object.fromEntries(
@@ -421,15 +421,21 @@ export default function Locations () {
     )
   }
 
+  // On mount: quietly ask for the visitor's location so nearby stores
+  // populate immediately. If they decline (or haven't answered yet), the
+  // results list falls back to showing every store instead of sitting empty.
+  React.useEffect(() => {
+    if (!('geolocation' in navigator)) return
+    navigator.geolocation.getCurrentPosition(
+      pos =>
+        setUserPoint({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
+      () => {},
+      { timeout: 8000, maximumAge: 300000 }
+    )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const results = React.useMemo(() => {
-    if (!userPoint)
-      return [] as Array<{
-        id: string
-        entry: StoreEntry
-        latlng: LatLng
-        distance: number
-        addr: string
-      }>
     const arr = Object.entries(stores)
       .map(([id, s]) => {
         const addr = fullAddress(s)
@@ -439,7 +445,9 @@ export default function Locations () {
           id,
           entry: s,
           latlng: ll,
-          distance: haversineMiles(userPoint, ll),
+          distance: userPoint
+            ? haversineMiles(userPoint, ll)
+            : Number.POSITIVE_INFINITY,
           addr
         }
       })
@@ -450,6 +458,18 @@ export default function Locations () {
       distance: number
       addr: string
     }>
+    // No location yet (still deciding, or declined): show every store,
+    // grouped by state then city, so the page is never empty.
+    if (!userPoint) {
+      return arr
+        .filter(r => matchesFilters(r.entry))
+        .sort(
+          (a, b) =>
+            (a.entry.state || '').localeCompare(b.entry.state || '') ||
+            (a.entry.city || '').localeCompare(b.entry.city || '') ||
+            (a.entry.name || '').localeCompare(b.entry.name || '')
+        )
+    }
     return arr
       .filter(r => r.distance <= radius)
       .filter(r => matchesFilters(r.entry))
@@ -465,7 +485,7 @@ export default function Locations () {
     fuelFilter
   ])
 
-  const mapCenter = userPoint || results[0]?.latlng || initialCenter
+  const mapCenter = userPoint || initialCenter
 
     const json = buildLocationsItemList()
 
@@ -560,11 +580,11 @@ export default function Locations () {
                   Nearby stores
                 </h2>
                 <div className='flex items-center gap-3'>
-                  {userPoint && (
-                    <span className='text-black/60 text-sm hidden sm:inline'>
-                      {results.length} within {radius} mi
-                    </span>
-                  )}
+                  <span className='text-black/60 text-sm hidden sm:inline'>
+                    {userPoint
+                      ? `${results.length} within ${radius} mi`
+                      : `All ${results.length} stores`}
+                  </span>
                   <button
                     type='button'
                     onClick={() => setFiltersOpen(o => !o)}
@@ -637,12 +657,14 @@ export default function Locations () {
                           <div className='text-sm text-black/70'>{addr}</div>
                           {entry.phone && (
                             <div className='text-sm text-black/70 mt-1'>
-                              {entry.phone}
+                              {formatPhone(entry.phone)}
                             </div>
                           )}
-                          <div className='mt-2 text-xs text-black/60'>
-                            {distance.toFixed(1)} mi away
-                          </div>
+                          {Number.isFinite(distance) && (
+                            <div className='mt-2 text-xs text-black/60'>
+                              {distance.toFixed(1)} mi away
+                            </div>
+                          )}
                         </div>
                         <div className='flex flex-col items-end gap-2'>
                           {SLUG_BY_ID[id] && (

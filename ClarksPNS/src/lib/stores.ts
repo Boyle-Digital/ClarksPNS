@@ -100,6 +100,14 @@ export function fullAddress(store: Store): string {
   return `${store.address}, ${store.city}, ${store.state} ${store.zip}`.trim()
 }
 
+// Source data has inconsistent phone formats ("606)393-1164.", "(304) 803.7257");
+// normalize to (XXX) XXX-XXXX wherever a phone is displayed.
+export function formatPhone(raw?: string): string {
+  const digits = String(raw || '').replace(/\D/g, '').replace(/^1(?=\d{10}$)/, '')
+  if (digits.length !== 10) return String(raw || '').trim()
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
+}
+
 export function directionsHref(store: Store): string {
   const q =
     store.lat != null && store.lng != null
