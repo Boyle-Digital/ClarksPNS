@@ -1,7 +1,14 @@
 // src/pages/Locations.tsx
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import { buildLocationsItemList } from '@/lib/locations-schema'
+import { allStores } from '@/lib/stores'
+
+// Map a store id (key in stores.geocoded.json) to its store-page slug.
+const SLUG_BY_ID: Record<string, string> = Object.fromEntries(
+  allStores.map(s => [s.id, s.slug])
+)
 
 import {
   GoogleMap,
@@ -616,7 +623,16 @@ export default function Locations () {
                       <div className='flex items-start justify-between gap-3'>
                         <div>
                           <div className="font-['Oswald'] font-bold text-lg text-black">
-                            {entry.name || `Store #${id}`}
+                            {SLUG_BY_ID[id] ? (
+                              <Link
+                                to={`/locations/${SLUG_BY_ID[id]}`}
+                                className='hover:text-brand'
+                              >
+                                {entry.name || `Store #${id}`}
+                              </Link>
+                            ) : (
+                              entry.name || `Store #${id}`
+                            )}
                           </div>
                           <div className='text-sm text-black/70'>{addr}</div>
                           {entry.phone && (
@@ -628,7 +644,15 @@ export default function Locations () {
                             {distance.toFixed(1)} mi away
                           </div>
                         </div>
-                        <div className='text-right'>
+                        <div className='flex flex-col items-end gap-2'>
+                          {SLUG_BY_ID[id] && (
+                            <Link
+                              className='inline-flex items-center justify-center rounded-xl px-3 py-2 bg-brand text-white hover:opacity-95 text-sm'
+                              to={`/locations/${SLUG_BY_ID[id]}`}
+                            >
+                              View store
+                            </Link>
+                          )}
                           <a
                             className='inline-flex items-center justify-center rounded-xl px-3 py-2 bg-neutral-100 hover:bg-neutral-200 text-sm'
                             href={directionsLink(addr)}
