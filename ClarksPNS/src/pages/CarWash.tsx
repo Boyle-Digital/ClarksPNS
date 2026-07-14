@@ -47,10 +47,10 @@ export default function CarWash () {
 
                 <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
                   <a
-                    href='#packages'
+                    href='#club'
                     className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-brand/20 text-base md:text-lg'
                   >
-                    View Packages
+                    Join the Keep It Clean Club
                   </a>
                   <Link
                     to='/locations?amenity=carwash'
@@ -145,39 +145,69 @@ export default function CarWash () {
           </div>
         </div>
       </section>
-      {/* === Benefits ===
-      <section aria-label="Car Wash Benefits" className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-6 md:px-10">
-          <div className="max-w-3xl">
+      {/* === Benefits === */}
+      <section aria-label='Car Wash Benefits' className='py-12 md:py-20 bg-white'>
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='max-w-3xl'>
             <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
               Why wash at Clarks
             </h2>
-            <p className="mt-2 text-black/70 text-base md:text-lg">
+            <p className='mt-2 text-black/70 text-base md:text-lg'>
               Pro formulas, soft-touch materials, and a spotless finish—fast.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {BENEFITS.map((b) => (
+          <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {BENEFITS.map(b => (
               <article
                 key={b.title}
-                className="rounded-2xl border border-black/10 p-6 hover:shadow-md transition-shadow bg-white"
+                className='rounded-2xl border border-black/10 p-6 hover:shadow-md transition-shadow bg-white'
               >
-                <div className="mb-4">
+                <div className='mb-4'>
                   <span
                     aria-hidden
-                    className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10"
+                    className='inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10'
                   >
-                    <b className="text-xl">{b.icon}</b>
+                    <b className='text-xl'>{b.icon}</b>
                   </span>
                 </div>
                 <h3 className="font-['Oswald'] text-xl font-bold text-black">{b.title}</h3>
-                <p className="mt-2 text-black/70 text-sm leading-relaxed">{b.desc}</p>
+                <p className='mt-2 text-black/70 text-sm leading-relaxed'>{b.desc}</p>
               </article>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
+
+      {/* === How it works === */}
+      <section aria-label='How it works' className='py-12 md:py-20 bg-neutral-50 border-y border-black/10'>
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='max-w-3xl'>
+            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+              How it works
+            </h2>
+            <p className='mt-2 text-black/70 text-base md:text-lg'>
+              Three steps between you and a showroom shine.
+            </p>
+          </div>
+          <ol className='mt-10 grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {STEPS.map((s, i) => (
+              <li
+                key={s.title}
+                className='relative rounded-2xl border border-black/10 bg-white p-6'
+              >
+                <span className="font-['Oswald'] absolute -top-4 left-6 grid h-9 w-9 place-items-center rounded-xl bg-brand text-lg font-bold text-white shadow-md">
+                  {i + 1}
+                </span>
+                <h3 className="mt-2 font-['Oswald'] text-xl font-bold text-black">
+                  {s.title}
+                </h3>
+                <p className='mt-2 text-sm leading-relaxed text-black/70'>{s.desc}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
       
       {/* === Packages / Pricing === */}

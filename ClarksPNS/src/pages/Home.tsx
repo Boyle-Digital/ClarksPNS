@@ -1,6 +1,7 @@
 import React from 'react'
 // import MobileHero from '@/components/site/MobileHero'
 import { DesktopHero } from '@/components/site/DesktopHero'
+import YourClarks from '@/components/site/YourClarks'
 import { SEO } from '@/lib/seo'
 
 // MobileHero images (keep as-is)
@@ -343,6 +344,9 @@ export default function Home () {
 
       {/* Desktop hero , now contains mobile responsive version as well */}
       <DesktopHero />
+
+      {/* Your nearest Clark's — appears once the visitor shares location */}
+      <YourClarks />
 
       {/* Rewards Phone Animation */}
       <section
