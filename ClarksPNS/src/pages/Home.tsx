@@ -1,6 +1,7 @@
 import React from 'react'
 // import MobileHero from '@/components/site/MobileHero'
 import { DesktopHero } from '@/components/site/DesktopHero'
+import YourClarks from '@/components/site/YourClarks'
 import { SEO } from '@/lib/seo'
 
 // MobileHero images (keep as-is)
@@ -48,14 +49,22 @@ function MonthlyPromotions ({
   autoPlay?: boolean
 }) {
   const scrollerRef = React.useRef<HTMLDivElement | null>(null)
-  const timerRef = React.useRef<number | null>(null)
+  const rafRef = React.useRef<number | null>(null)
   const userPausedRef = React.useRef(false)
+  // Fractional scroll position — scrollLeft rounds to whole pixels, so we
+  // accumulate sub-pixel movement here and assign from it each frame.
+  const posRef = React.useRef(0)
   const [openSrc, setOpenSrc] = React.useState<string | null>(null)
 
+  // Continuous marquee: the promo list renders twice, and once we scroll
+  // past the first copy we jump back by exactly one copy's width — an
+  // endless, seamless belt of every special. ~35px/s, pauses on hover.
+  const MARQUEE_PX_PER_FRAME = 0.6
+
   const clear = React.useCallback(() => {
-    if (timerRef.current) {
-      window.clearInterval(timerRef.current)
-      timerRef.current = null
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current)
+      rafRef.current = null
     }
   }, [])
 
@@ -63,24 +72,31 @@ function MonthlyPromotions ({
     const el = scrollerRef.current
     if (!el) return
     const amount = Math.min(el.clientWidth * 0.9, 520)
-    const atEnd =
-      Math.round(el.scrollLeft + el.clientWidth) >= el.scrollWidth - 2
-    if (dir === 1 && atEnd) {
-      el.scrollTo({ left: 0, behavior: 'smooth' })
-    } else {
-      el.scrollBy({ left: dir * amount, behavior: 'smooth' })
-    }
+    el.scrollBy({ left: dir * amount, behavior: 'smooth' })
   }, [])
 
   const start = React.useCallback(() => {
-    if (!autoPlay || openSrc) return
+    if (!autoPlay || openSrc || rafRef.current) return
     const reduced =
       window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false
-    if (reduced || timerRef.current) return
-    timerRef.current = window.setInterval(() => {
-      if (!userPausedRef.current) scrollStep(1)
-    }, intervalMs) as unknown as number
-  }, [autoPlay, intervalMs, scrollStep, openSrc])
+    if (reduced) return
+    const tick = () => {
+      const el = scrollerRef.current
+      if (el && !userPausedRef.current) {
+        // resync after any manual scroll (arrows, swipe, trackpad)
+        if (Math.abs(el.scrollLeft - posRef.current) > 2) {
+          posRef.current = el.scrollLeft
+        }
+        const half = el.scrollWidth / 2
+        let next = posRef.current + MARQUEE_PX_PER_FRAME
+        if (half > 0 && next >= half) next -= half
+        posRef.current = next
+        el.scrollLeft = next
+      }
+      rafRef.current = requestAnimationFrame(tick)
+    }
+    rafRef.current = requestAnimationFrame(tick)
+  }, [autoPlay, openSrc])
 
   React.useEffect(() => {
     start()
@@ -193,7 +209,7 @@ function MonthlyPromotions ({
             onFocusCapture={onUserEnter}
             onBlurCapture={onUserLeave}
             className='
-            flex gap-4 overflow-x-auto overscroll-x-contain snap-x snap-mandatory
+            flex gap-4 overflow-x-auto overscroll-x-contain
             [scrollbar-width:none] [-ms-overflow-style:none]
             pl-[max(1.5rem,calc((100vw-1280px)/2))]
             pr-[max(1.5rem,calc((100vw-1280px)/2))]
@@ -205,12 +221,14 @@ function MonthlyPromotions ({
           >
             <style>{`.hide-scrollbar::-webkit-scrollbar{display:none}`}</style>
 
-            {images.map(src => (
+            {[...images, ...images].map((src, i) => (
               <button
-                key={src}
+                key={`${src}-${i}`}
                 type='button'
                 onClick={() => setOpenSrc(src)}
-                className='group relative flex-none snap-center hide-scrollbar w-[82%] xs:w-[72%] sm:w-[58%] md:w-1/3'
+                aria-hidden={i >= images.length || undefined}
+                tabIndex={i >= images.length ? -1 : undefined}
+                className='group relative flex-none hide-scrollbar w-[82%] xs:w-[72%] sm:w-[58%] md:w-1/3'
                 title='Open promotion'
                 aria-label='Open promotion'
               >
@@ -343,6 +361,9 @@ export default function Home () {
 
       {/* Desktop hero , now contains mobile responsive version as well */}
       <DesktopHero />
+
+      {/* Your nearest Clark's — appears once the visitor shares location */}
+      <YourClarks />
 
       {/* Rewards Phone Animation */}
       <section

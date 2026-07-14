@@ -55,6 +55,47 @@ const LEADERSHIP: Person[] = [
   { name: 'Justin Gibson', title: 'Fuel Pricing', img: justinImg }
 ]
 
+// Milestones sourced from the Our Story copy on this page.
+const TIMELINE: Array<{
+  year: string
+  title: string
+  desc: string
+  img?: string
+  imgAlt?: string
+}> = [
+  {
+    year: '1976',
+    title: 'One store in Westwood',
+    desc: 'John W. Clark opens a single convenience store in his hometown of Westwood, Kentucky.',
+    img: westwoodHero,
+    imgAlt: 'The original Clark’s Pump-N-Shop in Westwood, KY'
+  },
+  {
+    year: '1990s',
+    title: 'The next generation',
+    desc: 'With the company grown to 18 locations, John’s three sons — Rick, Rodney, and Brent Clark — purchase the business and keep it in the family.',
+    img: foundersGroup,
+    imgAlt: 'Rick, John W., and Brent Clark at the 29th Street Marathon in Ashland, KY'
+  },
+  {
+    year: '2000s',
+    title: 'Growing across the Tri-State',
+    desc: 'Group acquisitions in central Kentucky and new-store construction expand Clark’s across Kentucky, Ohio, and West Virginia.',
+    img: johnConstruction,
+    imgAlt: 'John W. Clark at the construction of the new store in Jackson, OH'
+  },
+  {
+    year: '2019',
+    title: '63 stores strong',
+    desc: 'Clark’s Pump-N-Shop operates 63 convenience stores in three states, supported by more than 700 team members and a home office in Ashland, KY.'
+  },
+  {
+    year: 'Today',
+    title: 'Still family',
+    desc: 'Owned and operated by Rick and Brent Clark — same family, same promise: Return. Refresh. Refuel.'
+  }
+]
+
 export default function About () {
   return (
     <main className='w-full overflow-x-clip'>
@@ -190,6 +231,59 @@ export default function About () {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* TIMELINE — 50 years, one family */}
+      <section id='timeline' className='py-14 md:py-20 bg-neutral-50 border-y border-black/10'>
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='max-w-3xl'>
+            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+              Our history
+            </p>
+            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+              Fifty years, one family.
+            </h2>
+          </div>
+
+          <ol className='relative mt-10 space-y-10 border-l-2 border-brand/20 pl-8 md:pl-10'>
+            {TIMELINE.map(t => (
+              <li key={t.year} className='relative'>
+                <span
+                  aria-hidden
+                  className='absolute -left-[41px] top-1 grid h-5 w-5 place-items-center rounded-full border-2 border-brand bg-white md:-left-[49px]'
+                >
+                  <span className='h-2 w-2 rounded-full bg-brand' />
+                </span>
+                <div className='grid grid-cols-1 items-start gap-6 md:grid-cols-12'>
+                  <div className={t.img ? 'md:col-span-7' : 'md:col-span-12'}>
+                    <p className="font-['Oswald'] text-2xl font-bold text-brand leading-none">
+                      {t.year}
+                    </p>
+                    <h3 className="mt-1 font-['Oswald'] text-xl md:text-2xl font-bold text-black">
+                      {t.title}
+                    </h3>
+                    <p className='mt-2 max-w-prose text-black/70'>{t.desc}</p>
+                  </div>
+                  {t.img && (
+                    <figure className='md:col-span-5'>
+                      <img
+                        src={t.img}
+                        alt={t.imgAlt || t.title}
+                        loading='lazy'
+                        className='w-full rounded-2xl border border-black/10 object-cover shadow-sm'
+                      />
+                      {t.imgAlt && (
+                        <figcaption className='mt-2 text-xs text-black/50'>
+                          {t.imgAlt}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
