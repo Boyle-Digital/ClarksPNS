@@ -17,10 +17,22 @@ const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string }
     tag: 'Our Ashland hometown'
   },
   {
+    slug: 'winchester-road-lexington-ky',
+    name: 'Winchester Road',
+    place: 'Lexington, KY',
+    tag: 'Brand new in Lexington'
+  },
+  {
     slug: 'lucille-dr-lexington-ky',
     name: 'Lucille Dr',
     place: 'Lexington, KY',
     tag: 'Our newest store'
+  },
+  {
+    slug: 'midway-midway-ky',
+    name: 'Midway',
+    place: 'Midway, KY',
+    tag: 'Dog park on site'
   },
   {
     slug: 'huntington-huntington-wv',
@@ -29,9 +41,9 @@ const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string }
     tag: 'West Virginia proud'
   },
   {
-    slug: 'south-point-so-point-oh',
-    name: 'South Point',
-    place: 'South Point, OH',
+    slug: 'ironton-ironton-oh',
+    name: 'Ironton',
+    place: 'Ironton, OH',
     tag: 'Ohio proud'
   }
 ]
@@ -104,7 +116,7 @@ export default function HometownCinema() {
         </p>
 
         {/* Showcase cards */}
-        <div className='mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 [perspective:1200px]'>
+        <div className='mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 [perspective:1200px]'>
           {SHOWCASE.map(s => (
             <TiltCard key={s.slug} store={s} />
           ))}

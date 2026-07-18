@@ -131,6 +131,10 @@ const staticUrls = [
   { loc: '/clarks-rewards', changefreq: 'monthly' },
   { loc: '/car-wash', changefreq: 'monthly' },
   { loc: '/locations', changefreq: 'daily' },
+  { loc: '/beer-cave', changefreq: 'monthly' },
+  { loc: '/community', changefreq: 'monthly' },
+  { loc: '/scholarship', changefreq: 'monthly' },
+  { loc: '/fleet', changefreq: 'monthly' },
   { loc: '/about-us', changefreq: 'monthly' },
   { loc: '/careers', changefreq: 'weekly' }
 ]
