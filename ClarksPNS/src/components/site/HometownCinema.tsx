@@ -9,12 +9,13 @@ const FILM_SLUG = 'catlettsburg-catlettsburg-ky'
 const FILM = `${CDN}/video/upload/w_1280,q_auto:eco/v1/clarks/stores/${FILM_SLUG}/drone.mp4`
 const FILM_POSTER = `${CDN}/image/upload/f_auto,q_auto,w_1280/v1/clarks/stores/${FILM_SLUG}/poster.jpg`
 
-const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string }> = [
+const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string; img?: string }> = [
   {
-    slug: 'greenup-ave-ashland-ky',
-    name: 'Greenup Ave',
-    place: 'Ashland, KY',
-    tag: 'Our Ashland hometown'
+    slug: 'westwood-ashland-ky',
+    name: 'Westwood',
+    place: 'Fairview — Ashland, KY',
+    tag: 'The flagship — where we started',
+    img: 'gallery/09.jpg'
   },
   {
     slug: 'winchester-road-lexington-ky',
@@ -35,21 +36,21 @@ const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string }
     tag: 'Dog park on site'
   },
   {
-    slug: 'huntington-huntington-wv',
-    name: 'Huntington',
+    slug: 'hal-greer-huntington-wv',
+    name: 'Hal Greer Blvd',
     place: 'Huntington, WV',
     tag: 'West Virginia proud'
   },
   {
-    slug: 'ironton-ironton-oh',
-    name: 'Ironton',
-    place: 'Ironton, OH',
+    slug: 'south-point-so-point-oh',
+    name: 'South Point',
+    place: 'South Point, OH',
     tag: 'Ohio proud'
   }
 ]
 
-const heroUrl = (slug: string) =>
-  `${CDN}/image/upload/f_auto,q_auto,w_800/v1/clarks/stores/${slug}/hero.jpg`
+const heroUrl = (slug: string, img?: string) =>
+  `${CDN}/image/upload/f_auto,q_auto,w_800/v1/clarks/stores/${slug}/${img || 'hero.jpg'}`
 
 export default function HometownCinema() {
   const secRef = useRef<HTMLElement | null>(null)
@@ -136,7 +137,7 @@ export default function HometownCinema() {
 function TiltCard({
   store
 }: {
-  store: { slug: string; name: string; place: string; tag: string }
+  store: { slug: string; name: string; place: string; tag: string; img?: string }
 }) {
   const ref = useRef<HTMLAnchorElement | null>(null)
 
@@ -162,7 +163,7 @@ function TiltCard({
     >
       <div className='aspect-[4/3] overflow-hidden'>
         <img
-          src={heroUrl(store.slug)}
+          src={heroUrl(store.slug, store.img)}
           alt={`Clark’s Pump-N-Shop — ${store.name}, ${store.place}`}
           loading='lazy'
           className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]'
