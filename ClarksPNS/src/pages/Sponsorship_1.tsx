@@ -28,9 +28,9 @@ const Card = ({
 }) => (
   <article className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
     {eyebrow && (
-      <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">{eyebrow}</p>
+      <p className="font-display tracking-wide text-xs uppercase text-brand">{eyebrow}</p>
     )}
-    <h3 className="mt-1 font-['Oswald'] text-2xl md:text-3xl font-bold text-black">{title}</h3>
+    <h3 className="mt-1 font-display text-2xl md:text-3xl font-bold text-black">{title}</h3>
     <div className="prose prose-neutral mt-3 max-w-none text-black/80">{children}</div>
     {cta && (
       <div className="mt-5 flex flex-wrap gap-3">
@@ -161,8 +161,8 @@ export default function SponsorshipsPage() {
       <section className="relative isolate bg-brand text-white">
         <div className="container mx-auto grid md:grid-cols-12 gap-8 px-6 md:px-10 py-14 md:py-16 items-center">
           <div className="md:col-span-7">
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-white/80">Community Sponsorships</p>
-            <h1 className="mt-2 font-['Oswald'] text-3xl md:text-5xl font-bold leading-tight">
+            <p className="font-display tracking-wide text-xs uppercase text-white/80">Community Sponsorships</p>
+            <h1 className="mt-2 font-display text-3xl md:text-5xl font-bold leading-tight">
               Backing local schools, teams, and community events
             </h1>
             <p className="mt-3 text-white/90 max-w-prose">
@@ -207,8 +207,8 @@ export default function SponsorshipsPage() {
       <section id="high-school" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">Varsity & JV</p>
-            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">High School Partnerships</h2>
+            <p className="font-display tracking-wide text-xs uppercase text-brand">Varsity & JV</p>
+            <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">High School Partnerships</h2>
             <p className="mt-3 text-black/70">
               Signage, uniforms, equipment, and travel support—customized for each athletic department’s needs.
             </p>
@@ -231,8 +231,8 @@ export default function SponsorshipsPage() {
       <section id="youth" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">Ages 5–14</p>
-            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">Youth Sports</h2>
+            <p className="font-display tracking-wide text-xs uppercase text-brand">Ages 5–14</p>
+            <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">Youth Sports</h2>
             <p className="mt-3 text-black/70">
               Lowering barriers to play with registration scholarships, equipment drives, and field improvements.
             </p>
@@ -255,8 +255,8 @@ export default function SponsorshipsPage() {
       <section id="community" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">Festivals & Drives</p>
-            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">Community Events</h2>
+            <p className="font-display tracking-wide text-xs uppercase text-brand">Festivals & Drives</p>
+            <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">Community Events</h2>
             <p className="mt-3 text-black/70">
               Partnering with chambers, nonprofits, and civic groups to bring people together and give back.
             </p>
@@ -279,7 +279,7 @@ export default function SponsorshipsPage() {
       <section id="become-a-sponsor" className="py-12 md:py-16 bg-white border-y border-black/10">
         <div className="container mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-10 items-start justify-center text-center">
           <div className="lg:col-span-7">
-            <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">Interested in a sponsorship?</h2>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-black">Interested in a sponsorship?</h2>
             <p className="mt-3 text-black/70">
               Schools, coaches, boosters, and community organizers—tell us about your program and how we can help.
             </p>
@@ -290,7 +290,7 @@ export default function SponsorshipsPage() {
           </div>
 
           <div className="lg:col-span-5 text-left lg:text-center">
-            <h3 className="font-['Oswald'] text-xl md:text-2xl font-bold text-black">Sponsorship guidelines</h3>
+            <h3 className="font-display text-xl md:text-2xl font-bold text-black">Sponsorship guidelines</h3>
             <ul className="mt-3 space-y-2 text-sm text-black/70">
               <li>• Priority for schools/organizations near Clark’s locations in KY & OH.</li>
               <li>• Preference for safety, education, and youth development programs.</li>

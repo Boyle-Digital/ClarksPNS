@@ -29,10 +29,10 @@ type Media = {
 }
 const MEDIA = storeMedia as Record<string, Media>
 
-// Matches the site's eyebrow style: font-['Oswald'] tracking-wide text-xs uppercase text-brand
+// Matches the site's eyebrow style: font-display tracking-wide text-xs uppercase text-brand
 function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
-    <div className={`font-['Oswald'] tracking-wide text-xs uppercase ${light ? 'text-white/80' : 'text-brand'}`}>
+    <div className={`font-display tracking-wide text-xs uppercase ${light ? 'text-white/80' : 'text-brand'}`}>
       {children}
     </div>
   )
@@ -90,7 +90,7 @@ export default function StoreDetail() {
       <>
         <SEO title='Location not found — Clark’s Pump-N-Shop' robots='noindex,nofollow' />
         <main className='container mx-auto px-6 py-24 text-center md:px-10'>
-          <h1 className="font-['Oswald'] text-4xl font-bold text-black">We can’t find that location</h1>
+          <h1 className="font-display text-4xl font-bold text-black">We can’t find that location</h1>
           <p className='mt-3 text-black/70'>Let’s get you back to the map.</p>
           <Link to='/locations' className='mt-6 inline-flex rounded-2xl bg-brand px-5 py-3 text-white hover:opacity-95'>
             Find a Location
@@ -142,7 +142,7 @@ export default function StoreDetail() {
           <div className='grid grid-cols-1 gap-8 py-8 lg:grid-cols-12 lg:py-10'>
             <div className='lg:col-span-7'>
               <Eyebrow>Store #{store.id} · {store.city}, {store.state}</Eyebrow>
-              <h1 className="mt-2 font-['Oswald'] text-4xl font-bold leading-tight text-black md:text-6xl">
+              <h1 className="mt-2 font-display text-4xl font-bold leading-tight text-black md:text-6xl">
                 {store.name}
               </h1>
               <p className='mt-3 text-lg text-black/70'>
@@ -208,7 +208,7 @@ export default function StoreDetail() {
               {kitchens.length > 0 && (
                 <div className='rounded-2xl border border-black/10 bg-white p-6 shadow-soft'>
                   <Eyebrow>In-store kitchens</Eyebrow>
-                  <h2 className="mt-1 font-['Oswald'] text-2xl font-bold text-black md:text-3xl">Hot, fresh, and fast.</h2>
+                  <h2 className="mt-1 font-display text-2xl font-bold text-black md:text-3xl">Hot, fresh, and fast.</h2>
                   <p className='mt-1 text-black/70'>Made-to-order, right inside this location.</p>
                   <div className='mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2'>
                     {kitchens.map(k => {
@@ -242,7 +242,7 @@ export default function StoreDetail() {
 
               {amenities.length > 0 && (
                 <div className='rounded-2xl border border-black/10 bg-white p-6 shadow-soft'>
-                  <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">At this location</h2>
+                  <h2 className="font-display text-2xl font-bold text-black md:text-3xl">At this location</h2>
                   <ul className='mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3'>
                     {amenities.map(a => <AmenityRow key={a} label={a} />)}
                   </ul>
@@ -250,7 +250,7 @@ export default function StoreDetail() {
               )}
 
               <div className='rounded-2xl border border-black/10 bg-white p-6 shadow-soft'>
-                <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">Store hours</h2>
+                <h2 className="font-display text-2xl font-bold text-black md:text-3xl">Store hours</h2>
                 <table className='mt-3 w-full border-collapse'>
                   <tbody>
                     {DAY_ORDER.map(k => {
@@ -275,7 +275,7 @@ export default function StoreDetail() {
             {/* Find us */}
             <div className='lg:col-span-5'>
               <div className='rounded-2xl border border-black/10 bg-white p-6 shadow-soft'>
-                <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">Find us</h2>
+                <h2 className="font-display text-2xl font-bold text-black md:text-3xl">Find us</h2>
                 <div className='mt-3'>
                   <FindUsMap store={store} />
                 </div>
@@ -299,8 +299,8 @@ export default function StoreDetail() {
         {/* Store gallery — every shot from this store's folder */}
         {(MEDIA[store.slug]?.gallery?.length ?? 0) > 0 && (
           <section className='container mx-auto px-6 pb-10 md:px-10'>
-            <div className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">Store gallery</div>
-            <h2 className="mt-1 font-['Oswald'] text-2xl font-bold text-black md:text-3xl">Take a look around.</h2>
+            <div className="font-display tracking-wide text-xs uppercase text-brand">Store gallery</div>
+            <h2 className="mt-1 font-display text-2xl font-bold text-black md:text-3xl">Take a look around.</h2>
             <StoreGallery
               images={MEDIA[store.slug]!.gallery!}
               thumbs={MEDIA[store.slug]!.thumbs}
@@ -314,7 +314,7 @@ export default function StoreDetail() {
           <div className='flex flex-wrap items-center justify-between gap-5 rounded-2xl bg-gradient-to-r from-brand to-[#12205f] p-7 text-white shadow-soft'>
             <div>
               <Eyebrow light>Clarks Rewards</Eyebrow>
-              <h2 className="mt-1 font-['Oswald'] text-2xl font-bold md:text-3xl">Earn on every fill-up and snack.</h2>
+              <h2 className="mt-1 font-display text-2xl font-bold md:text-3xl">Earn on every fill-up and snack.</h2>
               <p className='mt-1 max-w-lg text-white/80'>
                 Redeem for free fuel, in-store savings, and members-only perks—all in the app.
               </p>
@@ -328,7 +328,7 @@ export default function StoreDetail() {
         {/* Nearby */}
         {nearby.length > 0 && (
           <section className='container mx-auto px-6 pb-16 md:px-10'>
-            <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">Other Clarks nearby</h2>
+            <h2 className="font-display text-2xl font-bold text-black md:text-3xl">Other Clarks nearby</h2>
             <div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
               {nearby.map(n => (
                 <Link
@@ -337,7 +337,7 @@ export default function StoreDetail() {
                   className='rounded-2xl border border-black/10 bg-white p-5 shadow-soft transition-transform hover:-translate-y-1'
                 >
                   <div className='text-sm text-black/50'>#{n.id} · {n.miles.toFixed(1)} mi away</div>
-                  <div className="mt-1 font-['Oswald'] text-xl font-bold text-black">{n.name}</div>
+                  <div className="mt-1 font-display text-xl font-bold text-black">{n.name}</div>
                   <div className='text-sm text-black/60'>{n.address} · {n.city}, {n.state}</div>
                 </Link>
               ))}

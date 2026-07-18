@@ -41,11 +41,12 @@ export default function Community() {
               'repeating-linear-gradient(0deg, #fff 0 2px, transparent 2px 56px), repeating-linear-gradient(90deg, #fff 0 2px, transparent 2px 56px)'
           }}
         />
+        <div aria-hidden className='ghost-word ghost-word--light text-center'>GAME DAY</div>
         <div className='container relative z-[1] mx-auto px-6 py-16 text-white md:px-10 md:py-24'>
-          <div className="font-['Oswald'] text-xs uppercase tracking-[0.3em] text-white/70">
+          <div className="font-display text-xs uppercase tracking-[0.3em] text-white/70">
             Sports & Community
           </div>
-          <h1 className="mt-2 font-['Oswald'] text-4xl font-bold leading-tight md:text-6xl">
+          <h1 className="mt-2 font-display text-4xl font-bold leading-tight md:text-6xl">
             The Official Fuel of the KHSAA.
           </h1>
           <p className='mt-4 max-w-prose text-lg text-white/90 md:text-xl'>
@@ -62,7 +63,7 @@ export default function Community() {
       <section className='container mx-auto px-6 py-12 md:px-10'>
         <div className='flex items-center gap-3'>
           <IconTrophy className='h-8 w-8 text-brand' />
-          <h2 className="font-['Oswald'] text-3xl font-bold text-black md:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-black md:text-4xl">
             Our name is on the trophy.
           </h2>
         </div>
@@ -70,7 +71,7 @@ export default function Community() {
           {TITLES.map(t => (
             <Tilt key={t.name}>
             <div className='rounded-2xl border border-black/10 brand-topline bg-surface-alt p-6'>
-              <div className="font-['Oswald'] text-xl font-bold text-black">
+              <div className="font-display text-xl font-bold text-black">
                 {t.name}
               </div>
               <p className='mt-1 text-black/70'>{t.note}</p>
@@ -91,7 +92,7 @@ export default function Community() {
         <div className='container mx-auto px-6 md:px-10'>
           <div className='flex items-center gap-3'>
             <IconCap className='h-8 w-8 text-brand' />
-            <h2 className="font-['Oswald'] text-3xl font-bold text-black md:text-4xl">
+            <h2 className="font-display text-3xl font-bold text-black md:text-4xl">
               Hometown colors
             </h2>
           </div>
@@ -126,13 +127,13 @@ export default function Community() {
       <section className='container mx-auto px-6 py-12 md:px-10'>
         <div className='flex items-center gap-3'>
           <IconPump className='h-8 w-8 text-brand' />
-          <h2 className="font-['Oswald'] text-3xl font-bold text-black md:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-black md:text-4xl">
             Beyond the field
           </h2>
         </div>
         <div className='mt-6 grid grid-cols-1 gap-4 md:grid-cols-3'>
           <div className='rounded-2xl border border-black/10 p-6'>
-            <div className="font-['Oswald'] text-lg font-bold text-black">
+            <div className="font-display text-lg font-bold text-black">
               The arts
             </div>
             <p className='mt-1 text-sm text-black/70'>
@@ -141,7 +142,7 @@ export default function Community() {
             </p>
           </div>
           <div className='rounded-2xl border border-black/10 p-6'>
-            <div className="font-['Oswald'] text-lg font-bold text-black">
+            <div className="font-display text-lg font-bold text-black">
               Scholarships
             </div>
             <p className='mt-1 text-sm text-black/70'>
@@ -156,7 +157,7 @@ export default function Community() {
             </Link>
           </div>
           <div className='rounded-2xl border border-black/10 p-6'>
-            <div className="font-['Oswald'] text-lg font-bold text-black">
+            <div className="font-display text-lg font-bold text-black">
               Your cause
             </div>
             <p className='mt-1 text-sm text-black/70'>

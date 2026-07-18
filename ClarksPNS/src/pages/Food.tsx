@@ -112,7 +112,7 @@ export default function Food () {
             {/* Text (left) */}
             <div className='w-full lg:flex-1'>
               <div className='max-w-[900px]'>
-                <h1 className="font-['Oswald'] font-bold text-black text-4xl md:text-6xl leading-tight">
+                <h1 className="font-display font-bold text-black text-4xl md:text-6xl leading-tight">
                   Hot, fresh, and fast.
                   <br />
                   right inside select locations
@@ -156,12 +156,12 @@ export default function Food () {
       {/* Gallery */}
       <section
         aria-label='Food Gallery'
-        className='py-12 md:py-20 bg-neutral-50 border-y border-black/10'
+        className='band-night brand-stripes relative py-12 md:py-20 text-white'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
-              Food Gallery
+            <h2 className="font-display text-3xl md:text-4xl font-bold">
+              Hot out of our kitchens
             </h2>
           </div>
           <div
@@ -192,7 +192,7 @@ function BrandMenus () {
     <section aria-label='Restaurant Menus' className='py-12 md:py-20 bg-surface-alt brand-stripes-light'>
       <div className='container mx-auto px-6 md:px-10'>
         <div className='max-w-3xl'>
-          {/* <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">Our In-Store Kitchens</h2> */}
+          {/* <h2 className="font-display text-3xl md:text-4xl font-bold text-black">Our In-Store Kitchens</h2> */}
         </div>
         <div className='mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <MenuBlock
@@ -343,7 +343,7 @@ function MenuBlock ({
           />
         </div>
         <div className='min-w-0 grow'>
-          <h3 className="font-['Oswald'] text-xl md:text-2xl font-bold text-black">
+          <h3 className="font-display text-xl md:text-2xl font-bold text-black">
             {name}
           </h3>
           <p className='mt-1 text-black/70 text-sm md:text-base line-clamp-2'>

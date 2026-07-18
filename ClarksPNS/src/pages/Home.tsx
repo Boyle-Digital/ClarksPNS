@@ -191,7 +191,7 @@ function MonthlyPromotions ({
         {/* Headings inside container */}
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               {title}
             </h2>
             {subtitle && (
@@ -375,14 +375,14 @@ export default function Home () {
         <div className='container mx-auto flex flex-col items-center gap-4 px-6 py-8 text-center text-white sm:flex-row sm:justify-between sm:text-left md:px-10'>
           <img src={whiteLogo} alt='Clark’s Pump-N-Shop' className='h-12 w-auto sm:h-14' loading='lazy' />
           <div>
-            <div className="font-['Oswald'] text-xl font-bold uppercase tracking-wide md:text-2xl">
+            <div className="font-display text-xl font-bold uppercase tracking-wide md:text-2xl">
               Family owned & operated since 1976
             </div>
             <div className='mt-1 text-white/85'>
               Rooted in Ashland — at home across Kentucky, Ohio & West Virginia.
             </div>
           </div>
-          <div className="font-['Oswald'] text-sm uppercase tracking-[0.25em] text-white/70">
+          <div className="font-display text-sm uppercase tracking-[0.25em] text-white/70">
             KY · OH · WV
           </div>
         </div>
@@ -391,19 +391,19 @@ export default function Home () {
       {/* Rewards Phone Animation */}
       <section
         aria-label='Clarks Rewards Phone Demo'
-        className='py-12 md:py-20 bg-white border-y border-black/10'
+        className='band-night brand-stripes py-12 md:py-20 text-white'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-10'>
             <div className='order-2 lg:order-1'>
-              <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+              <h2 className="font-display text-3xl md:text-4xl font-bold">
                 Watch points stack—right in the app
               </h2>
-              <p className='mt-3 text-black/70 text-base md:text-lg max-w-prose'>
+              <p className='mt-3 text-white/80 text-base md:text-lg max-w-prose'>
                 Earn on every fill-up, coffee, and snack. Track your balance and
                 redeem at the pump or register in a couple of taps.
               </p>
-              <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-black/70'>
+              <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/80'>
                 <li className='flex items-start gap-2'>
                   <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />{' '}
                   Members-only weekly Boosts
@@ -482,7 +482,7 @@ export default function Home () {
             <div className='container mx-auto h-full px-6 md:px-10'>
               <div className='flex h-full items-center'>
                 <div className='inline-flex flex-col gap-4 md:gap-6 max-w-[720px]'>
-                  <h2 className="font-['Oswald'] text-3xl md:text-5xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">
+                  <h2 className="font-display text-3xl md:text-5xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">
                     Rodney the Rewards Ranger
                   </h2>
                   <p className='text-white/95 text-base md:text-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] max-w-prose'>
@@ -521,7 +521,7 @@ export default function Home () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Follow Clarks
             </h2>
             <p className='mt-2 text-black text-base md:text-lg'>
@@ -659,7 +659,7 @@ export default function Home () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Fuel up. Eat well.
             </h2>
             <p className='mt-2 text-black/70 text-base md:text-lg'>
@@ -682,7 +682,7 @@ export default function Home () {
                   />
                 </div>
 
-                <h3 className="font-['Oswald'] text-xl font-bold text-black">
+                <h3 className="font-display text-xl font-bold text-black">
                   {f.name}
                 </h3>
                 <p className='mt-2 text-black/70 text-sm'>{f.desc}</p>

@@ -67,7 +67,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'ui-sans-serif', 'sans-serif'],
-      display: ['Oswald', 'ui-sans-serif', 'system-ui'],
+      display: ['"Bebas Neue"', 'Oswald', 'ui-sans-serif', 'system-ui'],
       body: ['Inter', 'ui-sans-serif', 'system-ui'],
     },
   },

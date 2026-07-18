@@ -38,7 +38,7 @@ block   /* <-- was "hidden md:block"; now renders on mobile too */
           <div className='inline-flex flex-col gap-6 md:gap-8 w-full max-w-[720px]'>
             <h1
               className="
-font-['Oswald'] font-extrabold text-white leading-[1.03]
+font-display font-extrabold text-white leading-[1.03]
 text-4xl sm:text-5xl md:text-7xl xl:text-8xl tracking-tight
 drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]
 "
@@ -55,7 +55,7 @@ drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]
 
             <p
               className="
-font-['Oswald'] font-semibold text-white/95
+font-display font-semibold text-white/95
 text-lg sm:text-xl md:text-3xl
 drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]
 "

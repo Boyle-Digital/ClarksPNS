@@ -51,11 +51,11 @@ const Card = ({
 }) => (
   <article className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
     {eyebrow && (
-      <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+      <p className="font-display tracking-wide text-xs uppercase text-brand">
         {eyebrow}
       </p>
     )}
-    <h3 className="mt-1 font-['Oswald'] text-2xl md:text-3xl font-bold">
+    <h3 className="mt-1 font-display text-2xl md:text-3xl font-bold">
       {title}
     </h3>
     <div className="prose prose-neutral mt-3 max-w-none text-black/80">
@@ -189,10 +189,10 @@ export default function DonationsPage() {
       <section className="relative isolate bg-brand text-white">
         <div className="container mx-auto grid md:grid-cols-12 gap-8 px-6 md:px-10 py-14 md:py-16 items-center">
           <div className="md:col-span-7">
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-white/80">
+            <p className="font-display tracking-wide text-xs uppercase text-white/80">
               Clark Family Charity
             </p>
-            <h1 className="mt-2 font-['Oswald'] text-3xl md:text-5xl font-bold leading-tight">
+            <h1 className="mt-2 font-display text-3xl md:text-5xl font-bold leading-tight">
               Investing in the communities that invest in us
             </h1>
             <p className="mt-3 text-white/90 max-w-prose">
@@ -255,10 +255,10 @@ export default function DonationsPage() {
           <article className="rounded-2xl border border-black/10 bg-white shadow-sm overflow-hidden">
             <div className="grid lg:grid-cols-12 gap-0">
               <div className="lg:col-span-7 p-6 md:p-8">
-                <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+                <p className="font-display tracking-wide text-xs uppercase text-brand">
                   Our Why
                 </p>
-                <h3 className="mt-1 font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+                <h3 className="mt-1 font-display text-2xl md:text-3xl font-bold text-black">
                   Rodney Clark Memorial Scholarship
                 </h3>
                 <div className="prose prose-neutral mt-3 max-w-none text-black/80">
@@ -291,10 +291,10 @@ export default function DonationsPage() {
       <section id="golf" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+            <p className="font-display tracking-wide text-xs uppercase text-brand">
               Monday, May 11th, 2026
             </p>
-            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">
               Rodney Clark Memorial Golf Outing
             </h2>
             <div className="mt-3 text-black/70">
@@ -339,10 +339,10 @@ export default function DonationsPage() {
       <section id="scholarship" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+            <p className="font-display tracking-wide text-xs uppercase text-brand">
               $2,000 yearly · Renewable up to 8 semesters
             </p>
-            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">
               Clark Family Scholarship
             </h2>
             <div className="mt-3 text-black/70">
@@ -396,7 +396,7 @@ export default function DonationsPage() {
             {/* Left / Donate */}
             <div className="lg:w-1/2 lg:pr-10 py-8">
               <div className="h-full flex flex-col justify-center text-center lg:text-left">
-                <h2 className="font-['Oswald'] text-3xl font-bold text-black">
+                <h2 className="font-display text-3xl font-bold text-black">
                   Make a Donation
                 </h2>
                 <p className="mt-4 text-black/70">
@@ -423,7 +423,7 @@ export default function DonationsPage() {
             {/* Right / Questions */}
             <div className="lg:w-1/2 lg:pl-10 py-8">
               <div className="h-full flex flex-col justify-center text-center lg:text-left">
-                <h2 className="font-['Oswald'] text-3xl font-bold text-black">
+                <h2 className="font-display text-3xl font-bold text-black">
                   Have questions?
                 </h2>
                 <p className="mt-4 text-black/70">

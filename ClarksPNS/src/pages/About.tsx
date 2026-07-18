@@ -129,7 +129,7 @@ export default function About () {
                 <p className='uppercase tracking-widest text-white/80 text-xs md:text-sm'>
                   About
                 </p>
-                <h1 className="font-['Oswald'] text-4xl md:text-5xl font-bold leading-tight">
+                <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight">
                   Family owned. Community focused. Since 1976.
                 </h1>
                 <p className='mt-4 text-white/90 text-base md:text-lg'>
@@ -179,7 +179,7 @@ export default function About () {
       <section id='story' className='py-14 md:py-20 bg-white'>
         <div className='container mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-10'>
           <div className='lg:col-span-7'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Our Story
             </h2>
             <div className='prose prose-neutral max-w-none mt-4 text-black/80'>
@@ -213,7 +213,7 @@ export default function About () {
           {/* Founders panel */}
           <div className='lg:col-span-5'>
             <div className='rounded-2xl border border-black/10 bg-brand/5 p-6'>
-              <h3 className="font-['Oswald'] text-xl font-bold text-black">
+              <h3 className="font-display text-xl font-bold text-black">
                 Family Owned &amp; Operated
               </h3>
               <ul className='mt-4 space-y-3'>
@@ -243,10 +243,10 @@ export default function About () {
       <section id='timeline' className='py-14 md:py-20 bg-neutral-50 border-y border-black/10'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+            <p className="font-display tracking-wide text-xs uppercase text-brand">
               Our history
             </p>
-            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">
               One family. Three generations.
             </h2>
           </div>
@@ -262,10 +262,10 @@ export default function About () {
                 </span>
                 <div className='grid grid-cols-1 items-start gap-6 md:grid-cols-12'>
                   <div className={t.img ? 'md:col-span-7' : 'md:col-span-12'}>
-                    <p className="font-['Oswald'] text-2xl font-bold text-brand leading-none">
+                    <p className="font-display text-2xl font-bold text-brand leading-none">
                       {t.year}
                     </p>
-                    <h3 className="mt-1 font-['Oswald'] text-xl md:text-2xl font-bold text-black">
+                    <h3 className="mt-1 font-display text-xl md:text-2xl font-bold text-black">
                       {t.title}
                     </h3>
                     <p className='mt-2 max-w-prose text-black/70'>{t.desc}</p>
@@ -296,7 +296,7 @@ export default function About () {
       <section id='footprint' className='py-14 md:py-20 bg-neutral-50'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Where we are
             </h2>
             <p className='mt-2 text-black/70'>
@@ -331,7 +331,7 @@ export default function About () {
       <section id='leadership' className='py-14 md:py-20 bg-white'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Leadership &amp; Management
             </h2>
             <p className='mt-2 text-black/70'>
@@ -385,7 +385,7 @@ export default function About () {
         <div className='container mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-10 items-center'>
           {/* Left copy */}
           <div className='lg:col-span-7'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold">
+            <h2 className="font-display text-3xl md:text-4xl font-bold">
               Careers at Clark’s
             </h2>
             <p className='mt-3 text-white/90 max-w-prose'>
@@ -444,7 +444,7 @@ export default function About () {
       <section id='community' className='py-14 md:py-20 bg-white'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Community &amp; Giving
             </h2>
             <p className='mt-2 text-black/70'>
@@ -509,7 +509,7 @@ export default function About () {
 function StatCard ({ k, v }: { k: string; v: string }) {
   return (
     <li className='rounded-2xl border border-white/15 bg-white/10 px-5 py-6'>
-      <p className="font-['Oswald'] text-3xl font-bold text-white leading-none">
+      <p className="font-display text-3xl font-bold text-white leading-none">
         {k}
       </p>
       <p className='mt-1 text-white/75'>{v}</p>

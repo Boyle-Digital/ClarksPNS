@@ -129,7 +129,7 @@ export default function ClarksRewards () {
             <div className='container mx-auto h-full px-6 md:px-10'>
               <div className='flex h-full items-center'>
                 <div className='inline-flex flex-col gap-4 md:gap-6 max-w-[680px]'>
-                  <h1 className="font-['Oswald'] font-bold text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.35)] text-4xl md:text-6xl leading-tight">
+                  <h1 className="font-display font-bold text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.35)] text-4xl md:text-6xl leading-tight">
                     Join Clarks Rewards
                   </h1>
                   <p className='text-white/95 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] text-lg md:text-2xl max-w-prose'>
@@ -170,7 +170,7 @@ export default function ClarksRewards () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Perks you’ll actually use
             </h2>
             <p className='mt-2 text-black/70 text-base md:text-lg'>
@@ -192,7 +192,7 @@ export default function ClarksRewards () {
                     <b.icon className='h-6 w-6 text-brand' />
                   </span>
                 </div>
-                <h3 className="font-['Oswald'] text-xl font-bold text-black">
+                <h3 className="font-display text-xl font-bold text-black">
                   {b.title}
                 </h3>
                 <p className='mt-2 text-black/70 text-sm leading-relaxed'>
@@ -209,7 +209,7 @@ export default function ClarksRewards () {
       <section aria-label='How points add up' className='py-12 md:py-20 bg-brand brand-stripes text-white'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold">
+            <h2 className="font-display text-3xl md:text-4xl font-bold">
               The math is simple.
             </h2>
             <p className='mt-2 text-white/85 text-base md:text-lg'>
@@ -232,8 +232,8 @@ export default function ClarksRewards () {
         <div className='container relative mx-auto px-6 md:px-10'>
           <div className='grid grid-cols-1 lg:grid-cols-12 items-center gap-10'>
             <div className='lg:col-span-5 order-2 lg:order-1'>
-              <div className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">Your points, protected</div>
-              <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+              <div className="font-display tracking-wide text-xs uppercase text-brand">Your points, protected</div>
+              <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">
                 Ride with Rodney, the Rewards Ranger.
               </h2>
               <p className='mt-3 text-black/70 max-w-prose'>
@@ -263,7 +263,7 @@ export default function ClarksRewards () {
       {/* === Featured Video (between Perks and How it Works) === */}
       <section
         aria-label='Rewards Spotlight Video'
-        className='py-10 md:py-16 bg-neutral-50 border-y border-black/10'
+        className='band-night brand-stripes py-10 md:py-16 text-white'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='mx-auto w-full max-w-6xl rounded-2xl overflow-hidden border border-black/10 shadow-sm bg-black'>
@@ -290,7 +290,7 @@ export default function ClarksRewards () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               How it works
             </h2>
             <p className='mt-2 text-black/70 text-base md:text-lg'>
@@ -307,7 +307,7 @@ export default function ClarksRewards () {
                 <div className='absolute -top-3 -left-3 flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-white font-bold'>
                   {i + 1}
                 </div>
-                <h3 className="font-['Oswald'] text-xl font-bold text-black pl-8">
+                <h3 className="font-display text-xl font-bold text-black pl-8">
                   {s.title}
                 </h3>
                 <p className='mt-2 text-black/70 text-sm leading-relaxed pl-8'>
@@ -335,7 +335,7 @@ export default function ClarksRewards () {
             {/* LEFT: Text — positioned lower as requested */}
             <div className='order-2 lg:order-1 relative z-20 flex items-start'>
               <div className='max-w-lg mt-16 md:mt-24 lg:mt-32 pb-16 md:pb-20 lg:pb-28'>
-                <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
                   The Clarks Rewards App
                 </h2>
                 <p className='mt-3 text-black/70 text-base md:text-lg'>
@@ -408,7 +408,7 @@ export default function ClarksRewards () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Frequently asked questions
             </h2>
             <p className='mt-2 text-black/70 text-base md:text-lg'>
@@ -422,7 +422,7 @@ export default function ClarksRewards () {
                 key={f.q}
                 className='group rounded-2xl bg-white p-6 border border-black/10 open:shadow-md'
               >
-                <summary className="cursor-pointer list-none font-['Oswald'] text-lg font-bold text-black flex items-center justify-between">
+                <summary className="cursor-pointer list-none font-display text-lg font-bold text-black flex items-center justify-between">
                   {f.q}
                   <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                     +
@@ -465,7 +465,7 @@ function RateCard ({ n, unit, per, isZero }: { n: number; unit: string; per: str
   }, [n, isZero])
   return (
     <div ref={ref} className='rounded-2xl bg-white/10 border border-white/15 p-6'>
-      <div className="font-['Oswald'] text-5xl font-bold tabular-nums">{isZero ? '$0' : val}</div>
+      <div className="font-display text-5xl font-bold tabular-nums">{isZero ? '$0' : val}</div>
       <div className='mt-1 font-medium'>{unit}</div>
       <div className='text-white/75 text-sm'>{per}</div>
     </div>

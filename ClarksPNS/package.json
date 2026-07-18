@@ -23,6 +23,7 @@
     "stores": "node scripts/build-stores.mjs"
   },
   "dependencies": {
+    "@fontsource/bebas-neue": "^5.2.7",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/oswald": "^5.2.6",
     "@googlemaps/markerclusterer": "^2.6.2",

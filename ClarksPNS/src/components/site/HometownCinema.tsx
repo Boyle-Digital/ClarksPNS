@@ -91,10 +91,10 @@ export default function HometownCinema() {
       </div>
 
       <div className='container relative z-[1] mx-auto px-6 py-20 md:px-10 md:py-28'>
-        <div className="font-['Oswald'] text-xs uppercase tracking-[0.3em] text-white/70">
+        <div className="font-display text-xs uppercase tracking-[0.3em] text-white/70">
           Filmed over our own stores
         </div>
-        <h2 className="mt-2 font-['Oswald'] text-4xl font-bold leading-tight md:text-6xl">
+        <h2 className="mt-2 font-display text-4xl font-bold leading-tight md:text-6xl">
           Sixty-three hometowns.
           <br />
           One promise.
@@ -159,7 +159,7 @@ function TiltCard({
         />
       </div>
       <div className='absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4 pt-10'>
-        <div className="font-['Oswald'] text-lg font-bold leading-tight">
+        <div className="font-display text-lg font-bold leading-tight">
           {store.name}
         </div>
         <div className='text-sm text-white/75'>{store.place}</div>

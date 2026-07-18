@@ -13,11 +13,11 @@ export default function Privacy() {
           }}
         />
         <div className='container mx-auto px-6 md:px-10 py-14 md:py-16 relative z-10'>
-          <p className="font-['Oswald'] tracking-wide text-xs uppercase text-white/80">
+          <p className="font-display tracking-wide text-xs uppercase text-white/80">
             Clark&apos;s Rewards
           </p>
 
-          <h1 className="mt-2 font-['Oswald'] text-3xl md:text-5xl font-bold leading-tight">
+          <h1 className="mt-2 font-display text-3xl md:text-5xl font-bold leading-tight">
             Privacy Policy
           </h1>
           <p className="mt-2 text-sm text-white/80">
@@ -34,7 +34,7 @@ export default function Privacy() {
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-4xl space-y-10 text-black/80'>
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 1. Information We Collect
               </h2>
               <p className='mt-3 leading-7'>
@@ -56,7 +56,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 2. How We Use Your Information
               </h2>
               <p className='mt-3 leading-7'>
@@ -73,7 +73,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 3. How We Share Information
               </h2>
               <p className='mt-3 leading-7'>
@@ -95,7 +95,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 4. Marketing & SMS Communications
               </h2>
               <p className='mt-3 leading-7'>
@@ -111,7 +111,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 5. Data Security
               </h2>
               <p className='mt-3 leading-7'>
@@ -124,7 +124,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 6. Data Retention
               </h2>
               <p className='mt-3 leading-7'>
@@ -134,7 +134,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 7. Your Rights & Choices
               </h2>
               <p className='mt-3 leading-7'>
@@ -155,7 +155,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 8. Children&apos;s Privacy
               </h2>
               <p className='mt-3 leading-7'>
@@ -166,7 +166,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 9. Changes to This Policy
               </h2>
               <p className='mt-3 leading-7'>
@@ -176,7 +176,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 10. Contact Us
               </h2>
               <p className='mt-3 leading-7'>

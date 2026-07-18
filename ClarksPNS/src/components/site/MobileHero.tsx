@@ -38,7 +38,7 @@ export default function MobileHero({
 
       {/* Text */}
       <div className="text-center space-y-3 mt-6 px-4">
-        <h1 className="font-['Oswald'] font-bold leading-tight text-[clamp(1.5rem,1.1rem+2.2vw,2rem)]">
+        <h1 className="font-display font-bold leading-tight text-[clamp(1.5rem,1.1rem+2.2vw,2rem)]">
           {title}
         </h1>
         {subtitle && (

@@ -42,11 +42,12 @@ export default function BeerCave() {
           aria-hidden
           className='pointer-events-none absolute -top-24 left-1/2 h-72 w-[130%] -translate-x-1/2 rounded-[100%] bg-white/10 blur-3xl'
         />
+        <div aria-hidden className='ghost-word ghost-word--light text-center'>ICE COLD</div>
         <div className='container relative z-[1] mx-auto px-6 py-20 text-white md:px-10 md:py-28'>
-          <div className="font-['Oswald'] text-xs uppercase tracking-[0.3em] text-white/70">
+          <div className="font-display text-xs uppercase tracking-[0.3em] text-white/70">
             The Beer Cave
           </div>
-          <h1 className="mt-2 font-['Oswald'] text-5xl font-bold leading-none md:text-7xl">
+          <h1 className="mt-2 font-display text-5xl font-bold leading-none md:text-7xl">
             Ice cold.
             <br />
             Walk in.
@@ -70,7 +71,7 @@ export default function BeerCave() {
       <section id='find' className='container mx-auto px-6 py-12 md:px-10'>
         {BY_STATE.filter(g => g.stores.length).map(g => (
           <div key={g.state} className='mb-10'>
-            <h2 className="font-['Oswald'] text-3xl font-bold text-black md:text-4xl">
+            <h2 className="font-display text-3xl font-bold text-black md:text-4xl">
               {g.label}
               <span className='ml-3 align-middle text-base font-normal text-black/50'>
                 {g.stores.length} cave{g.stores.length === 1 ? '' : 's'}
@@ -109,7 +110,7 @@ function CaveCard({ store }: { store: Store }) {
       className='group rounded-2xl border border-black/10 brand-topline bg-white p-5 shadow-soft transition-[box-shadow,transform] duration-200 hover:shadow-md'
     >
       <div className='flex items-center justify-between gap-3'>
-        <div className="font-['Oswald'] text-lg font-bold text-black group-hover:text-brand">
+        <div className="font-display text-lg font-bold text-black group-hover:text-brand">
           {store.name}
         </div>
         <span className='shrink-0 rounded-full bg-[#eaf3ff] px-2.5 py-1 text-xs font-semibold text-brand'>

@@ -499,21 +499,14 @@ export default function Locations () {
       />
     <main className='w-full overflow-x-clip bg-white -mt-5'>
       {/* Header / Search */}
-      <section className='relative isolate w-full bg-gradient-to-br from-white via-white to-neutral-50'>
-        <div
-          aria-hidden
-          className='pointer-events-none absolute inset-0 opacity-[0.07]'
-          style={{
-            background:
-              'repeating-linear-gradient(135deg, var(--tw-gradient-to) 0 2px, transparent 2px 22px)'
-          }}
-        />
+      <section className='band-night brand-stripes relative isolate w-full text-white'>
+        <div aria-hidden className='ghost-word ghost-word--light text-center'>FIND US</div>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='py-10 md:py-16'>
-            <h1 className="font-['Oswald'] text-4xl md:text-6xl font-extrabold text-black leading-tight">
+            <h1 className="font-display text-4xl md:text-6xl font-extrabold leading-tight">
               Find a Clarks near you
             </h1>
-            <p className='mt-2 text-black/70 text-lg md:text-xl max-w-prose'>
+            <p className='mt-2 text-white/80 text-lg md:text-xl max-w-prose'>
               To see nearby locations and available amenities, enter an address
               or select “Use My Location.”
             </p>
@@ -576,7 +569,7 @@ export default function Locations () {
             {/* Results list (mobile after map) */}
             <div className='lg:col-span-5 order-2 lg:order-1'>
               <div className='flex items-center justify-between'>
-                <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                   Nearby stores
                 </h2>
                 <div className='flex items-center gap-3'>
@@ -652,7 +645,7 @@ export default function Locations () {
                   return (
                     <React.Fragment key={id}>
                     {stateHeading && (
-                      <h3 className="pt-4 font-['Oswald'] text-xl font-bold text-brand uppercase tracking-wide">
+                      <h3 className="pt-4 font-display text-xl font-bold text-brand uppercase tracking-wide">
                         {stateHeading}
                       </h3>
                     )}
@@ -670,7 +663,7 @@ export default function Locations () {
                     >
                       <div className='flex items-start justify-between gap-3'>
                         <div>
-                          <div className="font-['Oswald'] font-bold text-lg text-black">
+                          <div className="font-display font-bold text-lg text-black">
                             {SLUG_BY_ID[id] ? (
                               <Link
                                 to={`/locations/${SLUG_BY_ID[id]}`}
@@ -1002,7 +995,7 @@ function FilterPanel ({
   return (
     <div className='space-y-3'>
       <div className='flex items-center justify-between'>
-        <div className="font-['Oswald'] text-lg font-bold">Filter</div>
+        <div className="font-display text-lg font-bold">Filter</div>
         <button
           type='button'
           onClick={clearFilters}

@@ -13,10 +13,10 @@ export default function Terms() {
           }}
         />
         <div className='container mx-auto px-6 md:px-10 py-14 md:py-16 relative z-10'>
-          <p className="font-['Oswald'] tracking-wide text-xs uppercase text-white/80">
+          <p className="font-display tracking-wide text-xs uppercase text-white/80">
             Clark&apos;s Rewards
           </p>
-          <h1 className="mt-2 font-['Oswald'] text-3xl md:text-5xl font-bold leading-tight">
+          <h1 className="mt-2 font-display text-3xl md:text-5xl font-bold leading-tight">
             Terms & Conditions
           </h1>
           <p className="mt-2 text-sm text-white/80">
@@ -32,7 +32,7 @@ export default function Terms() {
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-4xl space-y-10 text-black/80'>
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 1. Program Overview
               </h2>
               <p className='mt-3 leading-7'>
@@ -46,7 +46,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 2. Membership Eligibility
               </h2>
               <ul className='mt-3 space-y-2 leading-7 list-disc pl-6'>
@@ -62,7 +62,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 3. Enrollment
               </h2>
               <ul className='mt-3 space-y-2 leading-7 list-disc pl-6'>
@@ -79,25 +79,25 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 4. Earning & Tracking Activity
               </h2>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">4.1 Visits</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">4.1 Visits</h3>
               <p className='mt-2 leading-7'>
                 Any time a member uses their loyalty account in-store or online, the member
                 will accrue one (1) visit in a wallet labeled &ldquo;Visits&rdquo; at checkout and close.
                 Members cannot accrue more than one (1) visit within a 60-minute period.
               </p>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">4.2 Dollars Spent</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">4.2 Dollars Spent</h3>
               <p className='mt-2 leading-7'>
                 Any time a member makes a purchase, the pre-tax amount spent will be added
                 to a wallet labeled &ldquo;Dollars Spent.&rdquo; This value is used to calculate points
                 earned for that transaction.
               </p>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">4.3 Points</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">4.3 Points</h3>
               <p className='mt-2 leading-7'>
                 Points may be awarded based on visits, dollars spent, or other promotional
                 rules established by Clark&apos;s from time to time. Points have no cash value,
@@ -117,14 +117,14 @@ export default function Terms() {
                 from earning points at its discretion.
               </p>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">4.4 Rewards</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">4.4 Rewards</h3>
               <p className='mt-2 leading-7'>
                 Any reward redeemed on the account will be tracked in the member&apos;s account.
                 Rewards are subject to availability and may be changed, substituted, or
                 removed at any time at Clark&apos;s discretion.
               </p>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">4.5 Fuel Reward Limitations</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">4.5 Fuel Reward Limitations</h3>
               <p className='mt-2 leading-7'>
                 Fuel discounts may be subject to per-transaction gallon limits, per-day usage
                 limits, or other operational restrictions, which will be disclosed at the time
@@ -135,7 +135,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 5. Registration Reward (Fuel Discount Ladder)
               </h2>
               <ul className='mt-3 space-y-2 leading-7 list-disc pl-6'>
@@ -164,7 +164,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 6. Bankable Points & Reward Redemption
               </h2>
               <ul className='mt-3 space-y-2 leading-7 list-disc pl-6'>
@@ -180,7 +180,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 7. Points Balance Cap
               </h2>
               <p className='mt-3 leading-7'>
@@ -202,7 +202,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 8. Points Expiration Based on Inactivity
               </h2>
               <p className='mt-3 leading-7'>
@@ -224,7 +224,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 9. Exclusions & Limitations
               </h2>
               <p className='mt-3 leading-7'>
@@ -243,7 +243,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 10. Account Misuse & Adjustments
               </h2>
               <p className='mt-3 leading-7'>
@@ -254,7 +254,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 11. Program Changes or Termination
               </h2>
               <p className='mt-3 leading-7'>
@@ -282,7 +282,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 12. SMS Text Messaging Terms
               </h2>
               <p className='mt-3 leading-7'>
@@ -317,7 +317,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 13. Disclaimer of Warranties; Limitation of Liability
               </h2>
               <p className='mt-3 leading-7'>
@@ -346,7 +346,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 14. Governing Law
               </h2>
               <p className='mt-3 leading-7'>
@@ -356,11 +356,11 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 15. Dispute Resolution; Exclusive Venue; Class Action Waiver
               </h2>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">15.1 Exclusive Venue</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">15.1 Exclusive Venue</h3>
               <p className='mt-2 leading-7'>
                 Except where prohibited by law, any dispute, claim, or controversy arising out
                 of or relating to the Program, these Terms & Conditions, or your participation
@@ -373,20 +373,20 @@ export default function Terms() {
                 over Boyd County, Kentucky.
               </p>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">15.2 Waiver of Class Actions</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">15.2 Waiver of Class Actions</h3>
               <p className='mt-2 leading-7'>
                 You agree that any dispute shall be brought solely in your individual capacity
                 and not as a class action, consolidated action, or representative action.
                 You waive any right to participate in a class action lawsuit.
               </p>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">15.3 Waiver of Jury Trial</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">15.3 Waiver of Jury Trial</h3>
               <p className='mt-2 leading-7'>
                 To the fullest extent permitted by law, you waive any right to a jury trial in
                 any dispute arising out of or relating to the Program.
               </p>
 
-              <h3 className="mt-4 font-['Oswald'] text-xl font-bold text-black">15.4 Severability</h3>
+              <h3 className="mt-4 font-display text-xl font-bold text-black">15.4 Severability</h3>
               <p className='mt-2 leading-7'>
                 If any portion of this dispute resolution provision is found unenforceable, the
                 remaining portions shall remain in full force and effect to the fullest extent
@@ -395,7 +395,7 @@ export default function Terms() {
             </div>
 
             <div>
-              <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                 16. Contact Information
               </h2>
               <p className='mt-3 leading-7'>

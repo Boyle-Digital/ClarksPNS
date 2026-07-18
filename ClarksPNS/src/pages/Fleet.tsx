@@ -30,12 +30,13 @@ export default function Fleet() {
               'repeating-linear-gradient(135deg, #fff 0 2px, transparent 2px 30px)'
           }}
         />
+        <div aria-hidden className='ghost-word ghost-word--light text-center'>DIESEL</div>
         <div className='container relative z-[1] mx-auto grid grid-cols-1 items-center gap-10 px-6 py-16 text-white md:px-10 md:py-24 lg:grid-cols-12'>
           <div className='lg:col-span-7'>
-            <div className="font-['Oswald'] text-xs uppercase tracking-[0.3em] text-white/70">
+            <div className="font-display text-xs uppercase tracking-[0.3em] text-white/70">
               Fleet & Diesel
             </div>
-            <h1 className="mt-2 font-['Oswald'] text-4xl font-bold leading-tight md:text-6xl">
+            <h1 className="mt-2 font-display text-4xl font-bold leading-tight md:text-6xl">
               Built for the crews
               <br />
               that build the Tri-State.
@@ -96,7 +97,7 @@ function StatCard({ n, label }: { n: number; label: string }) {
   return (
     <Tilt max={5}>
     <div className='rounded-2xl border border-black/10 brand-topline bg-surface-alt p-6'>
-      <div className="font-['Oswald'] text-5xl font-bold text-brand tabular-nums">
+      <div className="font-display text-5xl font-bold text-brand tabular-nums">
         {n}
       </div>
       <div className='mt-1 font-medium text-black'>{label}</div>
@@ -136,8 +137,8 @@ function TiltPump() {
           <rect x='60' y='60' width='160' height='316' rx='18' fill='url(#pumpshine)' />
           {/* screen */}
           <rect x='82' y='88' width='116' height='74' rx='10' fill='#0b153a' />
-          <text x='140' y='120' textAnchor='middle' fill='#0084FF' fontFamily='Oswald, sans-serif' fontSize='22' fontWeight='700'>CLARK’S</text>
-          <text x='140' y='146' textAnchor='middle' fill='#ffffff' fontFamily='Oswald, sans-serif' fontSize='13' letterSpacing='3'>FLEET READY</text>
+          <text x='140' y='120' textAnchor='middle' fill='#0084FF' fontFamily='"Bebas Neue", Oswald, sans-serif' fontSize='22' fontWeight='700'>CLARK’S</text>
+          <text x='140' y='146' textAnchor='middle' fill='#ffffff' fontFamily='"Bebas Neue", Oswald, sans-serif' fontSize='13' letterSpacing='3'>FLEET READY</text>
           {/* keypad */}
           <g fill='#0084FF' opacity='0.85'>
             <rect x='92' y='182' width='28' height='20' rx='4' />
@@ -157,7 +158,7 @@ function TiltPump() {
           <rect x='248' y='108' width='22' height='12' rx='5' fill='#0b153a' />
           {/* wordmark plate */}
           <rect x='82' y='288' width='116' height='62' rx='10' fill='#ffffff' />
-          <text x='140' y='314' textAnchor='middle' fill='#263B95' fontFamily='Oswald, sans-serif' fontSize='17' fontWeight='700'>PUMP-N-SHOP</text>
+          <text x='140' y='314' textAnchor='middle' fill='#263B95' fontFamily='"Bebas Neue", Oswald, sans-serif' fontSize='17' fontWeight='700'>PUMP-N-SHOP</text>
           <text x='140' y='334' textAnchor='middle' fill='#4B5563' fontFamily='Inter, sans-serif' fontSize='8.5' letterSpacing='0.5'>RETURN · REFRESH · REFUEL</text>
           <defs>
             <linearGradient id='pumpshine' x1='0' y1='0' x2='1' y2='0'>

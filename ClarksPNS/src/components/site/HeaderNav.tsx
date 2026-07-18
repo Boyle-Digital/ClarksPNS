@@ -513,7 +513,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
               to={l.to}
               className={({ isActive }) =>
                 [
-                  "font-['Oswald'] text-[0.78rem] uppercase tracking-[0.14em] leading-none py-1 transition-colors",
+                  "font-display text-[0.78rem] uppercase tracking-[0.14em] leading-none py-1 transition-colors",
                   isActive ? 'text-white' : 'text-white/75 hover:text-white'
                 ].join(' ')
               }

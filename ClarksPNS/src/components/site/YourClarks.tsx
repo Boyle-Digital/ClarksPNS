@@ -43,10 +43,10 @@ export default function YourClarks() {
           className='group flex flex-col gap-2 py-4 sm:flex-row sm:items-center sm:justify-between'
         >
           <div className='flex flex-wrap items-baseline gap-x-3 gap-y-1'>
-            <span className="font-['Oswald'] text-xs uppercase tracking-wide text-white/70">
+            <span className="font-display text-xs uppercase tracking-wide text-white/70">
               Your Clark’s
             </span>
-            <span className="font-['Oswald'] text-lg font-bold md:text-xl">
+            <span className="font-display text-lg font-bold md:text-xl">
               {store.name} · {store.city}, {store.state}
             </span>
             <span className='text-sm text-white/85'>

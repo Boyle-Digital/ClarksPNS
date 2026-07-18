@@ -21,10 +21,10 @@ export default function Scholarship() {
       <section className='relative isolate -mt-[16px] bg-gradient-to-br from-white via-white to-neutral-50 md:-mt-[20px]'>
         <div className='container mx-auto grid grid-cols-1 items-center gap-10 px-6 py-14 md:px-10 md:py-20 lg:grid-cols-12'>
           <div className='lg:col-span-7'>
-            <div className="font-['Oswald'] text-xs uppercase tracking-[0.3em] text-brand">
+            <div className="font-display text-xs uppercase tracking-[0.3em] text-brand">
               The Clark legacy
             </div>
-            <h1 className="mt-2 font-['Oswald'] text-4xl font-bold leading-tight text-black md:text-6xl">
+            <h1 className="mt-2 font-display text-4xl font-bold leading-tight text-black md:text-6xl">
               For Rodney.
               <br />
               For the next generation.
@@ -57,7 +57,7 @@ export default function Scholarship() {
           <div className='grid grid-cols-1 gap-6 lg:grid-cols-2'>
             <Tilt max={4}>
             <div className='rounded-2xl border border-black/10 brand-topline bg-white p-8 shadow-soft'>
-              <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">
+              <h2 className="font-display text-2xl font-bold text-black md:text-3xl">
                 Clark Family Scholarship
               </h2>
               <p className='mt-3 text-black/70'>
@@ -78,7 +78,7 @@ export default function Scholarship() {
             </Tilt>
             <Tilt max={4}>
             <div className='rounded-2xl border border-black/10 brand-topline bg-white p-8 shadow-soft'>
-              <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">
+              <h2 className="font-display text-2xl font-bold text-black md:text-3xl">
                 Rodney Clark Memorial Scholarship
               </h2>
               <p className='mt-3 text-black/70'>
@@ -98,7 +98,8 @@ export default function Scholarship() {
       </section>
 
       {/* Golf outing */}
-      <section className='container mx-auto px-6 py-12 md:px-10'>
+      <section className='bg-brand brand-stripes py-12 text-white'>
+        <div className='container mx-auto px-6 md:px-10'>
         <div className='grid grid-cols-1 items-center gap-10 lg:grid-cols-12'>
           <div className='lg:col-span-4'>
             <img
@@ -109,10 +110,10 @@ export default function Scholarship() {
             />
           </div>
           <div className='lg:col-span-8'>
-            <h2 className="font-['Oswald'] text-3xl font-bold text-black md:text-4xl">
+            <h2 className="font-display text-3xl font-bold md:text-4xl">
               The Rodney Clark Memorial Golf Outing
             </h2>
-            <p className='mt-3 max-w-prose text-black/70'>
+            <p className='mt-3 max-w-prose text-white/85'>
               Once a year the region shows up, tees off, and funds the next
               class of scholarships. The 2026 outing is played at the Keene
               Trace Champions Course — sponsorships and foursomes available.
@@ -121,11 +122,12 @@ export default function Scholarship() {
               href={golfPdf}
               target='_blank'
               rel='noreferrer'
-              className='mt-5 inline-flex items-center justify-center rounded-2xl border border-brand px-5 py-3 font-medium text-brand transition-colors hover:bg-brand/5'
+              className='mt-5 inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 font-semibold text-brand transition-transform hover:-translate-y-0.5'
             >
               2026 outing details (PDF)
             </a>
           </div>
+        </div>
         </div>
       </section>
     </main>
