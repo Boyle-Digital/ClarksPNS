@@ -502,12 +502,12 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
             { to: '/food', label: 'Food & Menus' },
             { to: '/clarks-rewards', label: 'Rewards' },
             { to: '/car-wash', label: 'Car Wash' },
-            { to: '/beer-cave', label: 'Beer Cave' },
             { to: '/community', label: 'Sports & Community' },
             { to: '/scholarship', label: 'Scholarships' },
             { to: '/charity', label: 'Charity' },
             { to: '/fleet', label: 'Fleet & Diesel' },
-            { to: '/careers', label: 'Careers' }
+            { to: '/careers', label: 'Careers' },
+            { to: '/beer-cave', label: 'Beer Cave' }
           ].map(l => (
             <NavLink
               key={l.to}
