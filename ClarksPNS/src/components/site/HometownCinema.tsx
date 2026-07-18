@@ -29,10 +29,10 @@ const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string }
     tag: 'West Virginia proud'
   },
   {
-    slug: 'lexington-lexington-ky',
-    name: 'W Main St',
-    place: 'Lexington, KY',
-    tag: 'Downtown Lexington'
+    slug: 'ironton-ironton-oh',
+    name: 'Ironton',
+    place: 'Ironton, OH',
+    tag: 'Ohio proud'
   }
 ]
 
@@ -95,14 +95,14 @@ export default function HometownCinema() {
           Filmed over our own stores
         </div>
         <h2 className="mt-2 font-['Oswald'] text-4xl font-bold leading-tight md:text-6xl">
-          Sixty-five hometowns.
+          Sixty-three hometowns.
           <br />
           One promise.
         </h2>
         <p className='mt-4 max-w-prose text-lg text-white/85'>
-          Every Clark’s has its own page — real photos, real video, live
-          hours, and a map that knows how far away you are. Fly over a few
-          of ours.
+          Kentucky. Ohio. West Virginia. Every Clark’s has its own page —
+          real photos, real video, live hours, and a map that knows how far
+          away you are. Wherever you are in the Tri-State, you’re home.
         </p>
 
         {/* Showcase cards */}

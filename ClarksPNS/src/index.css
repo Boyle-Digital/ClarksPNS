@@ -102,3 +102,17 @@
 @media (prefers-reduced-motion: reduce) {
   .rodney-ride, .rodney-line { animation: none; }
 }
+
+/* ---------- Car wash water sheen ---------- */
+@keyframes water-sheen {
+  0% { transform: translateX(-70%) skewX(-18deg); }
+  100% { transform: translateX(220%) skewX(-18deg); }
+}
+.water-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; width: 34%;
+  background: linear-gradient(90deg, transparent, rgba(0, 132, 255, 0.10), rgba(255, 255, 255, 0.16), transparent);
+  animation: water-sheen 5.5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) { .water-sheen::after { animation: none; } }

@@ -3,6 +3,7 @@ import React from 'react'
 import { DesktopHero } from '@/components/site/DesktopHero'
 import YourClarks from '@/components/site/YourClarks'
 import HometownCinema from '@/components/site/HometownCinema'
+import whiteLogo from '@/assets/images/Clarks PNS Logo Updated all white.png'
 import { SEO } from '@/lib/seo'
 
 // MobileHero images (keep as-is)
@@ -368,6 +369,24 @@ export default function Home () {
 
       {/* Cinematic hometowns band — real drone film + storefront showcase */}
       <HometownCinema />
+
+      {/* Tri-State family ribbon */}
+      <section aria-label='Family owned across the Tri-State' className='bg-brand'>
+        <div className='container mx-auto flex flex-col items-center gap-4 px-6 py-8 text-center text-white sm:flex-row sm:justify-between sm:text-left md:px-10'>
+          <img src={whiteLogo} alt='Clark’s Pump-N-Shop' className='h-12 w-auto sm:h-14' loading='lazy' />
+          <div>
+            <div className="font-['Oswald'] text-xl font-bold uppercase tracking-wide md:text-2xl">
+              Family owned & operated since 1976
+            </div>
+            <div className='mt-1 text-white/85'>
+              Rooted in Ashland — at home across Kentucky, Ohio & West Virginia.
+            </div>
+          </div>
+          <div className="font-['Oswald'] text-sm uppercase tracking-[0.25em] text-white/70">
+            KY · OH · WV
+          </div>
+        </div>
+      </section>
 
       {/* Rewards Phone Animation */}
       <section

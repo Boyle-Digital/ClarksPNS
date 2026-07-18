@@ -49,8 +49,9 @@ export default function Community() {
           </h1>
           <p className='mt-4 max-w-prose text-lg text-white/90 md:text-xl'>
             Every high school in Kentucky plays under the same banner we fill
-            up under. From the Sweet 16 hardwood to the state track meet,
-            Clark’s backs the kids and the communities that raised us.
+            up under — and from Ironton to Huntington, we back the hometown
+            teams of Ohio and West Virginia just as hard. If your kid plays,
+            we’re already in the stands.
           </p>
         </div>
         <div className='h-8 w-full bg-gradient-to-b from-transparent to-white md:h-12' />
@@ -80,8 +81,8 @@ export default function Community() {
         <p className='mt-6 max-w-prose text-black/70'>
           As the Official Fuel Sponsor of the Kentucky High School Athletic
           Association, Clark’s has a presence at every KHSAA state
-          championship event — and we like it that way. If your kid plays,
-          we’re already in the stands.
+          championship event — and across the river, the same goes for the
+          Ohio and West Virginia communities we call home.
         </p>
       </section>
 

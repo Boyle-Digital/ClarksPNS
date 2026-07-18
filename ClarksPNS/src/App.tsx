@@ -16,6 +16,7 @@ import FoodBrand from '@/pages/FoodBrand'
 import BeerCave from '@/pages/BeerCave'
 import Community from '@/pages/Community'
 import Scholarship from '@/pages/Scholarship'
+import Fleet from '@/pages/Fleet'
 import Careers from '@/pages/Careers'
 import Terms from '@/pages/Terms'
 import Privacy from '@/pages/Privacy'
@@ -48,6 +49,7 @@ export default function App () {
           <Route path='/beer-cave' element={<BeerCave />} />
           <Route path='/community' element={<Community />} />
           <Route path='/scholarship' element={<Scholarship />} />
+          <Route path='/fleet' element={<Fleet />} />
           <Route path='/Careers' element={<Careers />} />
           <Route path='/terms' element={<Terms />} />
           <Route path='/privacy' element={<Privacy />} />

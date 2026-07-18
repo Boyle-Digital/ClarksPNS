@@ -33,6 +33,7 @@ export default function CarWash () {
           aria-hidden
           className='pointer-events-none absolute -inset-40 rounded-[64px] blur-3xl bg-brand/10'
         />
+        <div aria-hidden className='water-sheen pointer-events-none absolute inset-0' />
 
         <div className='relative z-[1] pt-[16px] md:pt-[20px]'>
           <div className='container mx-auto px-6 md:px-10'>

@@ -105,12 +105,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
     },
     { type: 'link' as const, label: 'Food', href: toPath('Food') },
     { type: 'link' as const, label: 'Careers', href: toPath('Careers') },
-    {
-      type: 'link' as const,
-      label: 'Fleet Card',
-      href: 'https://www.marathonfleetcard.com/associations/?cc=M00528',
-      external: true
-    },
+    { type: 'link' as const, label: 'Fleet', href: '/fleet' },
     {
       type: 'group' as const,
       label: 'About Us',
@@ -325,16 +320,19 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                     </NavLink>
                   </li>
 
-                  {/* Fleet Card — external link, WEX/Marathon association tracking */}
+                  {/* Fleet — diesel, kerosene & the Marathon fleet card */}
                   <li>
-                    <a
-                      href='https://www.marathonfleetcard.com/associations/?cc=M00528'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='inline-block text-nav text-center leading-none py-2 text-text hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand'
+                    <NavLink
+                      to='/fleet'
+                      className={({ isActive }) =>
+                        [
+                          'inline-block text-nav text-center leading-none py-2',
+                          isActive ? 'text-brand' : 'text-text hover:text-brand'
+                        ].join(' ')
+                      }
                     >
-                      Fleet Card
-                    </a>
+                      Fleet
+                    </NavLink>
                   </li>
 
                   {/* About dropdown */}
@@ -494,6 +492,37 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
           </div>
         </div>
       </div>
+
+      {/* Quick links — every destination visible, no dropdown hunting */}
+      <nav aria-label='Quick links' className='hidden md:block bg-brand'>
+        <div className='container mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1 px-6 py-2 md:px-10'>
+          {[
+            { to: '/locations', label: 'Locations' },
+            { to: '/food', label: 'Food & Menus' },
+            { to: '/clarks-rewards', label: 'Rewards' },
+            { to: '/car-wash', label: 'Car Wash' },
+            { to: '/beer-cave', label: 'Beer Cave' },
+            { to: '/community', label: 'Sports & Community' },
+            { to: '/scholarship', label: 'Scholarships' },
+            { to: '/charity', label: 'Charity' },
+            { to: '/fleet', label: 'Fleet & Diesel' },
+            { to: '/careers', label: 'Careers' }
+          ].map(l => (
+            <NavLink
+              key={l.to}
+              to={l.to}
+              className={({ isActive }) =>
+                [
+                  "font-['Oswald'] text-[0.78rem] uppercase tracking-[0.14em] leading-none py-1 transition-colors",
+                  isActive ? 'text-white' : 'text-white/75 hover:text-white'
+                ].join(' ')
+              }
+            >
+              {l.label}
+            </NavLink>
+          ))}
+        </div>
+      </nav>
 
       {/* Mobile drawer */}
       <MobileMenuDrawer

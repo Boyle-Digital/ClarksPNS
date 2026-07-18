@@ -624,7 +624,7 @@ export default function Locations () {
               )}
 
               {/* Results */}
-              <div className='mt-4 space-y-4'>
+              <div className='mt-4 space-y-4 [perspective:1400px]'>
                 {results.map((r, i) => {
                   const stateChanged =
                     !userPoint &&
@@ -657,7 +657,16 @@ export default function Locations () {
                       </h3>
                     )}
                     <article
-                      className='rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition-shadow'
+                      className='rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition-[box-shadow,transform] duration-200 [transform-style:preserve-3d]'
+                      onMouseMove={e => {
+                        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+                        const el = e.currentTarget
+                        const r = el.getBoundingClientRect()
+                        const x = (e.clientX - r.left) / r.width - 0.5
+                        const y = (e.clientY - r.top) / r.height - 0.5
+                        el.style.transform = `rotateY(${x * 4}deg) rotateX(${-y * 3}deg)`
+                      }}
+                      onMouseLeave={e => { e.currentTarget.style.transform = '' }}
                     >
                       <div className='flex items-start justify-between gap-3'>
                         <div>
