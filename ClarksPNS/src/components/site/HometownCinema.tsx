@@ -17,10 +17,10 @@ const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string }
     tag: 'Where it all started — 1976'
   },
   {
-    slug: 'greenup-ave-ashland-ky',
-    name: 'Greenup Ave',
-    place: 'Ashland, KY',
-    tag: 'Hometown flagship'
+    slug: 'clays-mill-rd-lexington-ky',
+    name: 'Clays Mill Rd',
+    place: 'Lexington, KY',
+    tag: 'Growing in the Bluegrass'
   },
   {
     slug: 'huntington-huntington-wv',
@@ -95,14 +95,12 @@ export default function HometownCinema() {
           Filmed over our own stores
         </div>
         <h2 className="mt-2 font-display text-4xl font-bold leading-tight md:text-6xl">
-          Sixty-three hometowns.
-          <br />
-          One promise.
+          Proudly serving you.
         </h2>
         <p className='mt-4 max-w-prose text-lg text-white/85'>
           Kentucky. Ohio. West Virginia. Every Clark’s has its own page —
           real photos, real video, live hours, and a map that knows how far
-          away you are. Wherever you are in the Tri-State, you’re home.
+          away you are.
         </p>
 
         {/* Showcase cards */}

@@ -77,7 +77,7 @@ export default function LiveTicker() {
         </span>
         <span className='font-display text-sm tracking-[0.2em]'>LIVE</span>
         <span className='hidden font-display text-sm tracking-[0.12em] text-white/60 sm:inline'>
-          CLARK’S ACROSS THE TRI-STATE
+          ALL CLARK’S PNS LOCATIONS
         </span>
       </div>
 

@@ -3,6 +3,9 @@ import React from 'react'
 import { DesktopHero } from '@/components/site/DesktopHero'
 import YourClarks from '@/components/site/YourClarks'
 import HometownCinema from '@/components/site/HometownCinema'
+import Tilt from '@/components/site/Tilt'
+import { FOOD_BRANDS } from '@/content/menus'
+import { allStores, namedKitchens } from '@/lib/stores'
 import whiteLogo from '@/assets/images/Clarks PNS Logo Updated all white.png'
 import { SEO } from '@/lib/seo'
 
@@ -11,6 +14,7 @@ import phone640 from '@/assets/images/phone-640.jpg'
 import phone960 from '@/assets/images/phone-960.jpg'
 import phone1440 from '@/assets/images/phone-1440.jpg'
 import champsLogo from '@/assets/images/champschickenlogo.png'
+import clarksMark from '@/assets/images/clarks-logo.png'
 import hangarLogo from '@/assets/images/Hangar54Logo_02-1.png'
 import jacksLogo from '@/assets/images/jacksdelilogo.webp'
 import cafeLogo from '@/assets/images/clarkscafelogo.webp'
@@ -513,18 +517,82 @@ export default function Home () {
         </div>
       </section>
 
+      {/* Food at Clarks */}
+      <section
+        aria-label='Food at Clarks'
+        className='relative bg-surface-alt brand-stripes-light py-12 md:py-20'
+      >
+        <div aria-hidden className='ghost-word ghost-word--blue text-center'>EAT</div>
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='max-w-3xl'>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
+              Fuel up. Eat well.
+            </h2>
+            <p className='mt-2 text-black/70 text-base md:text-lg'>
+              Hot, fresh, and fast—right inside select locations.
+            </p>
+          </div>
+
+          <div className='relative mt-8 flex flex-wrap justify-center gap-6 [perspective:1400px]'>
+            {FOOD_PARTNERS.map(f => {
+              const kitchen = f.kitchenName && KITCHEN_COUNT[f.kitchenName]
+              const menuSlug = f.kitchenName ? MENU_SLUG[f.kitchenName] : undefined
+              return (
+                <Tilt key={f.name} max={8} className='w-full sm:w-[22rem]'>
+                  <article className='h-full rounded-2xl border border-black/10 brand-topline bg-white p-6 shadow-soft'>
+                    <div className='mb-4 flex h-12 items-center'>
+                      <img
+                        src={f.logo}
+                        alt={`${f.name} logo`}
+                        className='h-full w-auto object-contain'
+                      />
+                    </div>
+                    <h3 className='font-display text-2xl text-black'>{f.name}</h3>
+                    <p className='mt-1 text-black/70 text-sm'>{f.desc}</p>
+                    {kitchen ? (
+                      <p className='mt-2 font-display text-sm tracking-[0.08em] text-brand'>
+                        INSIDE {kitchen} STORES
+                      </p>
+                    ) : (
+                      <p className='mt-2 font-display text-sm tracking-[0.08em] text-black/50'>
+                        SELECT LOCATIONS
+                      </p>
+                    )}
+                    <div className='mt-4 flex flex-wrap gap-2'>
+                      {menuSlug && (
+                        <a
+                          href={`/food/${menuSlug}`}
+                          className='inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-white transition-all hover:bg-brand/90'
+                        >
+                          See the menu
+                        </a>
+                      )}
+                      <a
+                        href={menuSlug ? `/food/${menuSlug}#find` : '/locations'}
+                        className='inline-flex items-center justify-center rounded-xl border border-brand/40 px-4 py-2 text-brand transition-colors hover:bg-brand/5'
+                      >
+                        Find stores
+                      </a>
+                    </div>
+                  </article>
+                </Tilt>
+              )
+            })}
+          </div>
+        </div>
+      </section>
       {/* Follow Clarks — expandable social cards (updated embeds) */}
       <section
         aria-label='Follow Clarks'
-        className='py-12 md:py-20 bg-white'
+        className='py-10 md:py-14 bg-white border-t border-black/10'
         id='follow-clarks'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
+            <h2 className='font-display text-xl md:text-2xl text-black/70'>
               Follow Clarks
             </h2>
-            <p className='mt-2 text-black text-base md:text-lg'>
+            <p className='mt-1 text-black/50 text-sm'>
               Deals, giveaways, and local highlights—tap a network to peek.
             </p>
           </div>
@@ -652,53 +720,6 @@ export default function Home () {
         </div>
       </section>
 
-      {/* Food at Clarks */}
-      <section
-        aria-label='Food at Clarks'
-        className='py-12 md:py-20 bg-neutral-50'
-      >
-        <div className='container mx-auto px-6 md:px-10'>
-          <div className='max-w-3xl'>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
-              Fuel up. Eat well.
-            </h2>
-            <p className='mt-2 text-black/70 text-base md:text-lg'>
-              Hot, fresh, and fast—right inside select locations.
-            </p>
-          </div>
-
-          <div className='mt-8 flex flex-wrap justify-center gap-6'>
-            {FOOD_PARTNERS.map(f => (
-              <article
-                key={f.name}
-                className='rounded-2xl border border-black/10 bg-white p-6 hover:shadow-md transition-shadow w-full sm:w-[22rem] lg:w-[22rem]'
-              >
-                {/* Logo row */}
-                <div className='mb-4 h-12 flex items-center'>
-                  <img
-                    src={f.logo}
-                    alt={`${f.name} logo`}
-                    className='h-full w-auto object-contain'
-                  />
-                </div>
-
-                <h3 className="font-display text-xl font-bold text-black">
-                  {f.name}
-                </h3>
-                <p className='mt-2 text-black/70 text-sm'>{f.desc}</p>
-                <div className='mt-4'>
-                  <a
-                    href={f.href}
-                    className='inline-flex items-center justify-center rounded-xl px-4 py-2 bg-brand text-white hover:bg-brand/90 transition-all'
-                  >
-                    {f.cta}
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   )
 }
@@ -726,16 +747,17 @@ function SocialButton ({
   )
 }
 
-const SOCIAL_LINKS = [
-  { name: 'Facebook', href: '#', icon: '👍' },
-  { name: 'Instagram', href: '#', icon: '📸' },
-  { name: 'TikTok', href: '#', icon: '🎵' },
-  { name: 'LinkedIn', href: '#', icon: '💼' }
-]
+const KITCHEN_COUNT: Record<string, number> = {}
+for (const st of allStores) {
+  for (const k of namedKitchens(st)) KITCHEN_COUNT[k] = (KITCHEN_COUNT[k] || 0) + 1
+}
+const MENU_SLUG: Record<string, string> = {}
+for (const b of FOOD_BRANDS) MENU_SLUG[b.kitchenName] = b.slug
 
 const FOOD_PARTNERS = [
   {
     name: 'Clarks Cafe',
+    kitchenName: "Clark's Café",
     desc: 'Breakfast sandwiches, pastries, and coffee.',
     href: '/locations?food=clarkscafe',
     cta: 'View Locations',
@@ -743,6 +765,7 @@ const FOOD_PARTNERS = [
   },
   {
     name: 'Krispy Krunchy Chicken',
+    kitchenName: 'Krispy Krunchy Chicken',
     desc: 'Louisiana-style chicken + biscuits.',
     href: '/locations?food=krispykrunchy',
     cta: 'View Locations',
@@ -750,6 +773,7 @@ const FOOD_PARTNERS = [
   },
   {
     name: 'Champs Chicken',
+    kitchenName: 'Champs Chicken',
     desc: 'Crispy tenders, sides, and sauces.',
     href: '/locations?food=champs',
     cta: 'View Locations',
@@ -757,6 +781,7 @@ const FOOD_PARTNERS = [
   },
   {
     name: 'Hangar 54 Pizza',
+    kitchenName: 'Hangar 54',
     desc: 'Slices and whole pies—perfectly melty.',
     href: '/locations?food=hangar',
     cta: 'View Locations',
@@ -772,9 +797,9 @@ const FOOD_PARTNERS = [
   {
     name: 'Grab-N-Go',
     desc: 'Quick bites, immediate satisfaction.',
-    href: '/locations?food=grabngo',
+    href: '/locations',
     cta: 'View Locations',
-    logo: kkcLogo
+    logo: clarksMark
   }
 ]
 
