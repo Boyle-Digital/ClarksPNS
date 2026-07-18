@@ -116,3 +116,15 @@
   animation: water-sheen 5.5s ease-in-out infinite;
 }
 @media (prefers-reduced-motion: reduce) { .water-sheen::after { animation: none; } }
+
+/* ---------- Brand fabric ---------- */
+/* White pinstripes for brand-blue bands */
+.brand-stripes {
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0 2px, transparent 2px 26px);
+}
+/* Faint blue pinstripes for light sections (kills flat white) */
+.brand-stripes-light {
+  background-image: repeating-linear-gradient(135deg, rgba(38,59,149,0.05) 0 2px, transparent 2px 26px);
+}
+/* Blue top rule for section cards */
+.brand-topline { box-shadow: inset 0 3px 0 0 #263B95; }

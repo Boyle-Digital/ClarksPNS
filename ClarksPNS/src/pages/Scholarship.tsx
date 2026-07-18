@@ -1,6 +1,7 @@
 // The Rodney Clark legacy — scholarships and the memorial golf outing.
 // Also reclaims /scholarship, a URL Google still indexes from the old site.
 import { SEO } from '@/lib/seo'
+import Tilt from '@/components/site/Tilt'
 
 import rodneyPhoto from '@/assets/images/Charity/Rodney_Clark.jpg'
 import scrambleLogo from '@/assets/images/Charity/scramble/scrambleLogo.png'
@@ -51,10 +52,11 @@ export default function Scholarship() {
       </section>
 
       {/* The two scholarships */}
-      <section className='bg-surface-alt py-12'>
+      <section className='bg-surface-alt brand-stripes-light py-12'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <div className='rounded-2xl border border-black/10 bg-white p-8 shadow-soft'>
+            <Tilt max={4}>
+            <div className='rounded-2xl border border-black/10 brand-topline bg-white p-8 shadow-soft'>
               <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">
                 Clark Family Scholarship
               </h2>
@@ -73,7 +75,9 @@ export default function Scholarship() {
                 Download the application
               </a>
             </div>
-            <div className='rounded-2xl border border-black/10 bg-white p-8 shadow-soft'>
+            </Tilt>
+            <Tilt max={4}>
+            <div className='rounded-2xl border border-black/10 brand-topline bg-white p-8 shadow-soft'>
               <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">
                 Rodney Clark Memorial Scholarship
               </h2>
@@ -88,6 +92,7 @@ export default function Scholarship() {
                 outing raises funds in his honor.
               </p>
             </div>
+            </Tilt>
           </div>
         </div>
       </section>

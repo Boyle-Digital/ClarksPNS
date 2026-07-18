@@ -4,6 +4,7 @@
 import { Link } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import { IconTrophy, IconPump, IconCap } from '@/components/site/Icons'
+import Tilt from '@/components/site/Tilt'
 
 import footballAd from "@/assets/images/Ashland FB - Clark's football AD (8.75 × 11.125 in) (1).png"
 import marshallAd from "@/assets/images/Clark's - Marshall Football Magazine (1) (1).png"
@@ -67,15 +68,14 @@ export default function Community() {
         </div>
         <div className='mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2'>
           {TITLES.map(t => (
-            <div
-              key={t.name}
-              className='rounded-2xl border border-black/10 bg-surface-alt p-6'
-            >
+            <Tilt key={t.name}>
+            <div className='rounded-2xl border border-black/10 brand-topline bg-surface-alt p-6'>
               <div className="font-['Oswald'] text-xl font-bold text-black">
                 {t.name}
               </div>
               <p className='mt-1 text-black/70'>{t.note}</p>
             </div>
+            </Tilt>
           ))}
         </div>
         <p className='mt-6 max-w-prose text-black/70'>

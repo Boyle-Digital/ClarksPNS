@@ -186,7 +186,7 @@ function MonthlyPromotions ({
 
       <section
         aria-label='Monthly Promotions'
-        className='py-12 md:py-20 bg-neutral-50'
+        className='py-12 md:py-20 bg-surface-alt brand-stripes-light border-y border-black/10'
       >
         {/* Headings inside container */}
         <div className='container mx-auto px-6 md:px-10'>

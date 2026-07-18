@@ -12,6 +12,7 @@ import { DesktopHero } from '@/components/site/DesktopHero'
 import rewardsPoster from '@/assets/images/clarkshero.png'
 import rodneyRanger from '@/assets/images/RodneyTB.png'
 import { IconPump, IconCoffee, IconGift } from '@/components/site/Icons'
+import Tilt from '@/components/site/Tilt'
 import rewardsVideo from '@/assets/videos/RewardsRangerVideo.mp4'
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
 import RewardsPageVideoAd from '@/assets/videos/ClarksRewardsPhoneAnimation1080pblack.mp4'
@@ -179,9 +180,9 @@ export default function ClarksRewards () {
 
           <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto'>
             {BENEFITS.map(b => (
+              <Tilt key={b.title}>
               <article
-                key={b.title}
-                className='rounded-2xl border border-black/10 p-6 hover:shadow-md transition-shadow bg-white'
+                className='rounded-2xl border border-black/10 brand-topline p-6 hover:shadow-md transition-shadow bg-white'
               >
                 <div className='mb-4'>
                   <span
@@ -198,13 +199,14 @@ export default function ClarksRewards () {
                   {b.desc}
                 </p>
               </article>
+              </Tilt>
             ))}
           </div>
         </div>
       </section>
 
       {/* === The math — real earn rates === */}
-      <section aria-label='How points add up' className='py-12 md:py-20 bg-brand text-white'>
+      <section aria-label='How points add up' className='py-12 md:py-20 bg-brand brand-stripes text-white'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
             <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold">

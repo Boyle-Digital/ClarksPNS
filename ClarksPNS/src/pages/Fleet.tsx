@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import { allStores } from '@/lib/stores'
+import Tilt from '@/components/site/Tilt'
 
 const DIESEL = allStores.filter(s => s.amenities?.diesel).length
 const KEROSENE = allStores.filter(s => s.amenities?.kerosene).length
@@ -93,12 +94,14 @@ export default function Fleet() {
 
 function StatCard({ n, label }: { n: number; label: string }) {
   return (
-    <div className='rounded-2xl border border-black/10 bg-surface-alt p-6'>
+    <Tilt max={5}>
+    <div className='rounded-2xl border border-black/10 brand-topline bg-surface-alt p-6'>
       <div className="font-['Oswald'] text-5xl font-bold text-brand tabular-nums">
         {n}
       </div>
       <div className='mt-1 font-medium text-black'>{label}</div>
     </div>
+    </Tilt>
   )
 }
 

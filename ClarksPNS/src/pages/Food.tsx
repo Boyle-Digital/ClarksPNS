@@ -189,7 +189,7 @@ export default function Food () {
 
 function BrandMenus () {
   return (
-    <section aria-label='Restaurant Menus' className='py-12 md:py-20 bg-white'>
+    <section aria-label='Restaurant Menus' className='py-12 md:py-20 bg-surface-alt brand-stripes-light'>
       <div className='container mx-auto px-6 md:px-10'>
         <div className='max-w-3xl'>
           {/* <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">Our In-Store Kitchens</h2> */}
@@ -325,7 +325,7 @@ function MenuBlock ({
   return (
     <article
       id={id}
-      className='rounded-2xl border border-black/10 bg-neutral-50'
+      className='rounded-2xl border border-black/10 brand-topline bg-white shadow-soft'
     >
       {/* Toggle header */}
       <button

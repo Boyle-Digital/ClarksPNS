@@ -163,7 +163,7 @@ export default function About () {
       {/* QUICK STATS — bring color into a light section */}
       <section
         aria-label='Fast facts'
-        className='bg-neutral-50 py-10 md:py-14 border-y border-black/10'
+        className='bg-brand brand-stripes py-10 md:py-14'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <ul className='grid grid-cols-2 md:grid-cols-4 gap-4'>
@@ -508,11 +508,11 @@ export default function About () {
 
 function StatCard ({ k, v }: { k: string; v: string }) {
   return (
-    <li className='rounded-2xl border border-black/10 bg-white px-5 py-6'>
-      <p className="font-['Oswald'] text-3xl font-bold text-brand leading-none">
+    <li className='rounded-2xl border border-white/15 bg-white/10 px-5 py-6'>
+      <p className="font-['Oswald'] text-3xl font-bold text-white leading-none">
         {k}
       </p>
-      <p className='mt-1 text-black/70'>{v}</p>
+      <p className='mt-1 text-white/75'>{v}</p>
     </li>
   )
 }

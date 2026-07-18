@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { IconShine, IconFoam, IconFast, IconDrop } from '@/components/site/Icons'
+import Tilt from '@/components/site/Tilt'
 
 import img1 from '@/assets/images/carwashphotos/DJI_0019.jpg'
 import img2 from '@/assets/images/carwashphotos/DSC02583.jpg'
@@ -72,7 +73,7 @@ export default function CarWash () {
       <section
         id='club'
         aria-label='Keep It Clean Club'
-        className='py-12 md:py-20 bg-neutral-50 border-y border-black/10'
+        className='py-12 md:py-20 bg-surface-alt brand-stripes-light border-y border-black/10'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-10'>
@@ -161,9 +162,9 @@ export default function CarWash () {
 
           <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {BENEFITS.map(b => (
+              <Tilt key={b.title}>
               <article
-                key={b.title}
-                className='rounded-2xl border border-black/10 p-6 hover:shadow-md transition-shadow bg-white'
+                className='rounded-2xl border border-black/10 brand-topline p-6 hover:shadow-md transition-shadow bg-white'
               >
                 <div className='mb-4'>
                   <span
@@ -176,6 +177,7 @@ export default function CarWash () {
                 <h3 className="font-['Oswald'] text-xl font-bold text-black">{b.title}</h3>
                 <p className='mt-2 text-black/70 text-sm leading-relaxed'>{b.desc}</p>
               </article>
+              </Tilt>
             ))}
           </div>
         </div>
