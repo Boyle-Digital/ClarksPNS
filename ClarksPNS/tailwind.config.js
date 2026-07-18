@@ -66,9 +66,9 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Oswald', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'ui-sans-serif', 'sans-serif'],
-      display: ['Oswald', 'ui-sans-serif', 'system-ui'],
-      body: ['Oswald', 'ui-sans-serif', 'system-ui'],
+      sans: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'ui-sans-serif', 'sans-serif'],
+      display: ['"Bebas Neue"', 'Oswald', 'ui-sans-serif', 'system-ui'],
+      body: ['Inter', 'ui-sans-serif', 'system-ui'],
     },
   },
   plugins: [],

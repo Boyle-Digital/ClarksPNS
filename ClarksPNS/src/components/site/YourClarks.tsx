@@ -13,6 +13,15 @@ export default function YourClarks() {
   const [nearest, setNearest] = useState<Nearest | null>(null)
 
   useEffect(() => {
+    // A chosen "my Clark's" wins — instant, no location prompt needed.
+    const savedSlug = localStorage.getItem('clarks-my-store')
+    if (savedSlug) {
+      const s = allStores.find(st => st.slug === savedSlug)
+      if (s) {
+        setNearest({ store: s, miles: -1 })
+        return
+      }
+    }
     if (!('geolocation' in navigator)) return
     navigator.geolocation.getCurrentPosition(
       pos => {
@@ -43,14 +52,15 @@ export default function YourClarks() {
           className='group flex flex-col gap-2 py-4 sm:flex-row sm:items-center sm:justify-between'
         >
           <div className='flex flex-wrap items-baseline gap-x-3 gap-y-1'>
-            <span className="font-['Oswald'] text-xs uppercase tracking-wide text-white/70">
+            <span className="font-display text-xs uppercase tracking-wide text-white/70">
               Your Clark’s
             </span>
-            <span className="font-['Oswald'] text-lg font-bold md:text-xl">
+            <span className="font-display text-lg font-bold md:text-xl">
               {store.name} · {store.city}, {store.state}
             </span>
             <span className='text-sm text-white/85'>
-              {status.label} · {miles.toFixed(1)} mi away
+              {status.label}
+              {miles >= 0 ? ` · ${miles.toFixed(1)} mi away` : ''}
             </span>
           </div>
           <span className='inline-flex shrink-0 items-center gap-1 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-brand transition-transform group-hover:translate-x-0.5'>

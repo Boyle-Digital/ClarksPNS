@@ -10,6 +10,10 @@ import { DesktopHero } from '@/components/site/DesktopHero'
 
 // Assets
 import rewardsPoster from '@/assets/images/clarkshero.png'
+import rodneyRanger from '@/assets/images/RodneyTB.png'
+import { IconPump, IconCoffee, IconGift } from '@/components/site/Icons'
+import { track } from '@/lib/track'
+import Tilt from '@/components/site/Tilt'
 import rewardsVideo from '@/assets/videos/RewardsRangerVideo.mp4'
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
 import RewardsPageVideoAd from '@/assets/videos/ClarksRewardsPhoneAnimation1080pblack.mp4'
@@ -126,7 +130,7 @@ export default function ClarksRewards () {
             <div className='container mx-auto h-full px-6 md:px-10'>
               <div className='flex h-full items-center'>
                 <div className='inline-flex flex-col gap-4 md:gap-6 max-w-[680px]'>
-                  <h1 className="font-['Oswald'] font-bold text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.35)] text-4xl md:text-6xl leading-tight">
+                  <h1 className="font-display font-bold text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.35)] text-4xl md:text-6xl leading-tight">
                     Join Clarks Rewards
                   </h1>
                   <p className='text-white/95 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] text-lg md:text-2xl max-w-prose'>
@@ -136,6 +140,7 @@ export default function ClarksRewards () {
                   <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
                     <Link
                       to='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
+                      onClick={() => track('rewards_join_click', { placement: 'hero' })}
                       className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-black/20 text-base md:text-lg'
                     >
                       Join Clarks Rewards
@@ -167,7 +172,7 @@ export default function ClarksRewards () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Perks you’ll actually use
             </h2>
             <p className='mt-2 text-black/70 text-base md:text-lg'>
@@ -177,26 +182,83 @@ export default function ClarksRewards () {
 
           <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto'>
             {BENEFITS.map(b => (
+              <Tilt key={b.title}>
               <article
-                key={b.title}
-                className='rounded-2xl border border-black/10 p-6 hover:shadow-md transition-shadow bg-white'
+                className='rounded-2xl border border-black/10 brand-topline p-6 hover:shadow-md transition-shadow bg-white'
               >
                 <div className='mb-4'>
                   <span
                     aria-hidden
                     className='inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10'
                   >
-                    <b className='text-xl'>{b.icon}</b>
+                    <b.icon className='h-6 w-6 text-brand' />
                   </span>
                 </div>
-                <h3 className="font-['Oswald'] text-xl font-bold text-black">
+                <h3 className="font-display text-xl font-bold text-black">
                   {b.title}
                 </h3>
                 <p className='mt-2 text-black/70 text-sm leading-relaxed'>
                   {b.desc}
                 </p>
               </article>
+              </Tilt>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === The math — real earn rates === */}
+      <section aria-label='How points add up' className='py-12 md:py-20 bg-brand brand-stripes text-white'>
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='max-w-3xl'>
+            <h2 className="font-display text-3xl md:text-4xl font-bold">
+              The math is simple.
+            </h2>
+            <p className='mt-2 text-white/85 text-base md:text-lg'>
+              Every dollar and every gallon works for you — then trade points
+              for cents-off fuel or free favorites like a sausage biscuit.
+            </p>
+          </div>
+          <div className='mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl'>
+            <RateCard n={10} unit='points' per='per $1 in store' />
+            <RateCard n={20} unit='points' per='per gallon of fuel' />
+            <RateCard n={0} unit='cost to join' per='free in the app, day one' isZero />
+          </div>
+          <PointsSim />
+        </div>
+      </section>
+
+      {/* === Rodney, the Rewards Ranger === */}
+      <section aria-label='Rodney the Rewards Ranger' className='relative overflow-hidden py-14 md:py-20 bg-white border-b border-black/10'>
+        <div aria-hidden className='pointer-events-none absolute inset-y-0 left-[-10%] w-[70%] opacity-[0.05]'
+          style={{ background: 'repeating-linear-gradient(90deg, #263B95 0 3px, transparent 3px 42px)' }} />
+        <div className='container relative mx-auto px-6 md:px-10'>
+          <div className='grid grid-cols-1 lg:grid-cols-12 items-center gap-10'>
+            <div className='lg:col-span-5 order-2 lg:order-1'>
+              <div className="font-display tracking-wide text-xs uppercase text-brand">Your points, protected</div>
+              <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">
+                Ride with Rodney, the Rewards Ranger.
+              </h2>
+              <p className='mt-3 text-black/70 max-w-prose'>
+                Rodney rides ahead so you never miss a boost — weekly point
+                multipliers, members-only drops, and surprise perks at the
+                pump. Saddle up in the app and he does the rest.
+              </p>
+              <Link
+                to='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
+                className='mt-6 inline-flex items-center justify-center rounded-2xl bg-brand px-6 py-3 text-white hover:bg-brand/90 transition-colors'
+              >
+                Join the ride
+              </Link>
+            </div>
+            <div className='lg:col-span-7 order-1 lg:order-2'>
+              <div className='relative mx-auto max-w-[520px]'>
+                <div aria-hidden className='absolute right-[62%] top-[38%] h-1.5 w-24 rounded-full bg-brand/25 rodney-line' />
+                <div aria-hidden className='absolute right-[68%] top-[52%] h-1.5 w-36 rounded-full bg-brand/15 rodney-line rodney-line-2' />
+                <div aria-hidden className='absolute right-[60%] top-[66%] h-1.5 w-16 rounded-full bg-brand/20 rodney-line rodney-line-3' />
+                <img src={rodneyRanger} alt='Rodney, the Clark’s Rewards Ranger' className='relative w-full h-auto rodney-ride' loading='lazy' />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -204,7 +266,7 @@ export default function ClarksRewards () {
       {/* === Featured Video (between Perks and How it Works) === */}
       <section
         aria-label='Rewards Spotlight Video'
-        className='py-10 md:py-16 bg-neutral-50 border-y border-black/10'
+        className='band-night brand-stripes py-10 md:py-16 text-white'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='mx-auto w-full max-w-6xl rounded-2xl overflow-hidden border border-black/10 shadow-sm bg-black'>
@@ -231,7 +293,7 @@ export default function ClarksRewards () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               How it works
             </h2>
             <p className='mt-2 text-black/70 text-base md:text-lg'>
@@ -248,7 +310,7 @@ export default function ClarksRewards () {
                 <div className='absolute -top-3 -left-3 flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-white font-bold'>
                   {i + 1}
                 </div>
-                <h3 className="font-['Oswald'] text-xl font-bold text-black pl-8">
+                <h3 className="font-display text-xl font-bold text-black pl-8">
                   {s.title}
                 </h3>
                 <p className='mt-2 text-black/70 text-sm leading-relaxed pl-8'>
@@ -276,7 +338,7 @@ export default function ClarksRewards () {
             {/* LEFT: Text — positioned lower as requested */}
             <div className='order-2 lg:order-1 relative z-20 flex items-start'>
               <div className='max-w-lg mt-16 md:mt-24 lg:mt-32 pb-16 md:pb-20 lg:pb-28'>
-                <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
                   The Clarks Rewards App
                 </h2>
                 <p className='mt-3 text-black/70 text-base md:text-lg'>
@@ -349,7 +411,7 @@ export default function ClarksRewards () {
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               Frequently asked questions
             </h2>
             <p className='mt-2 text-black/70 text-base md:text-lg'>
@@ -363,7 +425,7 @@ export default function ClarksRewards () {
                 key={f.q}
                 className='group rounded-2xl bg-white p-6 border border-black/10 open:shadow-md'
               >
-                <summary className="cursor-pointer list-none font-['Oswald'] text-lg font-bold text-black flex items-center justify-between">
+                <summary className="cursor-pointer list-none font-display text-lg font-bold text-black flex items-center justify-between">
                   {f.q}
                   <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                     +
@@ -382,19 +444,81 @@ export default function ClarksRewards () {
   )
 }
 
+function PointsSim () {
+  const [gal, setGal] = useState(12)
+  const [spend, setSpend] = useState(20)
+  const yearly = Math.round((gal * 20 + spend * 10) * 52)
+  return (
+    <div className='mt-10 max-w-5xl rounded-2xl border border-white/15 bg-white/10 p-6 md:p-8'>
+      <h3 className='font-display text-2xl md:text-3xl'>Your year in points</h3>
+      <div className='mt-6 grid grid-cols-1 gap-8 md:grid-cols-3'>
+        <label className='block'>
+          <div className='flex items-baseline justify-between text-sm text-white/80'>
+            <span>Gallons per week</span>
+            <span className='font-display text-xl text-white tabular-nums'>{gal}</span>
+          </div>
+          <input type='range' min={0} max={40} value={gal} onChange={e => setGal(+e.target.value)} className='mt-2 w-full accent-white' />
+        </label>
+        <label className='block'>
+          <div className='flex items-baseline justify-between text-sm text-white/80'>
+            <span>In-store $ per week</span>
+            <span className='font-display text-xl text-white tabular-nums'>${spend}</span>
+          </div>
+          <input type='range' min={0} max={100} value={spend} onChange={e => setSpend(+e.target.value)} className='mt-2 w-full accent-white' />
+        </label>
+        <div className='text-center md:text-right'>
+          <div className='font-display text-5xl leading-none text-white tabular-nums md:text-6xl'>{yearly.toLocaleString()}</div>
+          <div className='mt-1 text-sm text-white/75'>points a year — redeem for cents-off fuel and free favorites</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function RateCard ({ n, unit, per, isZero }: { n: number; unit: string; per: string; isZero?: boolean }) {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [val, setVal] = useState(0)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
+    const io = new IntersectionObserver(es => {
+      if (!es.some(e => e.isIntersecting)) return
+      io.disconnect()
+      if (reduced || isZero) { setVal(n); return }
+      const t0 = performance.now()
+      const tick = (t: number) => {
+        const p = Math.min((t - t0) / 1200, 1)
+        setVal(Math.round(n * (1 - Math.pow(1 - p, 3))))
+        if (p < 1) requestAnimationFrame(tick)
+      }
+      requestAnimationFrame(tick)
+    }, { threshold: 0.5 })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [n, isZero])
+  return (
+    <div ref={ref} className='rounded-2xl bg-white/10 border border-white/15 p-6'>
+      <div className="font-display text-5xl font-bold tabular-nums">{isZero ? '$0' : val}</div>
+      <div className='mt-1 font-medium'>{unit}</div>
+      <div className='text-white/75 text-sm'>{per}</div>
+    </div>
+  )
+}
+
 const BENEFITS = [
   {
-    icon: '⛽',
+    icon: IconPump,
     title: 'Fuel savings',
     desc: 'Redeem points at the pump for instant cents-off per gallon.'
   },
   {
-    icon: '☕',
+    icon: IconCoffee,
     title: 'Coffee & snacks',
     desc: 'Daily deals on hot coffee, fountain drinks, and fresh snacks.'
   },
   {
-    icon: '🎁',
+    icon: IconGift,
     title: 'Bonus boosts',
     desc: 'Multiply earnings during weekly Boosts and seasonal events.'
   }

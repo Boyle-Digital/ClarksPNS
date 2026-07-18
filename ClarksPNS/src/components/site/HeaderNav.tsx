@@ -1,6 +1,9 @@
 // src/components/site/HeaderNav.tsx
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import LiveTicker from '@/components/site/LiveTicker'
+import SearchOverlay from '@/components/site/SearchOverlay'
+import NoticeBanner from '@/components/site/NoticeBanner'
 import MobileMenuDrawer from './MobileMenuDrawer'
 import logoUrl from '@/assets/images/clarks-logo.png'
 import rewardsLogoUrl from '@/assets/images/Clarks-PNS-Main-Rewards-Logo-Cropped.png'
@@ -24,6 +27,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
 
   // === LOCATIONS DROPDOWN (desktop) ===
   const [locOpen, setLocOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const locBtnRef = useRef<HTMLButtonElement | null>(null)
   const locMenuRef = useRef<HTMLDivElement | null>(null)
 
@@ -99,30 +103,29 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
       label: 'Locations',
       items: [
         { label: 'All Locations', href: toPath('Locations') },
-        { label: 'Car Wash', href: toPath('Car Wash') }
+        { label: 'Car Wash', href: toPath('Car Wash') },
+        { label: 'Beer Cave', href: '/beer-cave' }
       ]
     },
     { type: 'link' as const, label: 'Food', href: toPath('Food') },
     { type: 'link' as const, label: 'Careers', href: toPath('Careers') },
-    {
-      type: 'link' as const,
-      label: 'Fleet Card',
-      href: 'https://www.marathonfleetcard.com/associations/?cc=M00528',
-      external: true
-    },
+    { type: 'link' as const, label: 'Fleet', href: '/fleet' },
     {
       type: 'group' as const,
       label: 'About Us',
       items: [
         { label: 'Our Story', href: toPath('About Us') },
-        { label: 'Clarks Charity', href: '/charity' },
-        { label: 'Sponsorships', href: '/sponsorship' }
+        { label: 'Sports & Community', href: '/community' },
+        { label: 'Scholarships', href: '/scholarship' },
+        { label: 'Clarks Charity', href: '/charity' }
       ]
     }
   ]
 
   return (
     <header className='sticky top-0 z-header w-full'>
+      <LiveTicker />
+      <NoticeBanner />
       <div className='bg-surface shadow-soft rounded-b-2xl'>
         {/* --- MOBILE BAR (<= md) --- */}
         <div className='md:hidden h-16 grid grid-cols-[auto_1fr_auto] items-center px-3'>
@@ -270,6 +273,21 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                         >
                           Car Wash
                         </NavLink>
+                        <NavLink
+                          to='/beer-cave'
+                          className={({ isActive }) =>
+                            [
+                              'block px-4 py-2 text-sm',
+                              isActive
+                                ? 'text-brand'
+                                : 'text-black hover:bg-brand/5 hover:text-brand'
+                            ].join(' ')
+                          }
+                          onClick={() => setLocOpen(false)}
+                          role='menuitem'
+                        >
+                          Beer Cave
+                        </NavLink>
                       </div>
                     </div>
                   </li>
@@ -308,15 +326,15 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                     </NavLink>
                   </li>
 
-                  {/* Fleet Card — external link, WEX/Marathon association tracking */}
+                  {/* Fleet — straight to the Marathon fleet card portal */}
                   <li>
                     <a
                       href='https://www.marathonfleetcard.com/associations/?cc=M00528'
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='inline-block text-nav text-center leading-none py-2 text-text hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand'
+                      className='inline-block text-nav text-center leading-none py-2 text-text hover:text-brand'
                     >
-                      Fleet Card
+                      Fleet
                     </a>
                   </li>
 
@@ -400,6 +418,36 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                         >
                           Clarks Charity
                         </NavLink>
+                        <NavLink
+                          to='/community'
+                          className={({ isActive }) =>
+                            [
+                              'block px-4 py-2 text-sm',
+                              isActive
+                                ? 'text-brand'
+                                : 'text-black hover:bg-brand/5 hover:text-brand'
+                            ].join(' ')
+                          }
+                          onClick={() => setAboutOpen(false)}
+                          role='menuitem'
+                        >
+                          Sports & Community
+                        </NavLink>
+                        <NavLink
+                          to='/scholarship'
+                          className={({ isActive }) =>
+                            [
+                              'block px-4 py-2 text-sm',
+                              isActive
+                                ? 'text-brand'
+                                : 'text-black hover:bg-brand/5 hover:text-brand'
+                            ].join(' ')
+                          }
+                          onClick={() => setAboutOpen(false)}
+                          role='menuitem'
+                        >
+                          Scholarships
+                        </NavLink>
                         {/* <NavLink
                           to='/sponsorship'
                           className={({ isActive }) =>
@@ -447,6 +495,46 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
           </div>
         </div>
       </div>
+
+      {/* Quick links — every destination visible, no dropdown hunting */}
+      <nav aria-label='Quick links' className='hidden md:block bg-brand'>
+        <div className='container mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1 px-6 py-2 md:px-10'>
+          {[
+            { to: '/locations', label: 'Locations' },
+            { to: '/food', label: 'Food & Menus' },
+            { to: '/clarks-rewards', label: 'Rewards' },
+            { to: '/car-wash', label: 'Car Wash' },
+            { to: '/community', label: 'Sports & Community' },
+            { to: '/scholarship', label: 'Scholarships' },
+            { to: '/charity', label: 'Charity' },
+            { to: '/fleet', label: 'Fleet & Diesel' },
+            { to: '/careers', label: 'Careers' },
+            { to: '/beer-cave', label: 'Beer Cave' }
+          ].map(l => (
+            <NavLink
+              key={l.to}
+              to={l.to}
+              className={({ isActive }) =>
+                [
+                  "font-display text-[0.78rem] uppercase tracking-[0.14em] leading-none py-1 transition-colors",
+                  isActive ? 'text-white' : 'text-white/75 hover:text-white'
+                ].join(' ')
+              }
+            >
+              {l.label}
+            </NavLink>
+          ))}
+          <button
+            type='button'
+            onClick={() => setSearchOpen(true)}
+            className="font-['Oswald'] text-[0.78rem] uppercase tracking-[0.14em] leading-none py-1 text-white/75 transition-colors hover:text-white"
+          >
+            Search
+          </button>
+        </div>
+      </nav>
+
+      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
 
       {/* Mobile drawer */}
       <MobileMenuDrawer

@@ -2,6 +2,11 @@
 @import '@fontsource/oswald/400.css';
 @import '@fontsource/oswald/500.css';
 @import '@fontsource/oswald/600.css';
+@import '@fontsource/oswald/700.css';
+@import '@fontsource/bebas-neue/400.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
 /* Or: @import "@fontsource/oswald/variable.css"; */
 
 @tailwind base;
@@ -80,4 +85,108 @@
   .nav-link-active {
     @apply text-brand;
   }
+}
+/* ---------- Rodney the Rewards Ranger ---------- */
+@keyframes rodney-ride {
+  0%, 100% { transform: translateY(0) rotate(-1.2deg); }
+  50% { transform: translateY(-8px) rotate(0.6deg); }
+}
+@keyframes rodney-line {
+  0% { transform: translateX(26px); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateX(-34px); opacity: 0; }
+}
+.rodney-ride { animation: rodney-ride 3.2s ease-in-out infinite, rodney-patrol 9s ease-in-out infinite; }
+@keyframes rodney-patrol {
+  0%, 100% { translate: 0 0; }
+  25% { translate: 26px 0; }
+  75% { translate: -26px 0; }
+}
+.rodney-line { animation: rodney-line 1.4s ease-out infinite; }
+.rodney-line-2 { animation-delay: 0.45s; }
+.rodney-line-3 { animation-delay: 0.9s; }
+@media (prefers-reduced-motion: reduce) {
+  .rodney-ride, .rodney-line { animation: none; }
+}
+
+/* ---------- Car wash water sheen ---------- */
+@keyframes water-sheen {
+  0% { transform: translateX(-70%) skewX(-18deg); }
+  100% { transform: translateX(220%) skewX(-18deg); }
+}
+.water-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; width: 34%;
+  background: linear-gradient(90deg, transparent, rgba(0, 132, 255, 0.10), rgba(255, 255, 255, 0.16), transparent);
+  animation: water-sheen 5.5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) { .water-sheen::after { animation: none; } }
+
+/* ---------- Brand fabric ---------- */
+/* White pinstripes for brand-blue bands */
+.brand-stripes {
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0 2px, transparent 2px 26px);
+}
+/* Faint blue pinstripes for light sections (kills flat white) */
+.brand-stripes-light {
+  background-image: repeating-linear-gradient(135deg, rgba(38,59,149,0.05) 0 2px, transparent 2px 26px);
+}
+/* Blue top rule for section cards */
+.brand-topline { box-shadow: inset 0 3px 0 0 #263B95; }
+
+/* ---------- Section modes ---------- */
+.band-night {
+  background: linear-gradient(135deg, #0b153a 0%, #16225a 45%, #263B95 100%);
+}
+/* Giant ghost display word behind section headings */
+.ghost-word {
+  position: absolute;
+  inset-inline: 0;
+  top: 0.1em;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  font-family: 'Bebas Neue', Oswald, sans-serif;
+  font-size: clamp(6rem, 22vw, 18rem);
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  color: transparent;
+}
+.ghost-word--light { -webkit-text-stroke: 2px rgba(255,255,255,0.14); }
+.ghost-word--blue { -webkit-text-stroke: 2px rgba(38,59,149,0.12); }
+/* Display face tuning: Bebas runs tight — give it air */
+.font-display { letter-spacing: 0.015em; }
+
+/* ---------- Top nav: brand display voice ---------- */
+.text-nav {
+  font-family: 'Bebas Neue', Oswald, sans-serif;
+  letter-spacing: 0.06em;
+  font-size: 1.35rem;
+}
+
+/* ---------- Social cards ---------- */
+.social-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.social-card:hover {
+  transform: perspective(800px) rotateX(3deg) rotateY(-3deg) translateY(-4px);
+  box-shadow: 0 16px 40px rgba(38, 59, 149, 0.18);
+}
+.social-chip { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.social-card:hover .social-chip {
+  transform: rotate(-10deg) scale(1.18);
+  animation: social-wiggle 0.6s ease 0.25s;
+}
+@keyframes social-wiggle {
+  0%, 100% { transform: rotate(-10deg) scale(1.18); }
+  30% { transform: rotate(8deg) scale(1.18); }
+  60% { transform: rotate(-6deg) scale(1.18); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .social-card, .social-chip { transition: none; }
+  .social-card:hover { transform: none; }
+  .social-card:hover .social-chip { animation: none; transform: none; }
 }

@@ -14,10 +14,12 @@ import Locations from '@/pages/Locations'
 import StoreDetail from '@/pages/StoreDetail'
 import FoodBrand from '@/pages/FoodBrand'
 import BeerCave from '@/pages/BeerCave'
+import Community from '@/pages/Community'
+import Scholarship from '@/pages/Scholarship'
+import Fleet from '@/pages/Fleet'
 import Careers from '@/pages/Careers'
 import Terms from '@/pages/Terms'
 import Privacy from '@/pages/Privacy'
-import MenuTest from '@/pages/menuTest'
 import NotFound from '@/pages/NotFound'
 
 import { SpeedInsights } from '@vercel/speed-insights/react'
@@ -45,11 +47,13 @@ export default function App () {
           <Route path='/Food' element={<Food />} />
           <Route path='/food/:slug' element={<FoodBrand />} />
           <Route path='/beer-cave' element={<BeerCave />} />
+          <Route path='/community' element={<Community />} />
+          <Route path='/scholarship' element={<Scholarship />} />
+          <Route path='/fleet' element={<Fleet />} />
           <Route path='/Careers' element={<Careers />} />
           <Route path='/terms' element={<Terms />} />
           <Route path='/privacy' element={<Privacy />} />
           {/* <Route path='/Sponsorship' element={<Sponsorship />} /> */}
-          <Route path='/menuTest' element={<MenuTest />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />

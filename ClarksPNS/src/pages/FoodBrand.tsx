@@ -36,7 +36,7 @@ function boardsFor(assetKey: string): string[] {
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+    <div className="font-display tracking-wide text-xs uppercase text-brand">
       {children}
     </div>
   )
@@ -55,7 +55,7 @@ export default function FoodBrand() {
       <main className='w-full bg-white'>
         <SEO title='Menu not found — Clark’s Pump-N-Shop' robots='noindex,nofollow' />
         <div className='container mx-auto px-6 py-24 text-center md:px-10'>
-          <h1 className="font-['Oswald'] text-4xl font-bold text-black">
+          <h1 className="font-display text-4xl font-bold text-black">
             Menu not found
           </h1>
           <p className='mt-3 text-black/70'>
@@ -100,7 +100,7 @@ export default function FoodBrand() {
           <div className='flex flex-col items-start gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12'>
             <div>
               <Eyebrow>In-store kitchen</Eyebrow>
-              <h1 className="mt-1 font-['Oswald'] text-4xl font-bold leading-tight text-black md:text-6xl">
+              <h1 className="mt-1 font-display text-4xl font-bold leading-tight text-black md:text-6xl">
                 {brand.name}
               </h1>
               <div className='mt-4 h-1 w-40 rounded bg-brand' />
@@ -120,14 +120,15 @@ export default function FoodBrand() {
       </section>
 
       {/* Menu */}
-      <section className='container mx-auto px-6 py-10 md:px-10'>
+      <section className='brand-stripes-light'>
+      <div className='container mx-auto px-6 py-10 md:px-10'>
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-2'>
           {brand.sections.map(section => (
             <div
               key={section.title}
-              className='rounded-2xl border border-black/10 bg-white p-6 shadow-soft'
+              className='rounded-2xl border border-black/10 brand-topline bg-white p-6 shadow-soft'
             >
-              <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">
+              <h2 className="font-display text-2xl font-bold text-black md:text-3xl">
                 {section.title}
               </h2>
               {section.note && (
@@ -162,16 +163,19 @@ export default function FoodBrand() {
           Prices and availability may vary by location. Nutrition information
           available in store.
         </p>
+      </div>
       </section>
 
       {/* Menu boards */}
       {boards.length > 0 && <MenuBoards name={brand.name} boards={boards} />}
 
       {/* Stores with this kitchen */}
-      <section className='bg-surface-alt py-12'>
+      <section className='bg-brand brand-stripes py-12 text-white'>
         <div className='container mx-auto px-6 md:px-10'>
-          <Eyebrow>Find it near you</Eyebrow>
-          <h2 className="mt-1 font-['Oswald'] text-3xl font-bold text-black md:text-4xl">
+          <div className="font-display tracking-wide text-xs uppercase text-white/70">
+            Find it near you
+          </div>
+          <h2 className="mt-1 font-display text-3xl font-bold md:text-4xl">
             {brand.name} is inside {stores.length} Clark’s location
             {stores.length === 1 ? '' : 's'}.
           </h2>
@@ -183,7 +187,7 @@ export default function FoodBrand() {
           <div className='mt-8'>
             <Link
               to='/locations'
-              className='inline-flex items-center justify-center rounded-2xl bg-brand px-5 py-3 text-white transition-colors hover:bg-brand/90'
+              className='inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 font-semibold text-brand transition-transform hover:-translate-y-0.5'
             >
               See all locations
             </Link>
@@ -193,7 +197,7 @@ export default function FoodBrand() {
 
       {/* Other kitchens */}
       <section className='container mx-auto px-6 py-12 md:px-10'>
-        <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">
+        <h2 className="font-display text-2xl font-bold text-black md:text-3xl">
           More from our kitchens
         </h2>
         <div className='mt-4 flex flex-wrap gap-3'>
@@ -216,9 +220,18 @@ function StoreCard({ store }: { store: Store }) {
   return (
     <Link
       to={`/locations/${store.slug}`}
-      className='group rounded-2xl border border-black/10 bg-white p-5 shadow-soft transition-shadow hover:shadow-md'
+      onMouseMove={e => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+        const el = e.currentTarget
+        const r = el.getBoundingClientRect()
+        const x = (e.clientX - r.left) / r.width - 0.5
+        const y = (e.clientY - r.top) / r.height - 0.5
+        el.style.transform = `perspective(900px) rotateY(${x * 5}deg) rotateX(${-y * 4}deg)`
+      }}
+      onMouseLeave={e => { e.currentTarget.style.transform = '' }}
+      className='group rounded-2xl border border-black/10 bg-white p-5 shadow-soft transition-[box-shadow,transform] duration-200 hover:shadow-md'
     >
-      <div className="font-['Oswald'] text-lg font-bold text-black group-hover:text-brand">
+      <div className="font-display text-lg font-bold text-black group-hover:text-brand">
         {store.name}
       </div>
       <div className='mt-1 text-sm text-black/70'>
@@ -243,7 +256,7 @@ function MenuBoards({ name, boards }: { name: string; boards: string[] }) {
 
   return (
     <section className='container mx-auto px-6 pb-4 md:px-10'>
-      <h2 className="font-['Oswald'] text-2xl font-bold text-black md:text-3xl">
+      <h2 className="font-display text-2xl font-bold text-black md:text-3xl">
         The menu board
       </h2>
       <div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2'>

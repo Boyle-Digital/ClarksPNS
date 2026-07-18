@@ -2,6 +2,11 @@ import React from 'react'
 // import MobileHero from '@/components/site/MobileHero'
 import { DesktopHero } from '@/components/site/DesktopHero'
 import YourClarks from '@/components/site/YourClarks'
+import HometownCinema from '@/components/site/HometownCinema'
+import Tilt from '@/components/site/Tilt'
+import { FOOD_BRANDS } from '@/content/menus'
+import { allStores, namedKitchens } from '@/lib/stores'
+import whiteLogo from '@/assets/images/Clarks PNS Logo Updated all white.png'
 import { SEO } from '@/lib/seo'
 
 // MobileHero images (keep as-is)
@@ -9,6 +14,7 @@ import phone640 from '@/assets/images/phone-640.jpg'
 import phone960 from '@/assets/images/phone-960.jpg'
 import phone1440 from '@/assets/images/phone-1440.jpg'
 import champsLogo from '@/assets/images/champschickenlogo.png'
+import clarksMark from '@/assets/images/clarks-logo.png'
 import hangarLogo from '@/assets/images/Hangar54Logo_02-1.png'
 import jacksLogo from '@/assets/images/jacksdelilogo.webp'
 import cafeLogo from '@/assets/images/clarkscafelogo.webp'
@@ -184,12 +190,12 @@ function MonthlyPromotions ({
 
       <section
         aria-label='Monthly Promotions'
-        className='py-12 md:py-20 bg-neutral-50'
+        className='py-12 md:py-20 bg-surface-alt brand-stripes-light border-y border-black/10'
       >
         {/* Headings inside container */}
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
               {title}
             </h2>
             {subtitle && (
@@ -365,22 +371,43 @@ export default function Home () {
       {/* Your nearest Clark's — appears once the visitor shares location */}
       <YourClarks />
 
+      {/* Cinematic hometowns band — real drone film + storefront showcase */}
+      <HometownCinema />
+
+      {/* Tri-State family ribbon */}
+      <section aria-label='Family owned across the Tri-State' className='bg-brand'>
+        <div className='container mx-auto flex flex-col items-center gap-4 px-6 py-8 text-center text-white sm:flex-row sm:justify-between sm:text-left md:px-10'>
+          <img src={whiteLogo} alt='Clark’s Pump-N-Shop' className='h-12 w-auto sm:h-14' loading='lazy' />
+          <div>
+            <div className="font-display text-xl font-bold uppercase tracking-wide md:text-2xl">
+              Family owned & operated since 1976
+            </div>
+            <div className='mt-1 text-white/85'>
+              Rooted in Ashland — at home across Kentucky, Ohio & West Virginia.
+            </div>
+          </div>
+          <div className="font-display text-sm uppercase tracking-[0.25em] text-white/70">
+            KY · OH · WV
+          </div>
+        </div>
+      </section>
+
       {/* Rewards Phone Animation */}
       <section
         aria-label='Clarks Rewards Phone Demo'
-        className='py-12 md:py-20 bg-white border-y border-black/10'
+        className='band-night brand-stripes py-12 md:py-20 text-white'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-10'>
             <div className='order-2 lg:order-1'>
-              <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+              <h2 className="font-display text-3xl md:text-4xl font-bold">
                 Watch points stack—right in the app
               </h2>
-              <p className='mt-3 text-black/70 text-base md:text-lg max-w-prose'>
+              <p className='mt-3 text-white/80 text-base md:text-lg max-w-prose'>
                 Earn on every fill-up, coffee, and snack. Track your balance and
                 redeem at the pump or register in a couple of taps.
               </p>
-              <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-black/70'>
+              <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/80'>
                 <li className='flex items-start gap-2'>
                   <span className='mt-1 inline-block h-2 w-2 rounded-full bg-brand' />{' '}
                   Members-only weekly Boosts
@@ -459,7 +486,7 @@ export default function Home () {
             <div className='container mx-auto h-full px-6 md:px-10'>
               <div className='flex h-full items-center'>
                 <div className='inline-flex flex-col gap-4 md:gap-6 max-w-[720px]'>
-                  <h2 className="font-['Oswald'] text-3xl md:text-5xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">
+                  <h2 className="font-display text-3xl md:text-5xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">
                     Rodney the Rewards Ranger
                   </h2>
                   <p className='text-white/95 text-base md:text-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] max-w-prose'>
@@ -490,29 +517,99 @@ export default function Home () {
         </div>
       </section>
 
+      {/* Food at Clarks */}
+      <section
+        aria-label='Food at Clarks'
+        className='relative bg-surface-alt brand-stripes-light py-12 md:py-20'
+      >
+        <div aria-hidden className='ghost-word ghost-word--blue text-center'>EAT</div>
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='max-w-3xl'>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-black">
+              Fuel up. Eat well.
+            </h2>
+            <p className='mt-2 text-black/70 text-base md:text-lg'>
+              Hot, fresh, and fast—right inside select locations.
+            </p>
+          </div>
+
+          <div className='relative mt-8 flex flex-wrap justify-center gap-6 [perspective:1400px]'>
+            {FOOD_PARTNERS.map(f => {
+              const kitchen = f.kitchenName && KITCHEN_COUNT[f.kitchenName]
+              const menuSlug = f.kitchenName ? MENU_SLUG[f.kitchenName] : undefined
+              return (
+                <Tilt key={f.name} max={8} className='w-full sm:w-[22rem]'>
+                  <article className='h-full rounded-2xl border border-black/10 brand-topline bg-white p-6 shadow-soft'>
+                    <div className='mb-4 flex h-12 items-center'>
+                      <img
+                        src={f.logo}
+                        alt={`${f.name} logo`}
+                        className='h-full w-auto object-contain'
+                      />
+                    </div>
+                    <h3 className='font-display text-2xl text-black'>{f.name}</h3>
+                    <p className='mt-1 text-black/70 text-sm'>{f.desc}</p>
+                    {kitchen ? (
+                      <p className='mt-2 font-display text-sm tracking-[0.08em] text-brand'>
+                        INSIDE {kitchen} STORES
+                      </p>
+                    ) : (
+                      <p className='mt-2 font-display text-sm tracking-[0.08em] text-black/50'>
+                        SELECT LOCATIONS
+                      </p>
+                    )}
+                    <div className='mt-4 flex flex-wrap gap-2'>
+                      {menuSlug && (
+                        <a
+                          href={`/food/${menuSlug}`}
+                          className='inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-white transition-all hover:bg-brand/90'
+                        >
+                          See the menu
+                        </a>
+                      )}
+                      <a
+                        href={menuSlug ? `/food/${menuSlug}#find` : '/locations'}
+                        className='inline-flex items-center justify-center rounded-xl border border-brand/40 px-4 py-2 text-brand transition-colors hover:bg-brand/5'
+                      >
+                        Find stores
+                      </a>
+                    </div>
+                  </article>
+                </Tilt>
+              )
+            })}
+          </div>
+        </div>
+      </section>
       {/* Follow Clarks — expandable social cards (updated embeds) */}
       <section
         aria-label='Follow Clarks'
-        className='py-12 md:py-20 bg-white'
+        className='relative py-10 md:py-14 bg-surface-alt brand-stripes-light border-t border-black/10 overflow-hidden'
         id='follow-clarks'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
-              Follow Clarks
+            <h2 className='font-display text-2xl md:text-3xl text-black'>
+              Follow the swoosh
             </h2>
-            <p className='mt-2 text-black text-base md:text-lg'>
-              Deals, giveaways, and local highlights—tap a network to peek.
+            <p className='mt-1 text-black/55 text-sm'>
+              Deals, giveaways, and hometown highlights — tap a card to peek
+              inside.
             </p>
           </div>
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-black'>
             {/* Facebook — embedded timeline (unchanged) */}
-            <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
+            <details className='social-card group rounded-2xl border border-black/10 brand-topline bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <img src={fbIcon} alt='' className='h-6 w-6' />
-                  <span className='font-semibold'>Facebook</span>
+                  <span
+                    className='social-chip grid h-11 w-11 place-items-center rounded-xl shadow-md'
+                    style={{ background: '#1877F2' }}
+                  >
+                    <img src={fbIcon} alt='' className='h-5 w-5 brightness-0 invert' />
+                  </span>
+                  <span className='font-display text-xl text-black'>Facebook</span>
                 </div>
                 <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                   +
@@ -546,11 +643,16 @@ export default function Home () {
             </details>
 
             {/* Instagram — single reel */}
-            <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
+            <details className='social-card group rounded-2xl border border-black/10 brand-topline bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <img src={igIcon} alt='' className='h-6 w-6' />
-                  <span className='font-semibold'>Instagram</span>
+                  <span
+                    className='social-chip grid h-11 w-11 place-items-center rounded-xl shadow-md'
+                    style={{ background: 'linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)' }}
+                  >
+                    <img src={igIcon} alt='' className='h-5 w-5 brightness-0 invert' />
+                  </span>
+                  <span className='font-display text-xl text-black'>Instagram</span>
                 </div>
                 <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                   +
@@ -573,11 +675,16 @@ export default function Home () {
             </details>
 
             {/* TikTok — single video */}
-            <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
+            <details className='social-card group rounded-2xl border border-black/10 brand-topline bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <img src={ttIcon} alt='' className='h-6 w-6' />
-                  <span className='font-semibold'>TikTok</span>
+                  <span
+                    className='social-chip grid h-11 w-11 place-items-center rounded-xl shadow-md'
+                    style={{ background: '#0b153a' }}
+                  >
+                    <img src={ttIcon} alt='' className='h-5 w-5 brightness-0 invert' />
+                  </span>
+                  <span className='font-display text-xl text-black'>TikTok</span>
                 </div>
                 <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                   +
@@ -599,11 +706,16 @@ export default function Home () {
             </details>
 
             {/* LinkedIn — single company post */}
-            <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
+            <details className='social-card group rounded-2xl border border-black/10 brand-topline bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <img src={liIcon} alt='' className='h-6 w-6' />
-                  <span className='font-semibold'>LinkedIn</span>
+                  <span
+                    className='social-chip grid h-11 w-11 place-items-center rounded-xl shadow-md'
+                    style={{ background: '#0A66C2' }}
+                  >
+                    <img src={liIcon} alt='' className='h-5 w-5 brightness-0 invert' />
+                  </span>
+                  <span className='font-display text-xl text-black'>LinkedIn</span>
                 </div>
                 <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                   +
@@ -629,53 +741,6 @@ export default function Home () {
         </div>
       </section>
 
-      {/* Food at Clarks */}
-      <section
-        aria-label='Food at Clarks'
-        className='py-12 md:py-20 bg-neutral-50'
-      >
-        <div className='container mx-auto px-6 md:px-10'>
-          <div className='max-w-3xl'>
-            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
-              Fuel up. Eat well.
-            </h2>
-            <p className='mt-2 text-black/70 text-base md:text-lg'>
-              Hot, fresh, and fast—right inside select locations.
-            </p>
-          </div>
-
-          <div className='mt-8 flex flex-wrap justify-center gap-6'>
-            {FOOD_PARTNERS.map(f => (
-              <article
-                key={f.name}
-                className='rounded-2xl border border-black/10 bg-white p-6 hover:shadow-md transition-shadow w-full sm:w-[22rem] lg:w-[22rem]'
-              >
-                {/* Logo row */}
-                <div className='mb-4 h-12 flex items-center'>
-                  <img
-                    src={f.logo}
-                    alt={`${f.name} logo`}
-                    className='h-full w-auto object-contain'
-                  />
-                </div>
-
-                <h3 className="font-['Oswald'] text-xl font-bold text-black">
-                  {f.name}
-                </h3>
-                <p className='mt-2 text-black/70 text-sm'>{f.desc}</p>
-                <div className='mt-4'>
-                  <a
-                    href={f.href}
-                    className='inline-flex items-center justify-center rounded-xl px-4 py-2 bg-brand text-white hover:bg-brand/90 transition-all'
-                  >
-                    {f.cta}
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   )
 }
@@ -703,16 +768,17 @@ function SocialButton ({
   )
 }
 
-const SOCIAL_LINKS = [
-  { name: 'Facebook', href: '#', icon: '👍' },
-  { name: 'Instagram', href: '#', icon: '📸' },
-  { name: 'TikTok', href: '#', icon: '🎵' },
-  { name: 'LinkedIn', href: '#', icon: '💼' }
-]
+const KITCHEN_COUNT: Record<string, number> = {}
+for (const st of allStores) {
+  for (const k of namedKitchens(st)) KITCHEN_COUNT[k] = (KITCHEN_COUNT[k] || 0) + 1
+}
+const MENU_SLUG: Record<string, string> = {}
+for (const b of FOOD_BRANDS) MENU_SLUG[b.kitchenName] = b.slug
 
 const FOOD_PARTNERS = [
   {
     name: 'Clarks Cafe',
+    kitchenName: "Clark's Café",
     desc: 'Breakfast sandwiches, pastries, and coffee.',
     href: '/locations?food=clarkscafe',
     cta: 'View Locations',
@@ -720,6 +786,7 @@ const FOOD_PARTNERS = [
   },
   {
     name: 'Krispy Krunchy Chicken',
+    kitchenName: 'Krispy Krunchy Chicken',
     desc: 'Louisiana-style chicken + biscuits.',
     href: '/locations?food=krispykrunchy',
     cta: 'View Locations',
@@ -727,6 +794,7 @@ const FOOD_PARTNERS = [
   },
   {
     name: 'Champs Chicken',
+    kitchenName: 'Champs Chicken',
     desc: 'Crispy tenders, sides, and sauces.',
     href: '/locations?food=champs',
     cta: 'View Locations',
@@ -734,6 +802,7 @@ const FOOD_PARTNERS = [
   },
   {
     name: 'Hangar 54 Pizza',
+    kitchenName: 'Hangar 54',
     desc: 'Slices and whole pies—perfectly melty.',
     href: '/locations?food=hangar',
     cta: 'View Locations',
@@ -749,9 +818,9 @@ const FOOD_PARTNERS = [
   {
     name: 'Grab-N-Go',
     desc: 'Quick bites, immediate satisfaction.',
-    href: '/locations?food=grabngo',
+    href: '/locations',
     cta: 'View Locations',
-    logo: kkcLogo
+    logo: clarksMark
   }
 ]
 

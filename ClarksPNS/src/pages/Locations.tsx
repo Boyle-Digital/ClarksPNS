@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import { buildLocationsItemList } from '@/lib/locations-schema'
 import { allStores, formatPhone } from '@/lib/stores'
+import BeaconMap from '@/components/site/BeaconMap'
+import RoadTrip from '@/components/site/RoadTrip'
 
 // Map a store id (key in stores.geocoded.json) to its store-page slug.
 const SLUG_BY_ID: Record<string, string> = Object.fromEntries(
@@ -264,7 +266,7 @@ const GOOGLE_KEY = (
 )?.trim()
 
 const mapContainerStyle = { width: '100%', height: '100%' } as const
-const initialCenter: LatLng = { lat: 39.5, lng: -98.35 } // US fallback
+const initialCenter: LatLng = { lat: 38.35, lng: -83.6 } // Tri-State heart
 
 // --- utilities ---
 function fullAddress (s: StoreEntry): string {
@@ -465,7 +467,7 @@ export default function Locations () {
         .filter(r => matchesFilters(r.entry))
         .sort(
           (a, b) =>
-            (a.entry.state || '').localeCompare(b.entry.state || '') ||
+            (a.entry.state || '').toUpperCase().localeCompare((b.entry.state || '').toUpperCase()) ||
             (a.entry.city || '').localeCompare(b.entry.city || '') ||
             (a.entry.name || '').localeCompare(b.entry.name || '')
         )
@@ -499,21 +501,14 @@ export default function Locations () {
       />
     <main className='w-full overflow-x-clip bg-white -mt-5'>
       {/* Header / Search */}
-      <section className='relative isolate w-full bg-gradient-to-br from-white via-white to-neutral-50'>
-        <div
-          aria-hidden
-          className='pointer-events-none absolute inset-0 opacity-[0.07]'
-          style={{
-            background:
-              'repeating-linear-gradient(135deg, var(--tw-gradient-to) 0 2px, transparent 2px 22px)'
-          }}
-        />
+      <section className='band-night brand-stripes relative isolate w-full text-white'>
+        <div aria-hidden className='ghost-word ghost-word--light text-center'>FIND US</div>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='py-10 md:py-16'>
-            <h1 className="font-['Oswald'] text-4xl md:text-6xl font-extrabold text-black leading-tight">
+            <h1 className="font-display text-4xl md:text-6xl font-extrabold leading-tight">
               Find a Clarks near you
             </h1>
-            <p className='mt-2 text-black/70 text-lg md:text-xl max-w-prose'>
+            <p className='mt-2 text-white/80 text-lg md:text-xl max-w-prose'>
               To see nearby locations and available amenities, enter an address
               or select “Use My Location.”
             </p>
@@ -565,6 +560,12 @@ export default function Locations () {
                 </p>
               )}
             </form>
+
+            <div className='mt-8'>
+              <BeaconMap />
+            </div>
+
+            <RoadTrip />
           </div>
         </div>
       </section>
@@ -576,7 +577,7 @@ export default function Locations () {
             {/* Results list (mobile after map) */}
             <div className='lg:col-span-5 order-2 lg:order-1'>
               <div className='flex items-center justify-between'>
-                <h2 className="font-['Oswald'] text-2xl md:text-3xl font-bold text-black">
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-black">
                   Nearby stores
                 </h2>
                 <div className='flex items-center gap-3'>
@@ -624,8 +625,22 @@ export default function Locations () {
               )}
 
               {/* Results */}
-              <div className='mt-4 space-y-4'>
-                {results.map(r => {
+              <div className='mt-4 space-y-4 [perspective:1400px]'>
+                {results.map((r, i) => {
+                  const stateChanged =
+                    !userPoint &&
+                    (i === 0 ||
+                      (results[i - 1].entry.state || '').toUpperCase() !==
+                        (r.entry.state || '').toUpperCase())
+                  const STATE_NAME: Record<string, string> = {
+                    KY: 'Kentucky',
+                    OH: 'Ohio',
+                    WV: 'West Virginia'
+                  }
+                  const stateHeading = stateChanged
+                    ? STATE_NAME[(r.entry.state || '').toUpperCase()] ||
+                      r.entry.state
+                    : null
                   const { id, entry, distance, addr } = r
                   const a = { ...DEFAULT_AMENITIES, ...(entry.amenities ?? {}) }
                   const f = { ...DEFAULT_FOOD, ...(entry.food ?? {}) }
@@ -636,13 +651,27 @@ export default function Locations () {
                   ).filter(k => !!a[k as keyof Amenities])
 
                   return (
+                    <React.Fragment key={id}>
+                    {stateHeading && (
+                      <h3 className="pt-4 font-display text-xl font-bold text-brand uppercase tracking-wide">
+                        {stateHeading}
+                      </h3>
+                    )}
                     <article
-                      key={id}
-                      className='rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition-shadow'
+                      className='rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition-[box-shadow,transform] duration-200 [transform-style:preserve-3d]'
+                      onMouseMove={e => {
+                        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+                        const el = e.currentTarget
+                        const r = el.getBoundingClientRect()
+                        const x = (e.clientX - r.left) / r.width - 0.5
+                        const y = (e.clientY - r.top) / r.height - 0.5
+                        el.style.transform = `rotateY(${x * 4}deg) rotateX(${-y * 3}deg)`
+                      }}
+                      onMouseLeave={e => { e.currentTarget.style.transform = '' }}
                     >
                       <div className='flex items-start justify-between gap-3'>
                         <div>
-                          <div className="font-['Oswald'] font-bold text-lg text-black">
+                          <div className="font-display font-bold text-lg text-black">
                             {SLUG_BY_ID[id] ? (
                               <Link
                                 to={`/locations/${SLUG_BY_ID[id]}`}
@@ -749,6 +778,7 @@ export default function Locations () {
                         </button>
                       </div>
                     </article>
+                    </React.Fragment>
                   )
                 })}
 
@@ -836,7 +866,7 @@ function MapCanvas ({
     <GoogleMap
       mapContainerStyle={mapContainerStyle}
       center={center}
-      zoom={userPoint ? 9 : 5}
+      zoom={userPoint ? 9 : 7}
     >
       {/* User pin */}
       {userPoint && (
@@ -973,7 +1003,7 @@ function FilterPanel ({
   return (
     <div className='space-y-3'>
       <div className='flex items-center justify-between'>
-        <div className="font-['Oswald'] text-lg font-bold">Filter</div>
+        <div className="font-display text-lg font-bold">Filter</div>
         <button
           type='button'
           onClick={clearFilters}

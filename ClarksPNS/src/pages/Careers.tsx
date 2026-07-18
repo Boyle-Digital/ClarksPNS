@@ -13,7 +13,7 @@ const PerkCard = ({
   children: React.ReactNode
 }) => (
   <article className='rounded-2xl border border-black/10 bg-white p-6 shadow-sm'>
-    <h3 className="font-['Oswald'] text-xl md:text-2xl font-bold text-black">
+    <h3 className="font-display text-xl md:text-2xl font-bold text-black">
       {title}
     </h3>
     <div className='prose prose-neutral mt-2 max-w-none text-black/80'>
@@ -54,10 +54,10 @@ export default function Careers () {
         />
         <div className='container mx-auto grid md:grid-cols-12 gap-8 px-6 md:px-10 py-14 md:py-16 items-center relative z-10'>
           <div className='md:col-span-8'>
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-white/80">
+            <p className="font-display tracking-wide text-xs uppercase text-white/80">
               Careers at Clark’s
             </p>
-            <h1 className="mt-2 font-['Oswald'] text-3xl md:text-5xl font-bold leading-tight">
+            <h1 className="mt-2 font-display text-3xl md:text-5xl font-bold leading-tight">
               Join the Clark’s family.
             </h1>
             <p className='mt-3 text-white/90 max-w-prose'>
@@ -103,10 +103,10 @@ export default function Careers () {
       <section id='why-clarks' className='py-12 md:py-16 bg-sky-50'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+            <p className="font-display tracking-wide text-xs uppercase text-brand">
               People First
             </p>
-            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">
               Build a career you’re proud of
             </h2>
             <p className='mt-3 text-black/70'>
@@ -144,10 +144,10 @@ export default function Careers () {
       <section className='py-12 md:py-16 bg-white border-y border-sky-100'>
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <p className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">
+            <p className="font-display tracking-wide text-xs uppercase text-brand">
               In Their Words
             </p>
-            <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+            <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">
               What our team says
             </h2>
           </div>
