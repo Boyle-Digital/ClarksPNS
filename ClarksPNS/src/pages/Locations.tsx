@@ -266,7 +266,7 @@ const GOOGLE_KEY = (
 )?.trim()
 
 const mapContainerStyle = { width: '100%', height: '100%' } as const
-const initialCenter: LatLng = { lat: 39.5, lng: -98.35 } // US fallback
+const initialCenter: LatLng = { lat: 38.35, lng: -83.6 } // Tri-State heart
 
 // --- utilities ---
 function fullAddress (s: StoreEntry): string {
@@ -866,7 +866,7 @@ function MapCanvas ({
     <GoogleMap
       mapContainerStyle={mapContainerStyle}
       center={center}
-      zoom={userPoint ? 9 : 5}
+      zoom={userPoint ? 9 : 7}
     >
       {/* User pin */}
       {userPoint && (

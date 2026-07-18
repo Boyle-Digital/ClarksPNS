@@ -584,26 +584,32 @@ export default function Home () {
       {/* Follow Clarks — expandable social cards (updated embeds) */}
       <section
         aria-label='Follow Clarks'
-        className='py-10 md:py-14 bg-white border-t border-black/10'
+        className='relative py-10 md:py-14 bg-surface-alt brand-stripes-light border-t border-black/10 overflow-hidden'
         id='follow-clarks'
       >
         <div className='container mx-auto px-6 md:px-10'>
           <div className='max-w-3xl'>
-            <h2 className='font-display text-xl md:text-2xl text-black/70'>
-              Follow Clarks
+            <h2 className='font-display text-2xl md:text-3xl text-black'>
+              Follow the swoosh
             </h2>
-            <p className='mt-1 text-black/50 text-sm'>
-              Deals, giveaways, and local highlights—tap a network to peek.
+            <p className='mt-1 text-black/55 text-sm'>
+              Deals, giveaways, and hometown highlights — tap a card to peek
+              inside.
             </p>
           </div>
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-black'>
             {/* Facebook — embedded timeline (unchanged) */}
-            <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
+            <details className='social-card group rounded-2xl border border-black/10 brand-topline bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <img src={fbIcon} alt='' className='h-6 w-6' />
-                  <span className='font-semibold'>Facebook</span>
+                  <span
+                    className='social-chip grid h-11 w-11 place-items-center rounded-xl shadow-md'
+                    style={{ background: '#1877F2' }}
+                  >
+                    <img src={fbIcon} alt='' className='h-5 w-5 brightness-0 invert' />
+                  </span>
+                  <span className='font-display text-xl text-black'>Facebook</span>
                 </div>
                 <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                   +
@@ -637,11 +643,16 @@ export default function Home () {
             </details>
 
             {/* Instagram — single reel */}
-            <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
+            <details className='social-card group rounded-2xl border border-black/10 brand-topline bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <img src={igIcon} alt='' className='h-6 w-6' />
-                  <span className='font-semibold'>Instagram</span>
+                  <span
+                    className='social-chip grid h-11 w-11 place-items-center rounded-xl shadow-md'
+                    style={{ background: 'linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)' }}
+                  >
+                    <img src={igIcon} alt='' className='h-5 w-5 brightness-0 invert' />
+                  </span>
+                  <span className='font-display text-xl text-black'>Instagram</span>
                 </div>
                 <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                   +
@@ -664,11 +675,16 @@ export default function Home () {
             </details>
 
             {/* TikTok — single video */}
-            <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
+            <details className='social-card group rounded-2xl border border-black/10 brand-topline bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <img src={ttIcon} alt='' className='h-6 w-6' />
-                  <span className='font-semibold'>TikTok</span>
+                  <span
+                    className='social-chip grid h-11 w-11 place-items-center rounded-xl shadow-md'
+                    style={{ background: '#0b153a' }}
+                  >
+                    <img src={ttIcon} alt='' className='h-5 w-5 brightness-0 invert' />
+                  </span>
+                  <span className='font-display text-xl text-black'>TikTok</span>
                 </div>
                 <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                   +
@@ -690,11 +706,16 @@ export default function Home () {
             </details>
 
             {/* LinkedIn — single company post */}
-            <details className='group rounded-2xl border border-black/10 bg-white p-5 open:shadow-md'>
+            <details className='social-card group rounded-2xl border border-black/10 brand-topline bg-white p-5 open:shadow-md'>
               <summary className='cursor-pointer list-none flex items-center justify-between'>
                 <div className='flex items-center gap-3'>
-                  <img src={liIcon} alt='' className='h-6 w-6' />
-                  <span className='font-semibold'>LinkedIn</span>
+                  <span
+                    className='social-chip grid h-11 w-11 place-items-center rounded-xl shadow-md'
+                    style={{ background: '#0A66C2' }}
+                  >
+                    <img src={liIcon} alt='' className='h-5 w-5 brightness-0 invert' />
+                  </span>
+                  <span className='font-display text-xl text-black'>LinkedIn</span>
                 </div>
                 <span className='ml-4 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-neutral-100 group-open:rotate-45 transition-transform'>
                   +
