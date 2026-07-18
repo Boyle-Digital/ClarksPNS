@@ -5,6 +5,7 @@ import { SEO } from '@/lib/seo'
 import { buildLocationsItemList } from '@/lib/locations-schema'
 import { allStores, formatPhone } from '@/lib/stores'
 import BeaconMap from '@/components/site/BeaconMap'
+import RoadTrip from '@/components/site/RoadTrip'
 
 // Map a store id (key in stores.geocoded.json) to its store-page slug.
 const SLUG_BY_ID: Record<string, string> = Object.fromEntries(
@@ -563,6 +564,8 @@ export default function Locations () {
             <div className='mt-8'>
               <BeaconMap />
             </div>
+
+            <RoadTrip />
           </div>
         </div>
       </section>

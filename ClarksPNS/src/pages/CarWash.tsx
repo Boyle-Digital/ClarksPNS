@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { IconShine, IconFoam, IconFast, IconDrop } from '@/components/site/Icons'
 import Tilt from '@/components/site/Tilt'
 import WashTunnel from '@/components/site/WashTunnel'
+import WashWindow from '@/components/site/WashWindow'
 
 import img1 from '@/assets/images/carwashphotos/DJI_0019.jpg'
 import img2 from '@/assets/images/carwashphotos/DSC02583.jpg'
@@ -58,6 +59,8 @@ export default function CarWash () {
           </div>
         </div>
       </section>
+
+      <WashWindow />
 
       {/* === Keep It Clean Club — brand band === */}
       <section

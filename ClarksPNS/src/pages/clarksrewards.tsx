@@ -12,6 +12,7 @@ import { DesktopHero } from '@/components/site/DesktopHero'
 import rewardsPoster from '@/assets/images/clarkshero.png'
 import rodneyRanger from '@/assets/images/RodneyTB.png'
 import { IconPump, IconCoffee, IconGift } from '@/components/site/Icons'
+import { track } from '@/lib/track'
 import Tilt from '@/components/site/Tilt'
 import rewardsVideo from '@/assets/videos/RewardsRangerVideo.mp4'
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
@@ -139,6 +140,7 @@ export default function ClarksRewards () {
                   <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
                     <Link
                       to='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
+                      onClick={() => track('rewards_join_click', { placement: 'hero' })}
                       className='inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white bg-brand hover:bg-brand/90 transition-all shadow-lg shadow-black/20 text-base md:text-lg'
                     >
                       Join Clarks Rewards

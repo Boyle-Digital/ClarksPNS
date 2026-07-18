@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import LiveTicker from '@/components/site/LiveTicker'
 import SearchOverlay from '@/components/site/SearchOverlay'
+import NoticeBanner from '@/components/site/NoticeBanner'
 import MobileMenuDrawer from './MobileMenuDrawer'
 import logoUrl from '@/assets/images/clarks-logo.png'
 import rewardsLogoUrl from '@/assets/images/Clarks-PNS-Main-Rewards-Logo-Cropped.png'
@@ -124,6 +125,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
   return (
     <header className='sticky top-0 z-header w-full'>
       <LiveTicker />
+      <NoticeBanner />
       <div className='bg-surface shadow-soft rounded-b-2xl'>
         {/* --- MOBILE BAR (<= md) --- */}
         <div className='md:hidden h-16 grid grid-cols-[auto_1fr_auto] items-center px-3'>

@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import FindUsMap from '@/components/site/FindUsMap'
 import Forecourt3D from '@/components/site/Forecourt3D'
+import ColdSnapNote from '@/components/site/ColdSnapNote'
+import { track } from '@/lib/track'
 import StoreGallery from '@/components/site/StoreGallery'
 import storeMedia from '@/content/store-media.json'
 import { FOOD_BRANDS } from '@/content/menus'
@@ -15,6 +17,7 @@ import {
   getStoreBySlug,
   namedKitchens,
   nearbyStores,
+  ogImageUrl,
   openNow,
   priceCheckHref,
   storeJsonLd,
@@ -120,6 +123,7 @@ export default function StoreDetail() {
   return (
     <>
       <SEO
+        image={MEDIA[store.slug]?.image ? ogImageUrl(store) : undefined}
         title={`${store.name} — Clark’s Pump-N-Shop | ${store.city}, ${store.state}`}
         description={`Clark’s Pump-N-Shop in ${store.city}, ${store.state}: hours, fuel, ${
           kitchens.length ? kitchens.join(', ') + ', ' : ''
@@ -156,6 +160,7 @@ export default function StoreDetail() {
                   href={directionsHref(store)}
                   target='_blank'
                   rel='noreferrer'
+                  onClick={() => track('directions_click', { store: store.slug })}
                   className='inline-flex items-center justify-center rounded-2xl bg-brand px-5 py-3 text-base font-medium text-white transition-opacity hover:opacity-95'
                 >
                   Get Directions
@@ -163,6 +168,7 @@ export default function StoreDetail() {
                 {store.phone && (
                   <a
                     href={`tel:${store.phone.replace(/[^0-9]/g, '')}`}
+                    onClick={() => track('call_click', { store: store.slug })}
                     className='inline-flex items-center justify-center rounded-2xl border border-brand px-5 py-3 text-base font-medium text-brand transition-colors hover:bg-brand/5'
                   >
                     Call {store.phone}
@@ -202,6 +208,7 @@ export default function StoreDetail() {
               Check today’s price ↗
             </a>
           </div>
+          {store.amenities?.kerosene && <ColdSnapNote store={store} />}
         </section>
 
         {/* Content columns */}

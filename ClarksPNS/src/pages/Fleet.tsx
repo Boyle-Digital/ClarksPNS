@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import { allStores } from '@/lib/stores'
 import Tilt from '@/components/site/Tilt'
+import { track } from '@/lib/track'
 
 const DIESEL = allStores.filter(s => s.amenities?.diesel).length
 const KEROSENE = allStores.filter(s => s.amenities?.kerosene).length
@@ -51,6 +52,7 @@ export default function Fleet() {
                 href='https://www.marathonfleetcard.com/associations/?cc=M00528'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => track('fleet_card_click', { placement: 'fleet_hero' })}
                 className='inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 font-semibold text-brand transition-transform hover:-translate-y-0.5'
               >
                 Get the fleet card
