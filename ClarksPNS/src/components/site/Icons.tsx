@@ -116,3 +116,12 @@ export function IconCap(props: P) {
     </svg>
   )
 }
+
+export function IconSearch(props: P) {
+  return (
+    <svg {...base} {...props}>
+      <circle cx='11' cy='11' r='6.5' />
+      <path d='M15.8 15.8 21 21' />
+    </svg>
+  )
+}

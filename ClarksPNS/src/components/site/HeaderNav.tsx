@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import LiveTicker from '@/components/site/LiveTicker'
 import SearchOverlay from '@/components/site/SearchOverlay'
 import NoticeBanner from '@/components/site/NoticeBanner'
+import { IconSearch } from '@/components/site/Icons'
 import MobileMenuDrawer from './MobileMenuDrawer'
 import logoUrl from '@/assets/images/clarks-logo.png'
 import rewardsLogoUrl from '@/assets/images/Clarks-PNS-Main-Rewards-Logo-Cropped.png'
@@ -143,7 +144,16 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
           </Link>
           {/* empty center cell */}
           <div />
-          {/* hamburger on right */}
+          {/* search + hamburger on right */}
+          <div className='flex items-center gap-1'>
+          <button
+            type='button'
+            aria-label='Search'
+            onClick={() => setSearchOpen(true)}
+            className='h-11 w-11 grid place-items-center rounded-md text-black hover:opacity-80'
+          >
+            <IconSearch className='h-5 w-5' />
+          </button>
           <button
             aria-label='Open menu'
             aria-expanded={open}
@@ -152,6 +162,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
           >
             <HamburgerIcon className='h-5 w-5' />
           </button>
+          </div>
         </div>
 
         {/* --- DESKTOP BAR (md+) --- */}
