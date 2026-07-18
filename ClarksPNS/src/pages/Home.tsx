@@ -2,6 +2,7 @@ import React from 'react'
 // import MobileHero from '@/components/site/MobileHero'
 import { DesktopHero } from '@/components/site/DesktopHero'
 import YourClarks from '@/components/site/YourClarks'
+import HometownCinema from '@/components/site/HometownCinema'
 import { SEO } from '@/lib/seo'
 
 // MobileHero images (keep as-is)
@@ -364,6 +365,9 @@ export default function Home () {
 
       {/* Your nearest Clark's — appears once the visitor shares location */}
       <YourClarks />
+
+      {/* Cinematic hometowns band — real drone film + storefront showcase */}
+      <HometownCinema />
 
       {/* Rewards Phone Animation */}
       <section

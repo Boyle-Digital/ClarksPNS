@@ -2,6 +2,10 @@
 @import '@fontsource/oswald/400.css';
 @import '@fontsource/oswald/500.css';
 @import '@fontsource/oswald/600.css';
+@import '@fontsource/oswald/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
 /* Or: @import "@fontsource/oswald/variable.css"; */
 
 @tailwind base;
@@ -80,4 +84,21 @@
   .nav-link-active {
     @apply text-brand;
   }
+}
+/* ---------- Rodney the Rewards Ranger ---------- */
+@keyframes rodney-ride {
+  0%, 100% { transform: translateY(0) rotate(-1.2deg); }
+  50% { transform: translateY(-8px) rotate(0.6deg); }
+}
+@keyframes rodney-line {
+  0% { transform: translateX(26px); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateX(-34px); opacity: 0; }
+}
+.rodney-ride { animation: rodney-ride 3.2s ease-in-out infinite; }
+.rodney-line { animation: rodney-line 1.4s ease-out infinite; }
+.rodney-line-2 { animation-delay: 0.45s; }
+.rodney-line-3 { animation-delay: 0.9s; }
+@media (prefers-reduced-motion: reduce) {
+  .rodney-ride, .rodney-line { animation: none; }
 }

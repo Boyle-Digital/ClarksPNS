@@ -64,6 +64,11 @@ const TIMELINE: Array<{
   imgAlt?: string
 }> = [
   {
+    year: '1970',
+    title: 'A Gulf Oil distributorship',
+    desc: 'John W. Clark enters the fuel business as a distributor for Gulf Oil — the foundation everything since is built on.'
+  },
+  {
     year: '1976',
     title: 'One store in Westwood',
     desc: 'John W. Clark opens a single convenience store in his hometown of Westwood, Kentucky.',
@@ -242,7 +247,7 @@ export default function About () {
               Our history
             </p>
             <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
-              Fifty years, one family.
+              One family. Three generations.
             </h2>
           </div>
 

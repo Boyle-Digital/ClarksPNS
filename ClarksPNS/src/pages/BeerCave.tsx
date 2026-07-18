@@ -2,6 +2,7 @@
 // amenity data the store pages use.
 import { Link } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
+import { IconSnow } from '@/components/site/Icons'
 import { allStores, openNow, type Store } from '@/lib/stores'
 
 const CAVE_STORES = allStores.filter(s => s.amenities?.beerCave)
@@ -103,7 +104,7 @@ function CaveCard({ store }: { store: Store }) {
           {store.name}
         </div>
         <span className='shrink-0 rounded-full bg-[#eaf3ff] px-2.5 py-1 text-xs font-semibold text-brand'>
-          ❄ Beer Cave
+          <IconSnow className='inline h-3.5 w-3.5 -mt-0.5 mr-1' /> Beer Cave
         </span>
       </div>
       <div className='mt-1 text-sm text-black/70'>

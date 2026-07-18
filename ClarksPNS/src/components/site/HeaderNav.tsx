@@ -99,7 +99,8 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
       label: 'Locations',
       items: [
         { label: 'All Locations', href: toPath('Locations') },
-        { label: 'Car Wash', href: toPath('Car Wash') }
+        { label: 'Car Wash', href: toPath('Car Wash') },
+        { label: 'Beer Cave', href: '/beer-cave' }
       ]
     },
     { type: 'link' as const, label: 'Food', href: toPath('Food') },
@@ -115,8 +116,9 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
       label: 'About Us',
       items: [
         { label: 'Our Story', href: toPath('About Us') },
-        { label: 'Clarks Charity', href: '/charity' },
-        { label: 'Sponsorships', href: '/sponsorship' }
+        { label: 'Sports & Community', href: '/community' },
+        { label: 'Scholarships', href: '/scholarship' },
+        { label: 'Clarks Charity', href: '/charity' }
       ]
     }
   ]
@@ -270,6 +272,21 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                         >
                           Car Wash
                         </NavLink>
+                        <NavLink
+                          to='/beer-cave'
+                          className={({ isActive }) =>
+                            [
+                              'block px-4 py-2 text-sm',
+                              isActive
+                                ? 'text-brand'
+                                : 'text-black hover:bg-brand/5 hover:text-brand'
+                            ].join(' ')
+                          }
+                          onClick={() => setLocOpen(false)}
+                          role='menuitem'
+                        >
+                          Beer Cave
+                        </NavLink>
                       </div>
                     </div>
                   </li>
@@ -399,6 +416,36 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                           role='menuitem'
                         >
                           Clarks Charity
+                        </NavLink>
+                        <NavLink
+                          to='/community'
+                          className={({ isActive }) =>
+                            [
+                              'block px-4 py-2 text-sm',
+                              isActive
+                                ? 'text-brand'
+                                : 'text-black hover:bg-brand/5 hover:text-brand'
+                            ].join(' ')
+                          }
+                          onClick={() => setAboutOpen(false)}
+                          role='menuitem'
+                        >
+                          Sports & Community
+                        </NavLink>
+                        <NavLink
+                          to='/scholarship'
+                          className={({ isActive }) =>
+                            [
+                              'block px-4 py-2 text-sm',
+                              isActive
+                                ? 'text-brand'
+                                : 'text-black hover:bg-brand/5 hover:text-brand'
+                            ].join(' ')
+                          }
+                          onClick={() => setAboutOpen(false)}
+                          role='menuitem'
+                        >
+                          Scholarships
                         </NavLink>
                         {/* <NavLink
                           to='/sponsorship'

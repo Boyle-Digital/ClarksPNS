@@ -465,7 +465,7 @@ export default function Locations () {
         .filter(r => matchesFilters(r.entry))
         .sort(
           (a, b) =>
-            (a.entry.state || '').localeCompare(b.entry.state || '') ||
+            (a.entry.state || '').toUpperCase().localeCompare((b.entry.state || '').toUpperCase()) ||
             (a.entry.city || '').localeCompare(b.entry.city || '') ||
             (a.entry.name || '').localeCompare(b.entry.name || '')
         )
@@ -625,7 +625,21 @@ export default function Locations () {
 
               {/* Results */}
               <div className='mt-4 space-y-4'>
-                {results.map(r => {
+                {results.map((r, i) => {
+                  const stateChanged =
+                    !userPoint &&
+                    (i === 0 ||
+                      (results[i - 1].entry.state || '').toUpperCase() !==
+                        (r.entry.state || '').toUpperCase())
+                  const STATE_NAME: Record<string, string> = {
+                    KY: 'Kentucky',
+                    OH: 'Ohio',
+                    WV: 'West Virginia'
+                  }
+                  const stateHeading = stateChanged
+                    ? STATE_NAME[(r.entry.state || '').toUpperCase()] ||
+                      r.entry.state
+                    : null
                   const { id, entry, distance, addr } = r
                   const a = { ...DEFAULT_AMENITIES, ...(entry.amenities ?? {}) }
                   const f = { ...DEFAULT_FOOD, ...(entry.food ?? {}) }
@@ -636,8 +650,13 @@ export default function Locations () {
                   ).filter(k => !!a[k as keyof Amenities])
 
                   return (
+                    <React.Fragment key={id}>
+                    {stateHeading && (
+                      <h3 className="pt-4 font-['Oswald'] text-xl font-bold text-brand uppercase tracking-wide">
+                        {stateHeading}
+                      </h3>
+                    )}
                     <article
-                      key={id}
                       className='rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition-shadow'
                     >
                       <div className='flex items-start justify-between gap-3'>
@@ -749,6 +768,7 @@ export default function Locations () {
                         </button>
                       </div>
                     </article>
+                    </React.Fragment>
                   )
                 })}
 

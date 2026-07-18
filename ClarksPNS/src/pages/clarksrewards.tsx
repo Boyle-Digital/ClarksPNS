@@ -10,6 +10,8 @@ import { DesktopHero } from '@/components/site/DesktopHero'
 
 // Assets
 import rewardsPoster from '@/assets/images/clarkshero.png'
+import rodneyRanger from '@/assets/images/RodneyTB.png'
+import { IconPump, IconCoffee, IconGift } from '@/components/site/Icons'
 import rewardsVideo from '@/assets/videos/RewardsRangerVideo.mp4'
 import appPhone from '@/assets/images/clarksrewards.jpg' // promo image of the app
 import RewardsPageVideoAd from '@/assets/videos/ClarksRewardsPhoneAnimation1080pblack.mp4'
@@ -186,7 +188,7 @@ export default function ClarksRewards () {
                     aria-hidden
                     className='inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10'
                   >
-                    <b className='text-xl'>{b.icon}</b>
+                    <b.icon className='h-6 w-6 text-brand' />
                   </span>
                 </div>
                 <h3 className="font-['Oswald'] text-xl font-bold text-black">
@@ -197,6 +199,61 @@ export default function ClarksRewards () {
                 </p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === The math — real earn rates === */}
+      <section aria-label='How points add up' className='py-12 md:py-20 bg-brand text-white'>
+        <div className='container mx-auto px-6 md:px-10'>
+          <div className='max-w-3xl'>
+            <h2 className="font-['Oswald'] text-3xl md:text-4xl font-bold">
+              The math is simple.
+            </h2>
+            <p className='mt-2 text-white/85 text-base md:text-lg'>
+              Every dollar and every gallon works for you — then trade points
+              for cents-off fuel or free favorites like a sausage biscuit.
+            </p>
+          </div>
+          <div className='mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl'>
+            <RateCard n={10} unit='points' per='per $1 in store' />
+            <RateCard n={20} unit='points' per='per gallon of fuel' />
+            <RateCard n={0} unit='cost to join' per='free in the app, day one' isZero />
+          </div>
+        </div>
+      </section>
+
+      {/* === Rodney, the Rewards Ranger === */}
+      <section aria-label='Rodney the Rewards Ranger' className='relative overflow-hidden py-14 md:py-20 bg-white border-b border-black/10'>
+        <div aria-hidden className='pointer-events-none absolute inset-y-0 left-[-10%] w-[70%] opacity-[0.05]'
+          style={{ background: 'repeating-linear-gradient(90deg, #263B95 0 3px, transparent 3px 42px)' }} />
+        <div className='container relative mx-auto px-6 md:px-10'>
+          <div className='grid grid-cols-1 lg:grid-cols-12 items-center gap-10'>
+            <div className='lg:col-span-5 order-2 lg:order-1'>
+              <div className="font-['Oswald'] tracking-wide text-xs uppercase text-brand">Your points, protected</div>
+              <h2 className="mt-1 font-['Oswald'] text-3xl md:text-4xl font-bold text-black">
+                Ride with Rodney, the Rewards Ranger.
+              </h2>
+              <p className='mt-3 text-black/70 max-w-prose'>
+                Rodney rides ahead so you never miss a boost — weekly point
+                multipliers, members-only drops, and surprise perks at the
+                pump. Saddle up in the app and he does the rest.
+              </p>
+              <Link
+                to='https://clarkspumpnshop.myguestaccount.com/en-us/guest/enroll?card-template=JTIldXJsLXBhcmFtLWFlcy1rZXklYzR0UXJrdXQzZmVRb1laWCU3WVNiTW1LeDN4TmhrRGdGV3dCMmxPMD0%3D&template=0'
+                className='mt-6 inline-flex items-center justify-center rounded-2xl bg-brand px-6 py-3 text-white hover:bg-brand/90 transition-colors'
+              >
+                Join the ride
+              </Link>
+            </div>
+            <div className='lg:col-span-7 order-1 lg:order-2'>
+              <div className='relative mx-auto max-w-[520px]'>
+                <div aria-hidden className='absolute right-[62%] top-[38%] h-1.5 w-24 rounded-full bg-brand/25 rodney-line' />
+                <div aria-hidden className='absolute right-[68%] top-[52%] h-1.5 w-36 rounded-full bg-brand/15 rodney-line rodney-line-2' />
+                <div aria-hidden className='absolute right-[60%] top-[66%] h-1.5 w-16 rounded-full bg-brand/20 rodney-line rodney-line-3' />
+                <img src={rodneyRanger} alt='Rodney, the Clark’s Rewards Ranger' className='relative w-full h-auto rodney-ride' loading='lazy' />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -382,19 +439,50 @@ export default function ClarksRewards () {
   )
 }
 
+function RateCard ({ n, unit, per, isZero }: { n: number; unit: string; per: string; isZero?: boolean }) {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [val, setVal] = useState(0)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
+    const io = new IntersectionObserver(es => {
+      if (!es.some(e => e.isIntersecting)) return
+      io.disconnect()
+      if (reduced || isZero) { setVal(n); return }
+      const t0 = performance.now()
+      const tick = (t: number) => {
+        const p = Math.min((t - t0) / 1200, 1)
+        setVal(Math.round(n * (1 - Math.pow(1 - p, 3))))
+        if (p < 1) requestAnimationFrame(tick)
+      }
+      requestAnimationFrame(tick)
+    }, { threshold: 0.5 })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [n, isZero])
+  return (
+    <div ref={ref} className='rounded-2xl bg-white/10 border border-white/15 p-6'>
+      <div className="font-['Oswald'] text-5xl font-bold tabular-nums">{isZero ? '$0' : val}</div>
+      <div className='mt-1 font-medium'>{unit}</div>
+      <div className='text-white/75 text-sm'>{per}</div>
+    </div>
+  )
+}
+
 const BENEFITS = [
   {
-    icon: '⛽',
+    icon: IconPump,
     title: 'Fuel savings',
     desc: 'Redeem points at the pump for instant cents-off per gallon.'
   },
   {
-    icon: '☕',
+    icon: IconCoffee,
     title: 'Coffee & snacks',
     desc: 'Daily deals on hot coffee, fountain drinks, and fresh snacks.'
   },
   {
-    icon: '🎁',
+    icon: IconGift,
     title: 'Bonus boosts',
     desc: 'Multiply earnings during weekly Boosts and seasonal events.'
   }

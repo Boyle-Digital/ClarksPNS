@@ -1,6 +1,7 @@
 // src/pages/CarWash.tsx
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { IconShine, IconFoam, IconFast, IconDrop } from '@/components/site/Icons'
 
 import img1 from '@/assets/images/carwashphotos/DJI_0019.jpg'
 import img2 from '@/assets/images/carwashphotos/DSC02583.jpg'
@@ -168,7 +169,7 @@ export default function CarWash () {
                     aria-hidden
                     className='inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10'
                   >
-                    <b className='text-xl'>{b.icon}</b>
+                    <b.icon className='h-6 w-6 text-brand' />
                   </span>
                 </div>
                 <h3 className="font-['Oswald'] text-xl font-bold text-black">{b.title}</h3>
@@ -379,22 +380,22 @@ export default function CarWash () {
 
 const BENEFITS = [
   {
-    icon: '✨',
+    icon: IconShine,
     title: 'Showroom shine',
     desc: 'Poly sealant + spot-free rinse for a glossy, protected finish.'
   },
   {
-    icon: '🫧',
+    icon: IconFoam,
     title: 'Gentle clean',
     desc: 'Soft-touch materials and pH-balanced soaps safe for clear coat.'
   },
   {
-    icon: '⚡',
+    icon: IconFast,
     title: 'Fast lanes',
     desc: 'In-and-out convenience designed for busy mornings and quick stops.'
   },
   {
-    icon: '💧',
+    icon: IconDrop,
     title: 'Spot-free dry',
     desc: 'Filtered water + high-velocity air for a streak-free result.'
   }
