@@ -222,6 +222,7 @@ export default function ClarksRewards () {
             <RateCard n={20} unit='points' per='per gallon of fuel' />
             <RateCard n={0} unit='cost to join' per='free in the app, day one' isZero />
           </div>
+          <PointsSim />
         </div>
       </section>
 
@@ -438,6 +439,37 @@ export default function ClarksRewards () {
       </section>
     </main>
     </>
+  )
+}
+
+function PointsSim () {
+  const [gal, setGal] = useState(12)
+  const [spend, setSpend] = useState(20)
+  const yearly = Math.round((gal * 20 + spend * 10) * 52)
+  return (
+    <div className='mt-10 max-w-5xl rounded-2xl border border-white/15 bg-white/10 p-6 md:p-8'>
+      <h3 className='font-display text-2xl md:text-3xl'>Your year in points</h3>
+      <div className='mt-6 grid grid-cols-1 gap-8 md:grid-cols-3'>
+        <label className='block'>
+          <div className='flex items-baseline justify-between text-sm text-white/80'>
+            <span>Gallons per week</span>
+            <span className='font-display text-xl text-white tabular-nums'>{gal}</span>
+          </div>
+          <input type='range' min={0} max={40} value={gal} onChange={e => setGal(+e.target.value)} className='mt-2 w-full accent-white' />
+        </label>
+        <label className='block'>
+          <div className='flex items-baseline justify-between text-sm text-white/80'>
+            <span>In-store $ per week</span>
+            <span className='font-display text-xl text-white tabular-nums'>${spend}</span>
+          </div>
+          <input type='range' min={0} max={100} value={spend} onChange={e => setSpend(+e.target.value)} className='mt-2 w-full accent-white' />
+        </label>
+        <div className='text-center md:text-right'>
+          <div className='font-display text-5xl leading-none text-white tabular-nums md:text-6xl'>{yearly.toLocaleString()}</div>
+          <div className='mt-1 text-sm text-white/75'>points a year — redeem for cents-off fuel and free favorites</div>
+        </div>
+      </div>
+    </div>
   )
 }
 

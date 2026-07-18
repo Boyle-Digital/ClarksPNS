@@ -3,6 +3,7 @@
 import { Link } from 'react-router-dom'
 import { IconShine, IconFoam, IconFast, IconDrop } from '@/components/site/Icons'
 import Tilt from '@/components/site/Tilt'
+import WashTunnel from '@/components/site/WashTunnel'
 
 import img1 from '@/assets/images/carwashphotos/DJI_0019.jpg'
 import img2 from '@/assets/images/carwashphotos/DSC02583.jpg'
@@ -151,23 +152,8 @@ export default function CarWash () {
         </div>
       </section>
 
-      {/* === How it works — night mode === */}
-      <section aria-label='How it works' className='band-night brand-stripes py-14 text-white md:py-20'>
-        <div className='container mx-auto px-6 md:px-10'>
-          <h2 className='font-display text-4xl md:text-5xl'>Three steps to shine</h2>
-          <ol className='mt-10 grid grid-cols-1 gap-6 md:grid-cols-3'>
-            {STEPS.map((s, i) => (
-              <li key={s.title} className='relative rounded-2xl border border-white/15 bg-white/5 p-6'>
-                <span className='absolute -top-4 left-6 grid h-9 w-9 place-items-center rounded-xl bg-white font-display text-lg text-brand shadow-md'>
-                  {i + 1}
-                </span>
-                <h3 className='mt-2 font-display text-2xl'>{s.title}</h3>
-                <p className='mt-2 text-sm leading-relaxed text-white/75'>{s.desc}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
+      {/* === Ride the tunnel — scroll scene === */}
+      <WashTunnel />
 
       {/* === Gift cards — 3D plastic === */}
       <section id='giftcards' aria-label='Car Wash Gift Cards' className='relative overflow-hidden bg-surface-alt brand-stripes-light py-14 md:py-20'>
@@ -252,11 +238,6 @@ const BENEFITS = [
   { icon: IconDrop, title: 'Spot-free dry', desc: 'Filtered water + high-velocity air for a streak-free result.' }
 ]
 
-const STEPS = [
-  { title: 'Choose your wash', desc: 'Pick at the kiosk or in the app — Rewards members save automatically.' },
-  { title: 'Roll through', desc: 'Follow the guide rails and shift to neutral — our equipment handles the rest.' },
-  { title: 'Shine & go', desc: 'Spot-free dry, optional towel bays, and you are on your way.' }
-]
 
 const FAQS = [
   { q: 'Do you offer unlimited plans?', a: 'Yes. The Keep It Clean Club is unlimited monthly washing — sign up online and cancel anytime.' },

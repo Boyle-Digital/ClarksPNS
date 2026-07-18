@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import FindUsMap from '@/components/site/FindUsMap'
+import Forecourt3D from '@/components/site/Forecourt3D'
 import StoreGallery from '@/components/site/StoreGallery'
 import storeMedia from '@/content/store-media.json'
 import { FOOD_BRANDS } from '@/content/menus'
@@ -166,6 +168,7 @@ export default function StoreDetail() {
                     Call {store.phone}
                   </a>
                 )}
+                <MyStoreButton slug={store.slug} />
               </div>
             </div>
 
@@ -244,7 +247,11 @@ export default function StoreDetail() {
                 <div className='rounded-2xl border border-black/10 bg-white p-6 shadow-soft'>
                   <h2 className="font-display text-2xl font-bold text-black md:text-3xl">At this location</h2>
                   <ul className='mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3'>
-                    {amenities.map(a => <AmenityRow key={a} label={a} />)}
+                    {amenities.map(a => (
+                      <a key={a} href='#gallery' className='block' title='See it in the store gallery'>
+                        <AmenityRow label={a} />
+                      </a>
+                    ))}
                   </ul>
                 </div>
               )}
@@ -276,6 +283,9 @@ export default function StoreDetail() {
             <div className='lg:col-span-5'>
               <div className='rounded-2xl border border-black/10 bg-white p-6 shadow-soft'>
                 <h2 className="font-display text-2xl font-bold text-black md:text-3xl">Find us</h2>
+                <div className='mt-2'>
+                  <Forecourt3D store={store} />
+                </div>
                 <div className='mt-3'>
                   <FindUsMap store={store} />
                 </div>
@@ -299,7 +309,7 @@ export default function StoreDetail() {
         {/* Store gallery — every shot from this store's folder */}
         {(MEDIA[store.slug]?.gallery?.length ?? 0) > 0 && (
           <section className='container mx-auto px-6 pb-10 md:px-10'>
-            <div className="font-display tracking-wide text-xs uppercase text-brand">Store gallery</div>
+            <div id='gallery' className="font-display tracking-wide text-xs uppercase text-brand">Store gallery</div>
             <h2 className="mt-1 font-display text-2xl font-bold text-black md:text-3xl">Take a look around.</h2>
             <StoreGallery
               images={MEDIA[store.slug]!.gallery!}
@@ -346,5 +356,29 @@ export default function StoreDetail() {
         )}
       </main>
     </>
+  )
+}
+
+
+function MyStoreButton({ slug }: { slug: string }) {
+  const KEY = 'clarks-my-store'
+  const [mine, setMine] = useState(
+    () => typeof window !== 'undefined' && localStorage.getItem(KEY) === slug
+  )
+  return (
+    <button
+      type='button'
+      onClick={() => {
+        localStorage.setItem(KEY, slug)
+        setMine(true)
+      }}
+      className={
+        mine
+          ? 'inline-flex items-center justify-center rounded-2xl bg-[#2fd06f]/15 px-5 py-3 text-base font-medium text-[#1d7c44]'
+          : 'inline-flex items-center justify-center rounded-2xl border border-black/15 px-5 py-3 text-base font-medium text-black/70 transition-colors hover:border-brand hover:text-brand'
+      }
+    >
+      {mine ? 'Your Clark’s' : 'Make this my Clark’s'}
+    </button>
   )
 }

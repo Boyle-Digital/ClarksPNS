@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import LiveTicker from '@/components/site/LiveTicker'
+import SearchOverlay from '@/components/site/SearchOverlay'
 import MobileMenuDrawer from './MobileMenuDrawer'
 import logoUrl from '@/assets/images/clarks-logo.png'
 import rewardsLogoUrl from '@/assets/images/Clarks-PNS-Main-Rewards-Logo-Cropped.png'
@@ -25,6 +26,7 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
 
   // === LOCATIONS DROPDOWN (desktop) ===
   const [locOpen, setLocOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const locBtnRef = useRef<HTMLButtonElement | null>(null)
   const locMenuRef = useRef<HTMLDivElement | null>(null)
 
@@ -520,8 +522,17 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
               {l.label}
             </NavLink>
           ))}
+          <button
+            type='button'
+            onClick={() => setSearchOpen(true)}
+            className="font-['Oswald'] text-[0.78rem] uppercase tracking-[0.14em] leading-none py-1 text-white/75 transition-colors hover:text-white"
+          >
+            Search
+          </button>
         </div>
       </nav>
+
+      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
 
       {/* Mobile drawer */}
       <MobileMenuDrawer

@@ -41,6 +41,11 @@ for (const st of allStores) {
   }
 }
 
+const IS_BREAKFAST = new Date().getHours() + new Date().getMinutes() / 60 < 10.5
+const BRANDS_ORDERED = IS_BREAKFAST
+  ? [...FOOD_BRANDS].sort((a, b) => (a.slug === 'clarks-cafe' ? -1 : b.slug === 'clarks-cafe' ? 1 : 0))
+  : FOOD_BRANDS
+
 export default function Food () {
   const [idx, setIdx] = React.useState(0)
   const [fading, setFading] = React.useState(false)
@@ -106,7 +111,7 @@ export default function Food () {
           </p>
 
           <div className='mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2 [perspective:1600px]'>
-            {FOOD_BRANDS.map(brand => {
+            {BRANDS_ORDERED.map(brand => {
               const stores = STORES_BY_KITCHEN[brand.kitchenName] || []
               const highlights = brand.sections[0]?.items.slice(0, 3) || []
               return (
@@ -119,7 +124,9 @@ export default function Food () {
                         className='h-12 w-auto object-contain'
                       />
                       <span className='shrink-0 rounded-full bg-brand/10 px-3 py-1 font-display text-sm tracking-[0.08em] text-brand'>
-                        {stores.length} STORES
+                        {IS_BREAKFAST && brand.slug === 'clarks-cafe'
+                          ? 'BREAKFAST IS ON'
+                          : `${stores.length} STORES`}
                       </span>
                     </div>
                     <h3 className='mt-4 font-display text-3xl text-black'>{brand.name}</h3>

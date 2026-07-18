@@ -1,7 +1,7 @@
 // Fleet & Diesel — the page for road crews, contractors, and anyone who
 // drives for a living. Real amenity counts from store data, the Marathon
 // fleet card, and a 3D-tilt fuel pump built in brand blue.
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from '@/lib/seo'
 import { allStores } from '@/lib/stores'
@@ -88,8 +88,45 @@ export default function Fleet() {
         >
           Browse all 63 stores
         </Link>
+
+        <FleetCalc />
       </section>
     </main>
+  )
+}
+
+function FleetCalc() {
+  const [trucks, setTrucks] = useState(3)
+  const [gal, setGal] = useState(60)
+  const yearly = Math.round(trucks * gal * 20 * 52)
+  return (
+    <div className='mt-12 rounded-2xl border border-black/10 brand-topline bg-surface-alt p-6 md:p-8'>
+      <h2 className='font-display text-3xl text-black md:text-4xl'>What your crew earns</h2>
+      <p className='mt-1 max-w-prose text-sm text-black/60'>
+        Clark's Rewards pays 20 points per gallon. Fleet-card fuel discounts
+        are set by Marathon when you enroll.
+      </p>
+      <div className='mt-6 grid grid-cols-1 gap-8 md:grid-cols-3'>
+        <label className='block'>
+          <div className='flex items-baseline justify-between text-sm text-black/70'>
+            <span>Trucks</span>
+            <span className='font-display text-xl text-brand tabular-nums'>{trucks}</span>
+          </div>
+          <input type='range' min={1} max={25} value={trucks} onChange={e => setTrucks(+e.target.value)} className='mt-2 w-full accent-[#263B95]' />
+        </label>
+        <label className='block'>
+          <div className='flex items-baseline justify-between text-sm text-black/70'>
+            <span>Gallons per truck / week</span>
+            <span className='font-display text-xl text-brand tabular-nums'>{gal}</span>
+          </div>
+          <input type='range' min={10} max={200} step={5} value={gal} onChange={e => setGal(+e.target.value)} className='mt-2 w-full accent-[#263B95]' />
+        </label>
+        <div className='text-center md:text-right'>
+          <div className='font-display text-5xl leading-none text-brand tabular-nums'>{yearly.toLocaleString()}</div>
+          <div className='mt-1 text-sm text-black/60'>rewards points a year across the fleet</div>
+        </div>
+      </div>
+    </div>
   )
 }
 
