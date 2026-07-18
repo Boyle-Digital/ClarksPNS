@@ -1,6 +1,7 @@
 // src/components/site/DesktopHero.tsx
 import React from 'react'
 import bgVideo from '@/assets/videos/clarkssecret_1080.mp4'
+import heroLogo from '@/assets/images/Clarks PNS Logo Updated all white.png'
 
 export function DesktopHero () {
   return (
@@ -36,29 +37,31 @@ block   /* <-- was "hidden md:block"; now renders on mobile too */
       <div className='relative z-[1] h-full flex items-center'>
         <div className='container max-w-screen-2xl px-6 md:px-10'>
           <div className='inline-flex flex-col gap-6 md:gap-8 w-full max-w-[720px]'>
+            {/* The brand itself is the hero */}
+            <img
+              src={heroLogo}
+              alt="Clark's Pump-N-Shop — Return. Refresh. Refuel."
+              className='w-[290px] sm:w-[380px] md:w-[520px] h-auto drop-shadow-[0_6px_28px_rgba(0,0,0,0.45)]'
+            />
+
             <h1
               className="
-font-display font-extrabold text-white leading-[1.03]
-text-4xl sm:text-5xl md:text-7xl xl:text-8xl tracking-tight
-drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]
+font-display text-white leading-none
+text-4xl sm:text-5xl md:text-7xl
+drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)]
 "
             >
-              Return.
-              <br />
-              Refresh.
-              <br />
-              Refuel.
+              Return. Refresh. Refuel.
             </h1>
 
-            {/* Accent rule */}
-            <div className='h-2 w-48 sm:w-64 md:w-80 bg-white rounded-full shadow-[0_2px_12px_rgba(0,0,0,0.25)]' />
+            <div className='h-1.5 w-40 sm:w-56 rounded-full bg-brand-blue shadow-[0_2px_12px_rgba(0,132,255,0.5)]' />
 
             <p
-              className="
-font-display font-semibold text-white/95
-text-lg sm:text-xl md:text-3xl
+              className='
+text-white/95 font-medium
+text-lg sm:text-xl md:text-2xl
 drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]
-"
+'
             >
               Your trusted stop for fuel, food, and friendly faces.
             </p>

@@ -11,16 +11,16 @@ const FILM_POSTER = `${CDN}/image/upload/f_auto,q_auto,w_1280/v1/clarks/stores/$
 
 const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string }> = [
   {
-    slug: 'westwood-ashland-ky',
-    name: 'Westwood',
+    slug: 'greenup-ave-ashland-ky',
+    name: 'Greenup Ave',
     place: 'Ashland, KY',
-    tag: 'Where it all started — 1976'
+    tag: 'Our Ashland hometown'
   },
   {
-    slug: 'clays-mill-rd-lexington-ky',
-    name: 'Clays Mill Rd',
+    slug: 'lucille-dr-lexington-ky',
+    name: 'Lucille Dr',
     place: 'Lexington, KY',
-    tag: 'Growing in the Bluegrass'
+    tag: 'Our newest store'
   },
   {
     slug: 'huntington-huntington-wv',
@@ -29,9 +29,9 @@ const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string }
     tag: 'West Virginia proud'
   },
   {
-    slug: 'ironton-ironton-oh',
-    name: 'Ironton',
-    place: 'Ironton, OH',
+    slug: 'south-point-so-point-oh',
+    name: 'South Point',
+    place: 'South Point, OH',
     tag: 'Ohio proud'
   }
 ]

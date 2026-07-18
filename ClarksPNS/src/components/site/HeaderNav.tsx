@@ -322,19 +322,16 @@ export default function HeaderNav ({ showAccentBar = true }: HeaderNavProps) {
                     </NavLink>
                   </li>
 
-                  {/* Fleet — diesel, kerosene & the Marathon fleet card */}
+                  {/* Fleet — straight to the Marathon fleet card portal */}
                   <li>
-                    <NavLink
-                      to='/fleet'
-                      className={({ isActive }) =>
-                        [
-                          'inline-block text-nav text-center leading-none py-2',
-                          isActive ? 'text-brand' : 'text-text hover:text-brand'
-                        ].join(' ')
-                      }
+                    <a
+                      href='https://www.marathonfleetcard.com/associations/?cc=M00528'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='inline-block text-nav text-center leading-none py-2 text-text hover:text-brand'
                     >
                       Fleet
-                    </NavLink>
+                    </a>
                   </li>
 
                   {/* About dropdown */}

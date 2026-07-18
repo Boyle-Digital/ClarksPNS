@@ -154,3 +154,10 @@
 .ghost-word--blue { -webkit-text-stroke: 2px rgba(38,59,149,0.12); }
 /* Display face tuning: Bebas runs tight — give it air */
 .font-display { letter-spacing: 0.015em; }
+
+/* ---------- Top nav: brand display voice ---------- */
+.text-nav {
+  font-family: 'Bebas Neue', Oswald, sans-serif;
+  letter-spacing: 0.06em;
+  font-size: 1.35rem;
+}
