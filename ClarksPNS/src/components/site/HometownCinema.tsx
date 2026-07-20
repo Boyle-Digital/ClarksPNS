@@ -105,15 +105,15 @@ export default function HometownCinema() {
 
       <div className='container relative z-[1] mx-auto px-6 py-20 md:px-10 md:py-28'>
         <div className="font-display text-xs uppercase tracking-[0.3em] text-white/70">
-          Filmed over our own stores
+          Across the Tri-State
         </div>
         <h2 className="mt-2 font-display text-4xl font-bold leading-tight md:text-6xl">
           Proudly serving you.
         </h2>
         <p className='mt-4 max-w-prose text-lg text-white/85'>
-          Kentucky. Ohio. West Virginia. Every Clark’s has its own page —
-          real photos, real video, live hours, and a map that knows how far
-          away you are.
+          Kentucky. Ohio. West Virginia. Sixty-three stores, one promise —
+          hot food, friendly faces, and a clean stop every time. Wherever
+          the road takes you, there’s a Clark’s close by. Come see us.
         </p>
 
         {/* Showcase cards */}
