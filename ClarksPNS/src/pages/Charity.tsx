@@ -17,7 +17,7 @@ const scholarshipEasternPdf = new URL(
   import.meta.url
 ).href
 const golfOutingPdf = new URL(
-  '../assets/files/2026 Rodney Clark Memorial Golf Outing - Keene Trace Champions Course 2026.pdf',
+  '../assets/files/Rodney Clark Memorial Golf Outing 2026 - Bellefonte.pdf',
   import.meta.url
 ).href
 
@@ -269,9 +269,10 @@ export default function DonationsPage() {
                     College for local high-school seniors.
                   </p>
                   <p>
-                    In addition to accepting general donations, we host an annual
-                    memorial golf outing — now also at Keene Trace Golf Club:
-                    Champions Course — with proceeds supporting our endowment.
+                    In addition to accepting general donations, we host
+                    memorial golf outings each year — next up at Bellefonte
+                    Country Club in Ashland this September — with proceeds
+                    supporting our endowment.
                   </p>
                 </div>
               </div>
@@ -292,18 +293,19 @@ export default function DonationsPage() {
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
             <p className="font-display tracking-wide text-xs uppercase text-brand">
-              Monday, May 11th, 2026
+              Monday, September 14, 2026
             </p>
             <h2 className="mt-1 font-display text-3xl md:text-4xl font-bold text-black">
               Rodney Clark Memorial Golf Outing
             </h2>
             <div className="mt-3 text-black/70">
             <p>
-    We invite you to join us for the 2026 Rodney Clark Memorial Golf Outing on Monday, May 11th at 
-    Keene Trace Golf Club — Champions Course in Nicholasville, KY. 
-    Registration and breakfast begin at 8:00 AM, followed by a 9:00 AM shotgun start. 
-    Following play, guests will enjoy lunch, awards, and a silent auction. 
-    Participation is limited to the first 25 teams.
+    Join us for the fall 2026 Rodney Clark Memorial Golf Outing on Monday,
+    September 14 at Bellefonte Country Club in Ashland, KY. Registration
+    and breakfast begin at 8:00 AM, followed by a 9:00 AM shotgun start.
+    Following play, guests will enjoy lunch, awards, and the silent
+    auction. Participation is limited to the first 25 teams — registration
+    closes Friday, September 4, 2026.
             </p>
               {/* <p className="mt-2">
                 Limited to the first 25 teams. Registration closes April 11,
