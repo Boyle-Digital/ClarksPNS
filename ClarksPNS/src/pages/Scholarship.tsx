@@ -5,7 +5,7 @@ import Tilt from '@/components/site/Tilt'
 
 import rodneyPhoto from '@/assets/images/Charity/Rodney_Clark.jpg'
 import scrambleLogo from '@/assets/images/Charity/scramble/scrambleLogo.png'
-import golfPdf from '@/assets/files/2026 Rodney Clark Memorial Golf Outing - Keene Trace Champions Course 2026.pdf'
+import golfPdf from '@/assets/files/Rodney Clark Memorial Golf Outing 2026 - Bellefonte.pdf'
 import appPdf from '@/assets/files/2026 Scholarship Application (Central) (01226829x9F876) (1).PDF'
 
 export default function Scholarship() {
@@ -44,7 +44,7 @@ export default function Scholarship() {
                 className='w-full rounded-2xl border border-black/10 object-cover shadow-soft'
               />
               <figcaption className='mt-2 text-center text-sm text-black/50'>
-                Rodney Clark
+                Rodney Clark · 1966–2016
               </figcaption>
             </figure>
           </div>
@@ -61,10 +61,11 @@ export default function Scholarship() {
                 Clark Family Scholarship
               </h2>
               <p className='mt-3 text-black/70'>
-                A $2,000 annual scholarship for students enrolled in a two-
-                to four-year college, university, trade school, or
-                vocational program. Built for the region we serve — because
-                a start close to home still counts.
+                $2,000 a year — $1,000 each semester, renewable for up to
+                eight semesters — for students enrolled in a two- to
+                four-year college, university, trade school, or vocational
+                program. Built for the region we serve, and designed to
+                support students through their entire academic journey.
               </p>
               <a
                 href={appPdf}
@@ -114,9 +115,18 @@ export default function Scholarship() {
               The Rodney Clark Memorial Golf Outing
             </h2>
             <p className='mt-3 max-w-prose text-white/85'>
-              Once a year the region shows up, tees off, and funds the next
-              class of scholarships. The 2026 outing is played at the Keene
-              Trace Champions Course — sponsorships and foursomes available.
+              The region shows up, tees off, and funds the next class of
+              scholarships. The fall 2026 outing is Monday, September 14 at
+              Bellefonte Country Club in Ashland — breakfast and
+              registration at 8:00 AM, shotgun start at 9:00 AM, with
+              lunch, awards, and the silent auction to follow. Limited to
+              the first 25 teams; registration closes September 4.
+            </p>
+            <p className='mt-3 max-w-prose text-white/85'>
+              Sponsorships: Platinum $5,000 · Gold $3,500 · Silver $2,500 ·
+              Hole Sponsor $500. Checks payable to Clark Family Charity —
+              registration and details in the packet below, or contact Wes
+              Crawford at wes.crawford@clarkspns.com.
             </p>
             <a
               href={golfPdf}
@@ -124,7 +134,7 @@ export default function Scholarship() {
               rel='noreferrer'
               className='mt-5 inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 font-semibold text-brand transition-transform hover:-translate-y-0.5'
             >
-              2026 outing details (PDF)
+              Registration packet (PDF)
             </a>
           </div>
         </div>
