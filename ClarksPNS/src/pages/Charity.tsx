@@ -304,8 +304,7 @@ export default function DonationsPage() {
     September 14 at Bellefonte Country Club in Ashland, KY. Registration
     and breakfast begin at 8:00 AM, followed by a 9:00 AM shotgun start.
     Following play, guests will enjoy lunch, awards, and the silent
-    auction. Participation is limited to the first 25 teams — registration
-    closes Friday, September 4, 2026.
+    auction. Participation is limited to the first 36 teams.
             </p>
               {/* <p className="mt-2">
                 Limited to the first 25 teams. Registration closes April 11,
