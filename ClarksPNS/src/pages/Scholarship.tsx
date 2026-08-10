@@ -120,7 +120,7 @@ export default function Scholarship() {
               Bellefonte Country Club in Ashland — breakfast and
               registration at 8:00 AM, shotgun start at 9:00 AM, with
               lunch, awards, and the silent auction to follow. Limited to
-              the first 25 teams; registration closes September 4.
+              the first 36 teams.
             </p>
             <p className='mt-3 max-w-prose text-white/85'>
               Sponsorships: Platinum $5,000 · Gold $3,500 · Silver $2,500 ·
