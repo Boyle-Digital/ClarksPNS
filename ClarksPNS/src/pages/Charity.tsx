@@ -97,11 +97,12 @@ const Gallery = ({
     {images.map((src, i) => (
       <li
         key={i}
-        className="overflow-hidden rounded-xl border border-black/10 bg-white"
+        className="aspect-[4/3] overflow-hidden rounded-xl border border-black/10 bg-neutral-100"
       >
         <img
           src={src}
-          loading={i < 6 ? 'eager' : 'lazy'}
+          loading={i < 4 ? 'eager' : 'lazy'}
+          decoding="async"
           alt="Clark Family Charity event"
           className="h-full w-full object-cover hover:opacity-95 transition"
         />
@@ -176,7 +177,7 @@ const ScrollPlayVideo = ({
       playsInline
       // Optional: keep looping once visible
       loop
-      preload="metadata"
+      preload="none"
       className={className}
     />
   )
@@ -289,7 +290,7 @@ export default function DonationsPage() {
       </section>
 
       {/* GOLF OUTING */}
-      <section id="golf" className="py-12 md:py-16 bg-white">
+      <section id="golf" className="scroll-mt-24 py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl">
             <p className="font-display tracking-wide text-xs uppercase text-brand">
