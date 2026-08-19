@@ -172,16 +172,8 @@ export function storeJsonLd(store: Store, siteUrl = 'https://www.myclarkspns.com
   }
 }
 
-/** Cloudinary-composed 1200x630 share card: the store's real hero photo
- *  with its name overlaid. Used for og:image on store pages. */
+/** og:image for store pages — the store's real hero photo, self-hosted.
+ *  Absolute URL so social scrapers can fetch it. */
 export function ogImageUrl(store: Store): string | undefined {
-  const enc = (s: string) =>
-    encodeURIComponent(s.replace(/[,\/]/g, ' ')).replace(/%2C/g, '')
-  return (
-    'https://res.cloudinary.com/yzpytwu5/image/upload/' +
-    'w_1200,h_630,c_fill,g_auto,q_auto:good/' +
-    `co_white,g_south_west,x_60,y_120,l_text:Arial_64_bold:${enc(store.name)}/` +
-    `co_rgb:BFD5FF,g_south_west,x_60,y_70,l_text:Arial_36:${enc(`${store.city} ${(store.state || '').toUpperCase()} · Clark's Pump-N-Shop`)}/` +
-    `v1/clarks/stores/${store.slug}/hero.jpg`
-  )
+  return `https://www.myclarkspns.com/media/stores/${store.slug}/hero.jpg`
 }
