@@ -1,105 +1,77 @@
 // Full-bleed cinematic band: real drone footage over a Clark's store,
 // then a 3D-tilt showcase of real storefronts linking to their pages.
 // Video only loads when the section scrolls into view (poster until then).
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
-const CDN = 'https://res.cloudinary.com/yzpytwu5'
-const FILM_SLUG = 'catlettsburg-catlettsburg-ky'
-const FILM = `${CDN}/video/upload/w_1280,q_auto:eco/v1/clarks/stores/${FILM_SLUG}/drone.mp4`
-const FILM_POSTER = `${CDN}/image/upload/f_auto,q_auto,w_1280/v1/clarks/stores/${FILM_SLUG}/poster.jpg`
+// Locally bundled so the homepage never depends on the image CDN.
+import filmPoster from '@/assets/images/showcase/film-poster.jpg'
+import imgWestwood from '@/assets/images/showcase/westwood.jpg'
+import imgWinchester from '@/assets/images/showcase/winchester-road.jpg'
+import imgLucille from '@/assets/images/showcase/lucille-dr.jpg'
+import imgMidway from '@/assets/images/showcase/midway.jpg'
+import imgHalGreer from '@/assets/images/showcase/hal-greer.jpg'
+import imgSouthPoint from '@/assets/images/showcase/south-point.jpg'
 
-const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string; img?: string }> = [
+const SHOWCASE: Array<{ slug: string; name: string; place: string; tag: string; img: string }> = [
   {
     slug: 'westwood-ashland-ky',
     name: 'Westwood',
     place: 'Fairview — Ashland, KY',
     tag: 'The flagship — where we started',
-    img: 'gallery/09.jpg'
+    img: imgWestwood
   },
   {
     slug: 'winchester-road-lexington-ky',
     name: 'Winchester Road',
     place: 'Lexington, KY',
-    tag: 'Brand new in Lexington'
+    tag: 'Brand new in Lexington',
+    img: imgWinchester
   },
   {
     slug: 'lucille-dr-lexington-ky',
     name: 'Lucille Dr',
     place: 'Lexington, KY',
-    tag: 'Our newest store'
+    tag: 'Our newest store',
+    img: imgLucille
   },
   {
     slug: 'midway-midway-ky',
     name: 'Midway',
     place: 'Midway, KY',
-    tag: 'Dog park on site'
+    tag: 'Dog park on site',
+    img: imgMidway
   },
   {
     slug: 'hal-greer-huntington-wv',
     name: 'Hal Greer Blvd',
     place: 'Huntington, WV',
-    tag: 'West Virginia proud'
+    tag: 'West Virginia proud',
+    img: imgHalGreer
   },
   {
     slug: 'south-point-so-point-oh',
     name: 'South Point',
     place: 'South Point, OH',
-    tag: 'Ohio proud'
+    tag: 'Ohio proud',
+    img: imgSouthPoint
   }
 ]
 
-const heroUrl = (slug: string, img?: string) =>
-  `${CDN}/image/upload/f_auto,q_auto,w_800/v1/clarks/stores/${slug}/${img || 'hero.jpg'}`
-
 export default function HometownCinema() {
-  const secRef = useRef<HTMLElement | null>(null)
-  const [playFilm, setPlayFilm] = useState(false)
-
-  useEffect(() => {
-    const el = secRef.current
-    if (!el) return
-    const io = new IntersectionObserver(
-      es => {
-        if (es.some(e => e.isIntersecting)) {
-          setPlayFilm(true)
-          io.disconnect()
-        }
-      },
-      { rootMargin: '200px' }
-    )
-    io.observe(el)
-    return () => io.disconnect()
-  }, [])
-
   return (
     <section
-      ref={secRef}
       aria-label='Our hometowns'
       className='relative isolate overflow-hidden bg-black text-white'
     >
-      {/* Film layer */}
+      {/* Background layer */}
       <div className='absolute inset-0'>
-        {playFilm ? (
-          <video
-            className='h-full w-full object-cover opacity-60'
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload='none'
-            poster={FILM_POSTER}
-          >
-            <source src={FILM} type='video/mp4' />
-          </video>
-        ) : (
-          <img
-            src={FILM_POSTER}
-            alt=''
-            aria-hidden
-            className='h-full w-full object-cover opacity-60'
-          />
-        )}
+        <img
+          src={filmPoster}
+          alt=''
+          aria-hidden
+          className='h-full w-full object-cover opacity-60'
+        />
         <div className='absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80' />
       </div>
 
@@ -137,7 +109,7 @@ export default function HometownCinema() {
 function TiltCard({
   store
 }: {
-  store: { slug: string; name: string; place: string; tag: string; img?: string }
+  store: { slug: string; name: string; place: string; tag: string; img: string }
 }) {
   const ref = useRef<HTMLAnchorElement | null>(null)
 
@@ -163,7 +135,7 @@ function TiltCard({
     >
       <div className='aspect-[4/3] overflow-hidden'>
         <img
-          src={heroUrl(store.slug, store.img)}
+          src={store.img}
           alt={`Clark’s Pump-N-Shop — ${store.name}, ${store.place}`}
           loading='lazy'
           className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]'
