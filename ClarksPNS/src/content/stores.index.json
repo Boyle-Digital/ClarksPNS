@@ -3585,79 +3585,6 @@
     "lng": -82.7728877
   },
   {
-    "id": "76",
-    "slug": "lexington-lexington-ky",
-    "name": "Lexington",
-    "address": "529 W Main St",
-    "city": "Lexington",
-    "state": "KY",
-    "zip": "40507",
-    "phone": "(859) 281-1008",
-    "fuelBrand": "",
-    "foodRaw": "Café/H54",
-    "kitchens": [
-      {
-        "code": "Café",
-        "name": "Clark's Café"
-      },
-      {
-        "code": "H54",
-        "name": "Hangar 54"
-      }
-    ],
-    "hours": {
-      "sun": {
-        "open": null,
-        "close": null,
-        "label": "Call for hours"
-      },
-      "mon": {
-        "open": null,
-        "close": null,
-        "label": "Call for hours"
-      },
-      "tues": {
-        "open": null,
-        "close": null,
-        "label": "Call for hours"
-      },
-      "wed": {
-        "open": null,
-        "close": null,
-        "label": "Call for hours"
-      },
-      "thur": {
-        "open": null,
-        "close": null,
-        "label": "Call for hours"
-      },
-      "fri": {
-        "open": null,
-        "close": null,
-        "label": "Call for hours"
-      },
-      "sat": {
-        "open": null,
-        "close": null,
-        "label": "Call for hours"
-      }
-    },
-    "open24": false,
-    "amenities": {
-      "carWash": false,
-      "diesel": false,
-      "def": false,
-      "atm": true,
-      "beerCave": true,
-      "kerosene": false,
-      "e85": false,
-      "showers": false,
-      "rvDump": false
-    },
-    "lat": 38.0504487,
-    "lng": -84.5012586
-  },
-  {
     "id": "77",
     "slug": "midway-midway-ky",
     "name": "Midway",
@@ -4510,5 +4437,69 @@
     },
     "lat": 37.5695196,
     "lng": -84.3183829
+  },
+  {
+    "id": "91",
+    "slug": "new-town-pike-lexington-ky",
+    "name": "New Town Pike",
+    "address": "1900 New Town Pike",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511",
+    "phone": "(859) 259-0382",
+    "fuelBrand": "MARATHON",
+    "foodRaw": "",
+    "kitchens": [],
+    "hours": {
+      "sun": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "mon": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "tues": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "wed": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "thur": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "fri": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      },
+      "sat": {
+        "open": 0,
+        "close": 24,
+        "label": "Open 24 hours"
+      }
+    },
+    "open24": true,
+    "amenities": {
+      "carWash": false,
+      "diesel": true,
+      "def": false,
+      "atm": true,
+      "beerCave": true,
+      "kerosene": false,
+      "e85": false,
+      "showers": false,
+      "rvDump": false
+    },
+    "lat": 38.0956049,
+    "lng": -84.4856743
   }
 ]

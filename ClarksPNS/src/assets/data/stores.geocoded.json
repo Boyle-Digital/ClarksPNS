@@ -1939,42 +1939,6 @@
     "lng": -82.7728877,
     "__addr": "9822 E. US Highway 60, Rush, KY, 41168"
   },
-  "76": {
-    "name": "Lexington",
-    "address": "529 W Main St",
-    "city": "Lexington",
-    "state": "KY",
-    "zip": "40507",
-    "phone": "(859)281-1008",
-    "food_programs": "Café/H54",
-    "alt_hours": {
-      "total_hours": "104.0",
-      "hours": {
-        "sun": "7-9",
-        "mon": "7-9",
-        "tues": "7-9",
-        "wed": "7-9",
-        "thur": "7-11",
-        "fri": "7-11",
-        "sat": "7-11"
-      }
-    },
-    "amenities": {
-      "atm": true,
-      "beerCave": true,
-      "beerSales": false,
-      "e85": false,
-      "diesel": false,
-      "kerosene": false,
-      "open24Hours": false,
-      "showers": false,
-      "rvDump": false,
-      "fuel": false
-    },
-    "lat": 38.0504487,
-    "lng": -84.5012586,
-    "__addr": "529 W Main St, Lexington, KY, 40507"
-  },
   "77": {
     "name": "Midway",
     "address": "300 Lacefield St",
@@ -2443,8 +2407,44 @@
     "lng": -84.3183829,
     "__addr": "274 Paint Lick Rd., Berea, KY, 40403"
   },
+  "91": {
+    "name": "New Town Pike",
+    "address": "1900 New Town Pike",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511",
+    "phone": "(859) 259-0382",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": true,
+      "beerSales": false,
+      "e85": false,
+      "diesel": true,
+      "kerosene": false,
+      "open24Hours": true,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    },
+    "lat": 38.0956049,
+    "lng": -84.4856743,
+    "__addr": "1900 New Town Pike, Lexington, KY, 40511"
+  },
   "__meta": {
-    "srcHash": "fbaa03fb17bb97d41b52c1edc49025e8c85973be467de998ff91673aa89b8815",
-    "generatedAt": "2025-10-06T15:54:41.456Z"
+    "srcHash": "259b07ab5a8fe4aff3ece6aa16d4ad904e1994da10192c0467b764cf8edd6b42",
+    "generatedAt": "2026-10-02T17:38:07.423Z"
   }
 }

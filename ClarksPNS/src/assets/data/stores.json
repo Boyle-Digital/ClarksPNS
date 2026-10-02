@@ -1783,39 +1783,6 @@
       "fuel": false
     }
   },
-  "76": {
-    "name": "Lexington",
-    "address": "529 W Main St",
-    "city": "Lexington",
-    "state": "KY",
-    "zip": "40507.0",
-    "phone": "(859)281-1008",
-    "food_programs": "Café/H54",
-    "alt_hours": {
-      "total_hours": "104.0",
-      "hours": {
-        "sun": "7-9",
-        "mon": "7-9",
-        "tues": "7-9",
-        "wed": "7-9",
-        "thur": "7-11",
-        "fri": "7-11",
-        "sat": "7-11"
-      }
-    },
-    "amenities": {
-      "atm": true,
-      "beerCave": true,
-      "beerSales": false,
-      "e85": false,
-      "diesel": false,
-      "kerosene": false,
-      "open24Hours": false,
-      "showers": false,
-      "rvDump": false,
-      "fuel": false
-    }
-  },
   "77": {
     "name": "Midway",
     "address": "300 Lacefield St",
@@ -2225,6 +2192,39 @@
     "brand": "ARCO",
     "alt_hours": {
       "total_hours": "168.0",
+      "hours": {
+        "sun": "24",
+        "mon": "24",
+        "tues": "24",
+        "wed": "24",
+        "thur": "24",
+        "fri": "24",
+        "sat": "24"
+      }
+    },
+    "amenities": {
+      "atm": true,
+      "beerCave": true,
+      "beerSales": false,
+      "e85": false,
+      "diesel": true,
+      "kerosene": false,
+      "open24Hours": true,
+      "showers": false,
+      "rvDump": false,
+      "fuel": false
+    }
+  },
+  "91": {
+    "name": "New Town Pike",
+    "address": "1900 New Town Pike",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511",
+    "phone": "(859) 259-0382",
+    "brand": "MARATHON",
+    "store_hours": {
+      "total_hours": "168",
       "hours": {
         "sun": "24",
         "mon": "24",
