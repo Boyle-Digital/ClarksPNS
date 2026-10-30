@@ -30,16 +30,47 @@ import HomePageVideoAd from '@/assets/videos/ClarksRewardsPhoneAnimation1080.mp4
 // Rodney banner (full-bleed). Note: filename includes a typographic apostrophe.
 import rodneyBanner from '@/assets/images/clarks-site-sample-9.png'
 
-/** Auto-import Monthly Promotions from the provided folders */
-const PromoImages = Object.values(
-  import.meta.glob('@/assets/PromoImages/800x800/*.jpg', {
-    eager: true,
-    as: 'url'
-  })
-) as string[]
+/** Auto-import Monthly Promotions. One folder per kit, named YYYY-MM — drop next
+ *  month's images in their own folder and they go live on the 1st by themselves,
+ *  with no deploy that morning. */
+const PromoKits = import.meta.glob('@/assets/PromoImages/*/*.jpg', {
+  eager: true,
+  as: 'url'
+}) as Record<string, string>
 
-// Merge into a single pool for the carousel
-const PROMO_IMAGES = [...PromoImages]
+function currentPromoKit (kits: Record<string, string>): string[] {
+  const byMonth = new Map<string, [string, string][]>()
+  for (const [path, url] of Object.entries(kits)) {
+    const m = path.match(/PromoImages\/(\d{4}-\d{2})\//)
+    if (!m) continue
+    const kit = byMonth.get(m[1]) ?? []
+    kit.push([path, url])
+    byMonth.set(m[1], kit)
+  }
+  const months = [...byMonth.keys()].sort()
+  if (months.length === 0) return []
+
+  // The stores run on Eastern time, so a kit turns over at midnight where the
+  // stores are, not in whatever timezone the visitor happens to be sitting in.
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit'
+  }).formatToParts(new Date())
+  const year = parts.find(p => p.type === 'year')?.value ?? ''
+  const month = parts.find(p => p.type === 'month')?.value ?? ''
+  const today = `${year}-${month}`
+
+  // The newest kit that has already started. Before the earliest kit begins, and
+  // if a month is ever missed, the carousel keeps showing the last one rather
+  // than going empty.
+  const live = months.filter(m => m <= today).pop() ?? months[0]
+  return (byMonth.get(live) ?? [])
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([, url]) => url)
+}
+
+const PROMO_IMAGES = currentPromoKit(PromoKits)
 
 function MonthlyPromotions ({
   title,
