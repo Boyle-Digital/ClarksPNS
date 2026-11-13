@@ -3658,7 +3658,7 @@
     "slug": "bethel-nicholsville-ky",
     "name": "Bethel",
     "address": "100 Bethel Harvest Drive",
-    "city": "Nicholsville",
+    "city": "Nicholasville",
     "state": "KY",
     "zip": "40356",
     "phone": "(859) 309-0075",
@@ -3719,8 +3719,8 @@
       "showers": false,
       "rvDump": false
     },
-    "lat": 37.9486108,
-    "lng": -84.5420362
+    "lat": 37.9485838,
+    "lng": -84.5420194
   },
   {
     "id": "79",

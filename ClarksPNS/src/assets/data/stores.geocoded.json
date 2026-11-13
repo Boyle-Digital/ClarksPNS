@@ -1979,7 +1979,8 @@
   "78": {
     "name": "Bethel",
     "address": "100 Bethel Harvest Drive",
-    "city": "Nicholsville",
+    "city": "Nicholasville",
+    "slug": "bethel-nicholsville-ky",
     "state": "KY",
     "zip": "40356",
     "phone": "(859)309-0075",
@@ -2009,9 +2010,9 @@
       "rvDump": false,
       "fuel": false
     },
-    "lat": 37.9486108,
-    "lng": -84.5420362,
-    "__addr": "100 Bethel Harvest Drive, Nicholsville, KY, 40356"
+    "lat": 37.9485838,
+    "lng": -84.5420194,
+    "__addr": "100 Bethel Harvest Drive, Nicholasville, KY, 40356"
   },
   "79": {
     "name": "Sandersville Rd.",
@@ -2444,7 +2445,7 @@
     "__addr": "1900 New Town Pike, Lexington, KY, 40511"
   },
   "__meta": {
-    "srcHash": "259b07ab5a8fe4aff3ece6aa16d4ad904e1994da10192c0467b764cf8edd6b42",
-    "generatedAt": "2026-10-02T17:38:07.423Z"
+    "srcHash": "d87bc7ed6b678f47374a276bdc3f024d1bf9b7eaef352058984bd3c97b594220",
+    "generatedAt": "2026-11-13T19:55:20.580Z"
   }
 }

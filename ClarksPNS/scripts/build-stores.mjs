@@ -78,7 +78,10 @@ function formatPhone(raw) {
 
 for (const [id, s] of entries) {
   if (!s || !s.name || !s.address || !s.city || !s.state) continue // skip bulk plants / blank rows
-  let slug = kebab(`${s.name}-${s.city}-${s.state}`)
+  // An explicit slug in stores.json pins the URL. Without it the slug is derived from
+  // name/city/state, so correcting a typo in either would silently move a live store page
+  // and orphan its /media/stores/<slug>/ folder.
+  let slug = s.slug || kebab(`${s.name}-${s.city}-${s.state}`)
   if (seen.has(slug)) slug = `${slug}-${id}` // guarantee uniqueness, stays stable per id
   seen.set(slug, true)
 
